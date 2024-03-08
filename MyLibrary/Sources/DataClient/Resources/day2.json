@@ -1,0 +1,443 @@
+{
+  "id": 2,
+  "title": "Day 2",
+  "date": "2024-03-23T09:00:00+09:00",
+  "schedules": [
+    {
+      "id": 20,
+      "time": "2024-03-23T09:00:00+09:00",
+      "sessions": [
+        {
+          "id": 28,
+          "title": "Morning Chat",
+          "summary": "Download Eventbrite app and show QR code of your ticket at the reception. You will receive a name tag and a goodie bag."
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "time": "2024-03-23T09:45:00+09:00",
+      "sessions": [
+        {
+          "id": 29,
+          "title": "Opening Remarks",
+          "speaker": "Organizers",
+          "place": "Hall"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "time": "2024-03-23T10:00:00+09:00",
+      "sessions": [
+        {
+          "id": 30,
+          "title": "Getting to Know TextKit",
+          "speakers": [
+            {
+              "name": "Marcin Krzyżanowski",
+              "image_name": "Marcin Kryzyzanowski",
+              "bio": "Marcin is a developer with extensive experience. He currently works at Judo.app, where he is building an interface builder for SwiftUI. Marcin has published numerous iOS/macOS libraries and tools, including CryptoSwift, ObjectivePGP, and the Online Swift Playground, which allows for interactive Swift code execution from a web browser. He is currently on a mission to ship SwiftStudio.app, an independent third-party IDE for Swift.",
+              "links": [
+                {
+                  "url": "https://x.com/krzyzanowskim",
+                  "name": "@krzyzanowskim"
+                }
+              ]
+            }
+          ],
+          "place": "Hall",
+          "description": "After a year of developing an editor component with the TextKit 2 framework, I gained knowledge of best practices and techniques. I am thrilled to share my experience and insights."
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "time": "2024-03-23T10:25:00+09:00",
+      "sessions": [
+        {
+          "id": 31,
+          "title": "Drive Through File Provider",
+          "speaker": "Audrey Zebaze",
+          "speakers": [
+            {
+              "name": "Audrey Zebaze",
+              "image_name": "Audrey",
+              "bio": "Audrey discovered iOS when she first bought an iPhone Edge in 2008. Since then, she is working passionately on Apple platforms, enjoying SwiftUI and even CoreData while building the macOS Proton Drive app. When she is not coding, watching/playing basketball and football are her favorite activities.\nAs a huge movie addict, Audrey is avoiding trailers as much as possible.",
+              "links": [
+                {
+                  "url": "https://twitter.com/Mvpohhhdrey",
+                  "name": "@Mvpohhhdrey"
+                }
+              ]
+            }
+          ],
+          "place": "Hall",
+          "description": "As most people tend to use cloud sync services to store relevant content, we will explore File Provider framework on both iOS and macOS and all the related features: Finder and Files app integration, remote synchronisation with upload and downloads.  So let’s explore how it works on both iOS and macOS and how you can sync, upload and download files on these platforms."
+        },
+        {
+          "id": 32,
+          "title": "Office hour with Marcin",
+          "speakers": [
+            {
+              "name": "Marcin Krzyżanowski",
+              "image_name": "Marcin Kryzyzanowski"
+            }
+          ],
+          "place": "Ask the Speaker",
+          "summary": "Meet Marcin and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "time": "2024-03-23T10:50:00+09:00",
+      "sessions": [
+        {
+          "id": 33,
+          "title": "Enhancing Applications with the Accessibility API",
+          "speaker": "Kishikawa Katsumi",
+          "speakers": [
+            {
+              "name": "Kishikawa katsumi",
+              "image_name": "kishikawa katsumi",
+              "bio": "Katsumi has been developing software for the Apple platform for over 10 years and currently works for a company that develops low-code platforms. He works on automating all kinds of tasks. In his spare time, he builds and maintains various open source projects that improve developer productivity.",
+              "links": [
+                {
+                  "url": "https://x.com/k_katsumi",
+                  "name": "@k_katsumi"
+                }
+              ]
+            }
+          ],
+          "place": "Hall",
+          "description": "Using the Accessibility API in macOS allows you to access and manipulate UI elements of other applications and retrieve the content displayed. This presentation will introduce methods to add assistant features such as autocomplete and translation to existing applications by utilizing this functionality. We will discuss the application of the Accessibility API to enhance applications, including practical examples."
+        },
+        {
+          "id": 34,
+          "title": "Office hour with Audrey",
+          "speakers": [
+            {
+              "name": "Audrey Zebaze",
+              "image_name": "Audrey"
+            }
+          ],
+          "place": "Ask the Speaker",
+          "summary": "Meet Audrey and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "time": "2024-03-23T11:05:00+09:00",
+      "sessions": [
+        {
+          "id": 35,
+          "title": "Break",
+          "summary": "Take a break and meet other attendees or sponsors"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "time": "2024-03-23T11:45:00+09:00",
+      "sessions": [
+        {
+          "id": 36,
+          "title": "Learning Swift's Type Inference",
+          "speaker": "omochimetaru",
+          "speakers": [
+            {
+              "name": "omochimetaru",
+              "image_name": "omochimetaru",
+              "bio": "He has been passionate about programming since his childhood and has experience in various programming languages. Ever since discovering Swift, he has been extremely enthusiastic about it.He particularly enjoys writing code that utilizes type systems.\nAs he believes Swift has applications beyond just iOS apps, he also uses Swift on the server side for his regular work. He considers the major appeal of server-side work to be the ability to utilize the latest language features without having to wait for end-users to upgrade their devices.\nHe is deeply interested in Swift as a language and has read almost all of the Swift Evolution proposals from the draft stage. He is also interested in compiler code, and regularly monitors the pull requests to the repository. For his past contributions, he has been recognized as a committer.\nHe runs a study group about the Swift compiler and presents about various topics. Additionally, he's managing a Discord server for discussions about Swift.",
+              "links": [
+                {
+                  "url": "https://x.com/omochimetaru",
+                  "name": "@omochimetaru"
+                }
+              ]
+            }
+          ],
+          "place": "Hall",
+          "description": "Swift boasts a powerful language feature known as type inference, which is crucial for balancing a safe type system with ease of coding. \nUnderstanding how this essential feature is implemented can aid in writing better code. \n\nIn this talk, I will explain the workings of Swift's type inference, including the fundamental algorithm that allows bidirectional propagation of type information for code, and how it's extended to accommodate language features like overloading. \nThis will help understand why compiling code can become overly burdensome and result in errors. \nI will also cover interesting related topics such as overload priority, simultaneous inference in multiple statements, and the challenges of protocol compliance determination.\n\nAdditionally, methods for directly observing the behavior of type inference using compiler options will be introduced, paving the way for further deepening your understanding."
+        },
+        {
+          "id": 37,
+          "title": "Office hour with Katsumi",
+          "speakers": [
+            {
+              "name": "Kishikawa Katsumi",
+              "image_name": "kishikawa katsumi"
+            }
+          ],
+          "place": "Ask the Speaker",
+          "summary": "Meet Katsumi and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "time": "2024-03-23T12:10:00+09:00",
+      "sessions": [
+        {
+          "id": 38,
+          "title": "Creating Retro-Style Photos Using Swift",
+          "speakers": [
+            {
+              "name": "Yunosuke Sakai",
+              "image_name": "Yunosuke Sakai",
+              "bio": "I love beautiful movies, novels, photography and mobile apps!",
+              "links": [
+                {
+                  "url": "https://twitter.com/_ski_u",
+                  "name": "@_ski_u"
+                }
+              ]
+            }
+          ],
+          "description": "With iPhones continually advancing their camera capabilities, one can capture satisfying photos without the need for a dedicated digital camera. Yet, there exists a niche of individuals who intentionally purchase older digital or film cameras. They are drawn to the unique aesthetic of photos and videos produced by these cameras.\nIn this talk, we'll explore how to achieve such retro-style photos using Swift. While Core Image's documentation offers articles like \"Simulating Scratchy Analog Film,\" implementing these techniques directly into a camera app may not yield the desired retro effect. Therefore, we'll start by reexamining the question, \"What defines a retro-style photo?\" and aim to create the ideal retro aesthetic."
+        },
+        {
+          "id": 39,
+          "title": "Office hour with omochimetaru",
+          "speakers": [
+            {
+              "name": "omochimetaru",
+              "image_name": "omochimetaru"
+            }
+          ],
+          "place": "Ask the Speaker",
+          "summary": "Meet omochimetaru and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "time": "2024-03-23T12:25:00+09:00",
+      "sessions": [
+        {
+          "id": 40,
+          "title": "Automation for App Localization",
+          "speakers": [
+            {
+              "name": "Chris Vasselli",
+              "image_name": "Chris Vasselli",
+              "bio": "Chris is an independent iOS app developer based out of Nara, Japan (originally from USA). Before going indie in 2018, he was a software engineer at various tech companies for about 10 years, mostly in the security space.\nChris is best known for his two apps in the area of Japanese language learning, Nihongo and Nihongo Lessons. Nihongo is a Japanese dictionary and study tool that’s made for learning from the words you’re encountering in real life. Nihongo Lessons is a companion app for learning Japanese, based on the work of Adam Shapiro and his Japanese Level Up learning program.\nChris loves learning languages, and loves helping people to learn languages. He’s also an avid gamer, hiker, and dad to an amazing 7 year old.",
+              "links": [
+                {
+                  "url": "https://twitter.com/chrisvasselli",
+                  "name": "@chrisvasselli"
+                }
+              ]
+            }
+          ],
+          "description": "Localizing your app into other languages can unlock a huge amount of growth potential for your app. But as an indie developer, I don’t have time to spare and don’t have others I can rely on to do the work involved in maintaining a high quality localization. So, I rely heavily on automation to minimize the work associated with maintaining 8 different high-quality localizations in my app Nihongo.\n\nIn this talk, I’ll discuss what aspects of localization I entrust to professional translators, what I use machine translation for, and what I use crowdsourcing from social media for. I’ll discuss techniques for automating various aspects of the localization process, including (1) generating screenshots of strings for providing context to translators and validating their translations, (2) generating app store screenshots, including marketing copy in multiple languages, (3) generating meaningful release notes in multiple languages, and (4) verifying app layout and correctness in multiple languages."
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "time": "2024-03-23T12:50:00+09:00",
+      "sessions": [
+        {
+          "id": 41,
+          "title": "Lunch",
+          "summary": "Take a lunch box and meet other attendees or sponsors."
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "time": "2024-03-23T14:20:00+09:00",
+      "sessions": [
+        {
+          "id": 42,
+          "title": "Code Signing - Have Fun and Take Control",
+          "speakers": [
+            {
+              "name": "Josh Holtz",
+              "image_name": "Josh Holtz",
+              "bio": "Software superstar. Stuttering stud. Lead maintainer of fastlane tools.",
+              "links": [
+                {
+                  "url": "https://twitter.com/joshdholtz",
+                  "name": "@joshdholtz"
+                }
+              ]
+            }
+          ],
+          "description": "Swift is cool but... do you know what's cooler? Successfully code signing your Swift apps. Code signing issues can certainly be scary but they can be really fun to solve! This talk will teach you how to take a step back from scary code signing errors to calmly and quickly code sign your apps.",
+        },
+        {
+          "id": 43,
+          "title": "Office hour with Chris",
+          "speakers": [
+            {
+              "name": "Chris Vasselli",
+              "image_name": "Chris Vasselli"
+            }
+          ],
+          "place": "Ask the Speaker",
+          "summary": "Meet Chris and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "time": "2024-03-23T14:45:00+09:00",
+      "sessions": [
+        {
+          "id": 44,
+          "title": "The Fascinating World of Addition in Swift",
+          "speakers": [
+            {
+              "name": "Shogo Yoshida",
+              "image_name": "Shogo Yoshida",
+              "bio": "I like ramen.",
+              "links": [
+                {
+                  "url": "https://twitter.com/shzero5",
+                  "name": "@shzero5"
+                }
+              ]
+            }
+          ],
+          "description": "Have you ever pondered why '1 + 1 = 2' in Swift? Join me as I unveil the intriguing journey behind this seemingly simple arithmetic operation, delving into Swift's inner workings, including its source code, LLVM, and assembly language. This talk offers a deep dive into the concealed mechanics behind everyday code!"
+        },
+        {
+          "id": 45,
+          "title": "Office hour with Josh",
+          "speakers": [
+            {
+              "name": "Josh Holtz",
+              "image_name": "Josh Holtz"
+            }
+          ],
+          "place": "Ask the Speaker",
+          "summary": "Meet Josh and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "time": "2024-03-23T15:25:00+09:00",
+      "sessions": [
+        {
+          "id": 46,
+          "title": "Group Photo",
+          "summary": "Take a group photo with all attendees and speakers"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "time": "2024-03-23T15:40:00+09:00",
+      "sessions": [
+        {
+          "id": 47,
+          "title": "Break",
+          "summary": "Take a break and meet other attendees or sponsors"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "time": "2024-03-23T16:10:00+09:00",
+      "sessions": [
+        {
+          "id": 48,
+          "title": "Building a Smaller App Binary",
+          "speakers": [
+            {
+              "name": "Yuta Saito",
+              "image_name": "katei",
+              "bio": "Yuta is a software engineer at Goodnotes, an open-source developer, and a graduate CS student. He has been contributing to Swift / Ruby / LLVM for WebAssembly support.",
+              "links": [
+                {
+                  "url": "https://twitter.com/kateinoigakukun",
+                  "name": "@kateinoigakukun"
+                }
+              ]
+            }
+          ],
+          "description": "Binary size is one of the critical metrics to improve the app experience. There are a bunch of approaches to optimize program size and Swift provides some of them including Swift-specific one. This talk gives you an overview of well-known optimizations and how to write size-friendly Swift code."
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "time": "2024-03-23T16:35:00+09:00",
+      "sessions": [
+        {
+          "id": 49,
+          "title": "Big Little Wins for You or Your App",
+          "speakers": [
+            {
+              "name": "Zamzam Farzamipooya",
+              "image_name": "Zamzam",
+              "bio": "Zamzam is a tech lead with deep knowledge in AI and mobile technology, currently advancing her expertise at Veo Technologies in Copenhagen. A movie enthusiast post-work ",
+              "links": [
+                {
+                  "url": "https://twitter.com/zamzampooya",
+                  "name": "@zamzampooya"
+                }
+              ]
+            }
+          ],
+          "description": "This talk will take you through a handful of topics that either make a big or a small win for you or your application, mostly with the new iOS, SwiftUI and Xcode features. Want to give your app some extra sparkle? Let's chat about cool shortcuts, playful animations, and the new tricks from SwiftUI 5 like observation framework, enhanced phased animations, updates to scrollview and new gestures. Come join this session and take home some big and small wins with you."
+        },
+        {
+          "id": 50,
+          "title": "Office hour with Yuta",
+          "speakers": [
+            {
+              "name": "Yuta Saito",
+              "image_name": "katei"
+            }
+          ],
+          "place": "Ask the Speaker",
+          "summary": "Meet Yuta and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "time": "2024-03-23T17:00:00+09:00",
+      "sessions": [
+        {
+          "id": 50,
+          "title": "Closing"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "time": "2024-03-23T17:15:00+09:00",
+      "sessions": [
+        {
+          "id": 51,
+          "title": "Office hour with Zamzam",
+          "speakers": [
+            {
+              "name": "Zamzam Farzamipooya",
+              "image_name": "Zamzam"
+            }
+          ],
+          "place": "Ask the Speaker",
+          "summary": "Meet Zamzam Ghorbaninia and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "time": "2024-03-23T18:15:00+09:00",
+      "sessions": [
+        {
+          "id": 52,
+          "title": "Party"
+        }
+      ]
+    }
+  ]
+}

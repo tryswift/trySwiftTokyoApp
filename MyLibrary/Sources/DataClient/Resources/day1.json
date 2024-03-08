@@ -1,0 +1,515 @@
+{
+  "id": 1,
+  "title": "Day 1",
+  "date": "2024-03-22T09:00:00+09:00",
+  "schedules": [
+    {
+      "id": 1,
+      "time": "2024-03-22T09:00:00+09:00",
+      "sessions": [
+        {
+          "id": 1,
+          "title": "Registration",
+          "summary": "Download Eventbrite app and show QR code of your ticket at the reception. You will receive a name tag and a goodie bag."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "time": "2024-03-22T10:00:00+09:00",
+      "sessions": [
+        {
+          "id": 2,
+          "title": "Opening Remarks",
+          "summary": "Let's start!",
+          "place": "Hall"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "time": "2024-03-22T10:15:00+09:00",
+      "sessions": [
+        {
+          "id": 3,
+          "title": "Cultivating a Sense for Designing Great Applications",
+          "speakers": [
+            {
+              "id": 1,
+              "name": "usagimaru",
+              "image_name": "usagimaru",
+              "bio": "He was fascinated by the smooth and beautiful UI of Mac OS X and started working with Cocoa to create it by himself. After working as a commercial iOS developer, he now works as a software designer and architect, aiming to create beautiful software with smooth UI. He is also a member of \"macOS native\" community organizers.",
+              "links": [
+                {
+                  "url": "https://twitter.com/usagimaru_dev",
+                  "name": "@usagimaru"
+                }
+              ]
+            }
+          ],
+          "place": "Hall",
+          "description": "In software design, it is crucial to focus on seamlessly integrating the platform's system with the creator's unique concept. Aiming for a harmonious and well-designed UI is a shortcut to creating software that is user-friendly and easy to use. This talk will focus on UI design for applications on macOS and iOS, discussing how creators can assert their uniqueness, adapt to the platform, and balance respect for cultural considerations."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "time": "2024-03-22T10:40:00+09:00",
+      "sessions": [
+        {
+          "id": 4,
+          "title": "Transforming Language Learning with AI: A Deep Dive into Duolingo’s AI Tutor",
+          "speakers": [
+            {
+              "id": 2,
+              "name": "Xingyu Wang",
+              "image_name": "Xingyu Wang",
+              "bio": "Xiangyu works at Duolingo and belongs to Max Immersion team, which develops the GPT-based subscription feature called Roleplay. She develops new improvements and features for Roleplay, mostly on iOS.\nApart from being a full-stack software developer, She enjoys most of my time playing the piano and reading.\nShe loves learning languages. She speaks Chinese and English fluently and is learning French.",
+              "links": [
+                {
+                  "url": "https://twitter.com/rubyxw3",
+                  "name": "@rubyxy3"
+                }
+              ]
+            }
+          ],
+          "place": "Hall",
+          "description": "In this talk, we’ll explore Duolingo's efforts to build a virtual language tutor, using the latest AI technology. In 2023, Duolingo launched a new feature built on GPT-4 called Roleplay, to simulate the experience of realistic conversation practice in a foreign language. As an engineer behind the product, I'll discuss iOS-specific challenges, as well as common issues working with generative AI issues, such as latency optimization. The talk concludes with an interactive demo of the Roleplay feature, providing an inside look at how AI is transforming language learning."
+        },
+        {
+          "id": 5,
+          "title": "Office hour with usagimaru",
+          "speakers": [
+            {
+              "id": 1,
+              "name": "usagimaru",
+              "image_name": "usagimaru"
+            }
+          ],
+          "place": "Ask the Speaker",
+          "summary": "Meet usagimaru and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "time": "2024-03-22T11:05:00+09:00",
+      "sessions": [
+        {
+          "id": 6,
+          "title": "Parallel Socket Communication in Swift",
+          "speakers": [
+            {
+              "id": 3,
+              "name": "S_Shimotori",
+              "image_name": "SHIMOTORI Shigure",
+              "bio": "S_Shimotori is an iOS application engineer. After work, I prepare for conferences, and on my days off, I enjoy playing games and eating out.",
+              "links": [
+                {
+                  "url": "https://twitter.com/S_Shimotori_pub",
+                  "name": "@S_Shimotori_pub"
+                }
+              ]
+            }
+          ],
+          "description": "Have you ever built a socket communication app? The sense of accomplishment when you delve into layers that aren't typically touched in your everyday app development and actually utilize them in an app is truly exceptional. However, creating a socket communication app requires knowledge of POSIX sockets, and for complex communications, you need to implement parallel processing."
+        },
+        {
+          "id": 7,
+          "title": "Office hour with Xingyu",
+          "speakers": [
+            {
+              "id": 2,
+              "name": "Xingyu Wang",
+              "image_name": "Xingyu Wang"
+            }
+          ],
+          "place": "Ask the Speaker",
+          "summary": "Meet Xingyu and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "time": "2024-03-22T11:30:00+09:00",
+      "sessions": [
+        {
+          "id": 8,
+          "title": "Break",
+          "summary": "Take a break and meet other attendees or sponsors"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "time": "2024-03-22T12:00:00+09:00",
+      "sessions": [
+        {
+          "id": 9,
+          "title": "HelloSwift.EXE: Writing a Windows Application as a non-Windows Developer",
+          "speakers": [
+            {
+              "id": 4,
+              "name": "Saleem Abdulrasool",
+              "image_name": "Saleem Abdulrasool",
+              "bio": "Saleem is currently a Software Engineer at The Browser Company and a member of the Swift core team. He has worked at Google, Facebook, and Microsoft in the past. His interests lie in systems, and has worked on compilers and programming languages for over a decade, with some embedded systems thrown in. While currently focused on cross-platform Swift, primarily on Windows, he has ported Swift to Android and Windows amongst other environments.",
+              "links": [
+                {
+                  "url": "https://twitter.com/compnerd",
+                  "name": "@compnerd"
+                }
+              ]
+            }
+          ],
+          "description": "A brief overview of how to write modern UI applications on Windows taking advantage of recent technologies. This assumes that the developer is not familiar with Windows development. By drawing parallels between the macOS and Windows worlds, it aims to show how Windows UI application development can be familiar and easy with Swift."
+        },
+        {
+          "id": 10,
+          "title": "Office hour with S_Shimotori",
+          "speakers": [
+            {
+              "id": 3,
+              "name": "S_Shimotori",
+              "image_name": "SHIMOTORI Shigure"
+            }
+          ],
+          "place": "Ask the Speaker",
+          "summary": "Meet S_Shimotori and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "time": "2024-03-22T12:25:00+09:00",
+      "sessions": [
+        {
+          "id": 11,
+          "title": "Unlocking the Boundless Potential of SF Symbols, \"The Artistic World of SF Symbols\"",
+          "speakers": [
+            {
+              "id": 5,
+              "name": "Lil Ossa",
+              "image_name": "Lil Ossa",
+              "bio": "Osama is an iOS engineer at Classmethod in Japan, and He’s also a breakdancer who came in second place at the World Breakdancing Championship in Germany in 2007. In the world, He often go by the name ‘Lil Ossa’. He has a passion for both beer and dance, as well as creating iOS apps. He loves sharing his unique iOS development experiences at conferences, including Swiftable 2023 and iOSDC Japan 2022.",
+              "links": [
+                {
+                  "url": "https://twitter.com/littleossa",
+                  "name": "@littleossa"
+                }
+              ]
+            }
+          ],
+          "description": "SF Symbols 5 offers 5,000+ symbols, simplifying icon creation. But we often overlook many SF Symbols.\n\nJoin us on a journey fusing SwiftUI, SF Symbols, and Art. Unlock tips to use SF Symbols creatively. Discover the SF Symbols mastery even Apple didn't foresee. Explore unique symbols with us."
+        },
+        {
+          "id": 12,
+          "title": "Office hour with Saleem",
+          "speakers": [
+            {
+              "id": 4,
+              "name": "Saleem Abdulrasool",
+              "image_name": "Saleem Abdulrasool"
+            }
+          ],
+          "place": "Ask the Speaker",
+          "summary": "Meet Saleem and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "time": "2024-03-22T12:40:00+09:00",
+      "sessions": [
+        {
+          "id": 13,
+          "title": "Building Apps for visionOS with Swift",
+          "speakers": [
+            {
+              "id": 5,
+              "name": "Satoshi Hattori",
+              "image_name": "Satoshi Hattori",
+              "bio": "Satoshi is a software engineer living in Tokyo, Japan.\nHe works for CyberAgent in a photography studio that enables virtual production.\nHe is also working on \"the visionOS 30 Days Development Challenge\" and a virtual camera implementation, and uploading the results to GitHub.\nHe loves ARKit and has recently pursued visionOS development and looks forward to a society where Vision Pro is widely used.",
+              "links": [
+                {
+                  "url": "https://twitter.com/shmdevelop",
+                  "name": "@shmdevelop"
+                }
+              ]
+            }
+          ],
+          "description": "visionOS represents a new paradigm known as Spatial Computing, which is expected to significantly increase the number of experiences available on headset devices. This talk will introduce the basic concepts of visionOS and provide explanations on implementing sample apps using Swift. Given that many may not have developed for visionOS or have experience with SwiftUI or RealityKit, understanding every aspect is not necessary. By learning the basic architecture, you can start implementing spatial applications. The session will cover the process from project creation to operation, with spatial expressions explained through demos and videos. Let's create experiences in Spatial Computing together!"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "time": "2024-03-22T13:05:00+09:00",
+      "sessions": [
+        {
+          "id": 14,
+          "title": "Lunch",
+          "summary": "Take a lunch box and meet other attendees or sponsors."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "time": "2024-03-22T14:35:00+09:00",
+      "sessions": [
+        {
+          "id": 15,
+          "title": "Build your next website with Swift",
+          "speakers": [
+            {
+              "id": 6,
+              "name": "Paul Hudson",
+              "image_name": "Paul Hudson",
+              "bio": "Paul is the author of Hacking with Swift, Pro Swift, Swift Design Patterns, Testing Swift, Swift Coding Challenges, and more. Suffice it to say, he quite likes Swift. And coffee. (But mostly Swift.) (And coffee.)",
+              "links": [
+                {
+                  "url": "https://twitter.com/twostraws",
+                  "name": "@twostraws"
+                }
+              ]
+            }
+          ],
+          "description": "We all know Swift is great for buildings apps on iOS, macOS, and other Apple platforms, but it can do so much more. In this talk you'll learn how to leverage result builders to generate HTML, then how to use that as a foundation for building whole websites in Swift."
+        },
+        {
+          "id": 16,
+          "title": "Office hour with Satoshi",
+          "speakers": [
+            {
+              "id": 5,
+              "name": "Satoshi Hattori",
+              "image_name": "Satoshi Hattori"
+            }
+          ],
+          "place": "Ask the Speaker",
+          "summary": "Meet Satoshi and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "time": "2024-03-22T15:00:00+09:00",
+      "sessions": [
+        {
+          "id": 17,
+          "title": "Prioritizing Health: Developing a Personalized App",
+          "speakers": [
+            {
+              "id": 7,
+              "name": "Kazuhiro Kamakura",
+              "image_name": "Kazuhiro Kamakura",
+              "bio": "Kazuhiro Kamakura works at LY corporation. He loves not only programming but also making things in general. In his spare time, he remodels houses.",
+              "links": [
+                {
+                  "url": "https://twitter.com/yoyokkTT",
+                  "name": "@yoyokkTT"
+                }
+              ]
+            }
+          ],
+          "description": "After transitioning to remote work several years ago, I found myself spending most of my time at home. However, I wanted to ensure I maintained a healthy lifestyle by aiming for 10,000 steps per day. To easily track my daily steps without the need for an app store, I developed a personal app for myself.\n\nInitially, I experimented with an iOS app using Swift Charts. However, as updates to the operating system rolled out, I found that I rarely used the app. Instead, with the convenience of the Apple Watch widget, I seamlessly transitioned to tracking my steps directly from my wrist. I'll discuss the logical progression of how I continuously refined the app for personal use, adapting it to evolving OS features, and how it positively impacted my daily routine."
+        },
+        {
+          "id": 18,
+          "title": "Office hour with Paul",
+          "speakers": [
+            {
+              "id": 6,
+              "name": "Paul Hudson",
+              "image_name": "Paul Hudson"
+            }
+          ],
+          "place": "Ask the Speaker",
+          "summary": "Meet Paul and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "time": "2024-03-22T15:15:00+09:00",
+      "sessions": [
+        {
+          "id": 19,
+          "title": "Migrating Large Codebases Without Breaking The World",
+          "speakers": [
+            {
+              "id": 8,
+              "name": "Tim Condon",
+              "image_name": "Tim Condon",
+              "bio": "Tim is a Swift developer from Manchester, UK and part of the Vapor Core Team. He's part of the server-side Swift team at Kodeco and has written the unofficial-official book on Vapor with the founders of the framework. He founded Broken Hands a few years ago and delivers talks and workshops on Vapor and server-side Swift around the world. He also co-organises the ServerSide.swift conference - the world’s first and only conference focused on server-side Swift.",
+              "links": [
+                {
+                  "url": "https://hachyderm.io/@0xTim",
+                  "name": "@0xTim"
+                }
+              ]
+            }
+          ],
+          "description": "Vapor has undergone a large number of significant changes over the last few years. The bio of Swift Concurrency, Sendable and rewriting the internals to use new async foundations have all posed big problems as we've had to migrate and adapt without breaking anything, continuing to ship and keeping our API stable! In this talk we'll go through some war stories of these migrations and learn some practical steps that you can use in your codebase to make big changes without grinding to a halt or breaking everything. \nThis talk is applicable to all Swift developers, whether writing libraries, iOS applications or even server apps!"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "time": "2024-03-22T15:40:00+09:00",
+      "sessions": [
+        {
+          "id": 20,
+          "title": "Break",
+          "summary": "Take a break and meet other attendees or sponsors"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "time": "2024-03-22T16:10:00+09:00",
+      "sessions": [
+        {
+          "id": 21,
+          "title": "Macro testing",
+          "speakers": [
+            {
+              "id": 9,
+              "name": "Brandon Williams",
+              "image_name": "Brandon Williams",
+              "bio": "Brandon spent a long time doing mathematics, but now likes to teach programming with a nod towards math. He co-hosts a video series called Point-Free, which focuses on the Swift language and how to best make use of its type system and features.",
+              "links": [
+                {
+                  "url": "https://twitter.com/mbrandonw",
+                  "name": "@mbrandonw"
+                }
+              ]
+            },
+            {
+              "id": 10,
+              "name": "Stephen Celis",
+              "image_name": "Stephen Celis",
+              "bio": "Stephen entered tech by way of a liberal arts degree. He now works on Point-Free with Brandon Williams, where he tries to spread the word of testable, composable app development.",
+              "links": [
+                {
+                  "url": "https://github.com/stephencelis",
+                  "name": "@stephencelis"
+                }
+              ]
+            }
+          ],
+          "description": "Macros are little compiler plugins that allow us to extend the Swift language in ways that do not require going through Swift evolution, or waiting for a Swift core team member to implement the feature, or require us learning C++ so that we can try implementing the feature ourselves. It is an incredibly powerful new feature, but can also be incredibly complex to get right. Let's explore how to debug and test every aspect of macros, from the code they expand to, to the errors and warnings and fix-its they emit."
+        },
+        {
+          "id": 22,
+          "title": "Office hour with Tim",
+          "speakers": [
+            {
+              "id": 8,
+              "name": "Tim Condon",
+              "image_name": "Tim Condon"
+            }
+          ],
+          "place": "Ask the Speaker",
+          "summary": "Meet Tim and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "time": "2024-03-22T16:35:00+09:00",
+      "sessions": [
+        {
+          "id": 23,
+          "title": "The Future of C++ Interoperability: Insights from Porting a Game to Swift",
+          "speakers": [
+            {
+              "id": 9,
+              "name": "Akimu Hirai",
+              "image_name": "Akimu Hirai",
+              "bio": "Akimu is an iOS software developer at LY Corporation. He is working on the chat related features of LINE app. In his free time, he is a developer of simutrans OTRP, a Japanese fork of Simutrans, an open source transport simulator written in C++. He is a scholarship winner of WWDC18 from Japan.",
+              "links": [
+                {
+                  "url": "https://twitter.com/himeshi_tech",
+                  "name": "@himeshi_tech"
+                }
+              ]
+            }
+          ],
+          "description": "In this session, I'll share insights gained from a project to rewrite the game \"Simutrans\" in Swift, focusing on the practicality of C++ interoperability and the anticipated developments in the future. You'll learn how to leverage these insights to potentially challenge yourself with porting C++ projects to Swift."
+        },
+        {
+          "id": 24,
+          "title": "Office hour with Brandon and Stephen",
+          "speakers": [
+            {
+              "id": 9,
+              "name": "Brandon Williams",
+              "image_name": "Brandon Williams"
+            },
+            {
+              "id": 10,
+              "name": "Stephen Celis",
+              "image_name": "Stephen Celis"
+            }
+          ],
+          "place": "Ask the Speaker",
+          "summary": "Meet Brandon and Stephen and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "time": "2024-03-22T16:50:00+09:00",
+      "sessions": [
+        {
+          "id": 25,
+          "title": "What Can We Do Without AI in the Future?",
+          "speakers": [
+            {
+              "id": 11,
+              "name": "Emad Ghorbaninia",
+              "image_name": "Emad",
+              "bio": "Emad is a Mobile Lead and Solution Architect at Visma Acubiz in Denmark and he is always eager to learn new topics. When he’s not in front of a computer he is usually playing board games",
+              "links": [
+                {
+                  "url": "https://twitter.com/emadgnia",
+                  "name": "@emadgnia"
+                }
+              ]
+            }
+          ],
+          "description": "In a world increasingly dominated by Artificial Intelligence (AI), this presentation challenges the audience to consider an alternate future: one where AI is not the centrepiece of technological advancement. We delve into the implications of a future less reliant on AI, discussing the potential benefits and drawbacks. \n\nThe talk focuses on three key areas: human creativity and innovation, the preservation of traditional skills and knowledge, and the ethical considerations of a non-AI-centric world.\n\nFirstly, we explore how a reduced emphasis on AI could foster greater human creativity and innovation. Without AI's influence, there might be a resurgence in traditional problem-solving approaches and a renewed emphasis on human ingenuity.\n\nSecondly, the talk addresses the preservation of traditional skills and knowledge. In a world less dependent on AI, these skills might not only survive but thrive, leading to a more diverse technological landscape.\n\nFinally, we discuss the ethical implications of a world without pervasive AI. This includes considerations of privacy, employment, and societal structure, and how these might differ from a future where AI plays a central role."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "time": "2024-03-22T17:15:00+09:00",
+      "sessions": [
+        {
+          "id": 26,
+          "title": "Closing"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "time": "2024-03-22T17:30:00+09:00",
+      "sessions": [
+        {
+          "id": 27,
+          "title": "Office hour with Emad",
+          "speakers": [
+            {
+              "id": 11,
+              "name": "Emad Ghorbaninia",
+              "image_name": "Emad"
+            }
+          ],
+          "place": "Ask the Speaker",
+          "summary": "Meet Emad Ghorbaninia and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    }
+  ]
+}

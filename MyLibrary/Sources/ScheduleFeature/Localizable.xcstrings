@@ -1,0 +1,674 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "A brief overview of how to write modern UI applications on Windows taking advantage of recent technologies.  This assumes that the developer is not familiar with Windows development. By drawing parallels between the macOS and Windows worlds, it aims to show how Windows UI application development can be familiar and easy with Swift." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最近の技術を活用してWindowsでモダンなUIアプリケーションを書く方法の概要を紹介します。この文章は、開発者がWindows開発に慣れていないことを前提としています。macOSとWindowsの世界との類似点を描きながら、Swiftを使ってWindows UIアプリケーション開発が親しみやすく、簡単になることを示すことを目指しています。"
+          }
+        }
+      }
+    },
+    "After a year of developing an editor component with the TextKit 2 framework, I gained knowledge of best practices and techniques. I am thrilled to share my experience and insights." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TextKit 2フレームワークを使ってエディターコンポーネントを1年間開発した経験から、最適な方法やテクニックを学びました。その知識やノウハウを皆さんとシェアできることをとても楽しみにしています。"
+          }
+        }
+      }
+    },
+    "After transitioning to remote work several years ago, I found myself spending most of my time at home. However, I wanted to ensure I maintained a healthy lifestyle by aiming for 10,000 steps per day. To easily track my daily steps without the need for an app store, I developed a personal app for myself.\n\nInitially, I experimented with an iOS app using Swift Charts. However, as updates to the operating system rolled out, I found that I rarely used the app. Instead, with the convenience of the Apple Watch widget, I seamlessly transitioned to tracking my steps directly from my wrist. I'll discuss the logical progression of how I continuously refined the app for personal use, adapting it to evolving OS features, and how it positively impacted my daily routine." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在宅ワークが始まって早数年。\nほぼ家にいるが、健康のためにも1日1万歩の歩数を確保したい。\nそこで、ストアにもあげず、ただただ自分が今何歩歩いているかを気軽に知るために自分専用のアプリを開発して使っています。\nSwift Chartsを使ってみたiOSのアプリは結局開かなくなったり、\nWatchOSのWidgetで直接歩数を見れるようになったのでWatchのWidgetで見るようにしたりとOSのアップデートと共に自分のためだけに改善していった様子とアプリを使ってからの生活環境の変化を話します。"
+          }
+        }
+      }
+    },
+    "As most people tend to use cloud sync services to store relevant content, we will explore File Provider framework on both iOS and macOS and all the related features: Finder and Files app integration, remote synchronisation with upload and downloads.  So let’s explore how it works on both iOS and macOS and how you can sync, upload and download files on these platforms." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "多くの人が関連するコンテンツを保存するためにクラウド同期サービスを使用するようになった今、iOSとmacOSの両方でファイルプロバイダフレームワークと、Finderやファイルアプリ統合、リモート同期やアップロード、ダウンロードなどの関連機能を探索します。iOSとmacOSの両方でどのように機能し、これらのプラットフォームでファイルを同期、アップロード、ダウンロードするかを見ていきましょう。"
+          }
+        }
+      }
+    },
+    "Automation for App Localization" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリローカライゼーションの自動化"
+          }
+        }
+      }
+    },
+    "Big Little Wins for You or Your App" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "塵も積もればアプリとなる"
+          }
+        }
+      }
+    },
+    "Binary size is one of the critical metrics to improve the app experience. There are a bunch of approaches to optimize program size and Swift provides some of them including Swift-specific one. This talk gives you an overview of well-known optimizations and how to write size-friendly Swift code." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリの体験を向上させる上で、バイナリサイズは重要な指標の一つです。プログラムサイズを最適化するためのさまざまな方法があり、SwiftにはSwift特有の方法も含めていくつかの方法が提供されています。この講演では、よく知られた最適化の概要と、サイズに優しいSwiftコードの書き方について紹介します。"
+          }
+        }
+      }
+    },
+    "Break" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩"
+          }
+        }
+      }
+    },
+    "Build your next website with Swift" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swiftで次世代のウェブサイトを構築しよう"
+          }
+        }
+      }
+    },
+    "Building a Smaller App Binary" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小さなアプリバイナリを構築する"
+          }
+        }
+      }
+    },
+    "Building Apps for visionOS with Swift" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SwiftでvisionOSのアプリをつくろう"
+          }
+        }
+      }
+    },
+    "Closing" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "クロージング"
+          }
+        }
+      }
+    },
+    "Code Signing - Have Fun and Take Control" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コード署名を楽しく乗り切る方法"
+          }
+        }
+      }
+    },
+    "Creating Retro-Style Photos Using Swift" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "何が写真をレトロたらしめるのか、Swiftを用いたその実現方法"
+          }
+        }
+      }
+    },
+    "Cultivating a Sense for Designing Great Applications" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "良いアプリケーションをデザインするための感覚の持ち方"
+          }
+        }
+      }
+    },
+    "Day 1" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "１日目"
+          }
+        }
+      }
+    },
+    "Day 2" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "２日目"
+          }
+        }
+      }
+    },
+    "Day 3" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "３日目"
+          }
+        }
+      }
+    },
+    "Days" : {
+
+    },
+    "Download Eventbrite app and show QR code of your ticket at the reception. You will receive a name tag and a goodie bag." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eventbriteアプリをダウンロードして、受付でQRコードを見せてください。ネームプレートやカンファレンスバッグを受け取りましょう！"
+          }
+        }
+      }
+    },
+    "Drive Through File Provider" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "File Providerを通じたクラウド同期"
+          }
+        }
+      }
+    },
+    "Enhancing Applications with the Accessibility API" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accessibility APIを使ってアプリケーションを拡張する"
+          }
+        }
+      }
+    },
+    "Getting to Know TextKit" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TextKitの理解を深めよう"
+          }
+        }
+      }
+    },
+    "Go Shibuya First, NOT Garden" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "渋谷ガーデンではありません！渋谷ファーストに向かいましょう！"
+          }
+        }
+      }
+    },
+    "Guidance URL" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://twitter.com/tryswiftconf/status/1108474796788977664"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://twitter.com/tryswiftconf/status/1108474796788977664"
+          }
+        }
+      }
+    },
+    "Have you ever built a socket communication app? The sense of accomplishment when you delve into layers that aren't typically touched in your everyday app development and actually utilize them in an app is truly exceptional. However, creating a socket communication app requires knowledge of POSIX sockets, and for complex communications, you need to implement parallel processing.\n\nIn this talk, we'll implement socket communication and parallel processing in Swift. With Swift, which we're all familiar with, you can easily venture into unfamiliar territories, and there are several instances where you can leverage Swift's capabilities through implementing socket communication and parallel processing. Take this opportunity to enjoy learning socket communication and rediscover the charm of Swift!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "皆さんはソケット通信アプリを作ったことはありますか？普段のアプリ開発では触らないレイヤーを学びアプリとして実際に使った時の達成感は格別です。しかしソケット通信アプリにはPOSIXソケットの知識が必要で、複雑な通信を行うなら並列処理を前提とした実装も必要です。\n\n本トークではSwiftでソケット通信と並列処理を実装します。私たちが使い慣れているSwiftであれば慣れない分野にも気軽に挑戦できますし、ソケット通信や並列処理の実装でSwiftの機能を活かせる場面がいくつかあります。この機会にソケット通信を楽しく学びSwiftの魅力を再発見してください！"
+          }
+        }
+      }
+    },
+    "Have you ever pondered why '1 + 1 = 2' in Swift? Join me as I unveil the intriguing journey behind this seemingly simple arithmetic operation, delving into Swift's inner workings, including its source code, LLVM, and assembly language. This talk offers a deep dive into the concealed mechanics behind everyday code!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swiftでの「1 + 1 = 2」の計算方法について考えたことはありますか？私のトークでは、単純な足し算からSwiftの内部機能まで、SwiftのソースコードやLLVM、アセンブリ言語を含めた興味深い旅路を明らかにします。日常のコードの隠れたメカニクスに深く入り込んだ内容ですので、ぜひご参加ください！"
+          }
+        }
+      }
+    },
+    "HelloSwift.EXE: Writing a Windows Application as a non-Windows Developer" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HelloSwift.EXE: Windows開発者じゃなくてもWindowsアプリケーションを書いてみよう"
+          }
+        }
+      }
+    },
+    "In a world increasingly dominated by Artificial Intelligence (AI), this presentation challenges the audience to consider an alternate future: one where AI is not the centrepiece of technological advancement. We delve into the implications of a future less reliant on AI, discussing the potential benefits and drawbacks. \n\nThe talk focuses on three key areas: human creativity and innovation, the preservation of traditional skills and knowledge, and the ethical considerations of a non-AI-centric world.\n\nFirstly, we explore how a reduced emphasis on AI could foster greater human creativity and innovation. Without AI's influence, there might be a resurgence in traditional problem-solving approaches and a renewed emphasis on human ingenuity.\n\nSecondly, the talk addresses the preservation of traditional skills and knowledge. In a world less dependent on AI, these skills might not only survive but thrive, leading to a more diverse technological landscape.\n\nFinally, we discuss the ethical implications of a world without pervasive AI. This includes considerations of privacy, employment, and societal structure, and how these might differ from a future where AI plays a central role." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AIが支配する世界では、技術の未来をAI中心ではないものとして想像することは、一種の挑戦です。このプレゼンテーションでは、AIに頼らない未来がもたらすかもしれないメリットとデメリットを探ります。\n\n話は大きく三つの部分に分かれています。一つ目は、AIに頼らないことで人間の創造性やイノベーションがどう促進されるか。AIがなければ、昔ながらの問題解決法が復活し、人間のひらめきが再び重要視されるかもしれません。\n\n二つ目は、伝統的な技術や知識の保存について。AIに依存しない世界では、これらの技術がただ生き残るだけでなく、繁栄することで、技術の多様性が広がる可能性があります。\n\n最後に、あらゆる場所にAIがあるわけではない世界の倫理的な問題について考えます。プライバシー、雇用、社会構造に関する考え方が、AIが中心の未来とどう違うのかを見ていきます。"
+          }
+        }
+      }
+    },
+    "In software design, it is crucial to focus on seamlessly integrating the platform's system with the creator's unique concept. Aiming for a harmonious and well-designed UI is a shortcut to creating software that is user-friendly and easy to use. This talk will focus on UI design for applications on macOS and iOS, discussing how creators can assert their uniqueness, adapt to the platform, and balance respect for cultural considerations." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ソフトウェアのデザインでは、プラットフォームのシステムとクリエイター独自のコンセプトとが矛盾なく成り立つことに強く意識を向けなければなりません。調和の取れた良いUIを目指すことは、ユーザーにとって親しみやすく、使いやすいソフトウェアへの近道です。この講演では、macOSやiOSにおけるアプリケーションのUIデザインに焦点を当て、クリエイターがアプリケーションを設計する際の自らの独自性の主張方法、プラットフォームへの適合方法、および文化尊重との塩梅を考えます。"
+          }
+        }
+      }
+    },
+    "In this session, I'll share insights gained from a project to rewrite the game \"Simutrans\" in Swift, focusing on the practicality of C++ interoperability and the anticipated developments in the future. You'll learn how to leverage these insights to potentially challenge yourself with porting C++ projects to Swift." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本セッションでは、SimutransというゲームをSwiftで書き換えるプロジェクトを通じて得た知見をもとに、C++ interoperabilityの実用性と今後期待される発展についてお話しします。皆さんも、このトークで学べることを活かして、C++プロジェクトのSwift書き換えにチャレンジしてみませんか？"
+          }
+        }
+      }
+    },
+    "In this talk, we’ll explore Duolingo's efforts to build a virtual language tutor, using the latest AI technology. In 2023, Duolingo launched a new feature built on GPT-4 called Roleplay, to simulate the experience of realistic conversation practice in a foreign language. As an engineer behind the product, I'll discuss iOS-specific challenges, as well as common issues working with generative AI issues, such as latency optimization. The talk concludes with an interactive demo of the Roleplay feature, providing an inside look at how AI is transforming language learning." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この講演では、最新のAI技術を使用して仮想言語チューターを構築するためのDuolingoの取り組みを探ります。2023年にDuolingoは、GPT-4を基盤とした新機能「Roleplay」を発表しました。これは、外国語でのリアルな会話練習体験をシミュレートすることを目的としています。製品開発に携わるエンジニアとして、iOS固有の課題や、生成AIを扱う際の一般的な問題点、例えばレイテンシの最適化などについて話します。講演は、Roleplay機能のインタラクティブなデモで締めくくられ、AIが言語学習をどのように変革しているかの内側を垣間見ることができます。"
+          }
+        }
+      }
+    },
+    "Learning Swift's Type Inference" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swiftの型推論を学ぼう"
+          }
+        }
+      }
+    },
+    "Let's start!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "いよいよ始まりますよ！"
+          }
+        }
+      }
+    },
+    "Localizing your app into other languages can unlock a huge amount of growth potential for your app. But as an indie developer, I don’t have time to spare and don’t have others I can rely on to do the work involved in maintaining a high quality localization. So, I rely heavily on automation to minimize the work associated with maintaining 8 different high-quality localizations in my app Nihongo.\n\nIn this talk, I’ll discuss what aspects of localization I entrust to professional translators, what I use machine translation for, and what I use crowdsourcing from social media for. I’ll discuss techniques for automating various aspects of the localization process, including (1) generating screenshots of strings for providing context to translators and validating their translations, (2) generating app store screenshots, including marketing copy in multiple languages, (3) generating meaningful release notes in multiple languages, and (4) verifying app layout and correctness in multiple languages." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "他言語へのアプリローカライゼーションは、アプリの成長潜在力を大きく解放することができます。しかし、インディーデベロッパーとして、時間に余裕がなく、高品質なローカライゼーションを維持するための作業を他人に任せることもできません。そのため、私は自分のアプリ「Nihongo」で8種類の高品質ローカライゼーションを維持する作業を最小限に抑えるために、自動化に大きく依存しています。\n\nこのトークでは、ローカライゼーションのどの側面をプロの翻訳者に委ね、どの側面を機械翻訳に使用し、どの側面をソーシャルメディアからのクラウドソーシングに使用するかについて話します。翻訳者へのコンテキスト提供とその翻訳の検証のための文字列のスクリーンショット生成、複数言語のマーケティングコピーを含むアプリストアスクリーンショットの生成、複数言語での意味のあるリリースノートの生成、および複数言語でのアプリレイアウトと正確性の検証など、ローカライゼーションプロセスの様々な側面を自動化する技術について議論します。"
+          }
+        }
+      }
+    },
+    "Lunch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "昼食"
+          }
+        }
+      }
+    },
+    "Macro testing" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "マクロをテストする"
+          }
+        }
+      }
+    },
+    "Macros are little compiler plugins that allow us to extend the Swift language in ways that do not require going through Swift evolution, or waiting for a Swift core team member to implement the feature, or require us learning C++ so that we can try implementing the feature ourselves. It is an incredibly powerful new feature, but can also be incredibly complex to get right. Let's explore how to debug and test every aspect of macros, from the code they expand to, to the errors and warnings and fix-its they emit." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "マクロは、Swiftの進化を経ず、Swiftコアチームのメンバーが機能を実装するのを待たず、または自分で機能を実装するためにC++を学ぶ必要がないように、Swift言語を拡張することを可能にする小さなコンパイラプラグインです。これは非常に強力な新機能ですが、正しく行うには非常に複雑になることもあります。マクロが展開するコード、発生するエラーや警告、修正提案など、マクロのすべての側面をデバッグしてテストする方法を探りましょう。"
+          }
+        }
+      }
+    },
+    "Migrating Large Codebases Without Breaking The World" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "平和に大規模なコードベースを移行する方法"
+          }
+        }
+      }
+    },
+    "Opening Remarks" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オープニング"
+          }
+        }
+      }
+    },
+    "Parallel Socket Communication in Swift" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parallel Socket Communication in Swift"
+          }
+        }
+      }
+    },
+    "Prioritizing Health: Developing a Personalized App" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "健康第一！自分専用の個人アプリ開発"
+          }
+        }
+      }
+    },
+    "Registration" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "受付"
+          }
+        }
+      }
+    },
+    "Requirements" : {
+
+    },
+    "Schedule" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スケジュール"
+          }
+        }
+      }
+    },
+    "SF Symbols 5 offers 5,000+ symbols, simplifying icon creation. But we often overlook many SF Symbols.\n\nJoin us on a journey fusing SwiftUI, SF Symbols, and Art. Unlock tips to use SF Symbols creatively. Discover the SF Symbols mastery even Apple didn't foresee. Explore unique symbols with us." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SF Symbols 5には5,000以上のシンボルがあり、アイコン作成が簡単になりました。しかし、多くのSF Symbolsが見落とされています。\n\nSwiftUI、SF Symbols、そしてアートを融合させた旅にご参加ください。SF Symbolsを創造的に使うためのヒントをお伝えします。Appleも予想しなかったSF Symbolsの使い方を発見しましょう。一緒にユニークなシンボルを探索しましょう。"
+          }
+        }
+      }
+    },
+    "Swift boasts a powerful language feature known as type inference, which is crucial for balancing a safe type system with ease of coding. \nUnderstanding how this essential feature is implemented can aid in writing better code. \n\nIn this talk, I will explain the workings of Swift's type inference, including the fundamental algorithm that allows bidirectional propagation of type information for code, and how it's extended to accommodate language features like overloading. \nThis will help understand why compiling code can become overly burdensome and result in errors. \nI will also cover interesting related topics such as overload priority, simultaneous inference in multiple statements, and the challenges of protocol compliance determination.\n\nAdditionally, methods for directly observing the behavior of type inference using compiler options will be introduced, paving the way for further deepening your understanding." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swiftには型推論という素晴らしい言語機能があります。これは安全な型システムとコードの書きやすさを両立させるために重要です。\nそのような重要な機能がどのように実現されているのか理解することは、良いコードを書くことに役立つでしょう。\nそこでこの発表では、Swiftの型推論の動作について解説します。\n型推論の基本となる、コードに対して双方向から型情報の伝搬を可能にするアルゴリズムを説明し、さらにオーバーロードなどの言語機能に対応するための拡張方法に触れます。これにより、コードのコンパイルが重すぎてエラーが出てしまう理由がわかるでしょう。\nオーバーロード優先度、複数文の同時推論、プロトコル準拠判定の難しさなど、関連する興味深いトピックも紹介します。\nまた、コンパイラオプションを利用して、型推論の動作を直接観察する方法を紹介します。この先も更に理解を深めていくことができるようになるでしょう。"
+          }
+        }
+      }
+    },
+    "Swift is cool but... do you know what's cooler? Successfully code signing your Swift apps. Code signing issues can certainly be scary but they can be really fun to solve! This talk will teach you how to take a step back from scary code signing errors to calmly and quickly code sign your apps." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swiftはかっこいいですけど、もっとかっこいいのは何だと思いますか？それは、Swiftアプリをコード署名できることです。コード署名の問題って本当に頭が痛いものですが、解決する過程は意外と楽しいんですよ！この話では、コード署名のエラーに怖がらず、冷静にそして素早くアプリをコード署名する方法をお教えします。"
+          }
+        }
+      }
+    },
+    "Take a break and meet other attendees or sponsors" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休憩をとりながら他の参加者やスポンサーと交流しましょう。"
+          }
+        }
+      }
+    },
+    "Take a lunch box and meet other attendees or sponsors" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "お弁当を食べながら他の参加者やスポンサーと交流しましょう。"
+          }
+        }
+      }
+    },
+    "The Fascinating World of Addition in Swift" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "なぜSwiftで「1 + 1 = 2」になるのか"
+          }
+        }
+      }
+    },
+    "The Future of C++ Interoperability: Insights from Porting a Game to Swift" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ゲームのSwift移植から見えたC++ interoperabilityの展望"
+          }
+        }
+      }
+    },
+    "There are two kinds of Bellesalle in Shibuya. Learn how to get from Shibuya Station to \"Bellesalle Shibuya FIRST\". " : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "渋谷にはベルサールが２つあります。ベルサール渋谷ファーストへの行き方を確認しましょう。"
+          }
+        }
+      }
+    },
+    "This talk will take you through a handful of topics that either make a big or a small win for you or your application, mostly with the new iOS, SwiftUI and Xcode features. Want to give your app some extra sparkle? Let's chat about cool shortcuts, playful animations, and the new tricks from SwiftUI 5 like observation framework, enhanced phased animations, updates to scrollview and new gestures. Come join this session and take home some big and small wins with you." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この講演では、新しいiOS、SwiftUI、そしてXcodeの特徴を活用して、あなたやアプリにとっての成果や進歩を促す様々なテーマを紹介します。アプリをさらに魅力的にしたいですか？便利なショートカット、楽しいアニメーション、SwiftUI 5から導入された新機能、例えばObservationフレームワーク、進化した段階的アニメーション、スクロールビューの更新、新しいジェスチャーなどについて話し合います。このセッションに参加し、あなたのアプリ開発に役立つヒントや知識を得てください。"
+          }
+        }
+      }
+    },
+    "Transforming Language Learning with AI: A Deep Dive into Duolingo’s AI Tutor" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AIによる言語学習の変革：DuolingoのAIチューターを深掘る"
+          }
+        }
+      }
+    },
+    "Unlocking the Boundless Potential of SF Symbols, \"The Artistic World of SF Symbols\"" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SF Symbolsの芸術的世界：限りない可能性を解き放つ"
+          }
+        }
+      }
+    },
+    "Using the Accessibility API in macOS allows you to access and manipulate UI elements of other applications and retrieve the content displayed. This presentation will introduce methods to add assistant features such as autocomplete and translation to existing applications by utilizing this functionality. We will discuss the application of the Accessibility API to enhance applications, including practical examples." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOSのAccessibility APIを利用すると他のアプリケーションのUI要素にアクセスして操作したり表示されているコンテンツを取得できます。この機能を用いて既存のアプリケーションに自動補完や翻訳機能などのアシスタント機能を追加する方法を紹介します。Accessibility APIのアプリケーションを拡張するための応用について、実例を交えて説明します。"
+          }
+        }
+      }
+    },
+    "Vapor has undergone a large number of significant changes over the last few years. The introduction of Swift Concurrency, Sendable and rewriting the internals to use new async foundations have all posed big problems as we've had to migrate and adapt without breaking anything, continuing to ship and keeping our API stable! In this talk we'll go through some war stories of these migrations and learn some practical steps that you can use in your codebase to make big changes without grinding to a halt or breaking everything.\nThis talk is applicable to all Swift developers, whether writing libraries, iOS applications or even server apps!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaporはここ数年で大きな変化を遂げてきました。Swiftの並行処理やSendableの導入、内部の書き直しによる新しい非同期基盤の使用など、これらの変更はすべて、何も壊さずに移行し、適応し、引き続き安定したAPIを提供し続けるという大きな課題をもたらしました！このトークでは、そんな移行の際の戦いについてのエピソードを共有し、コードベースで大きな変更を行う際の実践的な手順を学びます。このトークは、Swiftの開発者であれば、ライブラリを書いたり、iOSアプリケーションを作成したり、サーバーアプリケーションを開発したりするすべての人に役立つ内容です！"
+          }
+        }
+      }
+    },
+    "visionOS represents a new paradigm known as Spatial Computing, which is expected to significantly increase the number of experiences available on headset devices. This talk will introduce the basic concepts of visionOS and provide explanations on implementing sample apps using Swift. Given that many may not have developed for visionOS or have experience with SwiftUI or RealityKit, understanding every aspect is not necessary. By learning the basic architecture, you can start implementing spatial applications. The session will cover the process from project creation to operation, with spatial expressions explained through demos and videos. Let's create experiences in Spatial Computing together!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "visionOSはSpatial Compuingという新たなパラダイムを示しています。\n今後ヘッドセット型端末での体験が数多く提供されてゆくでしょう。\n\nこのトークではvisionOSの基本的な概念の解説をし\nSwiftを使ったサンプルアプリ実装の説明をします。\n\nまだ現時点ではvisionOSでの開発をしたことがない方が多いでしょう。\nSwiftUI、RealityKitの実装経験がない方もまた多いと思います。\n\nすべてを理解する必要はなく、基本的な構成を学習すれば\nあなたも空間的なアプリを実装することができます。\n\nプロジェクト作成から動作までの流れを解説し\n空間的表現をデモと動画で説明します。\n\nSpatial Computingの体験を皆でつくっていきましょう！"
+          }
+        }
+      }
+    },
+    "We all know Swift is great for buildings apps on iOS, macOS, and other Apple platforms, but it can do so much more. In this talk you'll learn how to leverage result builders to generate HTML, then how to use that as a foundation for building whole websites in Swift." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SwiftはiOS、macOS、その他のAppleプラットフォームでアプリを構築するのに適していることで知られていますが、それだけではありません。この講演では、Result Builderを利用してHTMLを生成する方法と、それを基盤としてSwiftで完全なウェブサイトを構築する方法について学びます。"
+          }
+        }
+      }
+    },
+    "What Can We Do Without AI in the Future?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AIがない未来を考える"
+          }
+        }
+      }
+    },
+    "With iPhones continually advancing their camera capabilities, one can capture satisfying photos without the need for a dedicated digital camera. Yet, there exists a niche of individuals who intentionally purchase older digital or film cameras. They are drawn to the unique aesthetic of photos and videos produced by these cameras.\n\nIn this talk, we'll explore how to achieve such retro-style photos using Swift. While Core Image's documentation offers articles like \"Simulating Scratchy Analog Film,\" implementing these techniques directly into a camera app may not yield the desired retro effect. Therefore, we'll start by reexamining the question, \"What defines a retro-style photo?\" and aim to create the ideal retro aesthetic." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPhoneのカメラは進化を続けており、本格的なデジタルカメラを持たなくても満足できる程の写真を撮ることができる。そんな中あえて古めのデジカメやフィルムカメラを購入している層がある。彼らはそうしたカメラで撮れる写真や動画の味わいに惹かれているのである。\nSwiftでそのような写真を生み出すにはどうしたら良いのだろうか。Core Imageのドキュメントに\"Simulating Scratchy Analog Film\"という記事はあるが、その通りに実装したカメラアプリでは思うような「レトロ」が作れない。そもそも「レトロな写真とは何なのか」という問いから再考し、理想の「レトロ」を作ろうと思う。"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
