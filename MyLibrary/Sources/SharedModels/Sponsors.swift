@@ -5,23 +5,51 @@ public enum Plan: String, Codable, Sendable, CaseIterable {
   case gold
   case silver
   case bronze
-  case diversityAndInclusion
+  case diversityAndInclusion = "Diversity and Inclusion"
   case student
   case community
   case individual
 }
 
 public struct Sponsors: Codable, Equatable, Hashable, Sendable {
-  public var plans: [Plan: Sponsor]
+  public var id: UUID { .init() }
+  let platinum: [Sponsor]
+  let gold: [Sponsor]
+  let silver: [Sponsor]
+  let bronze: [Sponsor]
+  let diversity: [Sponsor]
+  let student: [Sponsor]
+  let community: [Sponsor]
+  let individual: [Sponsor]
 
-  public init(plans: [Plan : Sponsor]) {
-    self.plans = plans
+  public var allPlans: [Plan: [Sponsor]] {
+    return [
+      .platinum: platinum,
+      .gold: gold,
+      .silver: silver,
+      .bronze: bronze,
+      .diversityAndInclusion: diversity,
+      .student: student,
+      .community: community,
+      .individual: individual
+    ]
+  }
+
+  init(platinum: [Sponsor], gold: [Sponsor], silver: [Sponsor], bronze: [Sponsor], diversity: [Sponsor], student: [Sponsor], community: [Sponsor], individual: [Sponsor]) {
+    self.platinum = platinum
+    self.gold = gold
+    self.silver = silver
+    self.bronze = bronze
+    self.diversity = diversity
+    self.student = student
+    self.community = community
+    self.individual = individual
   }
 }
 
 public struct Sponsor: Codable, Equatable, Hashable, Identifiable, Sendable {
   public var id: Int
-  public var name: String
+  public var name: String?
   public var imageName: String
   public var link: URL?
 
