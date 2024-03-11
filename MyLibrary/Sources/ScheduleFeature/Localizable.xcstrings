@@ -426,6 +426,40 @@
         }
       }
     },
+    "Office hour" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Office hour with %1$@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Q&A"
+          }
+        }
+      }
+    },
+    "Office hour description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meet %1$@ and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@に会って、トークについて質問しましょう。これは、さらに洞察を得て、トピックについてより深く学ぶ絶好の機会です。"
+          }
+        }
+      }
+    },
     "Opening Remarks" : {
       "extractionState" : "manual",
       "localizations" : {

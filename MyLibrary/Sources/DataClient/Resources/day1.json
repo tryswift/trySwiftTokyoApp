@@ -78,7 +78,7 @@
         },
         {
           "id": 5,
-          "title": "Office hour with usagimaru",
+          "title": "Office hour",
           "speakers": [
             {
               "id": 1,
@@ -116,7 +116,7 @@
         },
         {
           "id": 7,
-          "title": "Office hour with Xingyu",
+          "title": "Office hour",
           "speakers": [
             {
               "id": 2,
@@ -165,7 +165,7 @@
         },
         {
           "id": 10,
-          "title": "Office hour with S_Shimotori",
+          "title": "Office hour",
           "speakers": [
             {
               "id": 3,
@@ -203,7 +203,7 @@
         },
         {
           "id": 12,
-          "title": "Office hour with Saleem",
+          "title": "Office hour",
           "speakers": [
             {
               "id": 4,
@@ -277,7 +277,7 @@
         },
         {
           "id": 16,
-          "title": "Office hour with Satoshi",
+          "title": "Office hour",
           "speakers": [
             {
               "id": 5,
@@ -315,7 +315,7 @@
         },
         {
           "id": 18,
-          "title": "Office hour with Paul",
+          "title": "Office hour",
           "speakers": [
             {
               "id": 6,
@@ -401,7 +401,7 @@
         },
         {
           "id": 22,
-          "title": "Office hour with Tim",
+          "title": "Office hour",
           "speakers": [
             {
               "id": 8,
@@ -439,7 +439,7 @@
         },
         {
           "id": 24,
-          "title": "Office hour with Brandon and Stephen",
+          "title": "Office hour and Stephen",
           "speakers": [
             {
               "id": 9,
@@ -498,7 +498,7 @@
       "sessions": [
         {
           "id": 27,
-          "title": "Office hour with Emad",
+          "title": "Office hour",
           "speakers": [
             {
               "id": 11,

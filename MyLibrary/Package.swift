@@ -19,7 +19,6 @@ let package = Package(
       name: "AppFeature",
       dependencies: [
         "ScheduleFeature",
-        "SpeakerFeature",
         "SponsorFeature"
       ]
     ),
@@ -34,24 +33,25 @@ let package = Package(
       ]
     ),
     .target(
+      name: "Safari",
+      dependencies: [
+        .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+      ]
+    ),
+    .target(
       name: "ScheduleFeature",
       dependencies: [
         "DataClient",
+        "Safari",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
       ]
     ),
     .target(name: "SharedModels"),
     .target(
-      name: "SpeakerFeature",
-      dependencies: [
-        "DataClient",
-        .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
-      ]
-    ),
-    .target(
       name: "SponsorFeature",
       dependencies: [
         "DataClient",
+        "Safari",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
       ]
     ),

@@ -1,6 +1,5 @@
 import AppFeature
 import SwiftUI
-import SwiftData
 
 @main
 struct ConfenrenceApp: App {

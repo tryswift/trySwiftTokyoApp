@@ -1,7 +1,6 @@
 import ComposableArchitecture
 import Foundation
 import ScheduleFeature
-import SpeakerFeature
 import SponsorFeature
 import SwiftUI
 
@@ -9,19 +8,15 @@ import SwiftUI
 public struct AppReducer {
   @ObservableState
   public struct State: Equatable {
-
-
     var schedule = Schedule.State()
-    var speaker = Speaker.State()
-    var sponsor = Sponsor.State()
+    var sponsors = SponsorsList.State()
 
     public init() {}
   }
 
   public enum Action {
     case schedule(Schedule.Action)
-    case speaker(Speaker.Action)
-    case sponsor(Sponsor.Action)
+    case sponsors(SponsorsList.Action)
   }
 
   public init() {}
@@ -30,11 +25,8 @@ public struct AppReducer {
     Scope(state: \.schedule, action: \.schedule) {
       Schedule()
     }
-    Scope(state: \.speaker, action: \.speaker) {
-      Speaker()
-    }
-    Scope(state: \.sponsor, action: \.sponsor) {
-      Sponsor()
+    Scope(state: \.sponsors, action: \.sponsors) {
+      SponsorsList()
     }
   }
 }
@@ -52,11 +44,7 @@ public struct AppView: View {
         .tabItem {
           Label(String(localized: "Schedule", bundle: .module), systemImage: "calendar")
         }
-      SpeakerView(store: store.scope(state: \.speaker, action: \.speaker))
-        .tabItem {
-          Label(String(localized: "Speakers", bundle: .module), systemImage: "person.wave.2")
-        }
-      SponsorView(store: store.scope(state: \.sponsor, action: \.sponsor))
+      SponsorsListView(store: store.scope(state: \.sponsors, action: \.sponsors))
         .tabItem {
           Label(String(localized: "Sponsors", bundle: .module), systemImage: "building.2")
         }

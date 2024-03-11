@@ -1,6 +1,7 @@
 import ComposableArchitecture
 import DataClient
 import Foundation
+import Safari
 import SwiftUI
 import SharedModels
 import TipKit
@@ -25,6 +26,7 @@ public struct Schedule {
     var day1: Conference?
     var day2: Conference?
     var workshop: Conference?
+    @Presents var destination: Destination.State?
 
     public init() {
       try! Tips.configure([.displayFrequency(.immediate)])
@@ -34,6 +36,7 @@ public struct Schedule {
   public enum Action: BindableAction, ViewAction {
     case binding(BindingAction<State>)
     case path(StackAction<Path.State, Path.Action>)
+    case destination(PresentationAction<Destination.Action>)
     case view(View)
 
     public enum View {
@@ -41,6 +44,16 @@ public struct Schedule {
       case disclosureTapped(Session)
       case mapItemTapped
     }
+  }
+
+  @Reducer(state: .equatable)
+  public enum Path {
+    case detail(ScheduleDetail)
+  }
+
+  @Reducer(state: .equatable)
+  public enum Destination {
+    case guidance(Safari)
   }
 
   @Dependency(DataClient.self) var dataClient
@@ -70,35 +83,15 @@ public struct Schedule {
           )
           return .none
         case .view(.mapItemTapped):
-          return .run { _ in
-            let url = String(localized: "Guidance URL", bundle: .module)
-            await openURL(URL(string: url)!)
-          }
-        case .binding, .path:
+          let url = URL(string: String(localized: "Guidance URL", bundle: .module))!
+          state.destination = .guidance(.init(url: url))
+          return .none
+        case .binding, .path, .destination:
           return .none
       }
     }
-    .forEach(\.path, action: \.path) {
-      Path()
-    }
-  }
-
-  @Reducer
-  public struct Path {
-    @ObservableState
-    public enum State: Equatable {
-      case detail(ScheduleDetail.State)
-    }
-
-    public enum Action {
-      case detail(ScheduleDetail.Action)
-    }
-
-    public var body: some ReducerOf<Path> {
-      Scope(state: \.detail, action: \.detail) {
-        ScheduleDetail()
-      }
-    }
+    .forEach(\.path, action: \.path)
+    .ifLet(\.$destination, action: \.destination)
   }
 }
 
@@ -122,6 +115,9 @@ public struct ScheduleView: View {
             ScheduleDetailView(store: store)
           }
       }
+    }
+    .sheet(item: $store.scope(state: \.destination?.guidance, action: \.destination.guidance)) { sheetStore in
+      SafariViewRepresentation(url: sheetStore.url)
     }
   }
 
@@ -184,12 +180,12 @@ public struct ScheduleView: View {
             .font(.subheadline.bold())
           ForEach(schedule.sessions, id: \.self) { session in
             if session.description != nil {
-              Button(action: {
+              Button {
                 send(.disclosureTapped(session))
-              }, label: {
+              } label: {
                 listRow(session: session)
                   .padding()
-              })
+              }
               .background(
                 Color(uiColor: .secondarySystemBackground)
                   .clipShape(RoundedRectangle(cornerRadius: 8))

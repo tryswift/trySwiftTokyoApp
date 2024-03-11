@@ -1,5 +1,6 @@
 import ComposableArchitecture
 import Foundation
+import Safari
 import SharedModels
 import SwiftUI
 
@@ -12,6 +13,7 @@ public struct ScheduleDetail {
     var description: String
     var requirements: [String]?
     var speakers: [Speaker]
+    @Presents var destination: Destination.State?
 
     public init(title: String, description: String, requirements: [String]? = nil, speakers: [Speaker]) {
       self.title = title
@@ -21,7 +23,9 @@ public struct ScheduleDetail {
     }
   }
 
-  public enum Action: ViewAction {
+  public enum Action: ViewAction, BindableAction {
+    case binding(BindingAction<State>)
+    case destination(PresentationAction<Destination.Action>)
     case view(View)
 
     public enum View {
@@ -29,24 +33,34 @@ public struct ScheduleDetail {
     }
   }
 
+  @Reducer(state: .equatable)
+  public enum Destination {
+    case safari(Safari)
+  }
+
   public init() {}
 
-  @Dependency(\.openURL) var openURL
-
   public var body: some ReducerOf<Self> {
+    BindingReducer()
     Reduce { state, action in
       switch action {
         case let .view(.snsTapped(url)):
-          return .run { _ in await openURL(url) }
+          state.destination = .safari(.init(url: url))
+          return .none
+        case .destination:
+          return .none
+        case .binding:
+          return .none
       }
     }
+    ifLet(\.$destination, action: \.destination)
   }
 }
 
 @ViewAction(for: ScheduleDetail.self)
 public struct ScheduleDetailView: View {
 
-  public var store: StoreOf<ScheduleDetail>
+  @Bindable public var store: StoreOf<ScheduleDetail>
 
   public init(store: StoreOf<ScheduleDetail>) {
     self.store = store
@@ -76,7 +90,12 @@ public struct ScheduleDetailView: View {
       }
       .padding(.horizontal)
       .padding(.bottom)
+      .frame(maxWidth: 700) // Readable content width for iPad
       speakers
+        .frame(maxWidth: 700) // Readable content width for iPad
+    }
+    .sheet(item: $store.scope(state: \.destination?.safari, action: \.destination.safari)) { sheetStore in
+      SafariViewRepresentation(url: sheetStore.url)
     }
   }
 
@@ -99,7 +118,7 @@ public struct ScheduleDetailView: View {
                 HStack {
                   ForEach(links, id: \.self) { link in
                     Button(link.name) {
-                      UIApplication.shared.open(link.url)
+                      send(.snsTapped(link.url))
                     }
                   }
                 }

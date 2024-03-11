@@ -77,7 +77,7 @@
         },
         {
           "id": 32,
-          "title": "Office hour with Marcin",
+          "title": "Office hour",
           "speakers": [
             {
               "name": "Marcin Krzyżanowski",
@@ -115,7 +115,7 @@
         },
         {
           "id": 34,
-          "title": "Office hour with Audrey",
+          "title": "Office hour",
           "speakers": [
             {
               "name": "Audrey Zebaze",
@@ -164,7 +164,7 @@
         },
         {
           "id": 37,
-          "title": "Office hour with Katsumi",
+          "title": "Office hour",
           "speakers": [
             {
               "name": "Kishikawa Katsumi",
@@ -200,7 +200,7 @@
         },
         {
           "id": 39,
-          "title": "Office hour with omochimetaru",
+          "title": "Office hour",
           "speakers": [
             {
               "name": "omochimetaru",
@@ -271,7 +271,7 @@
         },
         {
           "id": 43,
-          "title": "Office hour with Chris",
+          "title": "Office hour",
           "speakers": [
             {
               "name": "Chris Vasselli",
@@ -307,7 +307,7 @@
         },
         {
           "id": 45,
-          "title": "Office hour with Josh",
+          "title": "Office hour",
           "speakers": [
             {
               "name": "Josh Holtz",
@@ -389,7 +389,7 @@
         },
         {
           "id": 50,
-          "title": "Office hour with Yuta",
+          "title": "Office hour",
           "speakers": [
             {
               "name": "Yuta Saito",
@@ -417,7 +417,7 @@
       "sessions": [
         {
           "id": 51,
-          "title": "Office hour with Zamzam",
+          "title": "Office hour",
           "speakers": [
             {
               "name": "Zamzam Farzamipooya",

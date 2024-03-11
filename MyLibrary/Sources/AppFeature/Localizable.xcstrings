@@ -21,16 +21,6 @@
         }
       }
     },
-    "Speakers" : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "スピーカー"
-          }
-        }
-      }
-    },
     "Sponsors" : {
       "localizations" : {
         "ja" : {
