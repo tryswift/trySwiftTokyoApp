@@ -86,7 +86,7 @@ public struct ProfileView: View {
           .padding()
           .frame(maxWidth: 700)
       }
-      .navigationTitle(store.organizer.name)
+      .navigationTitle(Text(LocalizedStringKey(store.organizer.name), bundle: .module))
     }
     .sheet(item: $store.scope(state: \.destination?.safari, action: \.destination.safari)) { sheetStore in
       SafariViewRepresentation(url: sheetStore.url)
