@@ -59,16 +59,17 @@ public struct OrganizersView: View {
   public var body: some View {
     List {
       ForEach(store.organizers) { organizer in
-        Label {
-          Text(LocalizedStringKey(organizer.name), bundle: .module)
-        } icon: {
-          Image(organizer.imageName, bundle: .module)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .clipShape(Circle())
-        }
-        .onTapGesture {
+        Button {
           send(._organizerTapped(organizer))
+        } label: {
+          Label {
+            Text(LocalizedStringKey(organizer.name), bundle: .module)
+          } icon: {
+            Image(organizer.imageName, bundle: .module)
+              .resizable()
+              .aspectRatio(contentMode: .fit)
+              .clipShape(Circle())
+          }
         }
       }
     }
