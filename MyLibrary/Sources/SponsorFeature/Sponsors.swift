@@ -90,6 +90,7 @@ public struct SponsorsListView: View {
           Text(plan.rawValue.localizedCapitalized)
             .font(.title.bold())
             .padding(.top, 64)
+            .foregroundStyle(Color.black)
           LazyVGrid(
             columns: Array(repeating: plan.gridItem, count: plan.columnCount),
             spacing: 64
@@ -104,8 +105,10 @@ public struct SponsorsListView: View {
                 }
             }
           }
+          .background(Color.white)
         }
         .padding()
+        .background(Color.white)
       }
       .navigationTitle(Text("Sponsors", bundle: .module))
     } else {

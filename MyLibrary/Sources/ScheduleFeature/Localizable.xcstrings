@@ -443,7 +443,7 @@
         }
       }
     },
-    "Office hour description" : {
+    "Office hour description %@" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -455,7 +455,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%1$@に会って、トークについて質問しましょう。これは、さらに洞察を得て、トピックについてより深く学ぶ絶好の機会です。"
+            "value" : "%1$@さんに会って、トークについて質問しましょう。これは、さらに洞察を得て、トピックについてより深く学ぶ絶好の機会です。"
           }
         }
       }

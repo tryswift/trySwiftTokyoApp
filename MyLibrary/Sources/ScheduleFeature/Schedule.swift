@@ -238,12 +238,29 @@ public struct ScheduleView: View {
             .foregroundStyle(Color.init(uiColor: .label))
         }
         if let summary = session.summary {
-          Text(LocalizedStringKey(summary), bundle: .module)
-            .foregroundStyle(Color(uiColor: .secondaryLabel))
+          if session.title == "Office hour", let speakers = session.speakers {
+            let description = officeHourDescription(speakers: speakers)
+            Text(description)
+              .foregroundStyle(Color(uiColor: .secondaryLabel))
+          } else {
+            Text(LocalizedStringKey(summary), bundle: .module)
+              .foregroundStyle(Color(uiColor: .secondaryLabel))
+          }
         }
       }
       .frame(maxWidth: .infinity, alignment: .leading)
     }
+  }
+
+  func officeHourDescription(speakers: [Speaker]) -> String {
+    let givenNames = speakers.compactMap {
+      let name = $0.name
+      let components = try! PersonNameComponents(name).givenName
+      return components
+    }
+    let formatter = ListFormatter()
+    let names = formatter.string(from: givenNames)!
+    return String(localized: "Office hour description \(names)", bundle: .module)
   }
 }
 
