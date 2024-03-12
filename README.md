@@ -1,1 +1,39 @@
-# trySwiftTokyoApp
+# try! Swift Tokyo App
+
+This is the official app for try! Swift Tokyo 2024.
+
+## Features
+
+We've submitted the app to the App Store as MVP, and it's currently under review. Here's a list of features that are currently available and those that are planned for future releases:
+
+- [x] View the schedule
+- [x] View the sponsors
+- [ ] Check your favorite sessions
+- [ ] Receive notifications for upcoming sessions
+- [x] Localize the app in English and Japanese (partially done)
+- [ ] macOS support
+- [ ] watchOS support
+- [ ] tvOS support
+- [x] visionOS support (Designed for iPad)
+
+## Requirements
+
+- Xcode 15.3 and later (Swift 5.10 and later)
+
+## Installation
+
+Available on the App Store soon, or you can build the app yourself. See the [Getting Started](#getting-started) section for more information.
+
+## Getting Started
+
+1. Clone the repository
+2. Open `trySwiftTokyo.xcworkspace` in Xcode
+3. Build and run the app
+
+## Contributing
+
+We welcome contributions to the app! Please refer to the [Contributing Guidelines](CONTRIBUTING.md) for more information.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
