@@ -9,7 +9,7 @@ public struct DataClient {
   public var fetchDay2: @Sendable () throws -> Conference
   public var fetchWorkshop: @Sendable () throws -> Conference
   public var fetchSponsors: @Sendable () throws -> Sponsors
-  public var fetchSpeaker: @Sendable (_ name: String) throws -> Speaker?
+  public var fetchOrganizers: @Sendable () throws -> [Organizer]
 }
 
 extension DataClient: DependencyKey {
@@ -19,7 +19,7 @@ extension DataClient: DependencyKey {
       let data = loadDataFromBundle(fileName: "day1")
       let response = try jsonDecoder.decode(Conference.self, from: data)
       return response
-    }, 
+    },
     fetchDay2: {
       let data = loadDataFromBundle(fileName: "day2")
       let response = try jsonDecoder.decode(Conference.self, from: data)
@@ -35,11 +35,10 @@ extension DataClient: DependencyKey {
       let response = try jsonDecoder.decode(Sponsors.self, from: data)
       return response
     },
-    fetchSpeaker: { name in
-      let data = loadDataFromBundle(fileName: "speaker")
-      let response = try jsonDecoder.decode([Speaker].self, from: data)
-      let speaker = response.filter { $0.name == name }.first
-      return speaker
+    fetchOrganizers: {
+      let data = loadDataFromBundle(fileName: "organizers")
+      let response = try jsonDecoder.decode([Organizer].self, from: data)
+      return response
     }
   )
 

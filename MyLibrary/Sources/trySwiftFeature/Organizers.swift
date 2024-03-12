@@ -14,8 +14,14 @@ public struct Organizers {
   public enum Action: ViewAction {
     case view(View)
     case destination(PresentationAction<Destination.Action>)
+    case delegate(Delegate)
 
     public enum View {
+      case onAppear
+      case _organizerTapped(Organizer)
+    }
+
+    public enum Delegate {
       case organizerTapped(Organizer)
     }
   }
@@ -25,11 +31,18 @@ public struct Organizers {
     case profile(Profile)
   }
 
+  @Dependency(DataClient.self) var dataClient
+
   public var body: some ReducerOf<Organizers> {
     Reduce { state, action in
       switch action {
-        case let .view(.organizerTapped(organizer)):
-          state.destination = .profile(.init(organizer: organizer))
+        case .view(.onAppear):
+          let response = try! dataClient.fetchOrganizers()
+          state.organizers.append(contentsOf: response)
+          return .none
+        case let .view(._organizerTapped(organizer)):
+          return .send(.delegate(.organizerTapped(organizer)))
+        case .delegate:
           return .none
         case .destination:
           return .none
@@ -55,9 +68,12 @@ public struct OrganizersView: View {
             .clipShape(Circle())
         }
         .onTapGesture {
-          send(.organizerTapped(organizer))
+          send(._organizerTapped(organizer))
         }
       }
+    }
+    .onAppear {
+      send(.onAppear)
     }
     .navigationTitle(Text("Meet Organizers", bundle: .module))
   }

@@ -10,6 +10,10 @@ public struct Profile {
   public struct State: Equatable {
     var organizer: Organizer
     @Presents var destination: Destination.State?
+
+    public init(organizer: Organizer) {
+      self.organizer = organizer
+    }
   }
 
   public enum Action: ViewAction, BindableAction {
@@ -58,16 +62,12 @@ public struct ProfileView: View {
   public var body: some View {
     ScrollView {
       VStack(spacing: 16) {
-        HStack {
+        VStack {
           Image(store.organizer.imageName, bundle: .module)
             .resizable()
-            .aspectRatio(1.0, contentMode: .fit)
-            .frame(width: 60)
-            .clipShape(Circle())
+            .aspectRatio(1.0, contentMode: .fill)
+            .frame(maxWidth: 400)
           VStack {
-            Text(LocalizedStringKey(store.organizer.name), bundle: .module)
-              .font(.title3.bold())
-              .frame(maxWidth: .infinity, alignment: .leading)
             if let links = store.organizer.links {
               HStack {
                 ForEach(links, id: \.self) { link in
@@ -77,18 +77,16 @@ public struct ProfileView: View {
                 }
               }
               .frame(maxWidth: .infinity, alignment: .leading)
+              .padding()
             }
           }
         }
         Text(LocalizedStringKey(store.organizer.bio), bundle: .module)
           .frame(maxWidth: .infinity, alignment: .leading)
+          .padding()
+          .frame(maxWidth: 700)
       }
+      .navigationTitle(store.organizer.name)
     }
-    .padding()
-    .background(
-      Color(uiColor: .secondarySystemBackground)
-        .clipShape(RoundedRectangle(cornerRadius: 8))
-    )
-    .padding()
   }
 }

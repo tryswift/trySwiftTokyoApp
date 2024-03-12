@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Natasha Murashev",
+    "image_name": "Natasha",
+    "bio": "Natasha is an iOS developer by day and a robot by night. She organizes the try! Swift Conference around the world (including this one!). She's currently living the digital nomad life as her alter identity: @NatashaTheNomad.",
+    "links": [
+      {
+        "name": "@natashatherobot",
+        "url": "https://x.com/natashatherobot"
+      },
+      {
+        "name": "@NatashaTheNomad",
+        "url": "https://x.com/NatashaTheNomad"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Daiki Matsudate",
+    "image_name": "Daiki",
+    "bio": "Daiki has worked as an iOS Developer for over 10 years and met as a volunteer staff member at try! Swift Tokyo in 2017. Inspired by the international speakers and sponsors he met then, he attended his first international conference, WWDC 2017.\nIn his work, I work as a software engineer at a ministry, while also serving as a technical advisor at various startups and listed companies, and as a general incorporated association try! Swift Tokyo.\nWhen he is not working, he likes to take podcasts with friends, play RPG games, snowboard in the snowy mountains, and spend time with friends in the neighborhood.",
+    "links": [
+      {
+        "name": "@d_date",
+        "url": "https://x.com/d_date"
+      },
+      {
+        "name": "@d-date",
+        "url": "https://github.com/d-date"
+      }
+    ]
+  }
+]

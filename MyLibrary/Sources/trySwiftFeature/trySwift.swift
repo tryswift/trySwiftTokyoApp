@@ -32,6 +32,7 @@ public struct TrySwift {
   @Reducer(state: .equatable)
   public enum Path {
     case organizers(Organizers)
+    case profile(Profile)
     case acknowledgements(Acknowledgements)
   }
 
@@ -71,6 +72,9 @@ public struct TrySwift {
           let url = URL(string: String(localized: "Website URL", bundle: .module))!
           state.destination = .eventbrite(.init(url: url))
           return .none
+        case let .path(.element(_, .organizers(.delegate(.organizerTapped(organizer))))):
+          state.path.append(.profile(.init(organizer: organizer)))
+          return .none
         case .binding:
           return .none
         case .path:
@@ -102,6 +106,10 @@ public struct TrySwiftView: View {
           if let store = store.scope(state: \.organizers, action: \.organizers) {
             OrganizersView(store: store)
           }
+        case .profile:
+          if let store = store.scope(state: \.profile, action: \.profile) {
+            ProfileView(store: store)
+          }
         case .acknowledgements:
           if let store = store.scope(state: \.acknowledgements, action: \.acknowledgements) {
             AcknowledgementsView(store: store)
@@ -114,9 +122,14 @@ public struct TrySwiftView: View {
   @ViewBuilder var root: some View {
     List {
       Section {
-        Image("logo", bundle: .module)
-          .resizable()
-          .aspectRatio(contentMode: .fit)
+        HStack {
+          Spacer()
+          Image("logo", bundle: .module)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(maxWidth: 400, alignment: .center)
+          Spacer()
+        }
         Text("try! Swift Description", bundle: .module)
       }
       Section {
