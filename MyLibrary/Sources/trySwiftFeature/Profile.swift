@@ -46,14 +46,14 @@ public struct Profile {
           return .none
       }
     }
-    ifLet(\.$destination, action: \.destination)
+    .ifLet(\.$destination, action: \.destination)
   }
 }
 
 @ViewAction(for: Profile.self)
 public struct ProfileView: View {
 
-  public var store: StoreOf<Profile>
+  @Bindable public var store: StoreOf<Profile>
 
   public init(store: StoreOf<Profile>) {
     self.store = store
@@ -87,6 +87,10 @@ public struct ProfileView: View {
           .frame(maxWidth: 700)
       }
       .navigationTitle(store.organizer.name)
+    }
+    .sheet(item: $store.scope(state: \.destination?.safari, action: \.destination.safari)) { sheetStore in
+      SafariViewRepresentation(url: sheetStore.url)
+        .ignoresSafeArea()
     }
   }
 }
