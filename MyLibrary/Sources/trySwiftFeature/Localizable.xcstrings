@@ -175,6 +175,17 @@
         }
       }
     },
+    "Takuya Tominaga" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冨永 拓弥"
+          }
+        }
+      }
+    },
     "try! Swift" : {
       "localizations" : {
         "ja" : {
