@@ -426,7 +426,7 @@
         }
       }
     },
-    "Office hour" : {
+    "Office hour %@" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {

@@ -230,9 +230,16 @@ public struct ScheduleView: View {
         }
       }
       VStack(alignment: .leading) {
-        Text(LocalizedStringKey(session.title), bundle: .module)
-          .font(.title3)
-          .multilineTextAlignment(.leading)
+        if session.title == "Office hour", let speakers = session.speakers {
+          let title = officeHourTitle(speakers: speakers)
+          Text(title)
+            .font(.title3)
+            .multilineTextAlignment(.leading)
+        } else {
+          Text(LocalizedStringKey(session.title), bundle: .module)
+            .font(.title3)
+            .multilineTextAlignment(.leading)
+        }
         if let speakers = session.speakers {
           Text(ListFormatter.localizedString(byJoining: speakers.map(\.name)))
             .foregroundStyle(Color.init(uiColor: .label))
@@ -252,15 +259,24 @@ public struct ScheduleView: View {
     }
   }
 
+  func officeHourTitle(speakers: [Speaker]) -> String {
+    let names = givenNameList(speakers: speakers)
+    return String(localized: "Office hour \(names)", bundle: .module)
+  }
+
   func officeHourDescription(speakers: [Speaker]) -> String {
+    let names = givenNameList(speakers: speakers)
+    return String(localized: "Office hour description \(names)", bundle: .module)
+  }
+
+  private func givenNameList(speakers: [Speaker]) -> String {
     let givenNames = speakers.compactMap {
       let name = $0.name
       let components = try! PersonNameComponents(name).givenName
       return components
     }
     let formatter = ListFormatter()
-    let names = formatter.string(from: givenNames)!
-    return String(localized: "Office hour description \(names)", bundle: .module)
+    return formatter.string(from: givenNames)!
   }
 }
 
