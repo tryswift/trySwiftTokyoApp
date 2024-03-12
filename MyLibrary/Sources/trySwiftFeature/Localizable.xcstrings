@@ -106,6 +106,17 @@
         }
       }
     },
+    "Naoki is a 3rd year software engineer working in Tokyo who loves Swift.\nHe loves beer and often drinks it when he's not working." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swiftが好きな東京で働いている3年目のソフトウェアエンジニアです。\nビールが大好きで、仕事以外でもよく飲んでいます。"
+          }
+        }
+      }
+    },
     "Natasha is an iOS developer by day and a robot by night. She organizes the try! Swift Conference around the world (including this one!). She's currently living the digital nomad life as her alter identity: @NatashaTheNomad." : {
       "extractionState" : "manual",
       "localizations" : {

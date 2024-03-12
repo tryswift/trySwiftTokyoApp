@@ -118,6 +118,7 @@ public struct ScheduleView: View {
     }
     .sheet(item: $store.scope(state: \.destination?.guidance, action: \.destination.guidance)) { sheetStore in
       SafariViewRepresentation(url: sheetStore.url)
+        .ignoresSafeArea()
     }
   }
 

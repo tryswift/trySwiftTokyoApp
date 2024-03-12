@@ -62,5 +62,21 @@
         "url": "https://github.com/mnaruse"
       }
     ]
+  },
+  {
+    "id": 5,
+    "name": "Naoki Muramoto",
+    "image_name": "Naoki",
+    "bio": "Naoki is a 3rd year software engineer working in Tokyo who loves Swift.\nHe loves beer and often drinks it when he's not working.",
+    "links": [
+      {
+        "name": "@naoki_mrmt",
+        "url": "https://x.com/naoki_mrmt"
+      },
+      {
+        "name": "@naoki-mrmt",
+        "url": "https://github.com/naoki-mrmt"
+      }
+    ]
   }
 ]
