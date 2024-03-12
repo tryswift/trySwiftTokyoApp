@@ -505,7 +505,14 @@
       }
     },
     "Requirements" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "必要なもの"
+          }
+        }
+      }
     },
     "Schedule" : {
       "localizations" : {

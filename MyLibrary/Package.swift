@@ -13,13 +13,15 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.9.1"),
+    .package(url: "https://github.com/zunda-pixel/LicenseProvider", from: "1.1.1")
   ],
   targets: [
     .target(
       name: "AppFeature",
       dependencies: [
         "ScheduleFeature",
-        "SponsorFeature"
+        "SponsorFeature",
+        "trySwiftFeature"
       ]
     ),
     .target(
@@ -55,6 +57,16 @@ let package = Package(
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
       ]
     ),
-
+    .target(
+      name: "trySwiftFeature",
+      dependencies: [
+        "DataClient",
+        "Safari",
+        .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+      ],
+      plugins: [
+        .plugin(name: "LicenseProviderPlugin", package: "LicenseProvider")
+      ]
+    )
   ]
 )

@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "licenseprovider",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/zunda-pixel/LicenseProvider",
+      "state" : {
+        "revision" : "39cd5f269955fc961630f970c370f9182fe56911",
+        "version" : "1.1.1"
+      }
+    },
+    {
       "identity" : "swift-case-paths",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-case-paths",

@@ -1,0 +1,172 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Acknowledgements" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "謝辞"
+          }
+        }
+      }
+    },
+    "Code of Conduct" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "行動規範"
+          }
+        }
+      }
+    },
+    "Code of Conduct URL" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://tryswift.jp/code-of-conduct_en"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://tryswift.jp/code-of-conduct"
+          }
+        }
+      }
+    },
+    "Eventbrite" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eventbrite"
+          }
+        }
+      }
+    },
+    "Eventbrite URL" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://www.eventbrite.com/e/try-swift-tokyo-2024-tickets-712565200697"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://www.eventbrite.com/e/try-swift-tokyo-2024-tickets-712565200697"
+          }
+        }
+      }
+    },
+    "Meet Organizers" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主催者のご紹介"
+          }
+        }
+      }
+    },
+    "Organizers" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主催者"
+          }
+        }
+      }
+    },
+    "Privacy Policy" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プライバシーポリシー"
+          }
+        }
+      }
+    },
+    "Privacy Policy URL" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://tryswift.jp/privacy-policy_en"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://tryswift.jp/privacy-policy"
+          }
+        }
+      }
+    },
+    "try! Swift" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "try! Swift"
+          }
+        }
+      }
+    },
+    "try! Swift Description" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "try! Swift is an international community gathering about the latest advancements in Swift Development. The event is bout bringing together talent for all around the world to collaborate and share advanced knowledge and techniques to improve Swift craftsmanship."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "try! Swiftは、Swift開発における最新の進歩に関する国際的なコミュニティです。このイベントは、Swiftの技術向上のための高度な知識や技術を共有し、コラボレーションするために、世界中の才能を集めています。"
+          }
+        }
+      }
+    },
+    "try! Swift Website" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "try! Swift Tokyo Website"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "try! Swift Tokyo ウェブサイト"
+          }
+        }
+      }
+    },
+    "Website URL" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://tryswift.jp/_en"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://tryswift.jp"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -3,6 +3,7 @@ import Foundation
 import ScheduleFeature
 import SponsorFeature
 import SwiftUI
+import trySwiftFeature
 
 @Reducer
 public struct AppReducer {
@@ -10,6 +11,7 @@ public struct AppReducer {
   public struct State: Equatable {
     var schedule = Schedule.State()
     var sponsors = SponsorsList.State()
+    var trySwift = TrySwift.State()
 
     public init() {}
   }
@@ -17,6 +19,7 @@ public struct AppReducer {
   public enum Action {
     case schedule(Schedule.Action)
     case sponsors(SponsorsList.Action)
+    case trySwift(TrySwift.Action)
   }
 
   public init() {}
@@ -27,6 +30,9 @@ public struct AppReducer {
     }
     Scope(state: \.sponsors, action: \.sponsors) {
       SponsorsList()
+    }
+    Scope(state: \.trySwift, action: \.trySwift) {
+      TrySwift()
     }
   }
 }
@@ -48,7 +54,7 @@ public struct AppView: View {
         .tabItem {
           Label(String(localized: "Sponsors", bundle: .module), systemImage: "building.2")
         }
-      Text("About")
+      TrySwiftView(store: store.scope(state: \.trySwift, action: \.trySwift))
         .tabItem {
           Image(.rikoTokyo)
           Text("About", bundle: .module)
