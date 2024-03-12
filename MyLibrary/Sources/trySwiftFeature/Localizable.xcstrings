@@ -11,6 +11,17 @@
         }
       }
     },
+    "Akio Itaya" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "板谷 晃良"
+          }
+        }
+      }
+    },
     "Code of Conduct" : {
       "localizations" : {
         "ja" : {
@@ -70,6 +81,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "https://www.eventbrite.com/e/try-swift-tokyo-2024-tickets-712565200697"
+          }
+        }
+      }
+    },
+    "I am the CEO of AkkeyLab, Inc., where we run a programming school. My main role at AkkeyLab is to promote the benefits of Swift. Lately, I've been enjoying playing tennis and futsal with my colleagues from the company." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プログラミングスクールを運営する AkkeyLab株式会社 の CEO を務めており、Swift の魅力を伝える仕事をしています。最近はテニスやフットサルを会社の仲間と楽しんでいます。"
           }
         }
       }

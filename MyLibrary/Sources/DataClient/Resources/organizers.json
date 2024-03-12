@@ -94,5 +94,21 @@
         "url": "https://github.com/saku"
       }
     ]
+  },
+  {
+    "id": 8,
+    "name": "Akio Itaya",
+    "image_name": "akkey",
+    "bio": "I am the CEO of AkkeyLab, Inc., where we run a programming school. My main role at AkkeyLab is to promote the benefits of Swift. Lately, I've been enjoying playing tennis and futsal with my colleagues from the company.",
+    "links": [
+      {
+        "name": "@AkkeyLab",
+        "url": "https://x.com/AkkeyLab"
+      },
+      {
+        "name": "@AkkeyLab",
+        "url": "https://github.com/AkkeyLab"
+      }
+    ]
   }
 ]
