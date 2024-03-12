@@ -94,5 +94,21 @@
         "url": "https://github.com/saku"
       }
     ]
+  },
+  {
+    "id": 9,
+    "name": "Roku / Miki Yoshida",
+    "image_name": "Roku",
+    "bio": "Roku is an iOS Developer. She  joined try! Swift in 2019 as a volunteer staff member, and became an organizer in 2020.\nShe loves Swift community and occasionally organizes study sessions and development camps.\nShe is interested in beer, whiskey, and unique design clothes. In addition to creating apps, She also enjoy making accessories.\nHer lucky number is 6️⃣, which is called \"Roku\" in Japanese.",
+    "links": [
+      {
+        "name": "@66nylon_y",
+        "url": "https://twitter.com/66nylon_y"
+      },
+      {
+        "name": "@roku-yosh",
+        "url": "https://github.com/roku-yosh"
+      }
+    ]
   }
 ]
