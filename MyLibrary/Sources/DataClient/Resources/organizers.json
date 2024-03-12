@@ -46,5 +46,21 @@
         "url": "https://github.com/yutailang0119"
       }
     ]
+  },
+  {
+    "id": 4,
+    "name": "Miharu Naruse",
+    "image_name": "miharun",
+    "bio": "Miharu is an iOS Developer. After graduating from the faculty of agriculture at university, she somehow started developing iOS apps.\nHer hobby is watching old movies. This year, she wants to learn English and go on a trip abroad!",
+    "links": [
+      {
+        "name": "@miharun_dev",
+        "url": "https://twitter.com/miharun_dev"
+      },
+      {
+        "name": "@mnaruse",
+        "url": "https://github.com/mnaruse"
+      }
+    ]
   }
 ]
