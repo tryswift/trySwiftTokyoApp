@@ -62,5 +62,21 @@
         "url": "https://github.com/naoki-mrmt"
       }
     ]
+  },
+  {
+    "id": 6,
+    "name": "Yoichiro Sakurai",
+    "image_name": "saku",
+    "bio": "Yoichiro is an engineer who likes to solve interesting problems. I has been contributing to try! Swift Tokyo since 2017. I love gourmet food and drinks, especially Japanese sake!",
+    "links": [
+      {
+        "name": "@saku2saku",
+        "url": "https://x.com/saku2saku"
+      },
+      {
+        "name": "@saku",
+        "url": "https://github.com/saku"
+      }
+    ]
   }
 ]
