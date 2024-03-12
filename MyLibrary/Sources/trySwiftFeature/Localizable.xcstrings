@@ -74,6 +74,17 @@
         }
       }
     },
+    "I'm an iOS Developer working at ROLLCAKE Inc, and I have a passion for automation technologies such as test automation and CI." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ROLLCAKE株式会社で働くiOS Developer、テスト自動化やCIなどの自動化技術が好きです"
+          }
+        }
+      }
+    },
     "Meet Organizers" : {
       "localizations" : {
         "ja" : {
