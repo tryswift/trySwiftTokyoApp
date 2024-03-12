@@ -30,5 +30,21 @@
         "url": "https://github.com/d-date"
       }
     ]
+  },
+  {
+    "id": 3,
+    "name": "Yutaro Muta",
+    "image_name": "yutailang0119",
+    "bio": "Yutaro is a Software Engineer who loves Swift. He has been contributing to try! Swift Tokyo since 2017.\nCurrently, he lives in the Kansai region and works at Hatena Co., Ltd.\nHis favorite things are beer🍺 and sake🍶. Recently, he has been experimenting with the Apple Vision Pro.",
+    "links": [
+      {
+        "name": "@yutailang0119",
+        "url": "https://x.com/yutailang0119"
+      },
+      {
+        "name": "@yutailang0119",
+        "url": "https://github.com/yutailang0119"
+      }
+    ]
   }
 ]
