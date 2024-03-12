@@ -482,6 +482,28 @@
         }
       }
     },
+    "Peer Labs is your chance to get hands on with things you learned from try! Swift presentations, discuss any issues with the speakers, connect with your peers, work on open source projects, organize impromptu learning sessions and more! Peer labs do not have a strict structure, and are open-ended instead. It is what you and your peers make of it! We will ask everyone to introduce themselves in the beginning, and then it is up to you to ask questions and work together with others on projects that interest you." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "もくもく会は、あなたがtry.Swiftのプレゼンテーションで学んだことを実践するチャンスです！Swiftのプレゼンテーション、スピーカーとのディスカッション、仲間との交流、オープンソースプロジェクト、即席の学習セッションなどなど！もくもく会には厳密な構成はなく、色々なことができます。みなさんで作るものです！はじめに全員に自己紹介をしてもらい、その後、質問をしたり、興味のあるプロジェクトに一緒に取り組んだりするのはあなた次第です。"
+          }
+        }
+      }
+    },
+    "Please enjoy the meal and have a chat with other attendees." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "お弁当を楽しんだり、他の参加者とおしゃべりしましょう。"
+          }
+        }
+      }
+    },
     "Prioritizing Health: Developing a Personalized App" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -531,6 +553,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "SF Symbols 5には5,000以上のシンボルがあり、アイコン作成が簡単になりました。しかし、多くのSF Symbolsが見落とされています。\n\nSwiftUI、SF Symbols、そしてアートを融合させた旅にご参加ください。SF Symbolsを創造的に使うためのヒントをお伝えします。Appleも予想しなかったSF Symbolsの使い方を発見しましょう。一緒にユニークなシンボルを探索しましょう。"
+          }
+        }
+      }
+    },
+    "Sign in with Luma and show QR code of your ticket at the reception." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LumaにログインしてQRコードを掲示してください。"
           }
         }
       }
