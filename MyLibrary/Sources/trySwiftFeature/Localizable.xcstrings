@@ -200,6 +200,17 @@
         }
       }
     },
+    "Yoichiro is an engineer who likes to solve interesting problems. I has been contributing to try! Swift Tokyo since 2017. I love gourmet food and drinks, especially Japanese sake!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "問題解決が好きなエンジニア。2017年からtry! Swift Tokyoの開催に携わっています。美味しいご飯とお酒が好きで、特に日本酒が大好きです！"
+          }
+        }
+      }
+    },
     "Yutaro is a Software Engineer who loves Swift. He has been contributing to try! Swift Tokyo since 2017.\nCurrently, he lives in the Kansai region and works at Hatena Co., Ltd.\nHis favorite things are beer🍺 and sake🍶. Recently, he has been experimenting with the Apple Vision Pro." : {
       "extractionState" : "manual",
       "localizations" : {
