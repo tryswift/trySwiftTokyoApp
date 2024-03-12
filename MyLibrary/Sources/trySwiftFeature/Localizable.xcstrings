@@ -84,6 +84,28 @@
         }
       }
     },
+    "Miharu is an iOS Developer. After graduating from the faculty of agriculture at university, she somehow started developing iOS apps.\nHer hobby is watching old movies. This year, she wants to learn English and go on a trip abroad!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS Developerです。なぜか畑違いの農学部出身です。\n趣味は古い映画を観ることです。今年は英語を学んだり、海外旅行をしたいです。"
+          }
+        }
+      }
+    },
+    "Miharu Naruse" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "成瀬 未春"
+          }
+        }
+      }
+    },
     "Naoki is a 3rd year software engineer working in Tokyo who loves Swift.\nHe loves beer and often drinks it when he's not working." : {
       "extractionState" : "manual",
       "localizations" : {
