@@ -1,6 +1,6 @@
 import ComposableArchitecture
-import SwiftUI
 import SafariServices
+import SwiftUI
 
 @Reducer
 public struct Safari {

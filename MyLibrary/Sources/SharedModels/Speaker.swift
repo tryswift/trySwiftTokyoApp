@@ -1,12 +1,12 @@
 import Foundation
 
-public struct Speaker: Codable,Equatable, Hashable, Sendable {
+public struct Speaker: Codable, Equatable, Hashable, Sendable {
   public var name: String
   public var imageName: String
   public var bio: String?
   public var links: [Link]?
 
-  public struct Link: Codable,Equatable, Hashable, Sendable {
+  public struct Link: Codable, Equatable, Hashable, Sendable {
     public var name: String
     public var url: URL
 

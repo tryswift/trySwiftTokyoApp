@@ -7,7 +7,7 @@ public struct Organizer: Codable, Equatable, Hashable, Sendable, Identifiable {
   public var bio: String
   public var links: [Link]?
 
-  public struct Link: Codable,Equatable, Hashable, Sendable {
+  public struct Link: Codable, Equatable, Hashable, Sendable {
     public var name: String
     public var url: URL
 
@@ -25,4 +25,3 @@ public struct Organizer: Codable, Equatable, Hashable, Sendable, Identifiable {
     self.links = links
   }
 }
-

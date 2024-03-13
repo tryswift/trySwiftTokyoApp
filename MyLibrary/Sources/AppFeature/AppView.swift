@@ -64,7 +64,10 @@ public struct AppView: View {
 }
 
 #Preview {
-  AppView(store: .init(initialState: .init(), reducer: {
-    AppReducer()
-  }))
+  AppView(
+    store: .init(
+      initialState: .init(),
+      reducer: {
+        AppReducer()
+      }))
 }

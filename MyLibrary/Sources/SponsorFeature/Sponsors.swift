@@ -2,8 +2,8 @@ import ComposableArchitecture
 import DataClient
 import Foundation
 import Safari
-import SwiftUI
 import SharedModels
+import SwiftUI
 
 @Reducer
 public struct SponsorsList {
@@ -38,18 +38,18 @@ public struct SponsorsList {
     BindingReducer()
     Reduce { state, action in
       switch action {
-        case .view(.onAppear):
-          state.sponsors = try! dataClient.fetchSponsors()
-          return .none
+      case .view(.onAppear):
+        state.sponsors = try! dataClient.fetchSponsors()
+        return .none
 
-        case let .view(.sponsorTapped(sponsor)):
-          guard let url = sponsor.link else { return .none }
-          state.destination = .safari(.init(url: url))
-          return .none
-        case .binding:
-          return .none
-        case .destination:
-          return .none
+      case let .view(.sponsorTapped(sponsor)):
+        guard let url = sponsor.link else { return .none }
+        state.destination = .safari(.init(url: url))
+        return .none
+      case .binding:
+        return .none
+      case .destination:
+        return .none
       }
     }
     .ifLet(\.$destination, action: \.destination)
@@ -72,7 +72,9 @@ public struct SponsorsListView: View {
   public var body: some View {
     NavigationView {
       root
-        .fullScreenCover(item: $store.scope(state: \.destination?.safari, action: \.destination.safari)) { sheetStore in
+        .fullScreenCover(
+          item: $store.scope(state: \.destination?.safari, action: \.destination.safari)
+        ) { sheetStore in
           SafariViewRepresentation(url: sheetStore.url)
             .ignoresSafeArea()
         }
@@ -120,23 +122,23 @@ public struct SponsorsListView: View {
 extension Plan {
   var gridItem: GridItem {
     switch self {
-      case .platinum:
-        return GridItem(.flexible(minimum: 320, maximum: 1024), spacing: 64, alignment: .center)
-      case .gold, .silver, .bronze, .diversityAndInclusion, .community, .student:
-        return GridItem(.flexible(minimum: 64, maximum: 512), spacing: 64, alignment: .center)
-      case .individual:
-        return GridItem.init(.adaptive(minimum: 64, maximum: 128), spacing: 32, alignment: .center)
+    case .platinum:
+      return GridItem(.flexible(minimum: 320, maximum: 1024), spacing: 64, alignment: .center)
+    case .gold, .silver, .bronze, .diversityAndInclusion, .community, .student:
+      return GridItem(.flexible(minimum: 64, maximum: 512), spacing: 64, alignment: .center)
+    case .individual:
+      return GridItem.init(.adaptive(minimum: 64, maximum: 128), spacing: 32, alignment: .center)
     }
 
   }
   var columnCount: Int {
     switch self {
-      case .platinum:
-        return 1
-      case .gold, .silver, .bronze, .diversityAndInclusion, .community, .student:
-        return 2
-      case .individual:
-        return 4
+    case .platinum:
+      return 1
+    case .gold, .silver, .bronze, .diversityAndInclusion, .community, .student:
+      return 2
+    case .individual:
+      return 4
     }
   }
 }

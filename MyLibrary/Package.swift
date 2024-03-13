@@ -9,11 +9,11 @@ let package = Package(
   products: [
     .library(
       name: "AppFeature",
-      targets: ["AppFeature"]),
+      targets: ["AppFeature"])
   ],
   dependencies: [
     .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.9.1"),
-    .package(url: "https://github.com/zunda-pixel/LicenseProvider", from: "1.1.1")
+    .package(url: "https://github.com/zunda-pixel/LicenseProvider", from: "1.1.1"),
   ],
   targets: [
     .target(
@@ -21,14 +21,14 @@ let package = Package(
       dependencies: [
         "ScheduleFeature",
         "SponsorFeature",
-        "trySwiftFeature"
+        "trySwiftFeature",
       ]
     ),
     .target(
       name: "DataClient",
       dependencies: [
         "SharedModels",
-        .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+        .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
       ],
       resources: [
         .process("Resources")
@@ -45,7 +45,7 @@ let package = Package(
       dependencies: [
         "DataClient",
         "Safari",
-        .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+        .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
       ]
     ),
     .target(name: "SharedModels"),
@@ -54,7 +54,7 @@ let package = Package(
       dependencies: [
         "DataClient",
         "Safari",
-        .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+        .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
       ]
     ),
     .target(
@@ -67,6 +67,6 @@ let package = Package(
       plugins: [
         .plugin(name: "LicenseProviderPlugin", package: "LicenseProvider")
       ]
-    )
+    ),
   ]
 )

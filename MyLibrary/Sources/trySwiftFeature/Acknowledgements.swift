@@ -20,11 +20,11 @@ public struct Acknowledgements {
   public var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
-        case let .urlTapped(url):
-          state.safari = .init(url: url)
-          return .none
-        case .safari:
-          return .none
+      case let .urlTapped(url):
+        state.safari = .init(url: url)
+        return .none
+      case .safari:
+        return .none
       }
     }
     .ifLet(\.$safari, action: \.safari) {

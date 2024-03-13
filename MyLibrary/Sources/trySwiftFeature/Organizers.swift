@@ -1,7 +1,7 @@
 import ComposableArchitecture
 import DataClient
-import SwiftUI
 import SharedModels
+import SwiftUI
 
 @Reducer
 public struct Organizers {
@@ -36,16 +36,16 @@ public struct Organizers {
   public var body: some ReducerOf<Organizers> {
     Reduce { state, action in
       switch action {
-        case .view(.onAppear):
-          let response = try! dataClient.fetchOrganizers()
-          state.organizers.append(contentsOf: response)
-          return .none
-        case let .view(._organizerTapped(organizer)):
-          return .send(.delegate(.organizerTapped(organizer)))
-        case .delegate:
-          return .none
-        case .destination:
-          return .none
+      case .view(.onAppear):
+        let response = try! dataClient.fetchOrganizers()
+        state.organizers.append(contentsOf: response)
+        return .none
+      case let .view(._organizerTapped(organizer)):
+        return .send(.delegate(.organizerTapped(organizer)))
+      case .delegate:
+        return .none
+      case .destination:
+        return .none
       }
     }
   }
@@ -81,7 +81,10 @@ public struct OrganizersView: View {
 }
 
 #Preview {
-  OrganizersView(store: .init(initialState: .init(), reducer: {
-    Organizers()
-  }))
+  OrganizersView(
+    store: .init(
+      initialState: .init(),
+      reducer: {
+        Organizers()
+      }))
 }
