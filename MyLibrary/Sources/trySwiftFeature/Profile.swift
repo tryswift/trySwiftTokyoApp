@@ -90,19 +90,15 @@ public struct ProfileView: View {
       }
       .navigationTitle(Text(LocalizedStringKey(store.organizer.name), bundle: .module))
     }
-    #if os(iOS) || os(macOS)
-    .sheet(item: $store.scope(state: \.destination?.safari, action: \.destination.safari)) {
-      sheetStore in
-      SafariViewRepresentation(url: sheetStore.url)
-        .ignoresSafeArea()
-    }
-    #elseif os(visionOS)
-    .onChange(
-        of: store.scope(state: \.destination?.safari, action: \.destination.safari)
-    ) { _, store in
-        guard let url = store?.url else { return }
-        openURL(url)
-    }
-    #endif
+    .safari(
+      item: $store.scope(state: \.destination?.safari, action: \.destination.safari),
+      sheetContent: { sheetStore in
+        SafariViewRepresentation(url: sheetStore.url)
+          .ignoresSafeArea()
+      },
+      action: { store in
+        openURL(store.url)
+      }
+    )
   }
 }

@@ -41,20 +41,16 @@ public struct AcknowledgementsView: View {
 
   public var body: some View {
     list
-      #if os(iOS) || os(macOS)
-      .sheet(item: $store.scope(state: \.safari, action: \.safari)) { sheetStore in
-        SafariViewRepresentation(url: sheetStore.url)
-          .ignoresSafeArea()
-      }
-      #elseif os(visionOS)
-      .onChange(
-        of: store.scope(state: \.safari, action: \.safari)
-      ) { _, store in
-        guard let url = store?.url else { return }
-        openURL(url)
-      }
-      #endif
-      
+      .safari(
+        item: $store.scope(state: \.safari, action: \.safari),
+        sheetContent: { sheetStore in
+          SafariViewRepresentation(url: sheetStore.url)
+            .ignoresSafeArea()
+        },
+        action: { store in
+          openURL(store.url)
+        }
+      )
   }
 
   @ViewBuilder
