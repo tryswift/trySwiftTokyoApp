@@ -14,7 +14,7 @@ We've submitted the app to the App Store as MVP, and it's currently under review
 - [ ] macOS support
 - [ ] watchOS support
 - [ ] tvOS support
-- [x] visionOS support (Designed for iPad)
+- [x] visionOS support
 
 ## Requirements
 
