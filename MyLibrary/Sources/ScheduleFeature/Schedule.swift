@@ -2,8 +2,8 @@ import ComposableArchitecture
 import DataClient
 import Foundation
 import Safari
-import SwiftUI
 import SharedModels
+import SwiftUI
 import TipKit
 
 @Reducer
@@ -65,14 +65,17 @@ public struct Schedule {
     BindingReducer()
     Reduce { state, action in
       switch action {
-        case .view(.onAppear):
-          state.day1 = try! dataClient.fetchDay1()
-          state.day2 = try! dataClient.fetchDay2()
-          state.workshop = try! dataClient.fetchWorkshop()
+      case .view(.onAppear):
+        state.day1 = try! dataClient.fetchDay1()
+        state.day2 = try! dataClient.fetchDay2()
+        state.workshop = try! dataClient.fetchWorkshop()
+        return .none
+      case let .view(.disclosureTapped(session)):
+        guard let description = session.description, let speakers = session.speakers else {
           return .none
-        case let .view(.disclosureTapped(session)):
-          guard let description = session.description, let speakers = session.speakers else { return .none }
-          state.path.append(.detail(
+        }
+        state.path.append(
+          .detail(
             .init(
               title: session.title,
               description: description,
@@ -80,14 +83,14 @@ public struct Schedule {
               speakers: speakers
             )
           )
-          )
-          return .none
-        case .view(.mapItemTapped):
-          let url = URL(string: String(localized: "Guidance URL", bundle: .module))!
-          state.destination = .guidance(.init(url: url))
-          return .none
-        case .binding, .path, .destination:
-          return .none
+        )
+        return .none
+      case .view(.mapItemTapped):
+        let url = URL(string: String(localized: "Guidance URL", bundle: .module))!
+        state.destination = .guidance(.init(url: url))
+        return .none
+      case .binding, .path, .destination:
+        return .none
       }
     }
     .forEach(\.path, action: \.path)
@@ -110,13 +113,14 @@ public struct ScheduleView: View {
       root
     } destination: { store in
       switch store.state {
-        case .detail:
-          if let store = store.scope(state: \.detail, action: \.detail) {
-            ScheduleDetailView(store: store)
-          }
+      case .detail:
+        if let store = store.scope(state: \.detail, action: \.detail) {
+          ScheduleDetailView(store: store)
+        }
       }
     }
-    .sheet(item: $store.scope(state: \.destination?.guidance, action: \.destination.guidance)) { sheetStore in
+    .sheet(item: $store.scope(state: \.destination?.guidance, action: \.destination.guidance)) {
+      sheetStore in
       SafariViewRepresentation(url: sheetStore.url)
         .ignoresSafeArea()
     }
@@ -133,24 +137,24 @@ public struct ScheduleView: View {
       .pickerStyle(.segmented)
       .padding(.horizontal)
       switch store.selectedDay {
-        case .day1:
-          if let day1 = store.day1 {
-            conferenceList(conference: day1)
-          } else {
-            Text("")
-          }
-        case .day2:
-          if let day2 = store.day2 {
-            conferenceList(conference: day2)
-          } else {
-            Text("")
-          }
-        case .day3:
-          if let workshop = store.workshop {
-            conferenceList(conference: workshop)
-          } else {
-            Text("")
-          }
+      case .day1:
+        if let day1 = store.day1 {
+          conferenceList(conference: day1)
+        } else {
+          Text("")
+        }
+      case .day2:
+        if let day2 = store.day2 {
+          conferenceList(conference: day2)
+        } else {
+          Text("")
+        }
+      case .day3:
+        if let workshop = store.workshop {
+          conferenceList(conference: workshop)
+        } else {
+          Text("")
+        }
       }
     }
     .toolbar {
@@ -283,12 +287,17 @@ public struct ScheduleView: View {
 
 struct MapTip: Tip, Equatable {
   var title: Text = Text("Go Shibuya First, NOT Garden", bundle: .module)
-  var message: Text? = Text("There are two kinds of Bellesalle in Shibuya. Learn how to get from Shibuya Station to \"Bellesalle Shibuya FIRST\". ", bundle: .module)
+  var message: Text? = Text(
+    "There are two kinds of Bellesalle in Shibuya. Learn how to get from Shibuya Station to \"Bellesalle Shibuya FIRST\". ",
+    bundle: .module)
   var image: Image? = .init(systemName: "map.circle.fill")
 }
 
 #Preview {
-  ScheduleView(store: .init(initialState: .init(), reducer: {
-    Schedule()
-  }))
+  ScheduleView(
+    store: .init(
+      initialState: .init(),
+      reducer: {
+        Schedule()
+      }))
 }

@@ -1,8 +1,8 @@
 import ComposableArchitecture
 import DataClient
 import Safari
-import SwiftUI
 import SharedModels
+import SwiftUI
 
 @Reducer
 public struct TrySwift {
@@ -50,37 +50,37 @@ public struct TrySwift {
     BindingReducer()
     Reduce { state, action in
       switch action {
-        case .view(.organizerTapped):
-          state.path.append(.organizers(.init()))
-          return .none
-        case .view(.codeOfConductTapped):
-          let url = URL(string: String(localized: "Code of Conduct URL", bundle: .module))!
-          state.destination = .codeOfConduct(.init(url: url))
-          return .none
-        case .view(.privacyPolicyTapped):
-          let url = URL(string: String(localized: "Privacy Policy URL", bundle: .module))!
-          state.destination = .privacyPolicy(.init(url: url))
-          return .none
-        case .view(.acknowledgementsTapped):
-          state.path.append(.acknowledgements(.init()))
-          return .none
-        case .view(.eventbriteTapped):
-          let url = URL(string: String(localized: "Eventbrite URL", bundle: .module))!
-          state.destination = .eventbrite(.init(url: url))
-          return .none
-        case .view(.websiteTapped):
-          let url = URL(string: String(localized: "Website URL", bundle: .module))!
-          state.destination = .eventbrite(.init(url: url))
-          return .none
-        case let .path(.element(_, .organizers(.delegate(.organizerTapped(organizer))))):
-          state.path.append(.profile(.init(organizer: organizer)))
-          return .none
-        case .binding:
-          return .none
-        case .path:
-          return .none
-        case .destination:
-          return .none
+      case .view(.organizerTapped):
+        state.path.append(.organizers(.init()))
+        return .none
+      case .view(.codeOfConductTapped):
+        let url = URL(string: String(localized: "Code of Conduct URL", bundle: .module))!
+        state.destination = .codeOfConduct(.init(url: url))
+        return .none
+      case .view(.privacyPolicyTapped):
+        let url = URL(string: String(localized: "Privacy Policy URL", bundle: .module))!
+        state.destination = .privacyPolicy(.init(url: url))
+        return .none
+      case .view(.acknowledgementsTapped):
+        state.path.append(.acknowledgements(.init()))
+        return .none
+      case .view(.eventbriteTapped):
+        let url = URL(string: String(localized: "Eventbrite URL", bundle: .module))!
+        state.destination = .eventbrite(.init(url: url))
+        return .none
+      case .view(.websiteTapped):
+        let url = URL(string: String(localized: "Website URL", bundle: .module))!
+        state.destination = .eventbrite(.init(url: url))
+        return .none
+      case let .path(.element(_, .organizers(.delegate(.organizerTapped(organizer))))):
+        state.path.append(.profile(.init(organizer: organizer)))
+        return .none
+      case .binding:
+        return .none
+      case .path:
+        return .none
+      case .destination:
+        return .none
       }
     }
     .forEach(\.path, action: \.path)
@@ -102,18 +102,18 @@ public struct TrySwiftView: View {
       root
     } destination: { store in
       switch store.state {
-        case .organizers:
-          if let store = store.scope(state: \.organizers, action: \.organizers) {
-            OrganizersView(store: store)
-          }
-        case .profile:
-          if let store = store.scope(state: \.profile, action: \.profile) {
-            ProfileView(store: store)
-          }
-        case .acknowledgements:
-          if let store = store.scope(state: \.acknowledgements, action: \.acknowledgements) {
-            AcknowledgementsView(store: store)
-          }
+      case .organizers:
+        if let store = store.scope(state: \.organizers, action: \.organizers) {
+          OrganizersView(store: store)
+        }
+      case .profile:
+        if let store = store.scope(state: \.profile, action: \.profile) {
+          ProfileView(store: store)
+        }
+      case .acknowledgements:
+        if let store = store.scope(state: \.acknowledgements, action: \.acknowledgements) {
+          AcknowledgementsView(store: store)
+        }
       }
     }
     .navigationTitle(Text("try! Swift", bundle: .module))
@@ -170,24 +170,33 @@ public struct TrySwiftView: View {
       }
     }
     .navigationTitle(Text("try! Swift", bundle: .module))
-    .sheet(item: $store.scope(state: \.destination?.codeOfConduct, action: \.destination.codeOfConduct)) { sheetStore in
+    .sheet(
+      item: $store.scope(state: \.destination?.codeOfConduct, action: \.destination.codeOfConduct)
+    ) { sheetStore in
       SafariViewRepresentation(url: sheetStore.url)
         .ignoresSafeArea()
         .navigationTitle(Text("Code of Conduct", bundle: .module))
     }
-    .sheet(item: $store.scope(state: \.destination?.privacyPolicy, action: \.destination.privacyPolicy), content: { sheetStore in
-      SafariViewRepresentation(url: sheetStore.url)
-        .ignoresSafeArea()
-        .navigationTitle(Text("Privacy Policy", bundle: .module))
-    })
-    .sheet(item: $store.scope(state: \.destination?.eventbrite, action: \.destination.eventbrite), content: { sheetStore in
-      SafariViewRepresentation(url: sheetStore.url)
-        .ignoresSafeArea()
-    })
-    .sheet(item: $store.scope(state: \.destination?.website, action: \.destination.website), content: { sheetStore in
-      SafariViewRepresentation(url: sheetStore.url)
-        .ignoresSafeArea()
-    })
+    .sheet(
+      item: $store.scope(state: \.destination?.privacyPolicy, action: \.destination.privacyPolicy),
+      content: { sheetStore in
+        SafariViewRepresentation(url: sheetStore.url)
+          .ignoresSafeArea()
+          .navigationTitle(Text("Privacy Policy", bundle: .module))
+      }
+    )
+    .sheet(
+      item: $store.scope(state: \.destination?.eventbrite, action: \.destination.eventbrite),
+      content: { sheetStore in
+        SafariViewRepresentation(url: sheetStore.url)
+          .ignoresSafeArea()
+      }
+    )
+    .sheet(
+      item: $store.scope(state: \.destination?.website, action: \.destination.website),
+      content: { sheetStore in
+        SafariViewRepresentation(url: sheetStore.url)
+          .ignoresSafeArea()
+      })
   }
 }
-

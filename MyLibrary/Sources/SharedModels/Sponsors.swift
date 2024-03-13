@@ -31,11 +31,14 @@ public struct Sponsors: Codable, Equatable, Hashable, Sendable {
       .diversityAndInclusion: diversity,
       .student: student,
       .community: community,
-      .individual: individual
+      .individual: individual,
     ]
   }
 
-  init(platinum: [Sponsor], gold: [Sponsor], silver: [Sponsor], bronze: [Sponsor], diversity: [Sponsor], student: [Sponsor], community: [Sponsor], individual: [Sponsor]) {
+  init(
+    platinum: [Sponsor], gold: [Sponsor], silver: [Sponsor], bronze: [Sponsor],
+    diversity: [Sponsor], student: [Sponsor], community: [Sponsor], individual: [Sponsor]
+  ) {
     self.platinum = platinum
     self.gold = gold
     self.silver = silver

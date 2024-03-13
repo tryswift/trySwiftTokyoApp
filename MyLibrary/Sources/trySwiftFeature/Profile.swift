@@ -37,13 +37,13 @@ public struct Profile {
     BindingReducer()
     Reduce { state, action in
       switch action {
-        case let .view(.snsTapped(url)):
-          state.destination = .safari(.init(url: url))
-          return .none
-        case .destination:
-          return .none
-        case .binding:
-          return .none
+      case let .view(.snsTapped(url)):
+        state.destination = .safari(.init(url: url))
+        return .none
+      case .destination:
+        return .none
+      case .binding:
+        return .none
       }
     }
     .ifLet(\.$destination, action: \.destination)
@@ -88,7 +88,8 @@ public struct ProfileView: View {
       }
       .navigationTitle(Text(LocalizedStringKey(store.organizer.name), bundle: .module))
     }
-    .sheet(item: $store.scope(state: \.destination?.safari, action: \.destination.safari)) { sheetStore in
+    .sheet(item: $store.scope(state: \.destination?.safari, action: \.destination.safari)) {
+      sheetStore in
       SafariViewRepresentation(url: sheetStore.url)
         .ignoresSafeArea()
     }

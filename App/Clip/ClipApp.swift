@@ -5,9 +5,10 @@ import SwiftUI
 struct AppClipApp: App {
   var body: some Scene {
     WindowGroup {
-      AppView(store: .init(initialState: .init()) {
-        AppReducer()
-      })
+      AppView(
+        store: .init(initialState: .init()) {
+          AppReducer()
+        })
     }
   }
 }

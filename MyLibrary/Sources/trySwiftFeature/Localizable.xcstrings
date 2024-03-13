@@ -11,6 +11,17 @@
         }
       }
     },
+    "Akio Itaya" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "板谷 晃良"
+          }
+        }
+      }
+    },
     "Code of Conduct" : {
       "localizations" : {
         "ja" : {
@@ -37,13 +48,13 @@
         }
       }
     },
-    "Daiki has worked as an iOS Developer for over 10 years and met as a volunteer staff member at try! Swift Tokyo in 2017. Inspired by the international speakers and sponsors he met then, he attended his first international conference, WWDC 2017.\nIn his work, I work as a software engineer at a ministry, while also serving as a technical advisor at various startups and listed companies, and as a general incorporated association try! Swift Tokyo.\nWhen he is not working, he likes to take podcasts with friends, play RPG games, snowboard in the snowy mountains, and spend time with friends in the neighborhood." : {
+    "Daiki has worked as an iOS Developer for over 10 years and met as a volunteer staff member at try! Swift Tokyo in 2017. Inspired by the international speakers and sponsors he met then, he attended his first international conference, WWDC 2017.\nIn his work, I work as a software engineer at a ministry, while also serving as a technical advisor at various startups and listed companies, and as a general incorporated association try! Swift Tokyo.\nWhen he is not working, he likes to take podcasts with friends, play RPG games, snowboard in the snowy mountains, and spend time with friends in the neighborhood.　He bought Apple Vision Pro at Honolulu on the day of release." : {
       "extractionState" : "manual",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "iOS Developerとして10年以上働いています。ボランティアスタッフとして出会ったtry! Swift Tokyo 2017にボランティアスタッフとして参加したのが初めてでした。仕事では、ソフトウェアエンジニア国家公務員として働く傍ら、様々なスタートアップや上場企業の技術顧問や一般社団法人try! Swift Tokyoの理事として活動しています。仕事以外の時間は、友人とポッドキャストをしたり、RPGゲームをしたり、雪山でスノーボードをしたり、近所の友人と過ごすのが好き。"
+            "value" : "iOS Developerとして10年以上働いています。ボランティアスタッフとして出会ったtry! Swift Tokyo 2017に参加したのが初めてでした。仕事では、ソフトウェアエンジニア国家公務員として働く傍ら、様々なスタートアップや上場企業の技術顧問や一般社団法人try! Swift Tokyoの理事として活動しています。仕事以外の時間は、友人とポッドキャストをしたり、RPGゲームをしたり、雪山でスノーボードをしたり、近所の友人と過ごすのが好き。Apple Vision Proを発売日にハワイで購入してきました。"
           }
         }
       }
@@ -70,6 +81,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "https://www.eventbrite.com/e/try-swift-tokyo-2024-tickets-712565200697"
+          }
+        }
+      }
+    },
+    "I am the CEO of AkkeyLab, Inc., where we run a programming school. My main role at AkkeyLab is to promote the benefits of Swift. Lately, I've been enjoying playing tennis and futsal with my colleagues from the company." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プログラミングスクールを運営する AkkeyLab株式会社 の CEO を務めており、Swift の魅力を伝える仕事をしています。最近はテニスやフットサルを会社の仲間と楽しんでいます。"
+          }
+        }
+      }
+    },
+    "I'm an iOS Developer working at ROLLCAKE Inc, and I have a passion for automation technologies such as test automation and CI." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ROLLCAKE株式会社で働くiOS Developer、テスト自動化やCIなどの自動化技術が好きです"
           }
         }
       }
@@ -164,6 +197,72 @@
         }
       }
     },
+    "Roku is an iOS Developer. She joined try! Swift in 2019 as a volunteer staff member, and became an organizer in 2020.\nShe loves Swift community and occasionally organizes study sessions and development camps.\nShe is interested in beer, whiskey, and unique design clothes. In addition to creating apps, She also enjoy making accessories.\nHer lucky number is 6️⃣, which is called \"Roku\" in Japanese." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS Developerとして働いています。try! Swiftは2019年に当日スタッフとして参加したのがきっかけで、2020年からOrganizerとしてjoinしました。\nSwiftコミュニティが好きで、たまに勉強会や開発合宿を企画することも。\nビール・ウイスキーや珍しいデザインの服に興味があり、アプリ作りのほか、アクセサリー作りも趣味。\nラッキナンバーは6️⃣。"
+          }
+        }
+      }
+    },
+    "Shota works as an iOS developer at Cybozu. His first programming language is Swift, and he loves Swift." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サイボウズでiOS Developerとして働いています。初めてのプログラミング言語はSwiftで、Swiftが大好きです。"
+          }
+        }
+      }
+    },
+    "Takuya has been an iOS developer for three years, after working in sales and testing. Now, I'm working on developing iOS apps with SwiftUI and GraphQL for my job. I love how iOS development is always changing. This is my first time at try! Swift Tokyo, and surprisingly, I'm part of the team too! What's more, try! Swift Tokyo happens to be on the same day my second child is expected, which has me really excited! Outside of work, my partner and I are big into Pokémon cards and hope to meet new friends this way. I can't wait to meet people from all over through Swift and have some great times together!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS Developerとしては3年目になります。前職では営業やテスターを経験し、現在ではSwiftUIとGraphQLを活用したiOSアプリ開発に携わっております。日々進化するiOS開発の世界に夢中になっています。try! Swift Tokyoは初参加で、まさかスタッフとしても携われるなんて思ってもみませんでした。今回のtry! Swift Tokyoの開催日は実は二人目の子供の出産予定日で色んな意味でドキドキしています！プライベートでは夫婦でポケモンカードゲームに熱中していて、この趣味を通じて新しい友達を作れればと思っています！Swiftを通して、世界中の人と繋がり、共有できることを楽しみにしています！！"
+          }
+        }
+      }
+    },
+    "Takuya Tominaga" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冨永 拓弥"
+          }
+        }
+      }
+    },
+    "Tim is an iOS developer from Australia and is currently working at Instagram in Tokyo. He presented at try! Swift Tokyo 2016 and has been volunteering at the conference since 2018. In his free time, he loves video games, writing open source software and karaoke." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timはオーストラリア出身のiOS Developerで、現在はInstagramの東京オフィスで働いています。彼はtry! Swift Tokyo 2016で登壇し、2018年からOrganizerです。休日はゲームをしたり、オープンソースソフトウェアを書いたり、カラオケに行くのが好きです。"
+          }
+        }
+      }
+    },
+    "Tim Oliver" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tim Oliver"
+          }
+        }
+      }
+    },
     "try! Swift" : {
       "localizations" : {
         "ja" : {
@@ -229,6 +328,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "問題解決が好きなエンジニア。2017年からtry! Swift Tokyoの開催に携わっています。美味しいご飯とお酒が好きで、特に日本酒が大好きです！"
+          }
+        }
+      }
+    },
+    "yucovin" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ゆこびん"
+          }
+        }
+      }
+    },
+    "yucovin is a designer and iOS engineer with over a decade of experience spanning multiple levels of structural designs and interface design/engineering in government and private start-up. yucovin has helped numerous teams improve their product/service quality and processes as a designer who can bridge design and development. And most importantly, she is the creator of Riko, the mascot of try! Swift!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "try! Swiftのマスコットキャラクター「Riko」の生みの親。\nスタートアップや行政のプロダクトなどを手掛けるデザイナー、iOSエンジニア。情報設計が必要なプロダクトのUIが得意。デザインとエンジニアリングを繋げるポジションとして、多くのチームでプロダクトやサービスのクオリティー向上とプロセス改善に寄与している。"
           }
         }
       }
