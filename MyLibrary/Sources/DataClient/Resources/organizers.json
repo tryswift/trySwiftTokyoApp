@@ -94,5 +94,22 @@
         "url": "https://github.com/saku"
       }
     ]
+  },
+  {
+    "id": 7,
+    "name": "Hideyuki Nanashima",
+    "image_name": "jollyjoester",
+    "bio": "Hideyuki is a Swift lover and focusing to enjoy learning and playing with Swift more. He organizes Swift Fun Club which is the group where Swift lovers gather in Japan. He is also the most famous Kanpai-er(person who make a toast). He is expanding the circle of Swift lovers with Kanpai.",
+    "links": [
+      {
+        "name": "@jollyjoester",
+        "url": "https://x.com/jollyjoester"
+      },
+      {
+        "name": "@jollyjoester",
+        "url": "https://github.com/jollyjoester"
+      }
+    ]
   }
+
 ]
