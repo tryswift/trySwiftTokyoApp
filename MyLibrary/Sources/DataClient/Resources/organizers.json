@@ -222,5 +222,21 @@
               "url": "https://github.com/jollyjoester"
           }
       ]
+  },
+  {
+    "id": 15,
+    "name": "Shoko Sato",
+    "image_name": "satoshoco",
+    "bio": "Shoko joined the DevRel team at LINE (now LY Corporation) in September 2019, after working as a front-end engineer at a venture company. There, she was responsible for tech branding, marketing, training, and managing technical conferences for the engineering organization. Subsequently, in March 2024, she founded THE BIGLE Inc., a company that provides support for Developer Relations, including technical PR, technical communities, and technical conferences, and became independent.",
+    "links": [
+      {
+        "name": "@satoshoco",
+        "url": "https://x.com/satoshoco"
+      },
+      {
+        "name": "@shoco310",
+        "url": "https://github.com/shoco310"
+      }
+    ]
   }
 ]
