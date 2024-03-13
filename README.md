@@ -34,6 +34,11 @@ Available on the App Store soon, or you can build the app yourself. See the [Get
 
 We welcome contributions to the app! Please refer to the [Contributing Guidelines](CONTRIBUTING.md) for more information.
 
+## History of try! Swift App
+
+The first try! Swift app (a repository named final) was released in 2016. At the time, it was written in Swift 3. Now is a good time for a new app, so We rebuilt it based on TCA and SwiftUI. Please take a look and enjoy.
+https://github.com/tryswift/trySwiftAppFinal
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
