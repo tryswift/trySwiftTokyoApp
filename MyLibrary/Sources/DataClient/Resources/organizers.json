@@ -204,12 +204,27 @@
       {
         "name": "@TimOliver",
         "url": "https://github.com/TimOliver"
-
       }
     ]
   },
   {
-    "id": 14,
+      "id": 14,
+      "name": "Hideyuki Nanashima",
+      "image_name": "jollyjoester",
+      "bio": "Hideyuki is a Swift lover and focusing to enjoy learning and playing with Swift more. He organizes Swift Fun Club which is the group where Swift lovers gather in Japan. He is also the most famous Kanpai-er(person who make a toast). He is expanding the circle of Swift lovers with Kanpai🍻",
+      "links": [
+          {
+              "name": "@jollyjoester",
+              "url": "https://x.com/jollyjoester"
+          },
+          {
+              "name": "@jollyjoester",
+              "url": "https://github.com/jollyjoester"
+          }
+      ]
+  },
+  {
+    "id": 15,
     "name": "Shoko Sato",
     "image_name": "satoshoco",
     "bio": "Shoko joined the DevRel team at LINE (now LY Corporation) in September 2019, after working as a front-end engineer at a venture company. There, she was responsible for tech branding, marketing, training, and managing technical conferences for the engineering organization. Subsequently, in March 2024, she founded THE BIGLE Inc., a company that provides support for Developer Relations, including technical PR, technical communities, and technical conferences, and became independent.",
