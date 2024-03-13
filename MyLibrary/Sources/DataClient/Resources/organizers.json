@@ -94,5 +94,21 @@
         "url": "https://github.com/saku"
       }
     ]
+  },
+  {
+    "id": 11,
+    "name": "Shota Ebara",
+    "image_name": "elmetal",
+    "bio": "Shota works as an iOS developer at Cybozu. His first programming language is Swift, and he loves Swift.",
+    "links": [
+      {
+        "name": "@el_metal_",
+        "url": "https://twitter.com/el_metal_"
+      },
+      {
+        "name": "@elmetal",
+        "url": "https://github.com/elmetal"
+      }
+    ]
   }
 ]
