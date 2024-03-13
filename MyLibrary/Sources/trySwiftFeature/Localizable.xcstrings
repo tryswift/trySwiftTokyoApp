@@ -186,6 +186,17 @@
         }
       }
     },
+    "Roku is an iOS Developer. She  joined try! Swift in 2019 as a volunteer staff member, and became an organizer in 2020.\nShe loves Swift community and occasionally organizes study sessions and development camps.\nShe is interested in beer, whiskey, and unique design clothes. In addition to creating apps, She also enjoy making accessories.\nHer lucky number is 6️⃣, which is called \"Roku\" in Japanese." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS Developerとして働いています。try! Swiftは2019年に当日スタッフとして参加したのがきっかけで、2020年からOrganizerとしてjoinしました。\nSwiftコミュニティが好きで、たまに勉強会や開発合宿を企画することも。\nビール・ウイスキーや珍しいデザインの服に興味があり、アプリ作りのほか、アクセサリー作りも趣味。\nラッキナンバーは6️⃣。"
+          }
+        }
+      }
+    },
     "Shota works as an iOS developer at Cybozu. His first programming language is Swift, and he loves Swift." : {
       "extractionState" : "manual",
       "localizations" : {
