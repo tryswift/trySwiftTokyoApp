@@ -85,6 +85,16 @@
         }
       }
     },
+    "I'm an iOS Developer working at ROLLCAKE Inc, and I have a passion for automation technologies such as test automation and CI." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ROLLCAKE株式会社で働くiOS Developer、テスト自動化やCIなどの自動化技術が好きです"
+        }
+      }
+    },
     "I am the CEO of AkkeyLab, Inc., where we run a programming school. My main role at AkkeyLab is to promote the benefits of Swift. Lately, I've been enjoying playing tennis and futsal with my colleagues from the company." : {
       "extractionState" : "manual",
       "localizations" : {
