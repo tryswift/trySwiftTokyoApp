@@ -175,6 +175,28 @@
         }
       }
     },
+    "Takuya has been an iOS developer for three years, after working in sales and testing. Now, I'm working on developing iOS apps with SwiftUI and GraphQL for my job. I love how iOS development is always changing. This is my first time at try! Swift Tokyo, and surprisingly, I'm part of the team too! What's more, try! Swift Tokyo happens to be on the same day my second child is expected, which has me really excited! Outside of work, my partner and I are big into Pokémon cards and hope to meet new friends this way. I can't wait to meet people from all over through Swift and have some great times together!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS Developerとしては3年目になります。前職では営業やテスターを経験し、現在ではSwiftUIとGraphQLを活用したiOSアプリ開発に携わっております。日々進化するiOS開発の世界に夢中になっています。try! Swift Tokyoは初参加で、まさかスタッフとしても携われるなんて思ってもみませんでした。今回のtry! Swift Tokyoの開催日は実は二人目の子供の出産予定日で色んな意味でドキドキしています！プライベートでは夫婦でポケモンカードゲームに熱中していて、この趣味を通じて新しい友達を作れればと思っています！Swiftを通して、世界中の人と繋がり、共有できることを楽しみにしています！！"
+          }
+        }
+      }
+    },
+    "Takuya Tominaga" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冨永 拓弥"
+          }
+        }
+      }
+    },
     "try! Swift" : {
       "localizations" : {
         "ja" : {
