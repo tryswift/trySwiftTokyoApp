@@ -2,9 +2,16 @@
   "sourceLanguage" : "en",
   "strings" : {
     "" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
-    "A brief overview of how to write modern UI applications on Windows taking advantage of recent technologies.  This assumes that the developer is not familiar with Windows development. By drawing parallels between the macOS and Windows worlds, it aims to show how Windows UI application development can be familiar and easy with Swift." : {
+    "A brief overview of how to write modern UI applications on Windows taking advantage of recent technologies. This assumes that the developer is not familiar with Windows development. By drawing parallels between the macOS and Windows worlds, it aims to show how Windows UI application development can be familiar and easy with Swift." : {
       "extractionState" : "manual",
       "localizations" : {
         "ja" : {
@@ -37,6 +44,17 @@
         }
       }
     },
+    "Akimu is an iOS software developer at LY Corporation. He is working on the chat related features of LINE app. In his free time, he is a developer of simutrans OTRP, a Japanese fork of Simutrans, an open source transport simulator written in C++. He is a scholarship winner of WWDC18 from Japan." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "株式会社LINEヤフーのiOS developer。LINEアプリのチャット関連機能を開発中。C++で書かれたオープンソースのトランスポートシミュレータ、Simutransの日本語フォークであるsimutrans OTRPの開発者。WWDC18日本代表。"
+          }
+        }
+      }
+    },
     "As most people tend to use cloud sync services to store relevant content, we will explore File Provider framework on both iOS and macOS and all the related features: Finder and Files app integration, remote synchronisation with upload and downloads.  So let’s explore how it works on both iOS and macOS and how you can sync, upload and download files on these platforms." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -44,6 +62,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "多くの人が関連するコンテンツを保存するためにクラウド同期サービスを使用するようになった今、iOSとmacOSの両方でファイルプロバイダフレームワークと、Finderやファイルアプリ統合、リモート同期やアップロード、ダウンロードなどの関連機能を探索します。iOSとmacOSの両方でどのように機能し、これらのプラットフォームでファイルを同期、アップロード、ダウンロードするかを見ていきましょう。"
+          }
+        }
+      }
+    },
+    "Audrey discovered iOS when she first bought an iPhone Edge in 2008. Since then, she is working passionately on Apple platforms, enjoying SwiftUI and even CoreData while building the macOS Proton Drive app. When she is not coding, watching/playing basketball and football are her favorite activities.\nAs a huge movie addict, Audrey is avoiding trailers as much as possible." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オードリーは2008年に初めてiPhone Edgeを購入したときにiOSに出会った。それ以来、彼女はアップルのプラットフォームに情熱的に取り組んでおり、macOS Proton Driveアプリを作りながらSwiftUIやCoreDataを楽しんでいる。コーディングをしていないときは、バスケットボールとフットボールを観戦するのが好き。\n大の映画ファンであるオードリーは、できるだけ予告編を見ないようにしている。"
           }
         }
       }
@@ -77,6 +106,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アプリの体験を向上させる上で、バイナリサイズは重要な指標の一つです。プログラムサイズを最適化するためのさまざまな方法があり、SwiftにはSwift特有の方法も含めていくつかの方法が提供されています。この講演では、よく知られた最適化の概要と、サイズに優しいSwiftコードの書き方について紹介します。"
+          }
+        }
+      }
+    },
+    "Brandon and Stephen, maintainers of the Composable Architecture, will give a broad overview of the library and demonstrate its core tenets: concise domain modeling with value types, composition of features, dependency management, and testability. We will do this by building a very simple application from scratch, and increasingly adding on more complex features." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Composable ArchitectureのメンテナーであるBrandonとStephenが、ライブラリの概要を説明し、そのコアとなる考え方、例えば、値型による簡潔なドメインモデリング、機能の組み合わせ、依存関係の管理、テスト容易性などを実演します。非常にシンプルなアプリケーションをゼロから構築し、より複雑な機能を追加していきます。"
+          }
+        }
+      }
+    },
+    "Brandon spent a long time doing mathematics, but now likes to teach programming with a nod towards math. He co-hosts a video series called Point-Free, which focuses on the Swift language and how to best make use of its type system and features." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brandonは長い間数学に携わっていましたが、現在は数学に傾倒しながらプログラミングを教えるのが好きです。彼は、Swift言語とその型システムと機能を最大限に活用する方法に焦点を当てたPoint-Freeというビデオシリーズを共催しています。"
           }
         }
       }
@@ -121,6 +172,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "SwiftでvisionOSのアプリをつくろう"
+          }
+        }
+      }
+    },
+    "Chris is an independent iOS app developer based out of Nara, Japan (originally from USA). Before going indie in 2018, he was a software engineer at various tech companies for about 10 years, mostly in the security space.\nChris is best known for his two apps in the area of Japanese language learning, Nihongo and Nihongo Lessons. Nihongo is a Japanese dictionary and study tool that’s made for learning from the words you’re encountering in real life. Nihongo Lessons is a companion app for learning Japanese, based on the work of Adam Shapiro and his Japanese Level Up learning program.\nChris loves learning languages, and loves helping people to learn languages. He’s also an avid gamer, hiker, and dad to an amazing 7 year old." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "クリスは奈良を拠点に活動するフリーランスのiOSアプリ開発者。2018年に独立する前は、様々なテック企業でソフトウェアエンジニアとして約10年間、主にセキュリティ分野で活躍していた。クリスは、日本語学習分野の2つのアプリ「にほんご」と「にほんごレッスン」で最もよく知られている。Nihongoは日本語辞書と学習ツールで、実生活で遭遇する言葉から学ぶために作られている。Nihongo Lessonsは、Adam Shapiro氏の日本語学習プログラムJapanese Level Upをベースにした、日本語学習のためのアプリです。\nクリスは言語学習が大好きで、人々の言語学習を手助けすることも大好きです。彼はまた、熱心なゲーマーであり、ハイカーであり、7歳の素晴らしい子供の父親でもある。"
           }
         }
       }
@@ -200,7 +262,14 @@
       }
     },
     "Days" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Days"
+          }
+        }
+      }
     },
     "Download Eventbrite app and show QR code of your ticket at the reception. You will receive a name tag and a goodie bag." : {
       "extractionState" : "manual",
@@ -224,6 +293,17 @@
         }
       }
     },
+    "Emad is a Mobile Lead and Solution Architect at Visma Acubiz in Denmark and he is always eager to learn new topics. When he’s not in front of a computer he is usually playing board games" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "EmadはデンマークのVisma Acubizのモバイル・リード兼ソリューション・アーキテクトで、常に新しいトピックを学ぶことに熱心である。コンピュータの前にいないときは、たいていボードゲームをしている。"
+          }
+        }
+      }
+    },
     "Enhancing Applications with the Accessibility API" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -235,6 +315,28 @@
         }
       }
     },
+    "Getting started with controlling LEGO using Swift" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swiftでレゴを動かそう！"
+          }
+        }
+      }
+    },
+    "Getting Started with Vapor" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaporを始めよう"
+          }
+        }
+      }
+    },
     "Getting to Know TextKit" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -242,6 +344,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "TextKitの理解を深めよう"
+          }
+        }
+      }
+    },
+    "giginet works at LY Corp to improve Developer Experience for LINE. He also contributes some open-sourced developer tools like fastlane, Carthage, XcodeGen, and so on." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LINEヤフー社でLINEのデベロッパーエクスペリエンス向上に従事。また、fastlane, Carthage, XcodeGenなどのオープンソース開発ツールにも貢献している。"
           }
         }
       }
@@ -272,13 +385,13 @@
         }
       }
     },
-    "Have you ever built a socket communication app? The sense of accomplishment when you delve into layers that aren't typically touched in your everyday app development and actually utilize them in an app is truly exceptional. However, creating a socket communication app requires knowledge of POSIX sockets, and for complex communications, you need to implement parallel processing.\n\nIn this talk, we'll implement socket communication and parallel processing in Swift. With Swift, which we're all familiar with, you can easily venture into unfamiliar territories, and there are several instances where you can leverage Swift's capabilities through implementing socket communication and parallel processing. Take this opportunity to enjoy learning socket communication and rediscover the charm of Swift!" : {
+    "Have you ever built a socket communication app? The sense of accomplishment when you delve into layers that aren't typically touched in your everyday app development and actually utilize them in an app is truly exceptional. However, creating a socket communication app requires knowledge of POSIX sockets, and for complex communications, you need to implement parallel processing.\nIn this talk, we'll implement socket communication and parallel processing in Swift. With Swift, which we're all familiar with, you can easily venture into unfamiliar territories, and there are several instances where you can leverage Swift's capabilities through implementing socket communication and parallel processing. Take this opportunity to enjoy learning socket communication and rediscover the charm of Swift!" : {
       "extractionState" : "manual",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "皆さんはソケット通信アプリを作ったことはありますか？普段のアプリ開発では触らないレイヤーを学びアプリとして実際に使った時の達成感は格別です。しかしソケット通信アプリにはPOSIXソケットの知識が必要で、複雑な通信を行うなら並列処理を前提とした実装も必要です。\n\n本トークではSwiftでソケット通信と並列処理を実装します。私たちが使い慣れているSwiftであれば慣れない分野にも気軽に挑戦できますし、ソケット通信や並列処理の実装でSwiftの機能を活かせる場面がいくつかあります。この機会にソケット通信を楽しく学びSwiftの魅力を再発見してください！"
+            "value" : "皆さんはソケット通信アプリを作ったことはありますか？普段のアプリ開発では触らないレイヤーを学びアプリとして実際に使った時の達成感は格別です。しかしソケット通信アプリにはPOSIXソケットの知識が必要で、複雑な通信を行うなら並列処理を前提とした実装も必要です。\n本トークではSwiftでソケット通信と並列処理を実装します。私たちが使い慣れているSwiftであれば慣れない分野にも気軽に挑戦できますし、ソケット通信や並列処理の実装でSwiftの機能を活かせる場面がいくつかあります。この機会にソケット通信を楽しく学びSwiftの魅力を再発見してください！"
           }
         }
       }
@@ -294,6 +407,39 @@
         }
       }
     },
+    "He has been passionate about programming since his childhood and has experience in various programming languages. Ever since discovering Swift, he has been extremely enthusiastic about it.He particularly enjoys writing code that utilizes type systems.\nAs he believes Swift has applications beyond just iOS apps, he also uses Swift on the server side for his regular work. He considers the major appeal of server-side work to be the ability to utilize the latest language features without having to wait for end-users to upgrade their devices.\nHe is deeply interested in Swift as a language and has read almost all of the Swift Evolution proposals from the draft stage. He is also interested in compiler code, and regularly monitors the pull requests to the repository. For his past contributions, he has been recognized as a committer.\nHe runs a study group about the Swift compiler and presents about various topics. Additionally, he's managing a Discord server for discussions about Swift." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "子供の頃からプログラミングが好きで、様々な言語に触れてきた。\nSwiftに出会ってからはこれに夢中だ。\n特に型システムを活かしたコードを書く事を楽しんでいる。\n\nSwiftが適用可能な領域はiOSアプリにとどまらないと考えていて、\n普段の仕事ではサーバサイドにもSwiftを導入している。\nサーバサイドではユーザーの端末のバージョンアップを待つ必要がないので、\n最新の言語機能が使える事が大きな魅力だと考えている。\n\nSwiftの言語としての側面に興味があり、Swift Evolutionのプロポーザルはドラフトの段階からほぼ全て読んでいる。\nコンパイラのコードにも興味があり、リポジトリへのプルリクエストを定期的にチェックしている。\n過去にコントリビュートした際にコミッターに認定されている。\n\nSwiftコンパイラについての勉強会を運営していて、様々なトピックについて発表をしている。\nまた、Swiftについて会話するDiscordサーバの管理運営もしている。"
+          }
+        }
+      }
+    },
+    "He is a software engineer and works on improvements of DevOps and DevEx in various teams. He also contributes some open-sourced swift projects." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ソフトウェアエンジニアとして、さまざまなチームでDevOpsやDevExの改善に取り組んでいる。また、オープンソース化されたswiftプロジェクトにも貢献している。"
+          }
+        }
+      }
+    },
+    "He was fascinated by the smooth and beautiful UI of Mac OS X and started working with Cocoa to create it by himself. After working as a commercial iOS developer, he now works as a software designer and architect, aiming to create beautiful software with smooth UI. He is also a member of \"macOS native\" community organizers." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "かつてMac OS Xのなめらかで美しいUIに憧れ、それを自らの手で作るためにCocoaに入門。商業iOSデベロッパーを経て、現在はソフトウェアデザイナー兼アーキテクトとして、なめらかなUIを備えた美しいソフトウェアの実現を志している。Macとネイティブアプリケーションをこよなく愛す。macOS native運営コアメンバー。"
+          }
+        }
+      }
+    },
     "HelloSwift.EXE: Writing a Windows Application as a non-Windows Developer" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -301,6 +447,61 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "HelloSwift.EXE: Windows開発者じゃなくてもWindowsアプリケーションを書いてみよう"
+          }
+        }
+      }
+    },
+    "Hiromu is a member of Rakuten Group, Inc. and is involved in the development of Rakuten Rakuma as an iOS engineer and tech lead." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "楽天グループ株式会社に所属。iOSエンジニア、テックリードとして楽天ラクマの開発に携わる。\n"
+          }
+        }
+      }
+    },
+    "Hisaki joined Konami Digital Entertainment and was involved in the online implementation of Winning Eleven for 5 years, developed and operated apps as an engineer at COLOPL for 9 years, developed AR games using location information and AR, and VR games such as OculusRift and PSVR After his experience in development, he joined MESON. He is developing SunnyTune, a launch title for VisionPro at MESON." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "株式会社コナミデジタルエンタテインメントに入社し5年間ウイニングイレブンのオンライン実装に携わる。\nその後、株式会社コロプラで9年間エンジニアとしてアプリ開発・運用を行い、位置情報やARを使用したARゲーム開発、OculusRiftやPSVRなどのVRゲーム開発を経験しMESONへ入社。\nMESONではVisionPro向けローンチタイトルのSunnyTuneを開発。"
+          }
+        }
+      }
+    },
+    "I like ramen." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I like ramen."
+          }
+        }
+      }
+    },
+    "I love beautiful movies, novels, photography and mobile apps!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I like ramen."
+          }
+        }
+      }
+    },
+    "ikesyo is a Swift (corelibs-foundation) contributor. He was also the author or maintainer of projects such as Himotoki, Quick, Nimble, Carthage, and ReactiveSwift. He is currently developing various manga apps at Hatena Co., Ltd." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ikesyoはSwift (corelibs-foundation)のコントリビューターである。Himotoki、Quick、Nimble、Carthage、ReactiveSwiftなどのプロジェクトの作者またはメンテナーでもある。現在は株式会社はてなで様々な漫画アプリを開発中。"
           }
         }
       }
@@ -345,6 +546,116 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "この講演では、最新のAI技術を使用して仮想言語チューターを構築するためのDuolingoの取り組みを探ります。2023年にDuolingoは、GPT-4を基盤とした新機能「Roleplay」を発表しました。これは、外国語でのリアルな会話練習体験をシミュレートすることを目的としています。製品開発に携わるエンジニアとして、iOS固有の課題や、生成AIを扱う際の一般的な問題点、例えばレイテンシの最適化などについて話します。講演は、Roleplay機能のインタラクティブなデモで締めくくられ、AIが言語学習をどのように変革しているかの内側を垣間見ることができます。"
+          }
+        }
+      }
+    },
+    "In this workshop we will look at the Swift compilation process and what those parts are, learn a bit about LLVM, how to find a bug to work on using bugs.swift.org and then making a build with our changes and running tests.A merged pull request is not the goal of this workshop, but after attending this workshop you should have enough knowledge to get started and know where to look to learn more.\n\nIf you are proficient in C++ or even have some experience with LLVM, then you can start working with the Swift compiler right away.\n\nIf you do not have former C++ knowledge fear not, the Swift standard library or SwiftSyntax are written mostly in Swift and the python / swift hybrid '.gyb' files.\nIn addition, we’re welcome to contribute to any other Swift family projects, like Foundation, Swift Package Manager, or any other first-party libraries." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このワークショップでは、Swiftのコンパイル過程とその部分について学びます。LLVMの基礎知識を少し学び、bugs.swift.orgを使って修正すべきバグを見つけ出し、変更を加えたビルドを作ってテストを行う方法についても扱います。このワークショップの目的はプルリクエストをマージすることではありませんが、参加後は始めるために必要な知識を身につけ、さらに学ぶべき方向性を理解できるようになるでしょう。\n\nもしC++が得意であるか、LLVMに関する経験が少しでもあれば、Swiftコンパイラの作業をすぐに開始できます。\n\nC++の経験がなくても大丈夫です。Swift標準ライブラリやSwiftSyntaxは主にSwiftで書かれており、PythonとSwiftのハイブリッドファイルである「.gyb」ファイルも存在します。また、Foundation、Swift Package Manager、その他のファーストパーティライブラリなど、Swiftファミリーのプロジェクトへの貢献も歓迎しています。"
+          }
+        }
+      }
+    },
+    "In this workshop we'll walk through how Swift's new Observable system is revolutionizing the way we write SwiftUI code, then move on to explore how it's used inside the SwiftData framework make app storage easier than ever. Please come with the latest Xcode installed on your laptop, because this is a hands-on workshop and you'll be expected to write a lot of code." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このワークショップでは、Swiftの新しいObservableシステムがSwiftUIのコードの書き方にどのような革命を起こしているのかを説明し、SwiftDataフレームワークの中でどのように使われているのかを探ることで、アプリのストレージをこれまで以上に簡単にします。これは実践的なワークショップであり、多くのコードを書くことが予想されるため、最新のXcodeをラップトップにインストールした状態でお越しください。"
+          }
+        }
+      }
+    },
+    "In this workshop you'll learn everything you need to build a simple Vapor application. You'll learn how to create routes, saves models to a database and build REST APIs. This workshop is fully updated for async/await!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このワークショップでは、シンプルなVaporアプリケーションを構築するために必要なすべてを学びます。ルートを作成し、モデルをデータベースに保存し、REST APIを構築する方法を学びます。このワークショップはasync/awaitに完全に対応しています！"
+          }
+        }
+      }
+    },
+    "In this workshop, we'll learn how to control Bluetooth Low Energy devices such as LEGO using Swift and Core Bluetooth.\n\nFirst, we'll deepen our understanding of controlling Bluetooth Low Energy (BLE) devices with Swift. After learning an overview of BLE and how to use Core Bluetooth, we will conduct a demonstration using the STAR WARS R2-D2 droid kit provided by littleBits.\n\nNext, we'll learn about the LEGO Wireless Protocol, which is the protocol for controlling LEGO via BLE. Finally, we'll utilize LEGO kits to create something that moves together.\n\nNote : Please note that the number of kits is limited, so if there are many participants, we'll form teams to conduct the workshop." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このワークショップでは、SwiftとCore Bluetoothを使用してレゴなどのBluetooth Low Energyデバイスを動かす方法を学びます。\n\n最初に、SwiftでBluetooth Low Energy（BLE）機器を制御する方法について理解を深めていきます。BLEの概要とCore Bluetoothの使い方を学んだあとに、具体的なデモとして、littleBitsが提供するSTAR WARS R2-D2ドロイド・キットによるデモンストレーションをします。\n\n次に、BLEでレゴを制御するためのプロトコルであるLEGO Wireless Protocolについて学習します。最後に、レゴのキットを活用して、一緒に動くものを作ります。\n\n※キットの数には限りがあるため、参加者が多い場合はチームを組んでワークショップを行います。"
+          }
+        }
+      }
+    },
+    "Katsumi has been developing software for the Apple platform for over 10 years and currently works for a company that develops low-code platforms. He works on automating all kinds of tasks. In his spare time, he builds and maintains various open source projects that improve developer productivity." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Platformのソフトウェアを専門に開発しているソフトウェアエンジニアです。現在はローコードでアプリ開発するサービスを提供する会社で働いていて、あらゆる作業を自動化する仕事をしています。空いた時間には、デベロッパーの生産性を向上するさまざまなオープンソースプロジェクトをメンテナンスしています。"
+          }
+        }
+      }
+    },
+    "Kazuhiro Kamakura works at LY corporation. He loves not only programming but also making things in general. In his spare time, he remodels houses." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LINEヤフー株式会社勤務。プログラミングだけでなく、ものづくり全般が好き。趣味は家のリフォーム。"
+          }
+        }
+      }
+    },
+    "Kazuya worked as a web engineer leader at Kayac, and then fell in love with 3DCG and VR, and moved to the VR team at COLOPL, where he worked as a lead engineer for the development of the VR game \"Nyoro The Snake & Seven Islands\" and experienced developing many VR games. After joining MESON, he worked as an XR engineer before becoming CTO." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "面白法人カヤックでWebエンジニアのリーダーを務めたのち3DCGおよびVRの魅力にハマり、その後コロプラの仮想現実チームに転籍。VRゲーム「Nyoro The Snake & Seven Islands」開発のリードエンジニアを務め、多数のVRゲーム開発を経験。MESONに入社後、XRエンジニアとして活動したのち、CTOに就任。"
+          }
+        }
+      }
+    },
+    "Key" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "もくもく会"
+          }
+        }
+      }
+    },
+    "Laptops with the latest stable Xcode and building the Swift compiler is preferred. Instruction will be provided beforehand." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最新の安定版Xcodeを搭載したラップトップを用意してください。事前にSwiftコンパイラをビルドしてくることが推奨されます。そのための指示は事前に提供されます。"
+          }
+        }
+      }
+    },
+    "Latest Xcode, Unity if needed and Apple Vision Pro (if you have, not required)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最新のXcodeを入れてきてください。必要な人はUnityも。Apple Vision Proは必須ではありません。"
           }
         }
       }
@@ -415,6 +726,17 @@
         }
       }
     },
+    "Marcin is a developer with extensive experience. He currently works at Judo.app, where he is building an interface builder for SwiftUI. Marcin has published numerous iOS/macOS libraries and tools, including CryptoSwift, ObjectivePGP, and the Online Swift Playground, which allows for interactive Swift code execution from a web browser. He is currently on a mission to ship SwiftStudio.app, an independent third-party IDE for Swift." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marcinは豊富な経験を持つ開発者である。彼は現在Judo.appで働いており、SwiftUIのインターフェースビルダーを構築している。Marcinは、CryptoSwift、ObjectivePGP、WebブラウザからインタラクティブなSwiftコードの実行を可能にするOnline Swift Playgroundなど、数多くのiOS/macOSライブラリやツールを公開している。彼は現在、Swift用の独立したサードパーティIDEであるSwiftStudio.appを出荷する使命を帯びている。"
+          }
+        }
+      }
+    },
     "Migrating Large Codebases Without Breaking The World" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -471,6 +793,17 @@
         }
       }
     },
+    "Osama is an iOS engineer at Classmethod in Japan, and He’s also a breakdancer who came in second place at the World Breakdancing Championship in Germany in 2007. In the world, He often go by the name ‘Lil Ossa’. He has a passion for both beer and dance, as well as creating iOS apps. He loves sharing his unique iOS development experiences at conferences, including Swiftable 2023 and iOSDC Japan 2022." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日本のクラスメソッドに所属するiOSエンジニアであり、2007年にドイツで開催されたブレイクダンス世界選手権で2位となったブレイクダンサーでもある。世界では「リル・オッサ」の名で呼ばれることが多い。ビールとダンス、そしてiOSアプリの開発に情熱を注ぐ。Swiftable 2023やiOSDC Japan 2022などのカンファレンスで、自身のユニークなiOS開発経験を共有するのが大好き。"
+          }
+        }
+      }
+    },
     "Parallel Socket Communication in Swift" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -478,6 +811,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Parallel Socket Communication in Swift"
+          }
+        }
+      }
+    },
+    "Paul is the author of Hacking with Swift, Pro Swift, Swift Design Patterns, Testing Swift, Swift Coding Challenges, and more. Suffice it to say, he quite likes Swift. And coffee. (But mostly Swift.) (And coffee.)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ポールは『Hacking with Swift』、『Pro Swift』、『Swift Design Patterns』、『Testing Swift』、『Swift Coding Challenges』などの著者です。言うまでもなく、彼はSwiftとコーヒーが大好きです。"
           }
         }
       }
@@ -536,6 +880,39 @@
         }
       }
     },
+    "S_Shimotori is an iOS application engineer. After work, I prepare for conferences, and on my days off, I enjoy playing games and eating out." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOSアプリエンジニアです。終業後はカンファレンスの準備を、休日はゲームと食べ歩きをしています。"
+          }
+        }
+      }
+    },
+    "Saleem is currently a Software Engineer at The Browser Company and a member of the Swift core team. He has worked at Google, Facebook, and Microsoft in the past. His interests lie in systems, and has worked on compilers and programming languages for over a decade, with some embedded systems thrown in. While currently focused on cross-platform Swift, primarily on Windows, he has ported Swift to Android and Windows amongst other environments." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saleemは現在、The Browser Companyのソフトウェアエンジニアで、Swiftコアチームのメンバーです。過去にはGoogle、Facebook、Microsoftで働いていた経験があります。彼の興味はシステムにあり、10年以上コンパイラとプログラミング言語に携わり、組み込みシステムにも携わってきました。現在は、主にWindows上のクロスプラットフォームSwiftに注力していますが、SwiftをAndroidやWindowsに移植した経験もあります。"
+          }
+        }
+      }
+    },
+    "Satoshi is a software engineer living in Tokyo, Japan.\nHe works for CyberAgent in a photography studio that enables virtual production.\nHe is also working on \"the visionOS 30 Days Development Challenge\" and a virtual camera implementation, and uploading the results to GitHub.\nHe loves ARKit and has recently pursued visionOS development and looks forward to a society where Vision Pro is widely used." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "東京在住のソフトウェアエンジニアです。\nサイバーエージェントに所属しており、バーチャルプロダクションを実現する撮影スタジオで働いています。\nvisionOS 30 Days 開発チャレンジや仮想カメラ実装などGitHubにアップしています。\nARKitが大好きで、最近はvisionOSの開発を追求中です。\nVision Proが普及した社会が楽しみですね。"
+          }
+        }
+      }
+    },
     "Schedule" : {
       "localizations" : {
         "ja" : {
@@ -557,6 +934,17 @@
         }
       }
     },
+    "Shinichiro is a software engineer and works on improvements of DevOps and DevEx in various teams. He also contributes some open-sourced swift projects." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レゴとSwiftが好きなプログラマ。iOSエンジニアとしてフリマアプリ「メルカリ」の立ち上げに参画し、現在は独立してプログラミング教育分野で活動中。iOSアプリ「Boost Remote」「Scrub」の作者。著書に『入門LEGO MINDSTORMS NXT 第2版 レゴブロックで作る動くロボット』(毎日コミュニケーションズ)など。"
+          }
+        }
+      }
+    },
     "Sign in with Luma and show QR code of your ticket at the reception." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -564,6 +952,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "LumaにログインしてQRコードを掲示してください。"
+          }
+        }
+      }
+    },
+    "Software superstar. Stuttering stud. Lead maintainer of fastlane tools." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ソフトウェア界のスーパースター。fastlaneツールのリード・メンテナー"
+          }
+        }
+      }
+    },
+    "Stephen entered tech by way of a liberal arts degree. He now works on Point-Free with Brandon Williams, where he tries to spread the word of testable, composable app development." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stephenは、リベラルアーツの学位から技術者の道に進みました。現在はBrandon WilliamsとともにPoint-Freeに携わり、テスト可能でコンポーザブルなアプリ開発の普及に努めています。"
           }
         }
       }
@@ -655,6 +1065,17 @@
         }
       }
     },
+    "Tim is a Swift developer from Manchester, UK and part of the Vapor Core Team. He's part of the server-side Swift team at Kodeco and has written the unofficial-official book on Vapor with the founders of the framework. He founded Broken Hands a few years ago and delivers talks and workshops on Vapor and server-side Swift around the world. He also co-organises the ServerSide.swift conference - the world’s first and only conference focused on server-side Swift." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tim はイギリス、マンチェスター出身の Swift 開発者で、Vapor コアチームの一員です。彼はKodecoのサーバーサイドSwiftチームの一員であり、フレームワークの創設者たちと共にVaporの非公式公式本を執筆している。数年前にBroken Handsを設立し、VaporとサーバーサイドSwiftに関する講演やワークショップを世界中で行っている。また、ServerSide.swiftカンファレンス（サーバーサイドSwiftに焦点を当てた世界初で唯一のカンファレンス）を共同主催している。"
+          }
+        }
+      }
+    },
     "Transforming Language Learning with AI: A Deep Dive into Duolingo’s AI Tutor" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -662,6 +1083,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "AIによる言語学習の変革：DuolingoのAIチューターを深掘る"
+          }
+        }
+      }
+    },
+    "Unique to Apple Vision Pro! How to Start Developing Spatial Apps" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Vision Proならでは！ 空間アプリ開発の始め方"
           }
         }
       }
@@ -688,7 +1120,7 @@
         }
       }
     },
-    "Vapor has undergone a large number of significant changes over the last few years. The introduction of Swift Concurrency, Sendable and rewriting the internals to use new async foundations have all posed big problems as we've had to migrate and adapt without breaking anything, continuing to ship and keeping our API stable! In this talk we'll go through some war stories of these migrations and learn some practical steps that you can use in your codebase to make big changes without grinding to a halt or breaking everything.\nThis talk is applicable to all Swift developers, whether writing libraries, iOS applications or even server apps!" : {
+    "Vapor has undergone a large number of significant changes over the last few years. The bio of Swift Concurrency, Sendable and rewriting the internals to use new async foundations have all posed big problems as we've had to migrate and adapt without breaking anything, continuing to ship and keeping our API stable! In this talk we'll go through some war stories of these migrations and learn some practical steps that you can use in your codebase to make big changes without grinding to a halt or breaking everything. \nThis talk is applicable to all Swift developers, whether writing libraries, iOS applications or even server apps!" : {
       "extractionState" : "manual",
       "localizations" : {
         "ja" : {
@@ -732,13 +1164,57 @@
         }
       }
     },
-    "With iPhones continually advancing their camera capabilities, one can capture satisfying photos without the need for a dedicated digital camera. Yet, there exists a niche of individuals who intentionally purchase older digital or film cameras. They are drawn to the unique aesthetic of photos and videos produced by these cameras.\n\nIn this talk, we'll explore how to achieve such retro-style photos using Swift. While Core Image's documentation offers articles like \"Simulating Scratchy Analog Film,\" implementing these techniques directly into a camera app may not yield the desired retro effect. Therefore, we'll start by reexamining the question, \"What defines a retro-style photo?\" and aim to create the ideal retro aesthetic." : {
+    "With iPhones continually advancing their camera capabilities, one can capture satisfying photos without the need for a dedicated digital camera. Yet, there exists a niche of individuals who intentionally purchase older digital or film cameras. They are drawn to the unique aesthetic of photos and videos produced by these cameras.\nIn this talk, we'll explore how to achieve such retro-style photos using Swift. While Core Image's documentation offers articles like \"Simulating Scratchy Analog Film,\" implementing these techniques directly into a camera app may not yield the desired retro effect. Therefore, we'll start by reexamining the question, \"What defines a retro-style photo?\" and aim to create the ideal retro aesthetic." : {
       "extractionState" : "manual",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iPhoneのカメラは進化を続けており、本格的なデジタルカメラを持たなくても満足できる程の写真を撮ることができる。そんな中あえて古めのデジカメやフィルムカメラを購入している層がある。彼らはそうしたカメラで撮れる写真や動画の味わいに惹かれているのである。\nSwiftでそのような写真を生み出すにはどうしたら良いのだろうか。Core Imageのドキュメントに\"Simulating Scratchy Analog Film\"という記事はあるが、その通りに実装したカメラアプリでは思うような「レトロ」が作れない。そもそも「レトロな写真とは何なのか」という問いから再考し、理想の「レトロ」を作ろうと思う。"
+          }
+        }
+      }
+    },
+    "Xiangyu works at Duolingo and belongs to Max Immersion team, which develops the GPT-based subscription feature called Roleplay. She develops new improvements and features for Roleplay, mostly on iOS.\nApart from being a full-stack software developer, She enjoys most of my time playing the piano and reading.\nShe loves learning languages. She speaks Chinese and English fluently and is learning French." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "XingyuはDuolingoで働いており、Roleplayと呼ばれるGPTベースのサブスクリプション機能を開発しているMax Immersionチームに所属しています。彼女はRoleplayの新しい改良と機能を、主にiOS上で開発しています。\nフルスタックのソフトウェア開発者であることとは別に、ピアノを弾いたり読書をしたりしています。\n言語を学ぶのも好きです。中国語と英語は流暢に話せますし、フランス語も勉強中です。"
+          }
+        }
+      }
+    },
+    "You will learn how MESON's launch title for Apple Vision Pro is made with hands-on experience.\n\nWe will also talk a bit about how we develop in Unity (PolySpatial)." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MESONがリリースしたApple Vision Pro向けローンチタイトルがどのようにしてできているかを、手を動かしながら学べる内容です。\n\nまた、Unity（PolySpatial）でどう開発していくのかを少しだけお話します。"
+          }
+        }
+      }
+    },
+    "Yuta is a software engineer at Goodnotes, an open-source developer, and a graduate CS student. He has been contributing to Swift / Ruby / LLVM for WebAssembly support." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Goodnotesのソフトウェアエンジニア、オープンソース開発者、CS大学院生。WebAssemblyをサポートするためにSwift / Ruby / LLVMに貢献している。"
+          }
+        }
+      }
+    },
+    "Zamzam is a tech lead with deep knowledge in AI and mobile technology, currently advancing her expertise at Veo Technologies in Copenhagen. A movie enthusiast post-work" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AIとモバイル技術に深い知識を持つ技術リーダーで、現在はコペンハーゲンのVeo Technologiesで専門知識を深めている。仕事の後は映画愛好家。"
           }
         }
       }

@@ -48,13 +48,13 @@
         }
       }
     },
-    "Daiki has worked as an iOS Developer for over 10 years and met as a volunteer staff member at try! Swift Tokyo in 2017. Inspired by the international speakers and sponsors he met then, he attended his first international conference, WWDC 2017.\nIn his work, I work as a software engineer at a ministry, while also serving as a technical advisor at various startups and listed companies, and as a general incorporated association try! Swift Tokyo.\nWhen he is not working, he likes to take podcasts with friends, play RPG games, snowboard in the snowy mountains, and spend time with friends in the neighborhood." : {
+    "Daiki has worked as an iOS Developer for over 10 years and met as a volunteer staff member at try! Swift Tokyo in 2017. Inspired by the international speakers and sponsors he met then, he attended his first international conference, WWDC 2017.\nIn his work, I work as a software engineer at a ministry, while also serving as a technical advisor at various startups and listed companies, and as a general incorporated association try! Swift Tokyo.\nWhen he is not working, he likes to take podcasts with friends, play RPG games, snowboard in the snowy mountains, and spend time with friends in the neighborhood.　He bought Apple Vision Pro at Honolulu on the day of release." : {
       "extractionState" : "manual",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "iOS Developerとして10年以上働いています。ボランティアスタッフとして出会ったtry! Swift Tokyo 2017にボランティアスタッフとして参加したのが初めてでした。仕事では、ソフトウェアエンジニア国家公務員として働く傍ら、様々なスタートアップや上場企業の技術顧問や一般社団法人try! Swift Tokyoの理事として活動しています。仕事以外の時間は、友人とポッドキャストをしたり、RPGゲームをしたり、雪山でスノーボードをしたり、近所の友人と過ごすのが好き。"
+            "value" : "iOS Developerとして10年以上働いています。ボランティアスタッフとして出会ったtry! Swift Tokyo 2017に参加したのが初めてでした。仕事では、ソフトウェアエンジニア国家公務員として働く傍ら、様々なスタートアップや上場企業の技術顧問や一般社団法人try! Swift Tokyoの理事として活動しています。仕事以外の時間は、友人とポッドキャストをしたり、RPGゲームをしたり、雪山でスノーボードをしたり、近所の友人と過ごすのが好き。Apple Vision Proを発売日にハワイで購入してきました。"
           }
         }
       }
@@ -85,16 +85,6 @@
         }
       }
     },
-    "I'm an iOS Developer working at ROLLCAKE Inc, and I have a passion for automation technologies such as test automation and CI." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ROLLCAKE株式会社で働くiOS Developer、テスト自動化やCIなどの自動化技術が好きです"
-        }
-      }
-    },
     "I am the CEO of AkkeyLab, Inc., where we run a programming school. My main role at AkkeyLab is to promote the benefits of Swift. Lately, I've been enjoying playing tennis and futsal with my colleagues from the company." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -102,6 +92,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "プログラミングスクールを運営する AkkeyLab株式会社 の CEO を務めており、Swift の魅力を伝える仕事をしています。最近はテニスやフットサルを会社の仲間と楽しんでいます。"
+          }
+        }
+      }
+    },
+    "I'm an iOS Developer working at ROLLCAKE Inc, and I have a passion for automation technologies such as test automation and CI." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ROLLCAKE株式会社で働くiOS Developer、テスト自動化やCIなどの自動化技術が好きです"
           }
         }
       }
@@ -196,7 +197,7 @@
         }
       }
     },
-    "Roku is an iOS Developer. She  joined try! Swift in 2019 as a volunteer staff member, and became an organizer in 2020.\nShe loves Swift community and occasionally organizes study sessions and development camps.\nShe is interested in beer, whiskey, and unique design clothes. In addition to creating apps, She also enjoy making accessories.\nHer lucky number is 6️⃣, which is called \"Roku\" in Japanese." : {
+    "Roku is an iOS Developer. She joined try! Swift in 2019 as a volunteer staff member, and became an organizer in 2020.\nShe loves Swift community and occasionally organizes study sessions and development camps.\nShe is interested in beer, whiskey, and unique design clothes. In addition to creating apps, She also enjoy making accessories.\nHer lucky number is 6️⃣, which is called \"Roku\" in Japanese." : {
       "extractionState" : "manual",
       "localizations" : {
         "ja" : {
