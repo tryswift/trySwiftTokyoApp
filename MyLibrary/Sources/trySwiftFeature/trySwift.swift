@@ -92,6 +92,8 @@ public struct TrySwift {
 public struct TrySwiftView: View {
 
   @Bindable public var store: StoreOf<TrySwift>
+    
+  @Environment(\.openURL) var openURL
 
   public init(store: StoreOf<TrySwift>) {
     self.store = store
@@ -170,6 +172,7 @@ public struct TrySwiftView: View {
       }
     }
     .navigationTitle(Text("try! Swift", bundle: .module))
+    #if os(iOS) || os(macOS)
     .sheet(
       item: $store.scope(state: \.destination?.codeOfConduct, action: \.destination.codeOfConduct)
     ) { sheetStore in
@@ -197,6 +200,33 @@ public struct TrySwiftView: View {
       content: { sheetStore in
         SafariViewRepresentation(url: sheetStore.url)
           .ignoresSafeArea()
-      })
+      }
+    )
+    #elseif os(visionOS)
+    .onChange(
+        of: store.scope(state: \.destination?.codeOfConduct, action: \.destination.codeOfConduct)
+    ) { _, store in
+        guard let url = store?.url else { return }
+        openURL(url)
+    }
+    .onChange(
+        of: store.scope(state: \.destination?.privacyPolicy, action: \.destination.privacyPolicy)
+    ) { _, store in
+        guard let url = store?.url else { return }
+        openURL(url)
+    }
+    .onChange(
+        of: store.scope(state: \.destination?.eventbrite, action: \.destination.eventbrite)
+    ) { _, store in
+        guard let url = store?.url else { return }
+        openURL(url)
+    }
+    .onChange(
+        of: store.scope(state: \.destination?.website, action: \.destination.website)
+    ) { _, store in
+        guard let url = store?.url else { return }
+        openURL(url)
+    }
+    #endif
   }
 }

@@ -54,6 +54,8 @@ public struct Profile {
 public struct ProfileView: View {
 
   @Bindable public var store: StoreOf<Profile>
+    
+  @Environment(\.openURL) var openURL
 
   public init(store: StoreOf<Profile>) {
     self.store = store
@@ -88,10 +90,19 @@ public struct ProfileView: View {
       }
       .navigationTitle(Text(LocalizedStringKey(store.organizer.name), bundle: .module))
     }
+    #if os(iOS) || os(macOS)
     .sheet(item: $store.scope(state: \.destination?.safari, action: \.destination.safari)) {
       sheetStore in
       SafariViewRepresentation(url: sheetStore.url)
         .ignoresSafeArea()
     }
+    #elseif os(visionOS)
+    .onChange(
+        of: store.scope(state: \.destination?.safari, action: \.destination.safari)
+    ) { _, store in
+        guard let url = store?.url else { return }
+        openURL(url)
+    }
+    #endif
   }
 }

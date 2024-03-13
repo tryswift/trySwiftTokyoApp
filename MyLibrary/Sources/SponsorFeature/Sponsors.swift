@@ -64,6 +64,8 @@ public struct SponsorsList {
 @ViewAction(for: SponsorsList.self)
 public struct SponsorsListView: View {
   @Bindable public var store: StoreOf<SponsorsList>
+  
+  @Environment(\.openURL) var openURL
 
   public init(store: StoreOf<SponsorsList>) {
     self.store = store
@@ -72,12 +74,21 @@ public struct SponsorsListView: View {
   public var body: some View {
     NavigationView {
       root
+        #if os(iOS) || os(macOS)
         .fullScreenCover(
           item: $store.scope(state: \.destination?.safari, action: \.destination.safari)
         ) { sheetStore in
           SafariViewRepresentation(url: sheetStore.url)
             .ignoresSafeArea()
         }
+        #elseif os(visionOS)
+        .onChange(
+          of: store.scope(state: \.destination?.safari, action: \.destination.safari)
+        ) { _, store in
+          guard let url = store?.url else { return }
+          openURL(url)
+        }
+        #endif
         .onAppear {
           send(.onAppear)
         }

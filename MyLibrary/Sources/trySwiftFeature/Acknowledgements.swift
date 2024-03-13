@@ -36,13 +36,25 @@ public struct Acknowledgements {
 public struct AcknowledgementsView: View {
 
   @Bindable public var store: StoreOf<Acknowledgements>
+  
+  @Environment(\.openURL) var openURL
 
   public var body: some View {
     list
+      #if os(iOS) || os(macOS)
       .sheet(item: $store.scope(state: \.safari, action: \.safari)) { sheetStore in
         SafariViewRepresentation(url: sheetStore.url)
           .ignoresSafeArea()
       }
+      #elseif os(visionOS)
+      .onChange(
+        of: store.scope(state: \.safari, action: \.safari)
+      ) { _, store in
+        guard let url = store?.url else { return }
+        openURL(url)
+      }
+      #endif
+      
   }
 
   @ViewBuilder

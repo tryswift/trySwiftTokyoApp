@@ -63,6 +63,8 @@ public struct ScheduleDetail {
 public struct ScheduleDetailView: View {
 
   @Bindable public var store: StoreOf<ScheduleDetail>
+  
+  @Environment(\.openURL) var openURL
 
   public init(store: StoreOf<ScheduleDetail>) {
     self.store = store
@@ -102,11 +104,20 @@ public struct ScheduleDetailView: View {
         Spacer()
       }
     }
+    #if os(iOS) || os(macOS)
     .sheet(item: $store.scope(state: \.destination?.safari, action: \.destination.safari)) {
       sheetStore in
       SafariViewRepresentation(url: sheetStore.url)
         .ignoresSafeArea()
     }
+    #elseif os(visionOS)
+    .onChange(
+      of: store.scope(state: \.destination?.safari, action: \.destination.safari)
+    ) { _, store in
+      guard let url = store?.url else { return }
+      openURL(url)
+    }
+    #endif
   }
 
   @ViewBuilder
