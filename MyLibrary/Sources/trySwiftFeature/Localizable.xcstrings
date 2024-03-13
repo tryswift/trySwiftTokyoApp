@@ -310,6 +310,28 @@
         }
       }
     },
+    "yucovin" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ゆこびん"
+          }
+        }
+      }
+    },
+    "yucovin is a designer and iOS engineer with over a decade of experience spanning multiple levels of structural designs and interface design/engineering in government and private start-up. yucovin has helped numerous teams improve their product/service quality and processes as a designer who can bridge design and development. And most importantly, she is the creator of Riko, the mascot of try! Swift!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "try! Swiftのマスコットキャラクター「Riko」の生みの親。\nスタートアップや行政のプロダクトなどを手掛けるデザイナー、iOSエンジニア。情報設計が必要なプロダクトのUIが得意。デザインとエンジニアリングを繋げるポジションとして、多くのチームでプロダクトやサービスのクオリティとプロセス改善に寄与している。"
+          }
+        }
+      }
+    },
     "Yutaro is a Software Engineer who loves Swift. He has been contributing to try! Swift Tokyo since 2017.\nCurrently, he lives in the Kansai region and works at Hatena Co., Ltd.\nHis favorite things are beer🍺 and sake🍶. Recently, he has been experimenting with the Apple Vision Pro." : {
       "extractionState" : "manual",
       "localizations" : {

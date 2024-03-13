@@ -174,5 +174,21 @@
         "url": "https://github.com/elmetal"
       }
     ]
+  },
+  {
+    "id": 12,
+    "name": "yucovin",
+    "image_name": "yucovin",
+    "bio": "yucovin is a designer and iOS engineer with over a decade of experience spanning multiple levels of structural designs and interface design/engineering in government and private start-up. yucovin has helped numerous teams improve their product/service quality and processes as a designer who can bridge design and development. And most importantly, she is the creator of Riko, the mascot of try! Swift!",
+    "links": [
+      {
+        "name": "@yucovin",
+        "url": "https://x.com/yucovin"
+      },
+      {
+        "name": "@yucovin",
+        "url": "https://github.com/yucovin"
+      }
+    ]
   }
 ]
