@@ -164,6 +164,17 @@
         }
       }
     },
+    "Shota works as an iOS developer at Cybozu. His first programming language is Swift, and he loves Swift." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サイボウズでiOS Developerとして働いています。初めてのプログラミング言語はSwiftで、Swiftが大好きです。"
+          }
+        }
+      }
+    },
     "try! Swift" : {
       "localizations" : {
         "ja" : {
