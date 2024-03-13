@@ -85,6 +85,28 @@
         }
       }
     },
+    "Hideyuki is a Swift lover and focusing to enjoy learning and playing with Swift more. He organizes Swift Fun Club which is the group where Swift lovers gather in Japan. He is also the most famous Kanpai-er(person who make a toast). He is expanding the circle of Swift lovers with Kanpai🍻" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swift愛好会会長です。みんなでもっとSwiftを楽しめるようなネタを探してます。かんぱいやー（勉強会で乾杯をする人）としても知られていて、乾杯の力でSwift好きの輪を広めています🍻"
+          }
+        }
+      }
+    },
+    "Hideyuki Nanashima" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "七島 偉之"
+          }
+        }
+      }
+    },
     "I am the CEO of AkkeyLab, Inc., where we run a programming school. My main role at AkkeyLab is to promote the benefits of Swift. Lately, I've been enjoying playing tennis and futsal with my colleagues from the company." : {
       "extractionState" : "manual",
       "localizations" : {
