@@ -241,6 +241,28 @@
         }
       }
     },
+    "Tim is an iOS developer from Australia and is currently working at Instagram in Tokyo. He presented at try! Swift Tokyo 2016 and has been volunteering as one of the MCs since 2018. In his free time, he loves video games, writing open source software and karaoke." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オーストラリア出身のiOS Developerで現在Instagramの東京オフィスで働いています。 2016年に初めてtry! Swift Tokyoに参加して、2018年から司会としてtry! Swiftをサポートしています。暇な時にゲームやカラオケやOSSが大好きです。"
+          }
+        }
+      }
+    },
+    "Tim Oliver" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ティム オリバー"
+          }
+        }
+      }
+    },
     "try! Swift" : {
       "localizations" : {
         "ja" : {
