@@ -11,11 +11,11 @@ public struct ScheduleDetail {
 
     var title: String
     var description: String
-    var requirements: [String]?
+    var requirements: String?
     var speakers: [Speaker]
     @Presents var destination: Destination.State?
 
-    public init(title: String, description: String, requirements: [String]? = nil, speakers: [Speaker]) {
+    public init(title: String, description: String, requirements: String? = nil, speakers: [Speaker]) {
       self.title = title
       self.description = description
       self.requirements = requirements
@@ -81,7 +81,7 @@ public struct ScheduleDetailView: View {
                 Text("Requirements", bundle: .module)
                   .font(.subheadline.bold())
                   .foregroundStyle(Color.accentColor)
-                Text(ListFormatter.localizedString(byJoining: requirements))
+                Text(LocalizedStringKey(requirements), bundle: .module)
                   .font(.callout)
               }
               .padding()

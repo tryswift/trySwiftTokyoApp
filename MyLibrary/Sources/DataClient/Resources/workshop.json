@@ -98,7 +98,7 @@
             {
               "name": "Shinichiro Oba",
               "image_name": "Shinichiro Oba",
-              "bio": "He is a software engineer and works on improvements of DevOps and DevEx in various teams. He also contributes some open-sourced swift projects.",
+              "bio": "Shinichiro is a software engineer and works on improvements of DevOps and DevEx in various teams. He also contributes some open-sourced swift projects.",
               "links": [
                 {
                   "name": "@ooba",
@@ -115,7 +115,7 @@
             {
               "name": "Kazuya Hiruma",
               "image_name": "Kazuya Hiruma",
-              "bio": "Kazuya worked as a web engineer leader at Kayac, and then fell in love with 3DCG and VR, and moved to the VR team at COLOPL, where he worked as a lead engineer for the development of the VR game \"Nyoro The Snake & Seven Islands\" and experienced developing many VR games. After joining MESON, he worked as an XR engineer before becoming CTO.。",
+              "bio": "Kazuya worked as a web engineer leader at Kayac, and then fell in love with 3DCG and VR, and moved to the VR team at COLOPL, where he worked as a lead engineer for the development of the VR game \"Nyoro The Snake & Seven Islands\" and experienced developing many VR games. After joining MESON, he worked as an XR engineer before becoming CTO.",
               "links": [
                 {
                   "name": "@edom18",
@@ -126,7 +126,7 @@
             {
               "name": "Hisaki Sato",
               "image_name": "Hisaki Sato",
-              "bio": "Hisaki joined Konami Digital Entertainment and was involved in the online implementation of Winning Eleven for 5 years, developed and operated apps as an engineer at COLOPL for 9 years, developed AR games using location information and AR, and VR games such as OculusRift and PSVR After his experience in development, he joined MESON. He is developing SunnyTune, a launch title for VisionPro at MESON",
+              "bio": "Hisaki joined Konami Digital Entertainment and was involved in the online implementation of Winning Eleven for 5 years, developed and operated apps as an engineer at COLOPL for 9 years, developed AR games using location information and AR, and VR games such as OculusRift and PSVR After his experience in development, he joined MESON. He is developing SunnyTune, a launch title for VisionPro at MESON.",
               "links": [
                 {
                   "name": "@lorincho3",
@@ -136,11 +136,7 @@
             }
           ],
           "description": "You will learn how MESON's launch title for Apple Vision Pro is made with hands-on experience.\n\nWe will also talk a bit about how we develop in Unity (PolySpatial).",
-          "requirements": [
-            "Latest Xcode",
-            "Unity (if needed)",
-            "Apple Vision Pro (if you have, not required)"
-          ]
+          "requirements": "Latest Xcode, Unity if needed and Apple Vision Pro (if you have, not required)"
         }
       ]
     },
@@ -193,11 +189,8 @@
               ]
             }
           ],
-          "description": "In this workshop, we will look at the Swift compilation process and what those parts are, learn a bit about LLVM, how to find a bug to work on using bugs.swift.org, and then making a build with our changes and running tests. A merged pull request is not the goal of this workshop, but you should have enough knowledge to get started and know where to look to learn more after attending.",
-          "requirements": [
-            "Laptops with the latest stable Xcode",
-            "Building the Swift compiler is preferred. Instruction will be provided beforehand."
-          ]
+          "description": "In this workshop we will look at the Swift compilation process and what those parts are, learn a bit about LLVM, how to find a bug to work on using bugs.swift.org and then making a build with our changes and running tests.A merged pull request is not the goal of this workshop, but after attending this workshop you should have enough knowledge to get started and know where to look to learn more.\n\nIf you are proficient in C++ or even have some experience with LLVM, then you can start working with the Swift compiler right away.\n\nIf you do not have former C++ knowledge fear not, the Swift standard library or SwiftSyntax are written mostly in Swift and the python / swift hybrid '.gyb' files.\nIn addition, we’re welcome to contribute to any other Swift family projects, like Foundation, Swift Package Manager, or any other first-party libraries.",
+          "requirements": "Laptops with the latest stable Xcode and building the Swift compiler is preferred. Instruction will be provided beforehand."
         },
         {
           "title": "Peer Labs",

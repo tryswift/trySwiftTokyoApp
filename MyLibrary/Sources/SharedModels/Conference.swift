@@ -28,11 +28,11 @@ public struct Session: Codable, Equatable, Hashable, Sendable {
   public var speakers: [Speaker]?
   public var place: String?
   public var description: String?
-  public var requirements: [String]?
+  public var requirements: String?
 
   public init(
     title: String, speakers: [Speaker]?, place: String?, description: String?,
-    requirements: [String]?
+    requirements: String?
   ) {
     self.title = title
     self.speakers = speakers

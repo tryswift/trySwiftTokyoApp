@@ -85,16 +85,6 @@
         }
       }
     },
-    "I'm an iOS Developer working at ROLLCAKE Inc, and I have a passion for automation technologies such as test automation and CI." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ROLLCAKE株式会社で働くiOS Developer、テスト自動化やCIなどの自動化技術が好きです"
-        }
-      }
-    },
     "I am the CEO of AkkeyLab, Inc., where we run a programming school. My main role at AkkeyLab is to promote the benefits of Swift. Lately, I've been enjoying playing tennis and futsal with my colleagues from the company." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -102,6 +92,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "プログラミングスクールを運営する AkkeyLab株式会社 の CEO を務めており、Swift の魅力を伝える仕事をしています。最近はテニスやフットサルを会社の仲間と楽しんでいます。"
+          }
+        }
+      }
+    },
+    "I'm an iOS Developer working at ROLLCAKE Inc, and I have a passion for automation technologies such as test automation and CI." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ROLLCAKE株式会社で働くiOS Developer、テスト自動化やCIなどの自動化技術が好きです"
           }
         }
       }
@@ -196,7 +197,7 @@
         }
       }
     },
-    "Roku is an iOS Developer. She  joined try! Swift in 2019 as a volunteer staff member, and became an organizer in 2020.\nShe loves Swift community and occasionally organizes study sessions and development camps.\nShe is interested in beer, whiskey, and unique design clothes. In addition to creating apps, She also enjoy making accessories.\nHer lucky number is 6️⃣, which is called \"Roku\" in Japanese." : {
+    "Roku is an iOS Developer. She joined try! Swift in 2019 as a volunteer staff member, and became an organizer in 2020.\nShe loves Swift community and occasionally organizes study sessions and development camps.\nShe is interested in beer, whiskey, and unique design clothes. In addition to creating apps, She also enjoy making accessories.\nHer lucky number is 6️⃣, which is called \"Roku\" in Japanese." : {
       "extractionState" : "manual",
       "localizations" : {
         "ja" : {
