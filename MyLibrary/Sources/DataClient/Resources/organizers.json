@@ -96,6 +96,54 @@
     ]
   },
   {
+    "id": 7,
+    "name": "Takuya Tominaga",
+    "image_name": "TakuyaTominaga",
+    "bio": "Takuya has been an iOS developer for three years, after working in sales and testing. Now, I'm working on developing iOS apps with SwiftUI and GraphQL for my job. I love how iOS development is always changing. This is my first time at try! Swift Tokyo, and surprisingly, I'm part of the team too! What's more, try! Swift Tokyo happens to be on the same day my second child is expected, which has me really excited! Outside of work, my partner and I are big into Pokémon cards and hope to meet new friends this way. I can't wait to meet people from all over through Swift and have some great times together!",
+    "links": [
+      {
+        "name": "@tominagaaaaa",
+        "url": "https://x.com/tominagaaaaa"
+      },
+      {
+        "name": "@takuyaaaaaaahaaaaaa",
+        "url": "https://github.com/takuyaaaaaaahaaaaaa"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Akio Itaya",
+    "image_name": "akkey",
+    "bio": "I am the CEO of AkkeyLab, Inc., where we run a programming school. My main role at AkkeyLab is to promote the benefits of Swift. Lately, I've been enjoying playing tennis and futsal with my colleagues from the company.",
+    "links": [
+      {
+        "name": "@AkkeyLab",
+        "url": "https://x.com/AkkeyLab"
+      },
+      {
+        "name": "@AkkeyLab",
+        "url": "https://github.com/AkkeyLab"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Roku / Miki Yoshida",
+    "image_name": "Roku",
+    "bio": "Roku is an iOS Developer. She  joined try! Swift in 2019 as a volunteer staff member, and became an organizer in 2020.\nShe loves Swift community and occasionally organizes study sessions and development camps.\nShe is interested in beer, whiskey, and unique design clothes. In addition to creating apps, She also enjoy making accessories.\nHer lucky number is 6️⃣, which is called \"Roku\" in Japanese.",
+    "links": [
+      {
+        "name": "@66nylon_y",
+        "url": "https://twitter.com/66nylon_y"
+      },
+      {
+        "name": "@roku-yosh",
+        "url": "https://github.com/roku-yosh"
+      }
+    ]
+  },
+  {
     "id": 10,
     "name": "Shingo Tamaki",
     "image_name": "tamaki",
@@ -108,6 +156,22 @@
       {
         "name": "@tamaki-shingo",
         "url": "https://github.com/tamaki-shingo"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Shota Ebara",
+    "image_name": "elmetal",
+    "bio": "Shota works as an iOS developer at Cybozu. His first programming language is Swift, and he loves Swift.",
+    "links": [
+      {
+        "name": "@el_metal_",
+        "url": "https://twitter.com/el_metal_"
+      },
+      {
+        "name": "@elmetal",
+        "url": "https://github.com/elmetal"
       }
     ]
   }
