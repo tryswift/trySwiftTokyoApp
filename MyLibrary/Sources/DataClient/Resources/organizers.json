@@ -190,5 +190,22 @@
         "url": "https://github.com/yucovin"
       }
     ]
+  },
+  {
+    "id": 13,
+    "name": "Tim Oliver",
+    "image_name": "TimOliver",
+    "bio": "Tim is an iOS developer from Australia and is currently working at Instagram in Tokyo. He presented at try! Swift Tokyo 2016 and has been helping the organizers since 2018. In his free time, he loves video games, writing open source software and karaoke.",
+    "links": [
+      {
+        "name": "@TimOliverAU",
+        "url": "https://twitter.com/TimOliverAU"
+      },
+      {
+        "name": "@TimOliver",
+        "url": "https://github.com/TimOliver"
+
+      }
+    ]
   }
 ]
