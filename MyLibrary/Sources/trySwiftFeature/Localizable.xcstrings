@@ -208,6 +208,17 @@
         }
       }
     },
+    "Shoko joined the DevRel team at LINE (now LY Corporation) in September 2019, after working as a front-end engineer at a venture company. There, she was responsible for tech branding, marketing, training, and managing technical conferences for the engineering organization. Subsequently, in March 2024, she founded THE BIGLE Inc., a company that provides support for Developer Relations, including technical PR, technical communities, and technical conferences, and became independent." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ベンチャー企業のフロントエンドエンジニアを経て、2019年9月よりLINE（現・LINEヤフー）のDevRelチームにてエンジニア組織のTech Branding、Trainingや技術カンファレンスの運営を担当。イベントやブログ、動画などを中心に社内外の技術コミュニティの盛り上げや機会づくりなど各組織のサポートに従事。その後、2024年3月よりDeveloper Relationsのサポート事業（技術広報・技術コミュニティ・技術カンファレンスの支援）を行うTHE BIGLE株式会社を立ち上げ、独立。"
+          }
+        }
+      }
+    },
     "Shota works as an iOS developer at Cybozu. His first programming language is Swift, and he loves Swift." : {
       "extractionState" : "manual",
       "localizations" : {
