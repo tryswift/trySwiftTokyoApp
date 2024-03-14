@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zunda-pixel/LicenseProvider",
       "state" : {
-        "revision" : "39cd5f269955fc961630f970c370f9182fe56911",
-        "version" : "1.1.1"
+        "branch" : "support-linux",
+        "revision" : "f0245df3ec0a41efed350e28ad3a84865620292a"
       }
     },
     {
