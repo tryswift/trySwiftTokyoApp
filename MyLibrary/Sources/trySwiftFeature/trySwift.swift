@@ -38,11 +38,10 @@ public struct TrySwift {
 
   @Reducer(state: .equatable)
   public enum Destination {
-    case codeOfConduct(Safari)
-    case privacyPolicy(Safari)
-    case eventbrite(Safari)
-    case website(Safari)
+    case safari(Safari)
   }
+    
+  @Dependency(\.openURL) var openURL
 
   public init() {}
 
@@ -55,23 +54,39 @@ public struct TrySwift {
         return .none
       case .view(.codeOfConductTapped):
         let url = URL(string: String(localized: "Code of Conduct URL", bundle: .module))!
-        state.destination = .codeOfConduct(.init(url: url))
+        #if os(iOS) || os(macOS)
+        state.destination = .safari(.init(url: url))
         return .none
+        #elseif os(visionOS)
+        return .run { _ in await openURL(url) }
+        #endif
       case .view(.privacyPolicyTapped):
         let url = URL(string: String(localized: "Privacy Policy URL", bundle: .module))!
-        state.destination = .privacyPolicy(.init(url: url))
+        #if os(iOS) || os(macOS)
+        state.destination = .safari(.init(url: url))
         return .none
+        #elseif os(visionOS)
+        return .run { _ in await openURL(url) }
+        #endif
       case .view(.acknowledgementsTapped):
         state.path.append(.acknowledgements(.init()))
         return .none
       case .view(.eventbriteTapped):
         let url = URL(string: String(localized: "Eventbrite URL", bundle: .module))!
-        state.destination = .eventbrite(.init(url: url))
+        #if os(iOS) || os(macOS)
+        state.destination = .safari(.init(url: url))
         return .none
+        #elseif os(visionOS)
+        return .run { _ in await openURL(url) }
+        #endif
       case .view(.websiteTapped):
         let url = URL(string: String(localized: "Website URL", bundle: .module))!
-        state.destination = .eventbrite(.init(url: url))
+        #if os(iOS) || os(macOS)
+        state.destination = .safari(.init(url: url))
         return .none
+        #elseif os(visionOS)
+        return .run { _ in await openURL(url) }
+        #endif
       case let .path(.element(_, .organizers(.delegate(.organizerTapped(organizer))))):
         state.path.append(.profile(.init(organizer: organizer)))
         return .none
@@ -171,32 +186,10 @@ public struct TrySwiftView: View {
     }
     .navigationTitle(Text("try! Swift", bundle: .module))
     .sheet(
-      item: $store.scope(state: \.destination?.codeOfConduct, action: \.destination.codeOfConduct)
+      item: $store.scope(state: \.destination?.safari, action: \.destination.safari)
     ) { sheetStore in
       SafariViewRepresentation(url: sheetStore.url)
         .ignoresSafeArea()
-        .navigationTitle(Text("Code of Conduct", bundle: .module))
     }
-    .sheet(
-      item: $store.scope(state: \.destination?.privacyPolicy, action: \.destination.privacyPolicy),
-      content: { sheetStore in
-        SafariViewRepresentation(url: sheetStore.url)
-          .ignoresSafeArea()
-          .navigationTitle(Text("Privacy Policy", bundle: .module))
-      }
-    )
-    .sheet(
-      item: $store.scope(state: \.destination?.eventbrite, action: \.destination.eventbrite),
-      content: { sheetStore in
-        SafariViewRepresentation(url: sheetStore.url)
-          .ignoresSafeArea()
-      }
-    )
-    .sheet(
-      item: $store.scope(state: \.destination?.website, action: \.destination.website),
-      content: { sheetStore in
-        SafariViewRepresentation(url: sheetStore.url)
-          .ignoresSafeArea()
-      })
   }
 }

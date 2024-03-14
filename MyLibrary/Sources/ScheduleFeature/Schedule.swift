@@ -87,8 +87,12 @@ public struct Schedule {
         return .none
       case .view(.mapItemTapped):
         let url = URL(string: String(localized: "Guidance URL", bundle: .module))!
+        #if os(iOS) || os(macOS)
         state.destination = .guidance(.init(url: url))
         return .none
+        #elseif os(visionOS)
+        return .run { _ in await openURL(url) }
+        #endif
       case .binding, .path, .destination:
         return .none
       }
@@ -102,6 +106,7 @@ public struct Schedule {
 public struct ScheduleView: View {
 
   @Bindable public var store: StoreOf<Schedule>
+  
   let mapTip: MapTip = .init()
 
   public init(store: StoreOf<Schedule>) {

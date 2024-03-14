@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
   name: "MyLibrary",
   defaultLocalization: "en",
-  platforms: [.iOS(.v17), .macOS(.v14), .watchOS(.v10), .tvOS(.v17)],
+  platforms: [.iOS(.v17), .macOS(.v14), .watchOS(.v10), .tvOS(.v17), .visionOS(.v1)],
   products: [
     .library(
       name: "AppFeature",

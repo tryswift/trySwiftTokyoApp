@@ -16,13 +16,19 @@ public struct Acknowledgements {
     case urlTapped(URL)
     case safari(PresentationAction<Safari.Action>)
   }
+  
+  @Dependency(\.openURL) var openURL
 
   public var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
       case let .urlTapped(url):
+        #if os(iOS) || os(macOS)
         state.safari = .init(url: url)
         return .none
+        #elseif os(visionOS)
+        return .run { _ in await openURL(url) }
+        #endif
       case .safari:
         return .none
       }

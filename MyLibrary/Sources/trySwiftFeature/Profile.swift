@@ -31,6 +31,8 @@ public struct Profile {
     case safari(Safari)
   }
 
+  @Dependency(\.openURL) var openURL
+    
   public init() {}
 
   public var body: some ReducerOf<Self> {
@@ -38,8 +40,12 @@ public struct Profile {
     Reduce { state, action in
       switch action {
       case let .view(.snsTapped(url)):
+        #if os(iOS) || os(macOS)
         state.destination = .safari(.init(url: url))
         return .none
+        #elseif os(visionOS)
+        return .run { _ in await openURL(url) }
+        #endif
       case .destination:
         return .none
       case .binding:

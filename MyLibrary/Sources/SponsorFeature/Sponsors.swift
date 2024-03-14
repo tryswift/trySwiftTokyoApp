@@ -44,8 +44,12 @@ public struct SponsorsList {
 
       case let .view(.sponsorTapped(sponsor)):
         guard let url = sponsor.link else { return .none }
+        #if os(iOS) || os(macOS)
         state.destination = .safari(.init(url: url))
         return .none
+        #elseif os(visionOS)
+        return .run { _ in await openURL(url) }
+        #endif
       case .binding:
         return .none
       case .destination:
