@@ -38,10 +38,7 @@ public struct TrySwift {
 
   @Reducer(state: .equatable)
   public enum Destination {
-    case codeOfConduct(Safari)
-    case privacyPolicy(Safari)
-    case eventbrite(Safari)
-    case website(Safari)
+    case safari(Safari)
   }
 
   public init() {}
@@ -55,22 +52,22 @@ public struct TrySwift {
         return .none
       case .view(.codeOfConductTapped):
         let url = URL(string: String(localized: "Code of Conduct URL", bundle: .module))!
-        state.destination = .codeOfConduct(.init(url: url))
+        state.destination = .safari(.init(url: url))
         return .none
       case .view(.privacyPolicyTapped):
         let url = URL(string: String(localized: "Privacy Policy URL", bundle: .module))!
-        state.destination = .privacyPolicy(.init(url: url))
+        state.destination = .safari(.init(url: url))
         return .none
       case .view(.acknowledgementsTapped):
         state.path.append(.acknowledgements(.init()))
         return .none
       case .view(.eventbriteTapped):
         let url = URL(string: String(localized: "Eventbrite URL", bundle: .module))!
-        state.destination = .eventbrite(.init(url: url))
+        state.destination = .safari(.init(url: url))
         return .none
       case .view(.websiteTapped):
         let url = URL(string: String(localized: "Website URL", bundle: .module))!
-        state.destination = .eventbrite(.init(url: url))
+        state.destination = .safari(.init(url: url))
         return .none
       case let .path(.element(_, .organizers(.delegate(.organizerTapped(organizer))))):
         state.path.append(.profile(.init(organizer: organizer)))
@@ -174,55 +171,14 @@ public struct TrySwiftView: View {
     .navigationTitle(Text("try! Swift", bundle: .module))
     #if os(iOS) || os(macOS)
     .sheet(
-      item: $store.scope(state: \.destination?.codeOfConduct, action: \.destination.codeOfConduct)
+      item: $store.scope(state: \.destination?.safari, action: \.destination.safari)
     ) { sheetStore in
       SafariViewRepresentation(url: sheetStore.url)
         .ignoresSafeArea()
-        .navigationTitle(Text("Code of Conduct", bundle: .module))
     }
-    .sheet(
-      item: $store.scope(state: \.destination?.privacyPolicy, action: \.destination.privacyPolicy),
-      content: { sheetStore in
-        SafariViewRepresentation(url: sheetStore.url)
-          .ignoresSafeArea()
-          .navigationTitle(Text("Privacy Policy", bundle: .module))
-      }
-    )
-    .sheet(
-      item: $store.scope(state: \.destination?.eventbrite, action: \.destination.eventbrite),
-      content: { sheetStore in
-        SafariViewRepresentation(url: sheetStore.url)
-          .ignoresSafeArea()
-      }
-    )
-    .sheet(
-      item: $store.scope(state: \.destination?.website, action: \.destination.website),
-      content: { sheetStore in
-        SafariViewRepresentation(url: sheetStore.url)
-          .ignoresSafeArea()
-      }
-    )
     #elseif os(visionOS)
     .onChange(
-        of: store.scope(state: \.destination?.codeOfConduct, action: \.destination.codeOfConduct)
-    ) { _, store in
-        guard let url = store?.url else { return }
-        openURL(url)
-    }
-    .onChange(
-        of: store.scope(state: \.destination?.privacyPolicy, action: \.destination.privacyPolicy)
-    ) { _, store in
-        guard let url = store?.url else { return }
-        openURL(url)
-    }
-    .onChange(
-        of: store.scope(state: \.destination?.eventbrite, action: \.destination.eventbrite)
-    ) { _, store in
-        guard let url = store?.url else { return }
-        openURL(url)
-    }
-    .onChange(
-        of: store.scope(state: \.destination?.website, action: \.destination.website)
+        of: store.scope(state: \.destination?.safari, action: \.destination.safari)
     ) { _, store in
         guard let url = store?.url else { return }
         openURL(url)
