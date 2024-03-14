@@ -40,6 +40,8 @@ public struct TrySwift {
   public enum Destination {
     case safari(Safari)
   }
+    
+  @Dependency(\.openURL) var openURL
 
   public init() {}
 
@@ -52,23 +54,39 @@ public struct TrySwift {
         return .none
       case .view(.codeOfConductTapped):
         let url = URL(string: String(localized: "Code of Conduct URL", bundle: .module))!
+        #if os(iOS) || os(macOS)
         state.destination = .safari(.init(url: url))
         return .none
+        #elseif os(visionOS)
+        return .run(operation: { _ in await openURL(url) })
+        #endif
       case .view(.privacyPolicyTapped):
         let url = URL(string: String(localized: "Privacy Policy URL", bundle: .module))!
+        #if os(iOS) || os(macOS)
         state.destination = .safari(.init(url: url))
         return .none
+        #elseif os(visionOS)
+        return .run(operation: { _ in await openURL(url) })
+        #endif
       case .view(.acknowledgementsTapped):
         state.path.append(.acknowledgements(.init()))
         return .none
       case .view(.eventbriteTapped):
         let url = URL(string: String(localized: "Eventbrite URL", bundle: .module))!
+        #if os(iOS) || os(macOS)
         state.destination = .safari(.init(url: url))
         return .none
+        #elseif os(visionOS)
+        return .run(operation: { _ in await openURL(url) })
+        #endif
       case .view(.websiteTapped):
         let url = URL(string: String(localized: "Website URL", bundle: .module))!
+        #if os(iOS) || os(macOS)
         state.destination = .safari(.init(url: url))
         return .none
+        #elseif os(visionOS)
+        return .run(operation: { _ in await openURL(url) })
+        #endif
       case let .path(.element(_, .organizers(.delegate(.organizerTapped(organizer))))):
         state.path.append(.profile(.init(organizer: organizer)))
         return .none
@@ -89,8 +107,6 @@ public struct TrySwift {
 public struct TrySwiftView: View {
 
   @Bindable public var store: StoreOf<TrySwift>
-    
-  @Environment(\.openURL) var openURL
 
   public init(store: StoreOf<TrySwift>) {
     self.store = store
@@ -169,20 +185,11 @@ public struct TrySwiftView: View {
       }
     }
     .navigationTitle(Text("try! Swift", bundle: .module))
-    #if os(iOS) || os(macOS)
     .sheet(
       item: $store.scope(state: \.destination?.safari, action: \.destination.safari)
     ) { sheetStore in
       SafariViewRepresentation(url: sheetStore.url)
         .ignoresSafeArea()
     }
-    #elseif os(visionOS)
-    .onChange(
-        of: store.scope(state: \.destination?.safari, action: \.destination.safari)
-    ) { _, store in
-        guard let url = store?.url else { return }
-        openURL(url)
-    }
-    #endif
   }
 }

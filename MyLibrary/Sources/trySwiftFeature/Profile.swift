@@ -31,6 +31,8 @@ public struct Profile {
     case safari(Safari)
   }
 
+  @Dependency(\.openURL) var openURL
+    
   public init() {}
 
   public var body: some ReducerOf<Self> {
@@ -38,8 +40,12 @@ public struct Profile {
     Reduce { state, action in
       switch action {
       case let .view(.snsTapped(url)):
+        #if os(iOS) || os(macOS)
         state.destination = .safari(.init(url: url))
         return .none
+        #elseif os(visionOS)
+        return .run(operation: { _ in await openURL(url) })
+        #endif
       case .destination:
         return .none
       case .binding:
@@ -54,8 +60,6 @@ public struct Profile {
 public struct ProfileView: View {
 
   @Bindable public var store: StoreOf<Profile>
-    
-  @Environment(\.openURL) var openURL
 
   public init(store: StoreOf<Profile>) {
     self.store = store
@@ -90,19 +94,10 @@ public struct ProfileView: View {
       }
       .navigationTitle(Text(LocalizedStringKey(store.organizer.name), bundle: .module))
     }
-    #if os(iOS) || os(macOS)
     .sheet(item: $store.scope(state: \.destination?.safari, action: \.destination.safari)) {
       sheetStore in
       SafariViewRepresentation(url: sheetStore.url)
         .ignoresSafeArea()
     }
-    #elseif os(visionOS)
-    .onChange(
-        of: store.scope(state: \.destination?.safari, action: \.destination.safari)
-    ) { _, store in
-        guard let url = store?.url else { return }
-        openURL(url)
-    }
-    #endif
   }
 }

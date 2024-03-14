@@ -39,6 +39,8 @@ public struct ScheduleDetail {
   public enum Destination {
     case safari(Safari)
   }
+    
+  @Dependency(\.openURL) var openURL
 
   public init() {}
 
@@ -47,8 +49,12 @@ public struct ScheduleDetail {
     Reduce { state, action in
       switch action {
       case let .view(.snsTapped(url)):
+        #if os(iOS) || os(macOS)
         state.destination = .safari(.init(url: url))
         return .none
+        #elseif os(visionOS)
+        return .run(operation: { _ in await openURL(url) })
+        #endif
       case .destination:
         return .none
       case .binding:
@@ -63,8 +69,6 @@ public struct ScheduleDetail {
 public struct ScheduleDetailView: View {
 
   @Bindable public var store: StoreOf<ScheduleDetail>
-  
-  @Environment(\.openURL) var openURL
 
   public init(store: StoreOf<ScheduleDetail>) {
     self.store = store
@@ -104,20 +108,11 @@ public struct ScheduleDetailView: View {
         Spacer()
       }
     }
-    #if os(iOS) || os(macOS)
     .sheet(item: $store.scope(state: \.destination?.safari, action: \.destination.safari)) {
       sheetStore in
       SafariViewRepresentation(url: sheetStore.url)
         .ignoresSafeArea()
     }
-    #elseif os(visionOS)
-    .onChange(
-      of: store.scope(state: \.destination?.safari, action: \.destination.safari)
-    ) { _, store in
-      guard let url = store?.url else { return }
-      openURL(url)
-    }
-    #endif
   }
 
   @ViewBuilder

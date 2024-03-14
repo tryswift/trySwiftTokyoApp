@@ -87,8 +87,12 @@ public struct Schedule {
         return .none
       case .view(.mapItemTapped):
         let url = URL(string: String(localized: "Guidance URL", bundle: .module))!
+        #if os(iOS) || os(macOS)
         state.destination = .guidance(.init(url: url))
         return .none
+        #elseif os(visionOS)
+        return .run(operation: { _ in await openURL(url) })
+        #endif
       case .binding, .path, .destination:
         return .none
       }
@@ -102,8 +106,6 @@ public struct Schedule {
 public struct ScheduleView: View {
 
   @Bindable public var store: StoreOf<Schedule>
-  
-  @Environment(\.openURL) var openURL
   
   let mapTip: MapTip = .init()
 
@@ -122,20 +124,11 @@ public struct ScheduleView: View {
         }
       }
     }
-    #if os(iOS) || os(macOS)
     .sheet(item: $store.scope(state: \.destination?.guidance, action: \.destination.guidance)) {
       sheetStore in
       SafariViewRepresentation(url: sheetStore.url)
         .ignoresSafeArea()
     }
-    #elseif os(visionOS)
-    .onChange(
-      of: store.scope(state: \.destination?.guidance, action: \.destination.guidance)
-    ) { _, store in
-      guard let url = store?.url else { return }
-      openURL(url)
-    }
-    #endif
   }
 
   @ViewBuilder
