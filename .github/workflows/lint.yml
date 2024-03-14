@@ -19,4 +19,5 @@ jobs:
       run: swiftly install ${{ matrix.swift }}
     - uses: actions/checkout@v4
     - name: Lint
+      working-directory: ./MyLibrary
       run: swift package plugin lint-source-code
