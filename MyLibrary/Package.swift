@@ -13,7 +13,7 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.9.1"),
-    .package(url: "https://github.com/zunda-pixel/LicenseProvider", branch: "support-linux"),
+    .package(url: "https://github.com/zunda-pixel/LicenseProvider", from: "1.1.2"),
     .package(url: "https://github.com/apple/swift-format", from: "510.0.1"),
   ],
   targets: [
