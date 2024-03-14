@@ -58,7 +58,7 @@ public struct TrySwift {
         state.destination = .safari(.init(url: url))
         return .none
         #elseif os(visionOS)
-        return .run(operation: { _ in await openURL(url) })
+        return .run { _ in await openURL(url) }
         #endif
       case .view(.privacyPolicyTapped):
         let url = URL(string: String(localized: "Privacy Policy URL", bundle: .module))!
@@ -66,7 +66,7 @@ public struct TrySwift {
         state.destination = .safari(.init(url: url))
         return .none
         #elseif os(visionOS)
-        return .run(operation: { _ in await openURL(url) })
+        return .run { _ in await openURL(url) }
         #endif
       case .view(.acknowledgementsTapped):
         state.path.append(.acknowledgements(.init()))
@@ -77,7 +77,7 @@ public struct TrySwift {
         state.destination = .safari(.init(url: url))
         return .none
         #elseif os(visionOS)
-        return .run(operation: { _ in await openURL(url) })
+        return .run { _ in await openURL(url) }
         #endif
       case .view(.websiteTapped):
         let url = URL(string: String(localized: "Website URL", bundle: .module))!
@@ -85,7 +85,7 @@ public struct TrySwift {
         state.destination = .safari(.init(url: url))
         return .none
         #elseif os(visionOS)
-        return .run(operation: { _ in await openURL(url) })
+        return .run { _ in await openURL(url) }
         #endif
       case let .path(.element(_, .organizers(.delegate(.organizerTapped(organizer))))):
         state.path.append(.profile(.init(organizer: organizer)))

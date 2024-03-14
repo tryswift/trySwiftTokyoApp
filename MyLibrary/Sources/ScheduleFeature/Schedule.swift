@@ -91,7 +91,7 @@ public struct Schedule {
         state.destination = .guidance(.init(url: url))
         return .none
         #elseif os(visionOS)
-        return .run(operation: { _ in await openURL(url) })
+        return .run { _ in await openURL(url) }
         #endif
       case .binding, .path, .destination:
         return .none
