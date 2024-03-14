@@ -143,6 +143,17 @@
         }
       }
     },
+    "Bring your breakfast and meet other attendees or sponsors." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "朝食を持ち寄って、他の参加者やスポンサーと楽しみましょう"
+          }
+        }
+      }
+    },
     "Build your next website with Swift" : {
       "extractionState" : "manual",
       "localizations" : {

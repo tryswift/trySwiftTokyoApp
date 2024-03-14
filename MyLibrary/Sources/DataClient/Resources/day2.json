@@ -10,7 +10,7 @@
         {
           "id": 28,
           "title": "Morning Chat",
-          "summary": "Download Eventbrite app and show QR code of your ticket at the reception. You will receive a name tag and a goodie bag."
+          "summary": "Bring your breakfast and meet other attendees or sponsors."
         }
       ]
     },
@@ -53,7 +53,7 @@
     },
     {
       "id": 23,
-      "time": "2024-03-23T10:25:00+09:00",
+      "time": "2024-03-23T10:45:00+09:00",
       "sessions": [
         {
           "id": 31,
@@ -90,8 +90,19 @@
       ]
     },
     {
+      "id": 25,
+      "time": "2024-03-23T11:10:00+09:00",
+      "sessions": [
+        {
+          "id": 35,
+          "title": "Break",
+          "summary": "Take a break and meet other attendees or sponsors"
+        }
+      ]
+    },
+    {
       "id": 24,
-      "time": "2024-03-23T10:50:00+09:00",
+      "time": "2024-03-23T11:40:00+09:00",
       "sessions": [
         {
           "id": 33,
@@ -128,57 +139,8 @@
       ]
     },
     {
-      "id": 25,
-      "time": "2024-03-23T11:05:00+09:00",
-      "sessions": [
-        {
-          "id": 35,
-          "title": "Break",
-          "summary": "Take a break and meet other attendees or sponsors"
-        }
-      ]
-    },
-    {
-      "id": 26,
-      "time": "2024-03-23T11:45:00+09:00",
-      "sessions": [
-        {
-          "id": 36,
-          "title": "Learning Swift's Type Inference",
-          "speaker": "omochimetaru",
-          "speakers": [
-            {
-              "name": "omochimetaru",
-              "image_name": "omochimetaru",
-              "bio": "He has been passionate about programming since his childhood and has experience in various programming languages. Ever since discovering Swift, he has been extremely enthusiastic about it.He particularly enjoys writing code that utilizes type systems.\nAs he believes Swift has applications beyond just iOS apps, he also uses Swift on the server side for his regular work. He considers the major appeal of server-side work to be the ability to utilize the latest language features without having to wait for end-users to upgrade their devices.\nHe is deeply interested in Swift as a language and has read almost all of the Swift Evolution proposals from the draft stage. He is also interested in compiler code, and regularly monitors the pull requests to the repository. For his past contributions, he has been recognized as a committer.\nHe runs a study group about the Swift compiler and presents about various topics. Additionally, he's managing a Discord server for discussions about Swift.",
-              "links": [
-                {
-                  "url": "https://x.com/omochimetaru",
-                  "name": "@omochimetaru"
-                }
-              ]
-            }
-          ],
-          "place": "Hall",
-          "description": "Swift boasts a powerful language feature known as type inference, which is crucial for balancing a safe type system with ease of coding. \nUnderstanding how this essential feature is implemented can aid in writing better code. \n\nIn this talk, I will explain the workings of Swift's type inference, including the fundamental algorithm that allows bidirectional propagation of type information for code, and how it's extended to accommodate language features like overloading. \nThis will help understand why compiling code can become overly burdensome and result in errors. \nI will also cover interesting related topics such as overload priority, simultaneous inference in multiple statements, and the challenges of protocol compliance determination.\n\nAdditionally, methods for directly observing the behavior of type inference using compiler options will be introduced, paving the way for further deepening your understanding."
-        },
-        {
-          "id": 37,
-          "title": "Office hour",
-          "speakers": [
-            {
-              "name": "Kishikawa Katsumi",
-              "image_name": "kishikawa katsumi"
-            }
-          ],
-          "place": "Ask the Speaker",
-          "summary": "Meet Katsumi and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
-        }
-      ]
-    },
-    {
       "id": 27,
-      "time": "2024-03-23T12:10:00+09:00",
+      "time": "2024-03-23T12:05:00+09:00",
       "sessions": [
         {
           "id": 38,
@@ -199,22 +161,59 @@
           "description": "With iPhones continually advancing their camera capabilities, one can capture satisfying photos without the need for a dedicated digital camera. Yet, there exists a niche of individuals who intentionally purchase older digital or film cameras. They are drawn to the unique aesthetic of photos and videos produced by these cameras.\nIn this talk, we'll explore how to achieve such retro-style photos using Swift. While Core Image's documentation offers articles like \"Simulating Scratchy Analog Film,\" implementing these techniques directly into a camera app may not yield the desired retro effect. Therefore, we'll start by reexamining the question, \"What defines a retro-style photo?\" and aim to create the ideal retro aesthetic."
         },
         {
-          "id": 39,
+          "id": 37,
           "title": "Office hour",
           "speakers": [
             {
-              "name": "omochimetaru",
-              "image_name": "omochimetaru"
+              "name": "Kishikawa Katsumi",
+              "image_name": "kishikawa katsumi"
             }
           ],
           "place": "Ask the Speaker",
-          "summary": "Meet omochimetaru and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+          "summary": "Meet Katsumi and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "time": "2024-03-23T12:20:00+09:00",
+      "sessions": [
+        {
+          "id": 36,
+          "title": "Learning Swift's Type Inference",
+          "speaker": "omochimetaru",
+          "speakers": [
+            {
+              "name": "omochimetaru",
+              "image_name": "omochimetaru",
+              "bio": "He has been passionate about programming since his childhood and has experience in various programming languages. Ever since discovering Swift, he has been extremely enthusiastic about it.He particularly enjoys writing code that utilizes type systems.\nAs he believes Swift has applications beyond just iOS apps, he also uses Swift on the server side for his regular work. He considers the major appeal of server-side work to be the ability to utilize the latest language features without having to wait for end-users to upgrade their devices.\nHe is deeply interested in Swift as a language and has read almost all of the Swift Evolution proposals from the draft stage. He is also interested in compiler code, and regularly monitors the pull requests to the repository. For his past contributions, he has been recognized as a committer.\nHe runs a study group about the Swift compiler and presents about various topics. Additionally, he's managing a Discord server for discussions about Swift.",
+              "links": [
+                {
+                  "url": "https://x.com/omochimetaru",
+                  "name": "@omochimetaru"
+                }
+              ]
+            }
+          ],
+          "place": "Hall",
+          "description": "Swift boasts a powerful language feature known as type inference, which is crucial for balancing a safe type system with ease of coding. \nUnderstanding how this essential feature is implemented can aid in writing better code. \n\nIn this talk, I will explain the workings of Swift's type inference, including the fundamental algorithm that allows bidirectional propagation of type information for code, and how it's extended to accommodate language features like overloading. \nThis will help understand why compiling code can become overly burdensome and result in errors. \nI will also cover interesting related topics such as overload priority, simultaneous inference in multiple statements, and the challenges of protocol compliance determination.\n\nAdditionally, methods for directly observing the behavior of type inference using compiler options will be introduced, paving the way for further deepening your understanding."
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "time": "2024-03-23T12:45:00+09:00",
+      "sessions": [
+        {
+          "id": 41,
+          "title": "Lunch",
+          "summary": "Take a lunch box and meet other attendees or sponsors."
         }
       ]
     },
     {
       "id": 28,
-      "time": "2024-03-23T12:25:00+09:00",
+      "time": "2024-03-23T14:15:00+09:00",
       "sessions": [
         {
           "id": 40,
@@ -233,59 +232,24 @@
             }
           ],
           "description": "Localizing your app into other languages can unlock a huge amount of growth potential for your app. But as an indie developer, I don’t have time to spare and don’t have others I can rely on to do the work involved in maintaining a high quality localization. So, I rely heavily on automation to minimize the work associated with maintaining 8 different high-quality localizations in my app Nihongo.\n\nIn this talk, I’ll discuss what aspects of localization I entrust to professional translators, what I use machine translation for, and what I use crowdsourcing from social media for. I’ll discuss techniques for automating various aspects of the localization process, including (1) generating screenshots of strings for providing context to translators and validating their translations, (2) generating app store screenshots, including marketing copy in multiple languages, (3) generating meaningful release notes in multiple languages, and (4) verifying app layout and correctness in multiple languages."
-        }
-      ]
-    },
-    {
-      "id": 29,
-      "time": "2024-03-23T12:50:00+09:00",
-      "sessions": [
-        {
-          "id": 41,
-          "title": "Lunch",
-          "summary": "Take a lunch box and meet other attendees or sponsors."
-        }
-      ]
-    },
-    {
-      "id": 30,
-      "time": "2024-03-23T14:20:00+09:00",
-      "sessions": [
-        {
-          "id": 42,
-          "title": "Code Signing - Have Fun and Take Control",
-          "speakers": [
-            {
-              "name": "Josh Holtz",
-              "image_name": "Josh Holtz",
-              "bio": "Software superstar. Stuttering stud. Lead maintainer of fastlane tools.",
-              "links": [
-                {
-                  "url": "https://twitter.com/joshdholtz",
-                  "name": "@joshdholtz"
-                }
-              ]
-            }
-          ],
-          "description": "Swift is cool but... do you know what's cooler? Successfully code signing your Swift apps. Code signing issues can certainly be scary but they can be really fun to solve! This talk will teach you how to take a step back from scary code signing errors to calmly and quickly code sign your apps."
         },
         {
-          "id": 43,
+          "id": 39,
           "title": "Office hour",
           "speakers": [
             {
-              "name": "Chris Vasselli",
-              "image_name": "Chris Vasselli"
+              "name": "omochimetaru",
+              "image_name": "omochimetaru"
             }
           ],
           "place": "Ask the Speaker",
-          "summary": "Meet Chris and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+          "summary": "Meet omochimetaru and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
         }
       ]
     },
     {
       "id": 31,
-      "time": "2024-03-23T14:45:00+09:00",
+      "time": "2024-03-23T14:40:00+09:00",
       "sessions": [
         {
           "id": 44,
@@ -306,22 +270,46 @@
           "description": "Have you ever pondered why '1 + 1 = 2' in Swift? Join me as I unveil the intriguing journey behind this seemingly simple arithmetic operation, delving into Swift's inner workings, including its source code, LLVM, and assembly language. This talk offers a deep dive into the concealed mechanics behind everyday code!"
         },
         {
-          "id": 45,
+          "id": 43,
           "title": "Office hour",
           "speakers": [
             {
-              "name": "Josh Holtz",
-              "image_name": "Josh Holtz"
+              "name": "Chris Vasselli",
+              "image_name": "Chris Vasselli"
             }
           ],
           "place": "Ask the Speaker",
-          "summary": "Meet Josh and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+          "summary": "Meet Chris and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "time": "2024-03-23T14:55:00+09:00",
+      "sessions": [
+        {
+          "id": 42,
+          "title": "Code Signing - Have Fun and Take Control",
+          "speakers": [
+            {
+              "name": "Josh Holtz",
+              "image_name": "Josh Holtz",
+              "bio": "Software superstar. Stuttering stud. Lead maintainer of fastlane tools.",
+              "links": [
+                {
+                  "url": "https://twitter.com/joshdholtz",
+                  "name": "@joshdholtz"
+                }
+              ]
+            }
+          ],
+          "description": "Swift is cool but... do you know what's cooler? Successfully code signing your Swift apps. Code signing issues can certainly be scary but they can be really fun to solve! This talk will teach you how to take a step back from scary code signing errors to calmly and quickly code sign your apps."
         }
       ]
     },
     {
       "id": 32,
-      "time": "2024-03-23T15:25:00+09:00",
+      "time": "2024-03-23T15:20:00+09:00",
       "sessions": [
         {
           "id": 46,
@@ -332,7 +320,7 @@
     },
     {
       "id": 33,
-      "time": "2024-03-23T15:40:00+09:00",
+      "time": "2024-03-23T15:45:00+09:00",
       "sessions": [
         {
           "id": 47,
@@ -343,7 +331,7 @@
     },
     {
       "id": 33,
-      "time": "2024-03-23T16:10:00+09:00",
+      "time": "2024-03-23T16:15:00+09:00",
       "sessions": [
         {
           "id": 48,
@@ -362,12 +350,24 @@
             }
           ],
           "description": "Binary size is one of the critical metrics to improve the app experience. There are a bunch of approaches to optimize program size and Swift provides some of them including Swift-specific one. This talk gives you an overview of well-known optimizations and how to write size-friendly Swift code."
+        },
+        {
+          "id": 45,
+          "title": "Office hour",
+          "speakers": [
+            {
+              "name": "Josh Holtz",
+              "image_name": "Josh Holtz"
+            }
+          ],
+          "place": "Ask the Speaker",
+          "summary": "Meet Josh and ask questions about the talk. This is a great opportunity to get more insights and learn more about the topic."
         }
       ]
     },
     {
       "id": 34,
-      "time": "2024-03-23T16:35:00+09:00",
+      "time": "2024-03-23T16:40:00+09:00",
       "sessions": [
         {
           "id": 49,
@@ -403,7 +403,7 @@
     },
     {
       "id": 35,
-      "time": "2024-03-23T17:00:00+09:00",
+      "time": "2024-03-23T17:05:00+09:00",
       "sessions": [
         {
           "id": 50,
@@ -413,7 +413,7 @@
     },
     {
       "id": 36,
-      "time": "2024-03-23T17:15:00+09:00",
+      "time": "2024-03-23T17:30:00+09:00",
       "sessions": [
         {
           "id": 51,
