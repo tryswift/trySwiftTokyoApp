@@ -51,31 +51,3 @@ public struct SafariViewRepresentation: UIViewControllerRepresentable {
   public func makeCoordinator() {
   }
 }
-
-public extension View {
-  func safari<T: Identifiable & Equatable, V: View>(
-    item: Binding<T?>,
-    sheetContent: @escaping (T) -> V,
-    action: @escaping (T) -> Void
-  ) -> some View {
-    self.modifier(SafariModifier(item: item, sheetContent: sheetContent, action: action))
-  }
-}
-
-struct SafariModifier<T: Identifiable & Equatable, V: View>: ViewModifier {
-  let item: Binding<T?>
-  let sheetContent: (T) -> V
-  let action: (T) -> Void
-  
-  func body(content: Content) -> some View {
-    content
-      #if os(iOS) || os(macOS)
-      .sheet(item: item, content: sheetContent)
-      #elseif os(visionOS)
-      .onChange(of: item.wrappedValue) { _, newValue in
-        guard let newValue else { return }
-        action(newValue)
-      }
-      #endif
-  }
-}
