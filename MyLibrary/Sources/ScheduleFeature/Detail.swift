@@ -48,7 +48,7 @@ public struct ScheduleDetail {
     BindingReducer()
     Reduce { state, action in
       switch action {
-      case let .view(.snsTapped(url)):
+      case .view(.snsTapped(let url)):
         #if os(iOS) || os(macOS)
           state.destination = .safari(.init(url: url))
           return .none

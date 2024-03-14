@@ -87,7 +87,7 @@ public struct TrySwift {
         #elseif os(visionOS)
           return .run { _ in await openURL(url) }
         #endif
-      case let .path(.element(_, .organizers(.delegate(.organizerTapped(organizer))))):
+      case .path(.element(_, .organizers(.delegate(.organizerTapped(let organizer))))):
         state.path.append(.profile(.init(organizer: organizer)))
         return .none
       case .binding:

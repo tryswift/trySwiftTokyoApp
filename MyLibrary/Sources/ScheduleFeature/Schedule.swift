@@ -70,7 +70,7 @@ public struct Schedule {
         state.day2 = try! dataClient.fetchDay2()
         state.workshop = try! dataClient.fetchWorkshop()
         return .none
-      case let .view(.disclosureTapped(session)):
+      case .view(.disclosureTapped(let session)):
         guard let description = session.description, let speakers = session.speakers else {
           return .none
         }

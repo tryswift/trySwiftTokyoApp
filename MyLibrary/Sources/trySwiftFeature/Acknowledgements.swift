@@ -22,7 +22,7 @@ public struct Acknowledgements {
   public var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
-      case let .urlTapped(url):
+      case .urlTapped(let url):
         #if os(iOS) || os(macOS)
           state.safari = .init(url: url)
           return .none

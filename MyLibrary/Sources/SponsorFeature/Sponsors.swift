@@ -42,7 +42,7 @@ public struct SponsorsList {
         state.sponsors = try! dataClient.fetchSponsors()
         return .none
 
-      case let .view(.sponsorTapped(sponsor)):
+      case .view(.sponsorTapped(let sponsor)):
         guard let url = sponsor.link else { return .none }
         #if os(iOS) || os(macOS)
           state.destination = .safari(.init(url: url))
