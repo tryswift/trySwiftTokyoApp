@@ -1,6 +1,7 @@
 import ComposableArchitecture
 import DataClient
 import Foundation
+import GuidanceFeature
 import Safari
 import SharedModels
 import SwiftUI
@@ -49,7 +50,6 @@ public struct Schedule {
     public enum View {
       case onAppear
       case disclosureTapped(Session)
-      case mapItemTapped
     }
   }
 
@@ -60,7 +60,7 @@ public struct Schedule {
 
   @Reducer(state: .equatable)
   public enum Destination {
-    case guidance(Safari)
+    case guidance(Guidance)
   }
 
   @Dependency(DataClient.self) var dataClient
@@ -81,42 +81,22 @@ public struct Schedule {
               let workshop = try dataClient.fetchWorkshop()
               return .init(day1: day1, day2: day2, workshop: workshop)
             }))
-      case let .view(.disclosureTapped(session)):
-        guard let description = session.description, let speakers = session.speakers else {
           return .none
-        }
-        state.path.append(
-          .detail(
-            .init(
-              title: session.title,
-              description: description,
-              requirements: session.requirements,
-              speakers: speakers
+        case let .view(.disclosureTapped(session)):
+          guard let description = session.description, let speakers = session.speakers else {
+            return .none
+          }
+          state.path.append(
+            .detail(
+              .init(
+                title: session.title,
+                description: description,
+                requirements: session.requirements,
+                speakers: speakers
+              )
             )
           )
-        )
-        return .none
-      case .view(.mapItemTapped):
-        let url = URL(string: String(localized: "Guidance URL", bundle: .module))!
-        #if os(iOS) || os(macOS)
-          state.destination = .guidance(.init(url: url))
           return .none
-        #elseif os(visionOS)
-          return .run { _ in await openURL(url) }
-        #endif
-      case let .fetchResponse(.success(response)):
-        state.day1 = response.day1
-        state.day2 = response.day2
-        state.workshop = response.workshop
-        return .none
-      case let .fetchResponse(.failure(error as DecodingError)):
-        assertionFailure(error.localizedDescription)
-        return .none
-      case let .fetchResponse(.failure(error)):
-        print(error)  // TODO: replace to Logger API
-        return .none
-      case .binding, .path, .destination:
-        return .none
       }
     }
     .forEach(\.path, action: \.path)
@@ -140,16 +120,15 @@ public struct ScheduleView: View {
       root
     } destination: { store in
       switch store.state {
-      case .detail:
-        if let store = store.scope(state: \.detail, action: \.detail) {
-          ScheduleDetailView(store: store)
-        }
+        case .detail:
+          if let store = store.scope(state: \.detail, action: \.detail) {
+            ScheduleDetailView(store: store)
+          }
       }
     }
     .sheet(item: $store.scope(state: \.destination?.guidance, action: \.destination.guidance)) {
       sheetStore in
-      SafariViewRepresentation(url: sheetStore.url)
-        .ignoresSafeArea()
+      GuidanceView(store: sheetStore)
     }
   }
 
@@ -164,34 +143,24 @@ public struct ScheduleView: View {
       .pickerStyle(.segmented)
       .padding(.horizontal)
       switch store.selectedDay {
-      case .day1:
-        if let day1 = store.day1 {
-          conferenceList(conference: day1)
-        } else {
-          Text("")
-        }
-      case .day2:
-        if let day2 = store.day2 {
-          conferenceList(conference: day2)
-        } else {
-          Text("")
-        }
-      case .day3:
-        if let workshop = store.workshop {
-          conferenceList(conference: workshop)
-        } else {
-          Text("")
-        }
-      }
-    }
-    .toolbar {
-      ToolbarItem(placement: .topBarTrailing) {
-        Image(systemName: "map")
-          .onTapGesture {
-            send(.mapItemTapped)
+        case .day1:
+          if let day1 = store.day1 {
+            conferenceList(conference: day1)
+          } else {
+            Text("")
           }
-          .popoverTip(mapTip)
-
+        case .day2:
+          if let day2 = store.day2 {
+            conferenceList(conference: day2)
+          } else {
+            Text("")
+          }
+        case .day3:
+          if let workshop = store.workshop {
+            conferenceList(conference: workshop)
+          } else {
+            Text("")
+          }
       }
     }
     .onAppear(perform: {

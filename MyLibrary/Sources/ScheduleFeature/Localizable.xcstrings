@@ -381,6 +381,7 @@
       }
     },
     "Guidance URL" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1141,6 +1142,9 @@
           }
         }
       }
+    },
+    "Venue" : {
+
     },
     "visionOS represents a new paradigm known as Spatial Computing, which is expected to significantly increase the number of experiences available on headset devices. This talk will introduce the basic concepts of visionOS and provide explanations on implementing sample apps using Swift. Given that many may not have developed for visionOS or have experience with SwiftUI or RealityKit, understanding every aspect is not necessary. By learning the basic architecture, you can start implementing spatial applications. The session will cover the process from project creation to operation, with spatial expressions explained through demos and videos. Let's create experiences in Spatial Computing together!" : {
       "extractionState" : "manual",

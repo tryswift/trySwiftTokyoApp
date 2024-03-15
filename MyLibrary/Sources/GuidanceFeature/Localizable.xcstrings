@@ -1,0 +1,190 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%lld" : {
+
+    },
+    "Belle Salle Shibuya First" : {
+
+    },
+    "Belle Salle Shibuya First address" : {
+
+    },
+    "Directions" : {
+
+    },
+    "Exit B1" : {
+
+    },
+    "Exit C1" : {
+
+    },
+    "JR Shibuya" : {
+
+    },
+    "JR Shibuya Station East Exit" : {
+
+    },
+    "jr-1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "After get off train, exit from Shibuya station South gate on 1st floor (Downstair), then go to East exit."
+          }
+        }
+      }
+    },
+    "jr-2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "After exit from East Exit, pass through left side of downstairs."
+          }
+        }
+      }
+    },
+    "jr-3" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Then, turn right at behind of pillar."
+          }
+        }
+      }
+    },
+    "jr-4" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go straight along with bus stops."
+          }
+        }
+      }
+    },
+    "jr-5" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go upstairs on the left hand."
+          }
+        }
+      }
+    },
+    "jr-6" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go diagonally right, then turn left."
+          }
+        }
+      }
+    },
+    "jr-7" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go downstairs left of police office."
+          }
+        }
+      }
+    },
+    "jr-8" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go straight."
+          }
+        }
+      }
+    },
+    "jr-9" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep going. You can get something to eat and drink at convenience store."
+          }
+        }
+      }
+    },
+    "jr-10" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Almost there!"
+          }
+        }
+      }
+    },
+    "jr-11" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You arrived and enter to entrance."
+          }
+        }
+      }
+    },
+    "Lines" : {
+
+    },
+    "Metro Shibuya" : {
+
+    },
+    "metro-1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "After getting off Tokyo Metro, head to C1 Exit. Then turn left"
+          }
+        }
+      }
+    },
+    "Omote-sando" : {
+
+    },
+    "Omote-sando Station B1 Exit" : {
+
+    },
+    "omotesando-1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Highly recommend using map with button above."
+          }
+        }
+      }
+    },
+    "Open Map" : {
+
+    },
+    "Our venue is Belle Salle Shibuya FIRST, not garden. Make sure there are two belle salle hall in Shibuya." : {
+
+    },
+    "Shibuya Station C1 Exit" : {
+
+    },
+    "Shibuya Station East Exit" : {
+
+    },
+    "Venue" : {
+
+    },
+    "Warning" : {
+
+    }
+  },
+  "version" : "1.0"
+}
