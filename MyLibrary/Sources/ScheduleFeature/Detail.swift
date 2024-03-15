@@ -154,8 +154,6 @@ public struct ScheduleDetailView: View {
       Color(uiColor: .secondarySystemBackground)
         .clipShape(RoundedRectangle(cornerRadius: 8))
     )
-    .padding()
-
   }
 }
 
