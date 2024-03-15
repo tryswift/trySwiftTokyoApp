@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Front.png",
+      "filename" : "vision_front.png",
       "idiom" : "vision",
       "scale" : "2x"
     }
