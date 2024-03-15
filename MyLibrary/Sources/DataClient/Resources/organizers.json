@@ -234,5 +234,21 @@
         "url": "https://github.com/shoco310"
       }
     ]
+  },
+  {
+    "id": 16,
+    "name": "kazuhiro takami",
+    "image_name": "kazu42",
+    "bio": "kazu is a SWE at U-NEXT. He loves Computer Science. Especially low-layers",
+    "links": [
+      {
+        "name": "@DevKazu42",
+        "url": "https://x.com/DevKazu42"
+      },
+      {
+        "name": "@kazu-42",
+        "url": "https://github.com/kazu-42"
+      }
+    ]
   }
 ]

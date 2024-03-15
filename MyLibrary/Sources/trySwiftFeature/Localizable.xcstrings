@@ -129,6 +129,17 @@
         }
       }
     },
+    "kazu is a SWE at U-NEXT. He loves Computer Science. Especially low-layers" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "株式会社U-NEXTで働くSWE、低レイヤーが好きです。"
+          }
+        }
+      }
+    },
     "Meet Organizers" : {
       "localizations" : {
         "ja" : {
