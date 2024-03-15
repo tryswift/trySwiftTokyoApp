@@ -76,38 +76,32 @@ public struct ScheduleDetailView: View {
 
   public var body: some View {
     ScrollView {
-      HStack {
-        Spacer()
-        VStack {
-          VStack(alignment: .leading, spacing: 16) {
-            Text(LocalizedStringKey(store.title), bundle: .module)
-              .font(.title.bold())
-              .fixedSize(horizontal: false, vertical: true)
-            Text(LocalizedStringKey(store.description), bundle: .module)
+      VStack(alignment: .leading, spacing: 16) {
+        Text(LocalizedStringKey(store.title), bundle: .module)
+          .font(.title.bold())
+        Text(LocalizedStringKey(store.description), bundle: .module)
+          .font(.callout)
+        if let requirements = store.requirements {
+          VStack(alignment: .leading) {
+            Text("Requirements", bundle: .module)
+              .font(.subheadline.bold())
+              .foregroundStyle(Color.accentColor)
+            Text(LocalizedStringKey(requirements), bundle: .module)
               .font(.callout)
-            if let requirements = store.requirements {
-              VStack(alignment: .leading) {
-                Text("Requirements", bundle: .module)
-                  .font(.subheadline.bold())
-                  .foregroundStyle(Color.accentColor)
-                Text(LocalizedStringKey(requirements), bundle: .module)
-                  .font(.callout)
-              }
-              .padding()
-              .overlay {
-                RoundedRectangle(cornerRadius: 16)
-                  .stroke(Color.accentColor, lineWidth: 1)
-              }
-            }
           }
-          .padding(.horizontal)
-          .padding(.bottom)
-          .frame(maxWidth: 700)  // Readable content width for iPad
-          speakers
-            .frame(maxWidth: 700)  // Readable content width for iPad
+          .padding()
+          .overlay {
+            RoundedRectangle(cornerRadius: 16)
+              .stroke(Color.accentColor, lineWidth: 1)
+          }
         }
-        Spacer()
       }
+      .padding(.horizontal)
+      .padding(.bottom)
+      .frame(maxWidth: 700)  // Readable content width for iPad
+
+      speakers
+        .frame(maxWidth: 700)  // Readable content width for iPad
     }
     .sheet(item: $store.scope(state: \.destination?.safari, action: \.destination.safari)) {
       sheetStore in
