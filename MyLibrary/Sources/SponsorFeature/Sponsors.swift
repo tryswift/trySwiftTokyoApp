@@ -31,7 +31,7 @@ public struct SponsorsList {
 
   public init() {}
 
-  @Dependency(DataClient.self) var dataClient
+  @Dependency(\.dataClient) var dataClient
   @Dependency(\.openURL) var openURL
 
   public var body: some ReducerOf<Self> {
