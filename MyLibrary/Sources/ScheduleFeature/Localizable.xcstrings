@@ -1022,7 +1022,7 @@
         }
       }
     },
-    "Take a lunch box and meet other attendees or sponsors" : {
+    "Take a lunch box and meet other attendees or sponsors." : {
       "extractionState" : "manual",
       "localizations" : {
         "ja" : {
