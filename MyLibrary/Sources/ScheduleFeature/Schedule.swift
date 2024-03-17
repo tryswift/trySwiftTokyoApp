@@ -266,6 +266,9 @@ public struct ScheduleView: View {
         }
       }
       .frame(maxWidth: .infinity, alignment: .leading)
+
+      Image(systemName: "star")
+        .foregroundColor(.gray)
     }
   }
 
