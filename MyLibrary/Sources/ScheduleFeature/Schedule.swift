@@ -57,7 +57,7 @@ public struct Schedule {
     case guidance(Safari)
   }
 
-  @Dependency(\.dataClient) var dataClient
+  @Dependency(DataClient.self) var dataClient
   @Dependency(\.openURL) var openURL
 
   public init() {}

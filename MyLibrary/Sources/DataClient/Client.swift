@@ -52,13 +52,6 @@ extension DataClient: DependencyKey {
   }
 }
 
-extension DependencyValues {
-  public var dataClient: DataClient {
-    get { self[DataClient.self] }
-    set { self[DataClient.self] = newValue }
-  }
-}
-
 extension Conference {
   static let mock1 = Self(
     id: 1,

@@ -10,9 +10,9 @@ final class ScheduleTests: XCTestCase {
     let store = TestStore(initialState: Schedule.State()) {
       Schedule()
     } withDependencies: {
-      $0.dataClient.fetchDay1 = { @Sendable in .mock1 }
-      $0.dataClient.fetchDay2 = { @Sendable in .mock2 }
-      $0.dataClient.fetchWorkshop = { @Sendable in .mock3 }
+      $0[DataClient.self].fetchDay1 = { @Sendable in .mock1 }
+      $0[DataClient.self].fetchDay2 = { @Sendable in .mock2 }
+      $0[DataClient.self].fetchWorkshop = { @Sendable in .mock3 }
     }
     await store.send(.view(.onAppear))
     await store.receive(\.fetchResponse.success) {
@@ -28,9 +28,9 @@ final class ScheduleTests: XCTestCase {
     let store = TestStore(initialState: Schedule.State()) {
       Schedule()
     } withDependencies: {
-      $0.dataClient.fetchDay1 = { @Sendable in throw FetchError() }
-      $0.dataClient.fetchDay2 = { @Sendable in .mock2 }
-      $0.dataClient.fetchWorkshop = { @Sendable in .mock3 }
+      $0[DataClient.self].fetchDay1 = { @Sendable in throw FetchError() }
+      $0[DataClient.self].fetchDay2 = { @Sendable in .mock2 }
+      $0[DataClient.self].fetchWorkshop = { @Sendable in .mock3 }
     }
     await store.send(.view(.onAppear))
     await store.receive(\.fetchResponse.failure)

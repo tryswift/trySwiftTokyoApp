@@ -31,7 +31,7 @@ public struct Organizers {
     case profile(Profile)
   }
 
-  @Dependency(\.dataClient) var dataClient
+  @Dependency(DataClient.self) var dataClient
 
   public var body: some ReducerOf<Organizers> {
     Reduce { state, action in
