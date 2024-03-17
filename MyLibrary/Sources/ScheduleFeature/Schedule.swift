@@ -43,6 +43,7 @@ public struct Schedule {
       case onAppear
       case disclosureTapped(Session)
       case mapItemTapped
+      case favoriteIconTapped(Session)
     }
   }
 
@@ -93,6 +94,8 @@ public struct Schedule {
         #elseif os(visionOS)
           return .run { _ in await openURL(url) }
         #endif
+      case let .view(.favoriteIconTapped(session)):
+        return .none
       case .binding, .path, .destination:
         return .none
       }
@@ -268,6 +271,9 @@ public struct ScheduleView: View {
       .frame(maxWidth: .infinity, alignment: .leading)
 
       favoriteIcon(for: session)
+        .onTapGesture {
+          send(.favoriteIconTapped(session))
+        }
     }
   }
 
