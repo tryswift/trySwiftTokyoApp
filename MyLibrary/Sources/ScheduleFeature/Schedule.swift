@@ -103,7 +103,14 @@ public struct Schedule {
         case .day3:
           state.workshop = update(state.workshop!, togglingFavoriteOf: session)
         }
-        return .none
+        let day1 = state.day1!
+        let day2 = state.day2!
+        let workshop = state.workshop!
+        return .run { _ in
+          try? dataClient.saveDay1(day1)
+          try? dataClient.saveDay2(day2)
+          try? dataClient.saveWorkshop(workshop)
+        }
       case .binding, .path, .destination:
         return .none
       }
