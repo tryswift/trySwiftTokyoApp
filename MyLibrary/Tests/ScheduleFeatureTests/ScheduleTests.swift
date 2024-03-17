@@ -1,7 +1,7 @@
 import ComposableArchitecture
+import DataClient
 import XCTest
 
-@testable import DataClient
 @testable import ScheduleFeature
 
 final class ScheduleTests: XCTestCase {
