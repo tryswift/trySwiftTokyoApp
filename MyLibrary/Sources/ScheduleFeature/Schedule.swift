@@ -16,6 +16,12 @@ public struct Schedule {
     var id: Self { self }
   }
 
+  public struct SchedulesResponse: Equatable {
+    var day1: Conference
+    var day2: Conference
+    var workshop: Conference
+  }
+
   @ObservableState
   public struct State: Equatable {
 
@@ -38,7 +44,7 @@ public struct Schedule {
     case path(StackAction<Path.State, Path.Action>)
     case destination(PresentationAction<Destination.Action>)
     case view(View)
-    case fetchResponse(Result<(Conference, Conference, Conference), Error>)
+    case fetchResponse(Result<SchedulesResponse, Error>)
 
     public enum View {
       case onAppear
@@ -71,7 +77,7 @@ public struct Schedule {
           let day1 = try dataClient.fetchDay1()
           let day2 = try dataClient.fetchDay2()
           let workshop = try dataClient.fetchWorkshop()
-          return (day1, day2, workshop)
+          return .init(day1: day1, day2: day2, workshop: workshop)
         }))
       case let .view(.disclosureTapped(session)):
         guard let description = session.description, let speakers = session.speakers else {
@@ -96,10 +102,10 @@ public struct Schedule {
         #elseif os(visionOS)
           return .run { _ in await openURL(url) }
         #endif
-      case let .fetchResponse(.success((day1, day2, workshop))):
-        state.day1 = day1
-        state.day2 = day2
-        state.workshop = workshop
+      case let .fetchResponse(.success(response)):
+        state.day1 = response.day1
+        state.day2 = response.day2
+        state.workshop = response.workshop
         return .none
       case let .fetchResponse(.failure(error as DecodingError)):
          assertionFailure(error.localizedDescription)
