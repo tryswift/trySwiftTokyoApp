@@ -10,6 +10,12 @@ public struct Conference: Codable, Equatable, Hashable, Sendable {
     self.date = date
     self.schedules = schedules
   }
+
+  public mutating func toggleFavorite(of session: Session) {
+    for index in schedules.indices {
+      schedules[index].toggleFavorite(of: session)
+    }
+  }
 }
 
 public struct Schedule: Codable, Equatable, Hashable, Sendable {
@@ -19,6 +25,12 @@ public struct Schedule: Codable, Equatable, Hashable, Sendable {
   public init(time: Date, sessions: [Session]) {
     self.time = time
     self.sessions = sessions
+  }
+
+  mutating func toggleFavorite(of session: Session) {
+    for index in sessions.indices {
+      sessions[index].toggleFavoriteIfEqual(with: session)
+    }
   }
 }
 
@@ -40,5 +52,15 @@ public struct Session: Codable, Equatable, Hashable, Sendable {
     self.place = place
     self.description = description
     self.requirements = requirements
+  }
+
+  mutating func toggleFavoriteIfEqual(with session: Session) {
+    if self == session {
+      if let isFavorited = isFavorited, isFavorited {
+        self.isFavorited = false
+      } else {
+        self.isFavorited = true
+      }
+    }
   }
 }

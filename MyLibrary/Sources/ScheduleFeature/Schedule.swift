@@ -95,6 +95,14 @@ public struct Schedule {
           return .run { _ in await openURL(url) }
         #endif
       case let .view(.favoriteIconTapped(session)):
+        switch state.selectedDay {
+        case .day1:
+          state.day1 = update(state.day1!, togglingFavoriteOf: session)
+        case .day2:
+          state.day2 = update(state.day2!, togglingFavoriteOf: session)
+        case .day3:
+          state.workshop = update(state.workshop!, togglingFavoriteOf: session)
+        }
         return .none
       case .binding, .path, .destination:
         return .none
@@ -102,6 +110,12 @@ public struct Schedule {
     }
     .forEach(\.path, action: \.path)
     .ifLet(\.$destination, action: \.destination)
+  }
+
+  private func update(_ conference: Conference, togglingFavoriteOf session: Session) -> Conference {
+    var newValue = conference
+    newValue.toggleFavorite(of: session)
+    return newValue
   }
 }
 
