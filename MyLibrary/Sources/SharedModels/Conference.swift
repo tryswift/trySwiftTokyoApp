@@ -29,6 +29,7 @@ public struct Session: Codable, Equatable, Hashable, Sendable {
   public var place: String?
   public var description: String?
   public var requirements: String?
+  public var isFavorited: Bool?
 
   public init(
     title: String, speakers: [Speaker]?, place: String?, description: String?,

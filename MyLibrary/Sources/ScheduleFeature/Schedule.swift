@@ -267,6 +267,16 @@ public struct ScheduleView: View {
       }
       .frame(maxWidth: .infinity, alignment: .leading)
 
+      favoriteIcon(for: session)
+    }
+  }
+
+  @ViewBuilder
+  func favoriteIcon(for session: Session) -> some View {
+    if let isFavorited = session.isFavorited, isFavorited {
+      Image(systemName: "star.fill")
+        .foregroundColor(.yellow)
+    } else {
       Image(systemName: "star")
         .foregroundColor(.gray)
     }
