@@ -101,8 +101,11 @@ public struct Schedule {
         state.day2 = day2
         state.workshop = workshop
         return .none
+      case let .fetchResponse(.failure(error as DecodingError)):
+         assertionFailure(error.localizedDescription)
+         return .none
       case let .fetchResponse(.failure(error)):
-        print(error)
+        print(error) // TODO: replace to Logger API
         return .none
       case .binding, .path, .destination:
         return .none
