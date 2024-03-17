@@ -42,8 +42,6 @@ extension DataClient: DependencyKey {
     }
   )
 
-  static public let testValue = Self()
-
   static func loadDataFromBundle(fileName: String) -> Data {
     let filePath = Bundle.module.path(forResource: fileName, ofType: "json")!
     let fileURL = URL(fileURLWithPath: filePath)
