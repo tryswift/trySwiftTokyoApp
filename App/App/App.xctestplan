@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "235E58B3-6724-418C-907A-6211C4CC541B",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:App.xcodeproj",
+      "identifier" : "D563615A2B931FF800E4F789",
+      "name" : "App"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..\/MyLibrary",
+        "identifier" : "ScheduleFeatureTests",
+        "name" : "ScheduleFeatureTests"
+      }
+    }
+  ],
+  "version" : 1
+}

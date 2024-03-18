@@ -69,5 +69,12 @@ let package = Package(
         .plugin(name: "LicenseProviderPlugin", package: "LicenseProvider")
       ]
     ),
+    .testTarget(
+      name: "ScheduleFeatureTests",
+      dependencies: [
+        "ScheduleFeature",
+        .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+      ]
+    ),
   ]
 )
