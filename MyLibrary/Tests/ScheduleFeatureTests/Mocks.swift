@@ -26,7 +26,7 @@ extension Conference {
         time: Date(timeIntervalSince1970: 20_000),
         sessions: [
           .mock1,
-          .mock2
+          .mock2,
         ]
       )
     ]
@@ -41,7 +41,7 @@ extension Conference {
         time: Date(timeIntervalSince1970: 30_000),
         sessions: [
           .mock1,
-          .mock2
+          .mock2,
         ]
       )
     ]

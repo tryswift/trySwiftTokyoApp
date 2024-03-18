@@ -73,12 +73,14 @@ public struct Schedule {
     Reduce { state, action in
       switch action {
       case .view(.onAppear):
-        return .send(.fetchResponse(Result {
-          let day1 = try dataClient.fetchDay1()
-          let day2 = try dataClient.fetchDay2()
-          let workshop = try dataClient.fetchWorkshop()
-          return .init(day1: day1, day2: day2, workshop: workshop)
-        }))
+        return .send(
+          .fetchResponse(
+            Result {
+              let day1 = try dataClient.fetchDay1()
+              let day2 = try dataClient.fetchDay2()
+              let workshop = try dataClient.fetchWorkshop()
+              return .init(day1: day1, day2: day2, workshop: workshop)
+            }))
       case let .view(.disclosureTapped(session)):
         guard let description = session.description, let speakers = session.speakers else {
           return .none
@@ -108,10 +110,10 @@ public struct Schedule {
         state.workshop = response.workshop
         return .none
       case let .fetchResponse(.failure(error as DecodingError)):
-         assertionFailure(error.localizedDescription)
-         return .none
+        assertionFailure(error.localizedDescription)
+        return .none
       case let .fetchResponse(.failure(error)):
-        print(error) // TODO: replace to Logger API
+        print(error)  // TODO: replace to Logger API
         return .none
       case .binding, .path, .destination:
         return .none
