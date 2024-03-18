@@ -16,6 +16,12 @@ public struct Schedule {
     var id: Self { self }
   }
 
+  public struct SchedulesResponse: Equatable {
+    var day1: Conference
+    var day2: Conference
+    var workshop: Conference
+  }
+
   @ObservableState
   public struct State: Equatable {
 
@@ -29,7 +35,7 @@ public struct Schedule {
     @Presents var destination: Destination.State?
 
     public init() {
-      try! Tips.configure([.displayFrequency(.immediate)])
+      try? Tips.configure([.displayFrequency(.immediate)])
     }
   }
 
@@ -38,6 +44,7 @@ public struct Schedule {
     case path(StackAction<Path.State, Path.Action>)
     case destination(PresentationAction<Destination.Action>)
     case view(View)
+    case fetchResponse(Result<SchedulesResponse, Error>)
 
     public enum View {
       case onAppear
@@ -66,10 +73,12 @@ public struct Schedule {
     Reduce { state, action in
       switch action {
       case .view(.onAppear):
-        state.day1 = try! dataClient.fetchDay1()
-        state.day2 = try! dataClient.fetchDay2()
-        state.workshop = try! dataClient.fetchWorkshop()
-        return .none
+        return .send(.fetchResponse(Result {
+          let day1 = try dataClient.fetchDay1()
+          let day2 = try dataClient.fetchDay2()
+          let workshop = try dataClient.fetchWorkshop()
+          return .init(day1: day1, day2: day2, workshop: workshop)
+        }))
       case let .view(.disclosureTapped(session)):
         guard let description = session.description, let speakers = session.speakers else {
           return .none
@@ -93,6 +102,17 @@ public struct Schedule {
         #elseif os(visionOS)
           return .run { _ in await openURL(url) }
         #endif
+      case let .fetchResponse(.success(response)):
+        state.day1 = response.day1
+        state.day2 = response.day2
+        state.workshop = response.workshop
+        return .none
+      case let .fetchResponse(.failure(error as DecodingError)):
+         assertionFailure(error.localizedDescription)
+         return .none
+      case let .fetchResponse(.failure(error)):
+        print(error) // TODO: replace to Logger API
+        return .none
       case .binding, .path, .destination:
         return .none
       }
