@@ -44,6 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2435021A2BA49F29000083BB /* App.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = App.xctestplan; sourceTree = "<group>"; };
 		D563615B2B931FF800E4F789 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D563615E2B931FF800E4F789 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		D56361642B931FF900E4F789 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +107,7 @@
 				D56361662B931FF900E4F789 /* App.entitlements */,
 				D563616A2B931FF900E4F789 /* Info.plist */,
 				D583D7C12B9AD2ED00B94F73 /* PrivacyInfo.xcprivacy */,
+				2435021A2BA49F29000083BB /* App.xctestplan */,
 				D56361672B931FF900E4F789 /* Preview Content */,
 			);
 			path = App;
