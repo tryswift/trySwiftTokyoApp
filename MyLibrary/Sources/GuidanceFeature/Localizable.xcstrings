@@ -16,9 +16,15 @@
     },
     "Belle Salle Shibuya First address" : {
       "localizations" : {
-        "ja" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "〒150-0011\nBelle Calle Shibuya First Tower B1 / 2F\n1-2-20, Higashi, Shibuya city, Tokyo, Japan"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "〒150-0011\n東京都渋谷区東1-2-20 住友不動産渋谷ファーストタワーB1・2F ベルサール渋谷ファースト"
           }
         }

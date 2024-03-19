@@ -274,6 +274,7 @@ public struct GuidanceView: View {
           Image(direction.imageName, bundle: .module)
             .resizable()
             .aspectRatio(contentMode: .fit)
+            .frame(maxWidth: 400)
         }
         .padding()
       }
