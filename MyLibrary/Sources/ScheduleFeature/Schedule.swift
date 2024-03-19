@@ -1,7 +1,6 @@
 import ComposableArchitecture
 import DataClient
 import Foundation
-import GuidanceFeature
 import Safari
 import SharedModels
 import SwiftUI
@@ -35,9 +34,7 @@ public struct Schedule {
     var workshop: Conference?
     @Presents var destination: Destination.State?
 
-    public init() {
-      try? Tips.configure([.displayFrequency(.immediate)])
-    }
+    public init() {}
   }
 
   public enum Action: BindableAction, ViewAction {
@@ -59,9 +56,7 @@ public struct Schedule {
   }
 
   @Reducer(state: .equatable)
-  public enum Destination {
-    case guidance(Guidance)
-  }
+  public enum Destination {}
 
   @Dependency(DataClient.self) var dataClient
   @Dependency(\.openURL) var openURL
@@ -81,7 +76,6 @@ public struct Schedule {
               let workshop = try dataClient.fetchWorkshop()
               return .init(day1: day1, day2: day2, workshop: workshop)
             }))
-          return .none
         case let .view(.disclosureTapped(session)):
           guard let description = session.description, let speakers = session.speakers else {
             return .none
@@ -97,6 +91,19 @@ public struct Schedule {
             )
           )
           return .none
+        case let .fetchResponse(.success(response)):
+          state.day1 = response.day1
+          state.day2 = response.day2
+          state.workshop = response.workshop
+          return .none
+        case let .fetchResponse(.failure(error as DecodingError)):
+          assertionFailure(error.localizedDescription)
+          return .none
+        case let .fetchResponse(.failure(error)):
+          print(error)  // TODO: replace to Logger API
+          return .none
+        case .binding, .path, .destination:
+          return .none
       }
     }
     .forEach(\.path, action: \.path)
@@ -108,8 +115,6 @@ public struct Schedule {
 public struct ScheduleView: View {
 
   @Bindable public var store: StoreOf<Schedule>
-
-  let mapTip: MapTip = .init()
 
   public init(store: StoreOf<Schedule>) {
     self.store = store
@@ -125,10 +130,6 @@ public struct ScheduleView: View {
             ScheduleDetailView(store: store)
           }
       }
-    }
-    .sheet(item: $store.scope(state: \.destination?.guidance, action: \.destination.guidance)) {
-      sheetStore in
-      GuidanceView(store: sheetStore)
     }
   }
 
@@ -279,14 +280,6 @@ public struct ScheduleView: View {
     let formatter = ListFormatter()
     return formatter.string(from: givenNames)!
   }
-}
-
-struct MapTip: Tip, Equatable {
-  var title: Text = Text("Go Shibuya First, NOT Garden", bundle: .module)
-  var message: Text? = Text(
-    "There are two kinds of Bellesalle in Shibuya. Learn how to get from Shibuya Station to \"Bellesalle Shibuya FIRST\". ",
-    bundle: .module)
-  var image: Image? = .init(systemName: "map.circle.fill")
 }
 
 #Preview {

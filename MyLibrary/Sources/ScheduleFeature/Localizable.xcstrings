@@ -370,33 +370,6 @@
         }
       }
     },
-    "Go Shibuya First, NOT Garden" : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "渋谷ガーデンではありません！渋谷ファーストに向かいましょう！"
-          }
-        }
-      }
-    },
-    "Guidance URL" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://twitter.com/tryswiftconf/status/1108474796788977664"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://twitter.com/tryswiftconf/status/1108474796788977664"
-          }
-        }
-      }
-    },
     "Have you ever built a socket communication app? The sense of accomplishment when you delve into layers that aren't typically touched in your everyday app development and actually utilize them in an app is truly exceptional. However, creating a socket communication app requires knowledge of POSIX sockets, and for complex communications, you need to implement parallel processing.\nIn this talk, we'll implement socket communication and parallel processing in Swift. With Swift, which we're all familiar with, you can easily venture into unfamiliar territories, and there are several instances where you can leverage Swift's capabilities through implementing socket communication and parallel processing. Take this opportunity to enjoy learning socket communication and rediscover the charm of Swift!" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1056,16 +1029,6 @@
         }
       }
     },
-    "There are two kinds of Bellesalle in Shibuya. Learn how to get from Shibuya Station to \"Bellesalle Shibuya FIRST\". " : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "渋谷にはベルサールが２つあります。ベルサール渋谷ファーストへの行き方を確認しましょう。"
-          }
-        }
-      }
-    },
     "This talk will take you through a handful of topics that either make a big or a small win for you or your application, mostly with the new iOS, SwiftUI and Xcode features. Want to give your app some extra sparkle? Let's chat about cool shortcuts, playful animations, and the new tricks from SwiftUI 5 like observation framework, enhanced phased animations, updates to scrollview and new gestures. Come join this session and take home some big and small wins with you." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1142,9 +1105,6 @@
           }
         }
       }
-    },
-    "Venue" : {
-
     },
     "visionOS represents a new paradigm known as Spatial Computing, which is expected to significantly increase the number of experiences available on headset devices. This talk will introduce the basic concepts of visionOS and provide explanations on implementing sample apps using Swift. Given that many may not have developed for visionOS or have experience with SwiftUI or RealityKit, understanding every aspect is not necessary. By learning the basic architecture, you can start implementing spatial applications. The session will cover the process from project creation to operation, with spatial expressions explained through demos and videos. Let's create experiences in Spatial Computing together!" : {
       "extractionState" : "manual",

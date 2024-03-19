@@ -23,6 +23,7 @@ let package = Package(
     .target(
       name: "AppFeature",
       dependencies: [
+        "GuidanceFeature",
         "ScheduleFeature",
         "SponsorFeature",
         "trySwiftFeature",
@@ -63,7 +64,6 @@ let package = Package(
       name: "ScheduleFeature",
       dependencies: [
         "DataClient",
-        "GuidanceFeature",
         "Safari",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
       ]
