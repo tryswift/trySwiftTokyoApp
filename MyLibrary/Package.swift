@@ -13,7 +13,7 @@ let package = Package(
     .library(
       name: "GuidanceFeature",
       targets: ["GuidanceFeature"]
-    )
+    ),
   ],
   dependencies: [
     .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.9.1"),
@@ -44,14 +44,14 @@ let package = Package(
       dependencies: [
         "MapKitClient",
         "Safari",
-        .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+        .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
       ]
     ),
     .target(
       name: "MapKitClient",
       dependencies: [
         "SharedModels",
-        .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+        .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
       ]
     ),
     .target(

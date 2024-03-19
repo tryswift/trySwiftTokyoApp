@@ -1,14 +1,14 @@
 import ComposableArchitecture
 import CoreLocation
 import Foundation
-import MapKitClient
 import MapKit
+import MapKitClient
 import Safari
 import SwiftUI
 
 @Reducer
 public struct Guidance {
-  
+
   @ObservableState
   public struct State: Equatable {
     @Presents var destination: Destination.State?
@@ -60,71 +60,75 @@ public struct Guidance {
     BindingReducer()
     Reduce { state, action in
       switch action {
-        case .view(.onAppear):
-          return .run { [state] send in
-            await send(
-              .initialResponse(
-                Result {
-                  try await onAppear(lines: state.lines)
-                }
-              )
+      case .view(.onAppear):
+        return .run { [state] send in
+          await send(
+            .initialResponse(
+              Result {
+                try await onAppear(lines: state.lines)
+              }
             )
-          }
-        case let .initialResponse(.success(response)):
-          guard let response = response else { return .none }
-          let route = response.2
+          )
+        }
+      case let .initialResponse(.success(response)):
+        guard let response = response else { return .none }
+        let route = response.2
 
-          state.origin = response.0
-          state.destinationItem = response.1
-          state.route = route
-          state.lookAround = response.3
-          //TODO: Calculate distance from 2 CLLocation
-          state.cameraPosition = .camera(.init(centerCoordinate: route.polyline.coordinate, distance: route.distance * 2))
-          return .none
+        state.origin = response.0
+        state.destinationItem = response.1
+        state.route = route
+        state.lookAround = response.3
+        //TODO: Calculate distance from 2 CLLocation
+        state.cameraPosition = .camera(
+          .init(centerCoordinate: route.polyline.coordinate, distance: route.distance * 2))
+        return .none
 
-        case let .initialResponse(.failure(error)):
-          print(error)
-          return .none
+      case let .initialResponse(.failure(error)):
+        print(error)
+        return .none
 
-        case let .updateResponse(.success(response)):
-          guard let response = response else { return .none }
-          let route = response.1
-          state.origin = response.0
-          state.route = route
-          state.lookAround = response.2
-          //TODO: Calculate distance from 2 CLLocation
-          state.cameraPosition = .camera(.init(centerCoordinate: route.polyline.coordinate, distance: route.distance * 2))
-          return .none
+      case let .updateResponse(.success(response)):
+        guard let response = response else { return .none }
+        let route = response.1
+        state.origin = response.0
+        state.route = route
+        state.lookAround = response.2
+        //TODO: Calculate distance from 2 CLLocation
+        state.cameraPosition = .camera(
+          .init(centerCoordinate: route.polyline.coordinate, distance: route.distance * 2))
+        return .none
 
-        case let .updateResponse(.failure(error)):
-          print(error)
-          return .none
+      case let .updateResponse(.failure(error)):
+        print(error)
+        return .none
 
-        case .binding(\.lines):
-          guard let destination = state.destinationItem else { return .none }
-          return .run { [state] send in
-            await send(
-              .updateResponse(
-                Result {
-                  try await update(with: state.lines, destination: destination)
-                }
-              )
+      case .binding(\.lines):
+        guard let destination = state.destinationItem else { return .none }
+        return .run { [state] send in
+          await send(
+            .updateResponse(
+              Result {
+                try await update(with: state.lines, destination: destination)
+              }
             )
-          }
+          )
+        }
 
-        case .view(.openMapTapped):
-          return .run { [state] _ in
-            state.destinationItem?.openInMaps()
-          }
-        case .destination, .binding:
-          return .none
+      case .view(.openMapTapped):
+        return .run { [state] _ in
+          state.destinationItem?.openInMaps()
+        }
+      case .destination, .binding:
+        return .none
       }
     }
     .ifLet(\.$destination, action: \.destination)
   }
 
   func onAppear(lines: Lines) async throws -> (MKMapItem, MKMapItem, MKRoute, MKLookAroundScene?)? {
-    let items = try await withThrowingTaskGroup(of: (Int, MKMapItem?).self, returning: (MKMapItem?, MKMapItem?).self) { group in
+    let items = try await withThrowingTaskGroup(
+      of: (Int, MKMapItem?).self, returning: (MKMapItem?, MKMapItem?).self
+    ) { group in
       group.addTask {
         (0, try await mapKitClient.localSearch(lines.searchQuery, lines.region).first)
       }
@@ -140,16 +144,23 @@ public struct Guidance {
     guard let origin = items.0, let destination = items.1 else { return nil }
     guard let route = try await mapKitClient.mapRoute(origin, destination) else { return nil }
     let polylineOrigin = route.polyline.coords.first!
-    guard let geoLocation = try await mapKitClient.reverseGeocodeLocation(.init(latitude: polylineOrigin.latitude, longitude: polylineOrigin.longitude)).first else {
+    guard
+      let geoLocation = try await mapKitClient.reverseGeocodeLocation(
+        .init(latitude: polylineOrigin.latitude, longitude: polylineOrigin.longitude)
+      ).first
+    else {
       return nil
     }
-    guard let lookAroundScene = try await mapKitClient.lookAround(.init(placemark: geoLocation)) else {
+    guard let lookAroundScene = try await mapKitClient.lookAround(.init(placemark: geoLocation))
+    else {
       return (origin, destination, route, nil)
     }
     return (origin, destination, route, lookAroundScene)
   }
 
-  func update(with lines: Lines, destination: MKMapItem) async throws -> (MKMapItem, MKRoute, MKLookAroundScene?)? {
+  func update(with lines: Lines, destination: MKMapItem) async throws -> (
+    MKMapItem, MKRoute, MKLookAroundScene?
+  )? {
     let origin = try await mapKitClient.localSearch(lines.searchQuery, lines.region).first
     guard let origin = origin else { return nil }
     guard let route = try await mapKitClient.mapRoute(origin, destination) else {
@@ -157,11 +168,16 @@ public struct Guidance {
       return nil
     }
     let polylineOrigin = route.polyline.coords.first!
-    guard let geoLocation = try await mapKitClient.reverseGeocodeLocation(.init(latitude: polylineOrigin.latitude, longitude: polylineOrigin.longitude)).first else {
+    guard
+      let geoLocation = try await mapKitClient.reverseGeocodeLocation(
+        .init(latitude: polylineOrigin.latitude, longitude: polylineOrigin.longitude)
+      ).first
+    else {
       print("[Error] Reverse Geocode failed", polylineOrigin)
       return nil
     }
-    guard let lookAroundScene = try await mapKitClient.lookAround(.init(placemark: geoLocation)) else {
+    guard let lookAroundScene = try await mapKitClient.lookAround(.init(placemark: geoLocation))
+    else {
       print("[Error] Look around scene not found", geoLocation)
       return (origin, route, nil)
     }
@@ -246,7 +262,11 @@ public struct GuidanceView: View {
             .tint(.blue)
         }
       }
-      .mapStyle(.standard(elevation: .realistic, emphasis: .automatic, pointsOfInterest: .including([.publicTransport]), showsTraffic: false))
+      .mapStyle(
+        .standard(
+          elevation: .realistic, emphasis: .automatic,
+          pointsOfInterest: .including([.publicTransport]), showsTraffic: false)
+      )
       .frame(minHeight: 240)
       .mapControlVisibility(.hidden)
 
@@ -291,8 +311,11 @@ public struct GuidanceView: View {
           Text("Warning", bundle: .module)
             .font(.subheadline.bold())
             .foregroundStyle(Color.accentColor)
-          Text("Our venue is Belle Salle Shibuya FIRST, not garden. Make sure there are two belle salle hall in Shibuya.", bundle: .module)
-            .font(.callout)
+          Text(
+            "Our venue is Belle Salle Shibuya FIRST, not garden. Make sure there are two belle salle hall in Shibuya.",
+            bundle: .module
+          )
+          .font(.callout)
         }
       } icon: {
         Image(systemName: "exclamationmark.triangle.fill")
@@ -308,11 +331,14 @@ public struct GuidanceView: View {
 }
 
 var hallLocation: MKCoordinateRegion {
-  .init(center: .init(latitude: 35.657920, longitude: 139.708854), span: .init(latitudeDelta: 0.01, longitudeDelta: 0.01))
+  .init(
+    center: .init(latitude: 35.657920, longitude: 139.708854),
+    span: .init(latitudeDelta: 0.01, longitudeDelta: 0.01))
 }
 
 #Preview {
-  GuidanceView(store: .init(initialState: .init()) {
-    Guidance()
-  })
+  GuidanceView(
+    store: .init(initialState: .init()) {
+      Guidance()
+    })
 }

@@ -76,34 +76,34 @@ public struct Schedule {
               let workshop = try dataClient.fetchWorkshop()
               return .init(day1: day1, day2: day2, workshop: workshop)
             }))
-        case let .view(.disclosureTapped(session)):
-          guard let description = session.description, let speakers = session.speakers else {
-            return .none
-          }
-          state.path.append(
-            .detail(
-              .init(
-                title: session.title,
-                description: description,
-                requirements: session.requirements,
-                speakers: speakers
-              )
+      case let .view(.disclosureTapped(session)):
+        guard let description = session.description, let speakers = session.speakers else {
+          return .none
+        }
+        state.path.append(
+          .detail(
+            .init(
+              title: session.title,
+              description: description,
+              requirements: session.requirements,
+              speakers: speakers
             )
           )
-          return .none
-        case let .fetchResponse(.success(response)):
-          state.day1 = response.day1
-          state.day2 = response.day2
-          state.workshop = response.workshop
-          return .none
-        case let .fetchResponse(.failure(error as DecodingError)):
-          assertionFailure(error.localizedDescription)
-          return .none
-        case let .fetchResponse(.failure(error)):
-          print(error)  // TODO: replace to Logger API
-          return .none
-        case .binding, .path, .destination:
-          return .none
+        )
+        return .none
+      case let .fetchResponse(.success(response)):
+        state.day1 = response.day1
+        state.day2 = response.day2
+        state.workshop = response.workshop
+        return .none
+      case let .fetchResponse(.failure(error as DecodingError)):
+        assertionFailure(error.localizedDescription)
+        return .none
+      case let .fetchResponse(.failure(error)):
+        print(error)  // TODO: replace to Logger API
+        return .none
+      case .binding, .path, .destination:
+        return .none
       }
     }
     .forEach(\.path, action: \.path)
@@ -125,10 +125,10 @@ public struct ScheduleView: View {
       root
     } destination: { store in
       switch store.state {
-        case .detail:
-          if let store = store.scope(state: \.detail, action: \.detail) {
-            ScheduleDetailView(store: store)
-          }
+      case .detail:
+        if let store = store.scope(state: \.detail, action: \.detail) {
+          ScheduleDetailView(store: store)
+        }
       }
     }
   }
@@ -144,24 +144,24 @@ public struct ScheduleView: View {
       .pickerStyle(.segmented)
       .padding(.horizontal)
       switch store.selectedDay {
-        case .day1:
-          if let day1 = store.day1 {
-            conferenceList(conference: day1)
-          } else {
-            Text("")
-          }
-        case .day2:
-          if let day2 = store.day2 {
-            conferenceList(conference: day2)
-          } else {
-            Text("")
-          }
-        case .day3:
-          if let workshop = store.workshop {
-            conferenceList(conference: workshop)
-          } else {
-            Text("")
-          }
+      case .day1:
+        if let day1 = store.day1 {
+          conferenceList(conference: day1)
+        } else {
+          Text("")
+        }
+      case .day2:
+        if let day2 = store.day2 {
+          conferenceList(conference: day2)
+        } else {
+          Text("")
+        }
+      case .day3:
+        if let workshop = store.workshop {
+          conferenceList(conference: workshop)
+        } else {
+          Text("")
+        }
       }
     }
     .onAppear(perform: {
