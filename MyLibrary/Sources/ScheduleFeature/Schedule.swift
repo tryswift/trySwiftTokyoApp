@@ -34,9 +34,7 @@ public struct Schedule {
     var workshop: Conference?
     @Presents var destination: Destination.State?
 
-    public init() {
-      try? Tips.configure([.displayFrequency(.immediate)])
-    }
+    public init() {}
   }
 
   public enum Action: BindableAction, ViewAction {
@@ -49,7 +47,6 @@ public struct Schedule {
     public enum View {
       case onAppear
       case disclosureTapped(Session)
-      case mapItemTapped
     }
   }
 
@@ -59,9 +56,7 @@ public struct Schedule {
   }
 
   @Reducer(state: .equatable)
-  public enum Destination {
-    case guidance(Safari)
-  }
+  public enum Destination {}
 
   @Dependency(DataClient.self) var dataClient
   @Dependency(\.openURL) var openURL
@@ -96,14 +91,6 @@ public struct Schedule {
           )
         )
         return .none
-      case .view(.mapItemTapped):
-        let url = URL(string: String(localized: "Guidance URL", bundle: .module))!
-        #if os(iOS) || os(macOS)
-          state.destination = .guidance(.init(url: url))
-          return .none
-        #elseif os(visionOS)
-          return .run { _ in await openURL(url) }
-        #endif
       case let .fetchResponse(.success(response)):
         state.day1 = response.day1
         state.day2 = response.day2
@@ -129,8 +116,6 @@ public struct ScheduleView: View {
 
   @Bindable public var store: StoreOf<Schedule>
 
-  let mapTip: MapTip = .init()
-
   public init(store: StoreOf<Schedule>) {
     self.store = store
   }
@@ -145,11 +130,6 @@ public struct ScheduleView: View {
           ScheduleDetailView(store: store)
         }
       }
-    }
-    .sheet(item: $store.scope(state: \.destination?.guidance, action: \.destination.guidance)) {
-      sheetStore in
-      SafariViewRepresentation(url: sheetStore.url)
-        .ignoresSafeArea()
     }
   }
 
@@ -182,16 +162,6 @@ public struct ScheduleView: View {
         } else {
           Text("")
         }
-      }
-    }
-    .toolbar {
-      ToolbarItem(placement: .topBarTrailing) {
-        Image(systemName: "map")
-          .onTapGesture {
-            send(.mapItemTapped)
-          }
-          .popoverTip(mapTip)
-
       }
     }
     .onAppear(perform: {
@@ -310,14 +280,6 @@ public struct ScheduleView: View {
     let formatter = ListFormatter()
     return formatter.string(from: givenNames)!
   }
-}
-
-struct MapTip: Tip, Equatable {
-  var title: Text = Text("Go Shibuya First, NOT Garden", bundle: .module)
-  var message: Text? = Text(
-    "There are two kinds of Bellesalle in Shibuya. Learn how to get from Shibuya Station to \"Bellesalle Shibuya FIRST\". ",
-    bundle: .module)
-  var image: Image? = .init(systemName: "map.circle.fill")
 }
 
 #Preview {

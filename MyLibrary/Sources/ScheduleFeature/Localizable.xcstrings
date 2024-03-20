@@ -370,32 +370,6 @@
         }
       }
     },
-    "Go Shibuya First, NOT Garden" : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "渋谷ガーデンではありません！渋谷ファーストに向かいましょう！"
-          }
-        }
-      }
-    },
-    "Guidance URL" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://twitter.com/tryswiftconf/status/1108474796788977664"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://twitter.com/tryswiftconf/status/1108474796788977664"
-          }
-        }
-      }
-    },
     "Have you ever built a socket communication app? The sense of accomplishment when you delve into layers that aren't typically touched in your everyday app development and actually utilize them in an app is truly exceptional. However, creating a socket communication app requires knowledge of POSIX sockets, and for complex communications, you need to implement parallel processing.\nIn this talk, we'll implement socket communication and parallel processing in Swift. With Swift, which we're all familiar with, you can easily venture into unfamiliar territories, and there are several instances where you can leverage Swift's capabilities through implementing socket communication and parallel processing. Take this opportunity to enjoy learning socket communication and rediscover the charm of Swift!" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1051,16 +1025,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ゲームのSwift移植から見えたC++ interoperabilityの展望"
-          }
-        }
-      }
-    },
-    "There are two kinds of Bellesalle in Shibuya. Learn how to get from Shibuya Station to \"Bellesalle Shibuya FIRST\". " : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "渋谷にはベルサールが２つあります。ベルサール渋谷ファーストへの行き方を確認しましょう。"
           }
         }
       }
