@@ -67,6 +67,7 @@ public struct Schedule {
   }
 
   @Dependency(DataClient.self) var dataClient
+  @Dependency(FileClient.self) var fileClient
   @Dependency(\.openURL) var openURL
 
   public init() {}
@@ -82,7 +83,7 @@ public struct Schedule {
               let day1 = try dataClient.fetchDay1()
               let day2 = try dataClient.fetchDay2()
               let workshop = try dataClient.fetchWorkshop()
-              let favorites = try dataClient.loadFavorites()
+              let favorites = try fileClient.loadFavorites()
               return (.init(day1: day1, day2: day2, workshop: workshop), favorites)
             }))
       case let .view(.disclosureTapped(session)):
@@ -119,7 +120,7 @@ public struct Schedule {
         }
         let favorites = state.favorites
         return .run { _ in
-          try? dataClient.saveFavorites(favorites)
+          try? fileClient.saveFavorites(favorites)
         }
       case let .fetchResponse(.success(response)):
         state.day1 = response.schedules.day1
