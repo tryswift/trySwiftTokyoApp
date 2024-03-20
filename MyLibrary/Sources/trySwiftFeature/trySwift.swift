@@ -9,13 +9,11 @@ public struct TrySwift {
   @ObservableState
   public struct State: Equatable {
     var path = StackState<Path.State>()
-    @Presents var destination: Destination.State?
     public init() {}
   }
 
   public enum Action: BindableAction, ViewAction {
     case path(StackAction<Path.State, Path.Action>)
-    case destination(PresentationAction<Destination.Action>)
     case binding(BindingAction<State>)
     case view(View)
 
@@ -34,11 +32,6 @@ public struct TrySwift {
     case organizers(Organizers)
     case profile(Profile)
     case acknowledgements(Acknowledgements)
-  }
-
-  @Reducer(state: .equatable)
-  public enum Destination {
-    case safari(Safari)
   }
 
   @Dependency(\.openURL) var openURL
@@ -61,31 +54,28 @@ public struct TrySwift {
         return .run { _ in await openURL(url) }
       case .view(.privacyPolicyTapped):
         let url = URL(string: String(localized: "Privacy Policy URL", bundle: .module))!
-        #if os(iOS) || os(macOS)
-          state.destination = .safari(.init(url: url))
-          return .none
-        #elseif os(visionOS)
-          return .run { _ in await openURL(url) }
-        #endif
+        let canOpenInSafari = UIApplication.shared.openInSFSafariViewIfEnabled(url: url)
+        if canOpenInSafari {
+            return .none
+        }
+        return .run { _ in await openURL(url) }
       case .view(.acknowledgementsTapped):
         state.path.append(.acknowledgements(.init()))
         return .none
       case .view(.eventbriteTapped):
         let url = URL(string: String(localized: "Eventbrite URL", bundle: .module))!
-        #if os(iOS) || os(macOS)
-          state.destination = .safari(.init(url: url))
-          return .none
-        #elseif os(visionOS)
-          return .run { _ in await openURL(url) }
-        #endif
+        let canOpenInSafari = UIApplication.shared.openInSFSafariViewIfEnabled(url: url)
+        if canOpenInSafari {
+            return .none
+        }
+        return .run { _ in await openURL(url) }
       case .view(.websiteTapped):
         let url = URL(string: String(localized: "Website URL", bundle: .module))!
-        #if os(iOS) || os(macOS)
-          state.destination = .safari(.init(url: url))
-          return .none
-        #elseif os(visionOS)
-          return .run { _ in await openURL(url) }
-        #endif
+        let canOpenInSafari = UIApplication.shared.openInSFSafariViewIfEnabled(url: url)
+        if canOpenInSafari {
+            return .none
+        }
+        return .run { _ in await openURL(url) }
       case let .path(.element(_, .organizers(.delegate(.organizerTapped(organizer))))):
         state.path.append(.profile(.init(organizer: organizer)))
         return .none
@@ -93,12 +83,9 @@ public struct TrySwift {
         return .none
       case .path:
         return .none
-      case .destination:
-        return .none
       }
     }
     .forEach(\.path, action: \.path)
-    .ifLet(\.$destination, action: \.destination)
   }
 }
 
@@ -184,11 +171,5 @@ public struct TrySwiftView: View {
       }
     }
     .navigationTitle(Text("try! Swift", bundle: .module))
-    .sheet(
-      item: $store.scope(state: \.destination?.safari, action: \.destination.safari)
-    ) { sheetStore in
-      SafariViewRepresentation(url: sheetStore.url)
-        .ignoresSafeArea()
-    }
   }
 }
