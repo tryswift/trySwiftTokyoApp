@@ -12,24 +12,34 @@ public struct FileClient {
 extension FileClient: DependencyKey {
   static public var liveValue: FileClient = .init(
     loadFavorites: {
-      guard let saveData = loadDataFromUserDefaults(key: "Favorites") else {
+      guard let saveData = loadDataFromFile(named: "Favorites") else {
         return .init(eachConferenceFavorites: [])
       }
       let response = try jsonDecoder.decode(Favorites.self, from: saveData)
       return response
     },
     saveFavorites: { favorites in
-      saveDataToUserDefaults(favorites, as: "Favorites")
+      guard let data = try? jsonEncoder.encode(favorites) else {
+        return
+      }
+      saveDataToFile(data, named: "Favorites")
     }
   )
 
-  static func saveDataToUserDefaults(_ favorites : Favorites, as key: String) {
-    let data = try? jsonEncoder.encode(favorites)
-    UserDefaults.standard.set(data, forKey: key)
+  static func saveDataToFile(_ data : Data, named fileName: String) {
+    guard let documentPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+      return
+    }
+    let fileURL = documentPath.appendingPathComponent(fileName + ".json")
+    try? data.write(to: fileURL)
   }
 
-  static func loadDataFromUserDefaults(key: String) -> Data? {
-    return UserDefaults.standard.data(forKey: key)
+  static func loadDataFromFile(named fileName: String) -> Data? {
+    guard let documentPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+      return nil
+    }
+    let fileURL = documentPath.appendingPathComponent(fileName + ".json")
+    return try? Data(contentsOf: fileURL)
   }
 }
 
