@@ -1,6 +1,6 @@
 import ComposableArchitecture
 import Foundation
-import Safari
+import DependencyExtra
 import SharedModels
 import SwiftUI
 
@@ -24,7 +24,7 @@ public struct Profile {
     }
   }
 
-  @Dependency(\.openURL) var openURL
+  @Dependency(\.safari) var safari
 
   public init() {}
 
@@ -33,11 +33,7 @@ public struct Profile {
     Reduce { state, action in
       switch action {
       case let .view(.snsTapped(url)):
-        let canOpenInSafari = UIApplication.shared.openInSFSafariViewIfEnabled(url: url)
-        if canOpenInSafari {
-          return .none
-        }
-        return .run { _ in await openURL(url) }
+        return .run { _ in await safari(url) }
       case .binding:
         return .none
       }

@@ -1,5 +1,5 @@
 import ComposableArchitecture
-import Safari
+import DependencyExtra
 import SwiftUI
 
 @Reducer
@@ -15,17 +15,13 @@ public struct Acknowledgements {
     case urlTapped(URL)
   }
 
-  @Dependency(\.openURL) var openURL
+  @Dependency(\.safari) var safari
 
   public var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
       case let .urlTapped(url):
-        let canOpenInSafari = UIApplication.shared.openInSFSafariViewIfEnabled(url: url)
-        if canOpenInSafari {
-          return .none
-        }
-        return .run { _ in await openURL(url) }
+        return .run { _ in await safari(url) }
       }
     }
   }

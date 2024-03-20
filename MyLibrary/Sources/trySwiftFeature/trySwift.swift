@@ -1,6 +1,6 @@
 import ComposableArchitecture
 import DataClient
-import Safari
+import DependencyExtra
 import SharedModels
 import SwiftUI
 
@@ -34,7 +34,7 @@ public struct TrySwift {
     case acknowledgements(Acknowledgements)
   }
 
-  @Dependency(\.openURL) var openURL
+  @Dependency(\.safari) var safari
 
   public init() {}
 
@@ -47,35 +47,19 @@ public struct TrySwift {
         return .none
       case .view(.codeOfConductTapped):
         let url = URL(string: String(localized: "Code of Conduct URL", bundle: .module))!
-        let canOpenInSafari = UIApplication.shared.openInSFSafariViewIfEnabled(url: url)
-        if canOpenInSafari {
-          return .none
-        }
-        return .run { _ in await openURL(url) }
+        return .run { _ in await safari(url) }
       case .view(.privacyPolicyTapped):
         let url = URL(string: String(localized: "Privacy Policy URL", bundle: .module))!
-        let canOpenInSafari = UIApplication.shared.openInSFSafariViewIfEnabled(url: url)
-        if canOpenInSafari {
-          return .none
-        }
-        return .run { _ in await openURL(url) }
+        return .run { _ in await safari(url) }
       case .view(.acknowledgementsTapped):
         state.path.append(.acknowledgements(.init()))
         return .none
       case .view(.eventbriteTapped):
         let url = URL(string: String(localized: "Eventbrite URL", bundle: .module))!
-        let canOpenInSafari = UIApplication.shared.openInSFSafariViewIfEnabled(url: url)
-        if canOpenInSafari {
-          return .none
-        }
-        return .run { _ in await openURL(url) }
+        return .run { _ in await safari(url) }
       case .view(.websiteTapped):
         let url = URL(string: String(localized: "Website URL", bundle: .module))!
-        let canOpenInSafari = UIApplication.shared.openInSFSafariViewIfEnabled(url: url)
-        if canOpenInSafari {
-          return .none
-        }
-        return .run { _ in await openURL(url) }
+        return .run { _ in await safari(url) }
       case let .path(.element(_, .organizers(.delegate(.organizerTapped(organizer))))):
         state.path.append(.profile(.init(organizer: organizer)))
         return .none
