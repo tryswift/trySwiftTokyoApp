@@ -9,7 +9,11 @@ let package = Package(
   products: [
     .library(
       name: "AppFeature",
-      targets: ["AppFeature"])
+      targets: ["AppFeature"]),
+    .library(
+      name: "GuidanceFeature",
+      targets: ["GuidanceFeature"]
+    ),
   ],
   dependencies: [
     .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.9.1"),
@@ -19,6 +23,7 @@ let package = Package(
     .target(
       name: "AppFeature",
       dependencies: [
+        "GuidanceFeature",
         "ScheduleFeature",
         "SponsorFeature",
         "trySwiftFeature",
@@ -32,6 +37,21 @@ let package = Package(
       ],
       resources: [
         .process("Resources")
+      ]
+    ),
+    .target(
+      name: "GuidanceFeature",
+      dependencies: [
+        "MapKitClient",
+        "Safari",
+        .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+      ]
+    ),
+    .target(
+      name: "MapKitClient",
+      dependencies: [
+        "SharedModels",
+        .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
       ]
     ),
     .target(

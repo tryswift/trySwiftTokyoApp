@@ -11,6 +11,16 @@
         }
       }
     },
+    "Go Shibuya First, NOT Garden" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "渋谷ファーストです！ガーデンではありません！"
+          }
+        }
+      }
+    },
     "Schedule" : {
       "localizations" : {
         "ja" : {
@@ -27,6 +37,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "スポンサー"
+          }
+        }
+      }
+    },
+    "There are two kinds of Bellesalle in Shibuya. Learn how to get from Shibuya Station to \"Bellesalle Shibuya FIRST\". " : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "渋谷にはベルサールが２つあります。渋谷駅からベルサール渋谷ファーストへの行き方を確認しましょう。"
+          }
+        }
+      }
+    },
+    "Venue" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "会場"
           }
         }
       }
