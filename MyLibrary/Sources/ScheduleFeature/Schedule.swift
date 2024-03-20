@@ -91,11 +91,11 @@ public struct Schedule {
         return .none
       case .view(.mapItemTapped):
         let url = URL(string: String(localized: "Guidance URL", bundle: .module))!
-          let canOpenInSafari = UIApplication.shared.openInSFSafariViewIfEnabled(url: url)
-          if canOpenInSafari {
-              return .none
-          }
-          return .run { _ in await openURL(url) }
+        let canOpenInSafari = UIApplication.shared.openInSFSafariViewIfEnabled(url: url)
+        if canOpenInSafari {
+          return .none
+        }
+        return .run { _ in await openURL(url) }
       case let .fetchResponse(.success(response)):
         state.day1 = response.day1
         state.day2 = response.day2

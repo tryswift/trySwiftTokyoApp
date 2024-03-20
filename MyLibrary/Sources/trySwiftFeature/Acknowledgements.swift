@@ -21,11 +21,11 @@ public struct Acknowledgements {
     Reduce { state, action in
       switch action {
       case let .urlTapped(url):
-          let canOpenInSafari = UIApplication.shared.openInSFSafariViewIfEnabled(url: url)
-          if canOpenInSafari {
-              return .none
-          }
-          return .run { _ in await openURL(url) }
+        let canOpenInSafari = UIApplication.shared.openInSFSafariViewIfEnabled(url: url)
+        if canOpenInSafari {
+          return .none
+        }
+        return .run { _ in await openURL(url) }
       }
     }
   }

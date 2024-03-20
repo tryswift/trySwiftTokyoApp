@@ -35,7 +35,7 @@ public struct Profile {
       case let .view(.snsTapped(url)):
         let canOpenInSafari = UIApplication.shared.openInSFSafariViewIfEnabled(url: url)
         if canOpenInSafari {
-            return .none
+          return .none
         }
         return .run { _ in await openURL(url) }
       case .binding:
