@@ -42,9 +42,3 @@ extension FileClient: DependencyKey {
     return try? Data(contentsOf: fileURL)
   }
 }
-
-let jsonEncoder = {
-  $0.dateEncodingStrategy = .iso8601
-  $0.keyEncodingStrategy = .convertToSnakeCase
-  return $0
-}(JSONEncoder())
