@@ -45,6 +45,7 @@ public struct Schedule {
     case destination(PresentationAction<Destination.Action>)
     case view(View)
     case fetchResponse(Result<(schedules: SchedulesResponse, favorites: Favorites), Error>)
+    case savedFavorites(Session, Conference)
 
     public enum View {
       case onAppear
@@ -97,18 +98,23 @@ public struct Schedule {
         )
         return .none
       case let .view(.favoriteIconTapped(session)):
-        switch state.selectedDay {
+        let day = switch state.selectedDay {
         case .day1:
-          state.favorites.updateFavoriteState(of: session, in: state.day1!)
+          state.day1!
         case .day2:
-          state.favorites.updateFavoriteState(of: session, in: state.day2!)
+          state.day2!
         case .day3:
-          state.favorites.updateFavoriteState(of: session, in: state.workshop!)
+          state.workshop!
         }
-        let favorites = state.favorites
-        return .run { _ in
+        var favorites = state.favorites
+        favorites.updateFavoriteState(of: session, in: day)
+        return .run { [favorites = favorites] send in
           try? fileClient.saveFavorites(favorites)
+          await send(.savedFavorites(session, day))
         }
+      case let .savedFavorites(session, day):
+        state.favorites.updateFavoriteState(of: session, in: day)
+        return .none
       case let .fetchResponse(.success(response)):
         state.day1 = response.schedules.day1
         state.day2 = response.schedules.day2
