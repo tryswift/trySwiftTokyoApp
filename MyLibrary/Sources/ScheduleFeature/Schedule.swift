@@ -245,6 +245,7 @@ public struct ScheduleView: View {
         if let speakers = session.speakers {
           Text(ListFormatter.localizedString(byJoining: speakers.map(\.name)))
             .foregroundStyle(Color.init(uiColor: .label))
+            .multilineTextAlignment(.leading)
         }
         if let summary = session.summary {
           if session.title == "Office hour", let speakers = session.speakers {
