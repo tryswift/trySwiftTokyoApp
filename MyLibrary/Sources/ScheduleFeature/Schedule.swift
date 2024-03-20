@@ -32,7 +32,6 @@ public struct Schedule {
     var day1: Conference?
     var day2: Conference?
     var workshop: Conference?
-    @Presents var destination: Destination.State?
 
     public init() {
       try? Tips.configure([.displayFrequency(.immediate)])
@@ -42,7 +41,6 @@ public struct Schedule {
   public enum Action: BindableAction, ViewAction {
     case binding(BindingAction<State>)
     case path(StackAction<Path.State, Path.Action>)
-    case destination(PresentationAction<Destination.Action>)
     case view(View)
     case fetchResponse(Result<SchedulesResponse, Error>)
 
@@ -56,11 +54,6 @@ public struct Schedule {
   @Reducer(state: .equatable)
   public enum Path {
     case detail(ScheduleDetail)
-  }
-
-  @Reducer(state: .equatable)
-  public enum Destination {
-    case guidance(Safari)
   }
 
   @Dependency(DataClient.self) var dataClient
@@ -98,12 +91,11 @@ public struct Schedule {
         return .none
       case .view(.mapItemTapped):
         let url = URL(string: String(localized: "Guidance URL", bundle: .module))!
-        #if os(iOS) || os(macOS)
-          state.destination = .guidance(.init(url: url))
-          return .none
-        #elseif os(visionOS)
+          let canOpenInSafari = UIApplication.shared.openInSFSafariViewIfEnabled(url: url)
+          if canOpenInSafari {
+              return .none
+          }
           return .run { _ in await openURL(url) }
-        #endif
       case let .fetchResponse(.success(response)):
         state.day1 = response.day1
         state.day2 = response.day2
@@ -115,12 +107,11 @@ public struct Schedule {
       case let .fetchResponse(.failure(error)):
         print(error)  // TODO: replace to Logger API
         return .none
-      case .binding, .path, .destination:
+      case .binding, .path:
         return .none
       }
     }
     .forEach(\.path, action: \.path)
-    .ifLet(\.$destination, action: \.destination)
   }
 }
 
@@ -145,11 +136,6 @@ public struct ScheduleView: View {
           ScheduleDetailView(store: store)
         }
       }
-    }
-    .sheet(item: $store.scope(state: \.destination?.guidance, action: \.destination.guidance)) {
-      sheetStore in
-      SafariViewRepresentation(url: sheetStore.url)
-        .ignoresSafeArea()
     }
   }
 
