@@ -7,14 +7,12 @@ public struct Acknowledgements {
   @ObservableState
   public struct State: Equatable {
     var packages = LicenseProvider.packages
-    @Presents var safari: Safari.State?
 
     public init() {}
   }
 
   public enum Action {
     case urlTapped(URL)
-    case safari(PresentationAction<Safari.Action>)
   }
 
   @Dependency(\.openURL) var openURL
@@ -23,18 +21,12 @@ public struct Acknowledgements {
     Reduce { state, action in
       switch action {
       case let .urlTapped(url):
-        #if os(iOS) || os(macOS)
-          state.safari = .init(url: url)
-          return .none
-        #elseif os(visionOS)
+          let canOpenInSafari = UIApplication.shared.openInSFSafariViewIfEnabled(url: url)
+          if canOpenInSafari {
+              return .none
+          }
           return .run { _ in await openURL(url) }
-        #endif
-      case .safari:
-        return .none
       }
-    }
-    .ifLet(\.$safari, action: \.safari) {
-      Safari()
     }
   }
 }
@@ -44,15 +36,6 @@ public struct AcknowledgementsView: View {
   @Bindable public var store: StoreOf<Acknowledgements>
 
   public var body: some View {
-    list
-      .sheet(item: $store.scope(state: \.safari, action: \.safari)) { sheetStore in
-        SafariViewRepresentation(url: sheetStore.url)
-          .ignoresSafeArea()
-      }
-  }
-
-  @ViewBuilder
-  var list: some View {
     List {
       ForEach(store.packages, id: \.self) { package in
         NavigationLink(package.name) {
