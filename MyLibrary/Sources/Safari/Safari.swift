@@ -18,6 +18,25 @@ public struct Safari {
   public init() {}
 }
 
+extension UIApplication {
+  var firstKeyWindow: UIWindow? {
+    return UIApplication.shared.connectedScenes
+          .compactMap { $0 as? UIWindowScene }
+          .filter { $0.activationState == .foregroundActive }
+          .first?.keyWindow
+  }
+    
+  public func openInSFSafariViewIfEnabled(url: URL) -> Bool {
+    #if os(iOS) || os(macOS)
+      let viewController = SFSafariViewController(url: url)
+      firstKeyWindow?.rootViewController?.present(viewController, animated: true)
+      return true
+    #elseif os(visionOS)
+      return false
+    #endif
+  }
+}
+
 public struct SafariView: View {
 
   public var store: StoreOf<Safari>

@@ -54,12 +54,11 @@ public struct TrySwift {
         return .none
       case .view(.codeOfConductTapped):
         let url = URL(string: String(localized: "Code of Conduct URL", bundle: .module))!
-        #if os(iOS) || os(macOS)
-          state.destination = .safari(.init(url: url))
-          return .none
-        #elseif os(visionOS)
-          return .run { _ in await openURL(url) }
-        #endif
+        let canOpenInSafari = UIApplication.shared.openInSFSafariViewIfEnabled(url: url)
+        if canOpenInSafari {
+            return .none
+        }
+        return .run { _ in await openURL(url) }
       case .view(.privacyPolicyTapped):
         let url = URL(string: String(localized: "Privacy Policy URL", bundle: .module))!
         #if os(iOS) || os(macOS)
