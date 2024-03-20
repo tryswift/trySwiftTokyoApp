@@ -9,7 +9,6 @@ public struct Profile {
   @ObservableState
   public struct State: Equatable {
     var organizer: Organizer
-    @Presents var destination: Destination.State?
 
     public init(organizer: Organizer) {
       self.organizer = organizer
@@ -18,17 +17,11 @@ public struct Profile {
 
   public enum Action: ViewAction, BindableAction {
     case binding(BindingAction<State>)
-    case destination(PresentationAction<Destination.Action>)
     case view(View)
 
     public enum View {
       case snsTapped(URL)
     }
-  }
-
-  @Reducer(state: .equatable)
-  public enum Destination {
-    case safari(Safari)
   }
 
   @Dependency(\.openURL) var openURL
@@ -40,19 +33,15 @@ public struct Profile {
     Reduce { state, action in
       switch action {
       case let .view(.snsTapped(url)):
-        #if os(iOS) || os(macOS)
-          state.destination = .safari(.init(url: url))
-          return .none
-        #elseif os(visionOS)
-          return .run { _ in await openURL(url) }
-        #endif
-      case .destination:
-        return .none
+        let canOpenInSafari = UIApplication.shared.openInSFSafariViewIfEnabled(url: url)
+        if canOpenInSafari {
+            return .none
+        }
+        return .run { _ in await openURL(url) }
       case .binding:
         return .none
       }
     }
-    .ifLet(\.$destination, action: \.destination)
   }
 }
 
@@ -93,11 +82,6 @@ public struct ProfileView: View {
           .frame(maxWidth: 700)
       }
       .navigationTitle(Text(LocalizedStringKey(store.organizer.name), bundle: .module))
-    }
-    .sheet(item: $store.scope(state: \.destination?.safari, action: \.destination.safari)) {
-      sheetStore in
-      SafariViewRepresentation(url: sheetStore.url)
-        .ignoresSafeArea()
     }
   }
 }
