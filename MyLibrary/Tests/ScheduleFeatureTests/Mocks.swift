@@ -95,3 +95,9 @@ extension Speaker {
     ]
   )
 }
+
+extension Favorites {
+  static let mock1 = Self(eachConferenceFavorites: [
+    (.mock1, [.mock1])
+  ])
+}

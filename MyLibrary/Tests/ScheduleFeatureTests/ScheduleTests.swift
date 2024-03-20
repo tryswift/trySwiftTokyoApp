@@ -13,12 +13,14 @@ final class ScheduleTests: XCTestCase {
       $0[DataClient.self].fetchDay1 = { @Sendable in .mock1 }
       $0[DataClient.self].fetchDay2 = { @Sendable in .mock2 }
       $0[DataClient.self].fetchWorkshop = { @Sendable in .mock3 }
+      $0[FileClient.self].loadFavorites = { @Sendable in .mock1 }
     }
     await store.send(.view(.onAppear))
     await store.receive(\.fetchResponse.success) {
       $0.day1 = .mock1
       $0.day2 = .mock2
       $0.workshop = .mock3
+      $0.favorites = .mock1
     }
   }
 
@@ -31,6 +33,7 @@ final class ScheduleTests: XCTestCase {
       $0[DataClient.self].fetchDay1 = { @Sendable in throw FetchError() }
       $0[DataClient.self].fetchDay2 = { @Sendable in .mock2 }
       $0[DataClient.self].fetchWorkshop = { @Sendable in .mock3 }
+      $0[FileClient.self].loadFavorites = { @Sendable in .mock1 }
     }
     await store.send(.view(.onAppear))
     await store.receive(\.fetchResponse.failure)
