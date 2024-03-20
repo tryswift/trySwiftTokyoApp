@@ -1,6 +1,8 @@
 import Foundation
 import SharedModels
 
+@testable import ScheduleFeature
+
 extension Conference {
   static let mock1 = Self(
     id: 1,
@@ -97,7 +99,26 @@ extension Speaker {
 }
 
 extension Favorites {
-  static let mock1 = Self(eachConferenceFavorites: [
+  static let mock1 = favoritedSession1InConference1
+  static let favoritedSession1InConference1 = Self(eachConferenceFavorites: [
     (.mock1, [.mock1])
   ])
+}
+
+extension ScheduleFeature.Schedule.State {
+  static let selectingDay1ScheduleWithNoFavorites = {
+    var initialState = Schedule.State()
+    initialState.selectedDay = .day1
+    initialState.day1 = .mock1
+    return initialState
+  }()
+
+  static let selectingDay1ScheduleWithOneFavorite = {
+    var initialState = Schedule.State()
+    initialState.selectedDay = .day1
+    initialState.day1 = .mock1
+    let firstSession = initialState.day1!.schedules.first!.sessions.first!
+    initialState.favorites = .init(eachConferenceFavorites: [(initialState.day1!, [firstSession])])
+    return initialState
+  }()
 }
