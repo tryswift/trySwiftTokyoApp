@@ -32,6 +32,8 @@ public struct Schedule {
     var day1: Conference?
     var day2: Conference?
     var workshop: Conference?
+    
+    var favorites: Favorites = .init(eachConferenceFavorites: [])
     @Presents var destination: Destination.State?
 
     public init() {
@@ -44,7 +46,7 @@ public struct Schedule {
     case path(StackAction<Path.State, Path.Action>)
     case destination(PresentationAction<Destination.Action>)
     case view(View)
-    case fetchResponse(Result<SchedulesResponse, Error>)
+    case fetchResponse(Result<(schedules: SchedulesResponse, favorites: Favorites), Error>)
 
     public enum View {
       case onAppear
@@ -80,7 +82,8 @@ public struct Schedule {
               let day1 = try dataClient.fetchDay1()
               let day2 = try dataClient.fetchDay2()
               let workshop = try dataClient.fetchWorkshop()
-              return .init(day1: day1, day2: day2, workshop: workshop)
+              let favorites = try dataClient.loadFavorites()
+              return (.init(day1: day1, day2: day2, workshop: workshop), favorites)
             }))
       case let .view(.disclosureTapped(session)):
         guard let description = session.description, let speakers = session.speakers else {
@@ -108,24 +111,21 @@ public struct Schedule {
       case let .view(.favoriteIconTapped(session)):
         switch state.selectedDay {
         case .day1:
-          state.day1 = update(state.day1!, togglingFavoriteOf: session)
+          state.favorites.updateFavoriteState(of: session, in: state.day1!)
         case .day2:
-          state.day2 = update(state.day2!, togglingFavoriteOf: session)
+          state.favorites.updateFavoriteState(of: session, in: state.day2!)
         case .day3:
-          state.workshop = update(state.workshop!, togglingFavoriteOf: session)
+          state.favorites.updateFavoriteState(of: session, in: state.workshop!)
         }
-        let day1 = state.day1!
-        let day2 = state.day2!
-        let workshop = state.workshop!
+        let favorites = state.favorites
         return .run { _ in
-          try? dataClient.saveDay1(day1)
-          try? dataClient.saveDay2(day2)
-          try? dataClient.saveWorkshop(workshop)
+          try? dataClient.saveFavorites(favorites)
         }
       case let .fetchResponse(.success(response)):
-        state.day1 = response.day1
-        state.day2 = response.day2
-        state.workshop = response.workshop
+        state.day1 = response.schedules.day1
+        state.day2 = response.schedules.day2
+        state.workshop = response.schedules.workshop
+        state.favorites = response.favorites
         return .none
       case let .fetchResponse(.failure(error as DecodingError)):
         assertionFailure(error.localizedDescription)
@@ -139,12 +139,6 @@ public struct Schedule {
     }
     .forEach(\.path, action: \.path)
     .ifLet(\.$destination, action: \.destination)
-  }
-
-  private func update(_ conference: Conference, togglingFavoriteOf session: Session) -> Conference {
-    var newValue = conference
-    newValue.toggleFavorite(of: session)
-    return newValue
   }
 }
 
@@ -322,7 +316,17 @@ public struct ScheduleView: View {
 
   @ViewBuilder
   func favoriteIcon(for session: Session) -> some View {
-    if let isFavorited = session.isFavorited, isFavorited {
+    let conference = 
+    switch store.selectedDay {
+    case .day1:
+      store.day1!
+    case .day2:
+      store.day2!
+    case .day3:
+      store.workshop!
+    }
+
+    if store.favorites.isFavorited(session, in: conference) {
       Image(systemName: "star.fill")
         .foregroundColor(.yellow)
     } else {

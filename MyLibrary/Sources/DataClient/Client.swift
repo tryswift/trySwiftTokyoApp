@@ -10,29 +10,25 @@ public struct DataClient {
   public var fetchWorkshop: @Sendable () throws -> Conference
   public var fetchSponsors: @Sendable () throws -> Sponsors
   public var fetchOrganizers: @Sendable () throws -> [Organizer]
-  public var saveDay1: @Sendable (Conference) throws -> Void
-  public var saveDay2: @Sendable (Conference) throws -> Void
-  public var saveWorkshop: @Sendable (Conference) throws -> Void
+  public var loadFavorites: @Sendable () throws -> Favorites
+  public var saveFavorites: @Sendable (Favorites) throws -> Void
 }
 
 extension DataClient: DependencyKey {
-  private static let day1 = "day1"
-  private static let day2 = "day2"
-  private static let workshop = "workshop"
 
   static public var liveValue: DataClient = .init(
     fetchDay1: {
-      let data = loadData(dayOf: day1)
+      let data = loadDataFromBundle(fileName: "day1")
       let response = try jsonDecoder.decode(Conference.self, from: data)
       return response
     },
     fetchDay2: {
-      let data = loadData(dayOf: day2)
+      let data = loadDataFromBundle(fileName: "day2")
       let response = try jsonDecoder.decode(Conference.self, from: data)
       return response
     },
     fetchWorkshop: {
-      let data = loadData(dayOf: workshop)
+      let data = loadDataFromBundle(fileName: "workshop")
       let response = try jsonDecoder.decode(Conference.self, from: data)
       return response
     },
@@ -45,24 +41,18 @@ extension DataClient: DependencyKey {
       let data = loadDataFromBundle(fileName: "organizers")
       let response = try jsonDecoder.decode([Organizer].self, from: data)
       return response
+    }, 
+    loadFavorites: {
+      guard let saveData = loadDataFromUserDefaults(key: "Favorites") else {
+        return .init(eachConferenceFavorites: [])
+      }
+      let response = try jsonDecoder.decode(Favorites.self, from: saveData)
+      return response
     },
-    saveDay1: { conference in
-      saveDataToUserDefaults(conference, as: day1)
-    },
-    saveDay2: { conference in
-      saveDataToUserDefaults(conference, as: day2)
-    },
-    saveWorkshop: { conference in
-      saveDataToUserDefaults(conference, as: workshop)
+    saveFavorites: { favorites in
+      saveDataToUserDefaults(favorites, as: "Favorites")
     }
   )
-
-  static func loadData(dayOf day: String) -> Data {
-    if let saveData = loadDataFromUserDefaults(key: day) {
-      return saveData
-    }
-    return loadDataFromBundle(fileName: day)
-  }
 
   static func loadDataFromBundle(fileName: String) -> Data {
     let filePath = Bundle.module.path(forResource: fileName, ofType: "json")!
@@ -71,8 +61,8 @@ extension DataClient: DependencyKey {
     return data
   }
 
-  static func saveDataToUserDefaults(_ conference : Conference, as key: String) {
-    let data = try? jsonEncoder.encode(conference)
+  static func saveDataToUserDefaults(_ favorites : Favorites, as key: String) {
+    let data = try? jsonEncoder.encode(favorites)
     UserDefaults.standard.set(data, forKey: key)
   }
 
