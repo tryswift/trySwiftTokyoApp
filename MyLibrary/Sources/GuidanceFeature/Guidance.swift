@@ -1,9 +1,9 @@
 import ComposableArchitecture
 import CoreLocation
+import DependencyExtra
 import Foundation
 import MapKit
 import MapKitClient
-import Safari
 import SwiftUI
 
 @Reducer
@@ -11,7 +11,6 @@ public struct Guidance {
 
   @ObservableState
   public struct State: Equatable {
-    @Presents var destination: Destination.State?
     var lines: Lines = .metroShibuya
     var route: MKRoute?
     var origin: MKMapItem?
@@ -36,7 +35,6 @@ public struct Guidance {
 
   public enum Action: BindableAction, ViewAction {
     case binding(BindingAction<State>)
-    case destination(PresentationAction<Destination.Action>)
     case view(View)
     case initialResponse(Result<(MKMapItem, MKMapItem, MKRoute, MKLookAroundScene?)?, Error>)
     case updateResponse(Result<(MKMapItem, MKRoute, MKLookAroundScene?)?, Error>)
@@ -45,11 +43,6 @@ public struct Guidance {
       case onAppear
       case openMapTapped
     }
-  }
-
-  @Reducer(state: .equatable)
-  public enum Destination {
-    case safari(Safari)
   }
 
   @Dependency(MapKitClient.self) var mapKitClient
@@ -118,11 +111,10 @@ public struct Guidance {
         return .run { [state] _ in
           state.destinationItem?.openInMaps()
         }
-      case .destination, .binding:
+      case .binding:
         return .none
       }
     }
-    .ifLet(\.$destination, action: \.destination)
   }
 
   func onAppear(lines: Lines) async throws -> (MKMapItem, MKMapItem, MKRoute, MKLookAroundScene?)? {

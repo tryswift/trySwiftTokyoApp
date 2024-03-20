@@ -1,7 +1,7 @@
 import ComposableArchitecture
 import DataClient
 import Foundation
-import Safari
+import DependencyExtra
 import SharedModels
 import SwiftUI
 
@@ -13,13 +13,11 @@ public struct SponsorsList {
     var searchText: String = ""
     var isSearchBarPresented: Bool = false
     var sponsors: Sponsors?
-    @Presents var destination: Destination.State?
 
     public init() {}
   }
 
   public enum Action: ViewAction, BindableAction {
-    case destination(PresentationAction<Destination.Action>)
     case binding(BindingAction<State>)
     case view(View)
 
@@ -32,7 +30,7 @@ public struct SponsorsList {
   public init() {}
 
   @Dependency(DataClient.self) var dataClient
-  @Dependency(\.openURL) var openURL
+  @Dependency(\.safari) var safari
 
   public var body: some ReducerOf<Self> {
     BindingReducer()
@@ -44,24 +42,11 @@ public struct SponsorsList {
 
       case let .view(.sponsorTapped(sponsor)):
         guard let url = sponsor.link else { return .none }
-        #if os(iOS) || os(macOS)
-          state.destination = .safari(.init(url: url))
-          return .none
-        #elseif os(visionOS)
-          return .run { _ in await openURL(url) }
-        #endif
+          return .run { _ in await safari(url) }
       case .binding:
-        return .none
-      case .destination:
         return .none
       }
     }
-    .ifLet(\.$destination, action: \.destination)
-  }
-
-  @Reducer(state: .equatable)
-  public enum Destination {
-    case safari(Safari)
   }
 }
 
@@ -76,12 +61,6 @@ public struct SponsorsListView: View {
   public var body: some View {
     NavigationView {
       root
-        .fullScreenCover(
-          item: $store.scope(state: \.destination?.safari, action: \.destination.safari)
-        ) { sheetStore in
-          SafariViewRepresentation(url: sheetStore.url)
-            .ignoresSafeArea()
-        }
         .onAppear {
           send(.onAppear)
         }
