@@ -49,3 +49,9 @@ extension DataClient: DependencyKey {
     return data
   }
 }
+
+let jsonDecoder = {
+  $0.dateDecodingStrategy = .iso8601
+  $0.keyDecodingStrategy = .convertFromSnakeCase
+  return $0
+}(JSONDecoder())
