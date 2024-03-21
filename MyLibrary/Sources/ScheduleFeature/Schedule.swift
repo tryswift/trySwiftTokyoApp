@@ -2,7 +2,6 @@ import ComposableArchitecture
 import DataClient
 import FileClient
 import Foundation
-import Safari
 import SharedModels
 import SwiftUI
 import TipKit
@@ -65,7 +64,6 @@ public struct Schedule {
 
   @Dependency(DataClient.self) var dataClient
   @Dependency(FileClient.self) var fileClient
-  @Dependency(\.openURL) var openURL
 
   public init() {}
 

@@ -1,9 +1,9 @@
 import ComposableArchitecture
 import CoreLocation
+import DependencyExtra
 import Foundation
 import MapKit
 import MapKitClient
-import Safari
 import SwiftUI
 
 @Reducer
@@ -49,10 +49,10 @@ public struct Guidance {
 
   @Reducer(state: .equatable)
   public enum Destination {
-    case safari(Safari)
   }
 
   @Dependency(MapKitClient.self) var mapKitClient
+  @Dependency(\.safari) var safari
 
   public init() {}
 
