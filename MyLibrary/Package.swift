@@ -96,5 +96,13 @@ let package = Package(
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
       ]
     ),
+    .testTarget(
+      name: "SponsorFeatureTests",
+      dependencies: [
+        "SponsorFeature",
+        "SharedModels",
+        .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+      ]
+    ),
   ]
 )

@@ -12,7 +12,6 @@ public enum Plan: String, Codable, Sendable, CaseIterable {
 }
 
 public struct Sponsors: Codable, Equatable, Hashable, Sendable {
-  public var id: UUID { .init() }
   let platinum: [Sponsor]
   let gold: [Sponsor]
   let silver: [Sponsor]
