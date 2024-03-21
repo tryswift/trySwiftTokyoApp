@@ -40,6 +40,13 @@ let package = Package(
       ]
     ),
     .target(
+      name: "FileClient",
+      dependencies: [
+        "SharedModels",
+        .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+      ]
+    ),
+    .target(
       name: "GuidanceFeature",
       dependencies: [
         "MapKitClient",
@@ -64,6 +71,7 @@ let package = Package(
       name: "ScheduleFeature",
       dependencies: [
         "DataClient",
+        "FileClient",
         "Safari",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
       ]

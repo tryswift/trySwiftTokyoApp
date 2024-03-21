@@ -1,5 +1,6 @@
 import ComposableArchitecture
 import DataClient
+import FileClient
 import Foundation
 import Safari
 import SharedModels

@@ -1,5 +1,6 @@
 import ComposableArchitecture
 import DataClient
+import FileClient
 import SharedModels
 import XCTest
 
