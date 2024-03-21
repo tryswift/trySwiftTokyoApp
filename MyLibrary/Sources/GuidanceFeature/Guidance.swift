@@ -1,9 +1,9 @@
 import ComposableArchitecture
 import CoreLocation
+import DependencyExtra
 import Foundation
 import MapKit
 import MapKitClient
-import DependencyExtra
 import SwiftUI
 
 @Reducer

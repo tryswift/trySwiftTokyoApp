@@ -43,7 +43,7 @@ let package = Package(
     .target(
       name: "DependencyExtra",
       dependencies: [
-        .product(name: "Dependencies", package: "swift-dependencies"),
+        .product(name: "Dependencies", package: "swift-dependencies")
       ]
     ),
     .target(
