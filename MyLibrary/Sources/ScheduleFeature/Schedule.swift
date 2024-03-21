@@ -1,7 +1,6 @@
 import ComposableArchitecture
 import DataClient
 import Foundation
-import Safari
 import SharedModels
 import SwiftUI
 import TipKit
@@ -59,7 +58,6 @@ public struct Schedule {
   public enum Destination {}
 
   @Dependency(DataClient.self) var dataClient
-  @Dependency(\.openURL) var openURL
 
   public init() {}
 
