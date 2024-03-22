@@ -23,6 +23,7 @@ public struct SponsorsList {
     case binding(BindingAction<State>)
     case view(View)
 
+    @CasePathable
     public enum View {
       case onAppear
       case sponsorTapped(Sponsor)
