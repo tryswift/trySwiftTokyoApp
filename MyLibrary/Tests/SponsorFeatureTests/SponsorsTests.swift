@@ -1,7 +1,7 @@
 import ComposableArchitecture
 import DataClient
-import SharedModels
 import DependencyExtra
+import SharedModels
 import XCTest
 
 @testable import SponsorFeature
@@ -14,7 +14,7 @@ final class SponsorsTests: XCTestCase {
     } withDependencies: {
       $0[DataClient.self].fetchSponsors = { @Sendable in .mock }
     }
-      
+
     await store.send(\.view.onAppear) {
       $0.sponsors = .mock
     }
