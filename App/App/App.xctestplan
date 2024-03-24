@@ -30,6 +30,13 @@
         "identifier" : "SponsorFeatureTests",
         "name" : "SponsorFeatureTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/MyLibrary",
+        "identifier" : "trySwiftFeatureTests",
+        "name" : "trySwiftFeatureTests"
+      }
     }
   ],
   "version" : 1
