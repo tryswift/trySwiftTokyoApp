@@ -22,8 +22,7 @@ public struct Schedule: Codable, Equatable, Hashable, Sendable {
     }
 }
 
-public struct Session: Codable, Equatable, Hashable, Sendable, Identifiable {
-    public var id = UUID()
+public struct Session: Codable, Equatable, Hashable, Sendable {
     public var title: String
     public var summary: String?
     public var speakers: [Speaker]?

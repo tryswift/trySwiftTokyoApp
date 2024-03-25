@@ -110,8 +110,7 @@ public struct Schedule {
                 state.workshop = response.workshop
                 return .none
             case let .fetchResponse(.failure(error as DecodingError)):
-                // FIXME: Error Here!!!
-                //assertionFailure(error.localizedDescription)
+                assertionFailure(error.localizedDescription)
                 return .none
             case let .fetchResponse(.failure(error)):
                 print(error)  // TODO: replace to Logger API
@@ -211,7 +210,7 @@ public struct ScheduleView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(schedule.time, style: .time)
                         .font(.subheadline.bold())
-                    ForEach(schedule.sessions) { session in
+                    ForEach(schedule.sessions, id: \.self) { session in
                         if session.description != nil {
                             Button {
                                 send(.disclosureTapped(session))
