@@ -23,6 +23,13 @@
         "identifier" : "ScheduleFeatureTests",
         "name" : "ScheduleFeatureTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/MyLibrary",
+        "identifier" : "SponsorFeatureTests",
+        "name" : "SponsorFeatureTests"
+      }
     }
   ],
   "version" : 1

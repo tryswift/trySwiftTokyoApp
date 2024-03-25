@@ -1,0 +1,393 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%lld" : {
+
+    },
+    "Belle Salle Shibuya First" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ベルサール渋谷ファースト"
+          }
+        }
+      }
+    },
+    "Belle Salle Shibuya First address" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "〒150-0011\nBelle Calle Shibuya First Tower B1 / 2F\n1-2-20, Higashi, Shibuya city, Tokyo, Japan"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "〒150-0011\n東京都渋谷区東1-2-20 住友不動産渋谷ファーストタワーB1・2F ベルサール渋谷ファースト"
+          }
+        }
+      }
+    },
+    "Directions" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "道順"
+          }
+        }
+      }
+    },
+    "Exit B1" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "B1出口"
+          }
+        }
+      }
+    },
+    "Exit C1" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CI出口"
+          }
+        }
+      }
+    },
+    "JR Shibuya" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "JR渋谷駅"
+          }
+        }
+      }
+    },
+    "JR Shibuya Station East Exit" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "JR渋谷駅東口"
+          }
+        }
+      }
+    },
+    "jr-1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "After get off train, exit from Shibuya station South gate on 1st floor (Downstair), then go to East exit."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "電車を降りたら、階段を降りて南改札から出てください。そのあと東口から出ます。"
+          }
+        }
+      }
+    },
+    "jr-2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "After exit from East Exit, pass through left side of downstairs."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "東口を出たら、エスカレータの左側を抜けます。"
+          }
+        }
+      }
+    },
+    "jr-3" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Then, turn right at behind of pillar."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "柱の後ろで右折します。"
+          }
+        }
+      }
+    },
+    "jr-4" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go straight along with bus stops."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バス停の横を直進します。"
+          }
+        }
+      }
+    },
+    "jr-5" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go upstairs on the left hand."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "左手の階段を登ります。"
+          }
+        }
+      }
+    },
+    "jr-6" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go diagonally right, then turn left."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斜め右方向へ進み、そのあと左折します。"
+          }
+        }
+      }
+    },
+    "jr-7" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go downstairs left of police office."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "渋谷警察署横の階段を降ります。"
+          }
+        }
+      }
+    },
+    "jr-8" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go straight."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直進します。"
+          }
+        }
+      }
+    },
+    "jr-9" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep going. You can get something to eat and drink at convenience store."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "そのまま直進します。途中コンビニがあるので食料を調達しても良いでしょう。"
+          }
+        }
+      }
+    },
+    "jr-10" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Almost there!"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "もうすぐ到着です！"
+          }
+        }
+      }
+    },
+    "jr-11" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You arrived and enter to entrance."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "到着しました。入り口からお入りください。"
+          }
+        }
+      }
+    },
+    "Lines" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "路線"
+          }
+        }
+      }
+    },
+    "Metro Shibuya" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "東京メトロ渋谷"
+          }
+        }
+      }
+    },
+    "metro-1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "After getting off Tokyo Metro, head to C1 Exit. Then turn left"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地下鉄を降りたらC1出口に向かいます。地上に出たら左折します。"
+          }
+        }
+      }
+    },
+    "Omote-sando" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "表参道駅"
+          }
+        }
+      }
+    },
+    "Omote-sando Station B1 Exit" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "表参道駅B1出口"
+          }
+        }
+      }
+    },
+    "omotesando-1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Highly recommend using map with button above."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上のボタンからマップを開くことをお勧めします。"
+          }
+        }
+      }
+    },
+    "Open Map" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mapを開く"
+          }
+        }
+      }
+    },
+    "Our venue is Belle Salle Shibuya FIRST, not garden. Make sure there are two belle salle hall in Shibuya." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "会場はベルサール渋谷ファーストです。渋谷ガーデンもあるのでお間違えないようにしてください。"
+          }
+        }
+      }
+    },
+    "Shibuya Station C1 Exit" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "渋谷駅C1出口"
+          }
+        }
+      }
+    },
+    "Shibuya Station East Exit" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "渋谷駅東口"
+          }
+        }
+      }
+    },
+    "Venue" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "会場"
+          }
+        }
+      }
+    },
+    "Warning" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "注意"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

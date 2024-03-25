@@ -9,16 +9,22 @@ let package = Package(
   products: [
     .library(
       name: "AppFeature",
-      targets: ["AppFeature"])
+      targets: ["AppFeature"]),
+    .library(
+      name: "GuidanceFeature",
+      targets: ["GuidanceFeature"]
+    ),
   ],
   dependencies: [
     .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.9.1"),
+    .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.2.0"),
     .package(url: "https://github.com/zunda-pixel/LicenseProvider", from: "1.1.1"),
   ],
   targets: [
     .target(
       name: "AppFeature",
       dependencies: [
+        "GuidanceFeature",
         "ScheduleFeature",
         "SponsorFeature",
         "trySwiftFeature",
@@ -35,16 +41,31 @@ let package = Package(
       ]
     ),
     .target(
-      name: "Safari",
+      name: "DependencyExtra",
       dependencies: [
-        .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+        .product(name: "Dependencies", package: "swift-dependencies")
+      ]
+    ),
+    .target(
+      name: "GuidanceFeature",
+      dependencies: [
+        "DependencyExtra",
+        "MapKitClient",
+        .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+      ]
+    ),
+    .target(
+      name: "MapKitClient",
+      dependencies: [
+        "SharedModels",
+        .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
       ]
     ),
     .target(
       name: "ScheduleFeature",
       dependencies: [
         "DataClient",
-        "Safari",
+        "DependencyExtra",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
       ]
     ),
@@ -53,7 +74,7 @@ let package = Package(
       name: "SponsorFeature",
       dependencies: [
         "DataClient",
-        "Safari",
+        "DependencyExtra",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
       ]
     ),
@@ -61,7 +82,7 @@ let package = Package(
       name: "trySwiftFeature",
       dependencies: [
         "DataClient",
-        "Safari",
+        "DependencyExtra",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
       ],
       plugins: [
@@ -72,6 +93,14 @@ let package = Package(
       name: "ScheduleFeatureTests",
       dependencies: [
         "ScheduleFeature",
+        .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+      ]
+    ),
+    .testTarget(
+      name: "SponsorFeatureTests",
+      dependencies: [
+        "SponsorFeature",
+        "SharedModels",
         .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
       ]
     ),
