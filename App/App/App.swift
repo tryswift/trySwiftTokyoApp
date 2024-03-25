@@ -2,7 +2,7 @@ import AppFeature
 import SwiftUI
 
 @main
-struct ConfenrenceApp: App {
+struct ConferenceApp: App {
   var body: some Scene {
     WindowGroup {
       AppView(
