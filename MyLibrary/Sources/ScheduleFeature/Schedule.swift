@@ -110,6 +110,7 @@ public struct Schedule {
                 state.workshop = response.workshop
                 return .none
             case let .fetchResponse(.failure(error as DecodingError)):
+                // FIXME: Error Here!!!
                 //assertionFailure(error.localizedDescription)
                 return .none
             case let .fetchResponse(.failure(error)):
