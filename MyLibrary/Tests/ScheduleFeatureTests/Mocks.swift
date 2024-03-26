@@ -1,6 +1,8 @@
 import Foundation
 import SharedModels
 
+@testable import ScheduleFeature
+
 extension Conference {
   static let mock1 = Self(
     id: 1,
@@ -94,4 +96,10 @@ extension Speaker {
       )
     ]
   )
+}
+
+extension Favorites {
+  static let mock1 =  Self(eachConferenceFavorites: [
+    (.mock1, [.mock1])
+  ])
 }
