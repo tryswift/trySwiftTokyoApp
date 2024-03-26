@@ -1,6 +1,6 @@
 import ComposableArchitecture
-import SharedModels
 import DependencyExtra
+import SharedModels
 import XCTest
 
 @testable import trySwiftFeature
@@ -11,7 +11,7 @@ final class trySwiftTests: XCTestCase {
     let store = TestStore(initialState: TrySwift.State()) {
       TrySwift()
     }
-    
+
     await store.send(\.view.organizerTapped) {
       $0.path[id: 0] = .organizers(.init())
     }
@@ -93,7 +93,8 @@ final class trySwiftTests: XCTestCase {
 
     await store.send(\.view.eventbriteTapped)
     await receivedUrl.withValue {
-      XCTAssertEqual($0, URL(string: "https://www.eventbrite.com/e/try-swift-tokyo-2024-tickets-712565200697")!)
+      XCTAssertEqual(
+        $0, URL(string: "https://www.eventbrite.com/e/try-swift-tokyo-2024-tickets-712565200697")!)
     }
   }
 
@@ -136,7 +137,7 @@ final class trySwiftTests: XCTestCase {
       TrySwift()
     }
 
-    await store.send(\.path[id: 0].organizers.delegate.organizerTapped, .alice) {
+    await store.send(\.path[id:0].organizers.delegate.organizerTapped, .alice) {
       $0.path[id: 1] = .profile(.init(organizer: .alice))
     }
   }
