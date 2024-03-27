@@ -104,8 +104,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-format",
       "state" : {
-        "revision" : "7c60a5d1f508965a87ed66b6e58e9392af4b36af",
-        "version" : "510.0.1"
+        "revision" : "7996ac678197d293f6c088a1e74bb778b4e10139",
+        "version" : "510.1.0"
       }
     },
     {
