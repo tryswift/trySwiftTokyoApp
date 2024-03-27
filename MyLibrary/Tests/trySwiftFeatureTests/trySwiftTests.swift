@@ -5,7 +5,7 @@ import XCTest
 
 @testable import trySwiftFeature
 
-final class trySwiftTests: XCTestCase {
+final class TrySwiftTests: XCTestCase {
   @MainActor
   func testOrganizerTapped() async {
     let store = TestStore(initialState: TrySwift.State()) {

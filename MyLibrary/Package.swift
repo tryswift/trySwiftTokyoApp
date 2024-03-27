@@ -19,6 +19,7 @@ let package = Package(
     .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.9.1"),
     .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.2.0"),
     .package(url: "https://github.com/zunda-pixel/LicenseProvider", from: "1.1.1"),
+    .package(url: "https://github.com/apple/swift-format", from: "510.1.0"),
   ],
   targets: [
     .target(
