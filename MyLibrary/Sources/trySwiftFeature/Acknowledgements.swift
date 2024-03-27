@@ -50,3 +50,11 @@ public struct AcknowledgementsView: View {
     .navigationTitle(Text("Acknowledgements", bundle: .module))
   }
 }
+
+#Preview {
+  NavigationStack {
+    AcknowledgementsView(store: .init(initialState: .init()) {
+      Acknowledgements()
+    })
+  }
+}
