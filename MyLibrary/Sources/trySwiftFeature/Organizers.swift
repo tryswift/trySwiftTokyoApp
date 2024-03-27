@@ -9,6 +9,14 @@ public struct Organizers {
   public struct State: Equatable {
     var organizers = IdentifiedArrayOf<Organizer>()
     @Presents var destination: Destination.State?
+
+    public init(
+      organizers: IdentifiedArrayOf<Organizer> = [],
+      destination: Destination.State? = nil
+    ) {
+      self.organizers = organizers
+      self.destination = destination
+    }
   }
 
   public enum Action: ViewAction {
@@ -21,6 +29,7 @@ public struct Organizers {
       case _organizerTapped(Organizer)
     }
 
+    @CasePathable
     public enum Delegate {
       case organizerTapped(Organizer)
     }

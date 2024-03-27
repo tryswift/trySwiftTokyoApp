@@ -9,7 +9,12 @@ public struct TrySwift {
   @ObservableState
   public struct State: Equatable {
     var path = StackState<Path.State>()
-    public init() {}
+
+    public init(
+      path: StackState<Path.State> = .init()
+    ) {
+      self.path = path
+    }
   }
 
   public enum Action: BindableAction, ViewAction {
@@ -17,6 +22,7 @@ public struct TrySwift {
     case binding(BindingAction<State>)
     case view(View)
 
+    @CasePathable
     public enum View {
       case organizerTapped
       case codeOfConductTapped
