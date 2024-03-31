@@ -3,6 +3,8 @@ import DependenciesMacros
 import SharedModels
 import Foundation
 
+public typealias Favorites = [String: [Session]]
+
 @DependencyClient
 public struct FileClient {
   public var loadFavorites: @Sendable () throws -> Favorites
@@ -13,7 +15,7 @@ extension FileClient: DependencyKey {
   static public var liveValue: FileClient = .init(
     loadFavorites: {
       guard let saveData = loadDataFromFile(named: "Favorites") else {
-        return .init(eachConferenceFavorites: [])
+        return [:]
       }
       let response = try jsonDecoder.decode(Favorites.self, from: saveData)
       return response

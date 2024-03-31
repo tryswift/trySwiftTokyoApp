@@ -1,5 +1,6 @@
 import Foundation
 import SharedModels
+import FileClient
 
 @testable import ScheduleFeature
 
@@ -99,7 +100,5 @@ extension Speaker {
 }
 
 extension Favorites {
-  static let mock1 =  Self(eachConferenceFavorites: [
-    (.mock1, [.mock1])
-  ])
+  static let mock1 =  [Conference.mock1.title: [Session.mock1]]
 }

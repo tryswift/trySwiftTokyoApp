@@ -70,7 +70,7 @@ final class ScheduleTests: XCTestCase {
   func testAddingFavorites() async {
     let initialState: ScheduleFeature.Schedule.State = ScheduleTests.selectingDay1ScheduleWithNoFavorites
     let firstSession = initialState.day1!.schedules.first!.sessions.first!
-    let firstSessionFavorited: Favorites = .init(eachConferenceFavorites: [(initialState.day1!, [firstSession])])
+    let firstSessionFavorited = [initialState.day1!.title: [firstSession]]
     let store = TestStore(initialState: initialState) {
       Schedule()
     } withDependencies: {
@@ -87,7 +87,7 @@ final class ScheduleTests: XCTestCase {
   func testRemovingFavorites() async {
     let initialState: ScheduleFeature.Schedule.State = ScheduleTests.selectingDay1ScheduleWithOneFavorite
     let firstSession = initialState.day1!.schedules.first!.sessions.first!
-    let noFavorites: Favorites = .init(eachConferenceFavorites: [(initialState.day1!, [])])
+    let noFavorites: Favorites = [initialState.day1!.title: []]
     let store = TestStore(initialState: initialState) {
       Schedule()
     } withDependencies: {
@@ -112,7 +112,7 @@ final class ScheduleTests: XCTestCase {
     initialState.selectedDay = .day1
     initialState.day1 = .mock1
     let firstSession = initialState.day1!.schedules.first!.sessions.first!
-    initialState.favorites = .init(eachConferenceFavorites: [(initialState.day1!, [firstSession])])
+    initialState.favorites = [initialState.day1!.title: [firstSession]]
     return initialState
   }()
 }

@@ -32,8 +32,7 @@ public struct Schedule {
     var day1: Conference?
     var day2: Conference?
     var workshop: Conference?
-    
-    var favorites: Favorites = .init(eachConferenceFavorites: [])
+    var favorites: Favorites = [:]
     @Presents var destination: Destination.State?
 
     public init() {}
@@ -147,6 +146,21 @@ public struct Schedule {
     }
     .forEach(\.path, action: \.path)
     .ifLet(\.$destination, action: \.destination)
+  }
+}
+
+private extension Favorites {
+  mutating func updateFavoriteState(of session: Session, in conference: Conference) {
+    guard var favorites = self[conference.title] else {
+      self[conference.title] = [session]
+      return
+    }
+    if favorites.contains(session) {
+      self[conference.title] = favorites.filter { $0 != session }
+    } else {
+      favorites.append(session)
+      self[conference.title] = favorites
+    }
   }
 }
 
@@ -318,7 +332,13 @@ public struct ScheduleView: View {
       store.workshop!
     }
 
-    if store.favorites.isFavorited(session, in: conference) {
+    let isFavorited = {
+      guard let favorites = store.favorites[conference.title] else {
+        return false
+      }
+      return favorites.contains(session)
+    }()
+    if isFavorited {
       Image(systemName: "star.fill")
         .foregroundColor(.yellow)
     } else {
