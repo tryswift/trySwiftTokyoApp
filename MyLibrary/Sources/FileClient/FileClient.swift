@@ -14,7 +14,7 @@ public struct FileClient {
 extension FileClient: DependencyKey {
   static public var liveValue: FileClient = .init(
     loadFavorites: {
-      guard let saveData = loadDataFromFile(named: "Favorites") else {
+      guard let saveData = serialize(from: "Favorites") else {
         return [:]
       }
       let response = try jsonDecoder.decode(Favorites.self, from: saveData)
@@ -24,23 +24,23 @@ extension FileClient: DependencyKey {
       guard let data = try? jsonEncoder.encode(favorites) else {
         return
       }
-      saveDataToFile(data, named: "Favorites")
+      deserialize(data: data, into: "Favorites")
     }
   )
 
-  static func saveDataToFile(_ data : Data, named fileName: String) {
+  static func deserialize(data : Data, into filePath: String) {
     guard let documentPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
       return
     }
-    let fileURL = documentPath.appendingPathComponent(fileName + ".json")
+    let fileURL = documentPath.appendingPathComponent(filePath + ".json")
     try? data.write(to: fileURL)
   }
 
-  static func loadDataFromFile(named fileName: String) -> Data? {
+  static func serialize(from filePath: String) -> Data? {
     guard let documentPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
       return nil
     }
-    let fileURL = documentPath.appendingPathComponent(fileName + ".json")
+    let fileURL = documentPath.appendingPathComponent(filePath + ".json")
     return try? Data(contentsOf: fileURL)
   }
 }
