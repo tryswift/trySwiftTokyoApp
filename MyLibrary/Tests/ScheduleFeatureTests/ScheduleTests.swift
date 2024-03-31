@@ -74,11 +74,7 @@ final class ScheduleTests: XCTestCase {
       $0.favorites = noFavorites
     }
   }
-
-  static let favoritedSession1InConference1 = Favorites(eachConferenceFavorites: [
-    (.mock1, [.mock1])
-  ])
-
+  
   static let selectingDay1ScheduleWithNoFavorites = {
     var initialState = Schedule.State()
     initialState.selectedDay = .day1
