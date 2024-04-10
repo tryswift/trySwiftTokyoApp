@@ -163,3 +163,9 @@ public struct TrySwiftView: View {
     .navigationTitle(Text("try! Swift", bundle: .module))
   }
 }
+
+#Preview {
+  TrySwiftView(store: .init(initialState: .init()) {
+    TrySwift()
+  })
+}

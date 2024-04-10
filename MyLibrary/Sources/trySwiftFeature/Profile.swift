@@ -81,3 +81,38 @@ public struct ProfileView: View {
     }
   }
 }
+
+#Preview {
+  NavigationStack {
+    ProfileView(store: .init(
+      initialState: .init(organizer: .trySwift)
+    ) {
+      Profile()
+    })
+  }
+}
+
+extension Organizer {
+  static fileprivate let trySwift: Self = .init(
+    id: 1,
+    name: "try! Swift",
+    imageName: "logo",
+    bio: #"""
+    try! Swift is an international community gathering that focuses on the Swift programming language and its ecosystem. It brings together developers, industry experts, and enthusiasts for a series of talks, learning sessions, and networking opportunities. The event aims to foster collaboration, share the latest advancements and best practices, and inspire innovation within the Swift community.The revival of "try! Swift" signifies a renewed commitment to these goals, potentially after a period of hiatus or reduced activity, possibly due to global challenges like the COVID-19 pandemic. This resurgence would likely involve the organization of new events, either virtually or in-person, reflecting the latest trends and technologies within the Swift ecosystem. The revival indicates a strong, ongoing interest in Swift programming, with the community eager to reconvene, exchange ideas, and continue learning from each other.
+    """#,
+    links: [
+      .init(
+        name: "@tryswiftconf",
+        url: URL(string: "https://twitter.com/tryswiftconf")!
+      ),
+      .init(
+        name: "try! Swift Tokyo(tryswift.jp)",
+        url: URL(string: "https://tryswift.jp")!
+      ),
+      .init(
+        name: "#tryswift",
+        url: URL(string: "https://twitter.com/search?q=%23tryswift")!
+      ),
+    ]
+  )
+}
