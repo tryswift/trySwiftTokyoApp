@@ -35,6 +35,17 @@ public struct Schedule {
     var favorites: Favorites = [:]
     @Presents var destination: Destination.State?
 
+    var selectedConference: Conference? {
+      switch selectedDay {
+      case .day1:
+        day1
+      case .day2:
+        day2
+      case .day3:
+        workshop
+      }
+    }
+
     public init() {}
   }
 
@@ -309,18 +320,8 @@ public struct ScheduleView: View {
 
   @ViewBuilder
   func favoriteIcon(for session: Session) -> some View {
-    let conference = 
-    switch store.selectedDay {
-    case .day1:
-      store.day1!
-    case .day2:
-      store.day2!
-    case .day3:
-      store.workshop!
-    }
-
     let isFavorited = {
-      guard let favorites = store.favorites[conference.title] else {
+      guard let favorites = store.favorites[store.selectedConference!.title] else {
         return false
       }
       return favorites.contains(session)
