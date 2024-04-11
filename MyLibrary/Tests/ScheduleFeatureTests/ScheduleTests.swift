@@ -22,8 +22,6 @@ final class ScheduleTests: XCTestCase {
       $0.day1 = .mock1
       $0.day2 = .mock2
       $0.workshop = .mock3
-    }
-    await store.receive(\.loadResponse.success) {
       $0.favorites = .mock1
     }
   }
@@ -41,9 +39,6 @@ final class ScheduleTests: XCTestCase {
     }
     await store.send(.view(.onAppear))
     await store.receive(\.fetchResponse.failure)
-    await store.receive(\.loadResponse) {
-      $0.favorites = .mock1
-    }
   }
 
   @MainActor
@@ -58,12 +53,7 @@ final class ScheduleTests: XCTestCase {
       $0[FileClient.self].loadFavorites = { @Sendable in throw LoadError() }
     }
     await store.send(.view(.onAppear))
-    await store.receive(\.fetchResponse.success) {
-      $0.day1 = .mock1
-      $0.day2 = .mock2
-      $0.workshop = .mock3
-    }
-    await store.receive(\.loadResponse.failure)
+    await store.receive(\.fetchResponse.failure)
   }
 
   @MainActor

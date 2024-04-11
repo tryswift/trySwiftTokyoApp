@@ -43,8 +43,7 @@ public struct Schedule {
     case path(StackAction<Path.State, Path.Action>)
     case destination(PresentationAction<Destination.Action>)
     case view(View)
-    case fetchResponse(Result<SchedulesResponse, Error>)
-    case loadResponse(Result<Favorites, Error>)
+    case fetchResponse(Result<(scheduleResponse: SchedulesResponse, favorites: Favorites), Error>)
     case savedFavorites(Session, Conference)
 
     public enum View {
@@ -79,12 +78,8 @@ public struct Schedule {
                 let day1 = try dataClient.fetchDay1()
                 let day2 = try dataClient.fetchDay2()
                 let workshop = try dataClient.fetchWorkshop()
-                return .init(day1: day1, day2: day2, workshop: workshop)
-              }))
-          await send(
-            .loadResponse(
-              Result {
-                try fileClient.loadFavorites()
+                let favorites = try fileClient.loadFavorites()
+                return (.init(day1: day1, day2: day2, workshop: workshop), favorites)
               }))
         }
       case let .view(.disclosureTapped(session)):
@@ -121,23 +116,15 @@ public struct Schedule {
         state.favorites.updateFavoriteState(of: session, in: day)
         return .none
       case let .fetchResponse(.success(response)):
-        state.day1 = response.day1
-        state.day2 = response.day2
-        state.workshop = response.workshop
+        state.day1 = response.scheduleResponse.day1
+        state.day2 = response.scheduleResponse.day2
+        state.workshop = response.scheduleResponse.workshop
+        state.favorites = response.favorites
         return .none
       case let .fetchResponse(.failure(error as DecodingError)):
         assertionFailure(error.localizedDescription)
         return .none
       case let .fetchResponse(.failure(error)):
-        print(error)  // TODO: replace to Logger API
-        return .none
-      case let .loadResponse(.success(response)):
-        state.favorites = response
-        return .none
-      case let .loadResponse(.failure(error as DecodingError)):
-        assertionFailure(error.localizedDescription)
-        return .none
-      case let .loadResponse(.failure(error)):
         print(error)  // TODO: replace to Logger API
         return .none
       case .binding, .path, .destination:
