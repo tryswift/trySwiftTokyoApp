@@ -165,7 +165,8 @@ public struct TrySwiftView: View {
 }
 
 #Preview {
-  TrySwiftView(store: .init(initialState: .init()) {
-    TrySwift()
-  })
+  TrySwiftView(
+    store: .init(initialState: .init()) {
+      TrySwift()
+    })
 }

@@ -53,8 +53,9 @@ public struct AcknowledgementsView: View {
 
 #Preview {
   NavigationStack {
-    AcknowledgementsView(store: .init(initialState: .init()) {
-      Acknowledgements()
-    })
+    AcknowledgementsView(
+      store: .init(initialState: .init()) {
+        Acknowledgements()
+      })
   }
 }

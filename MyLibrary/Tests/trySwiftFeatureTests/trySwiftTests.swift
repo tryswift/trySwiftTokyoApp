@@ -137,7 +137,7 @@ final class trySwiftTests: XCTestCase {
       TrySwift()
     }
 
-    await store.send(\.path[id:0].organizers.delegate.organizerTapped, .alice) {
+    await store.send(\.path[id: 0].organizers.delegate.organizerTapped, .alice) {
       $0.path[id: 1] = .profile(.init(organizer: .alice))
     }
   }
