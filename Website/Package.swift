@@ -4,14 +4,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "trySwiftTokyo",
+    name: "Website",
     platforms: [.macOS(.v13)],
     dependencies: [
         .package(url: "https://github.com/twostraws/Ignite", branch: "main")
     ],
     targets: [
         .executableTarget(
-            name: "trySwiftTokyo",
+            name: "Website",
             dependencies: ["Ignite"]
         ),
     ]

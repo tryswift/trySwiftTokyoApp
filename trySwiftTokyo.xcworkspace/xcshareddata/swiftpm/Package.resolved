@@ -10,12 +10,30 @@
       }
     },
     {
+      "identity" : "ignite",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/twostraws/Ignite",
+      "state" : {
+        "branch" : "main",
+        "revision" : "02c14aefbd93b8cb31c27515c8104336c80d9d36"
+      }
+    },
+    {
       "identity" : "licenseprovider",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zunda-pixel/LicenseProvider",
       "state" : {
         "revision" : "ca2216026c681aa154e5023bcefc560b7507268b",
         "version" : "1.1.2"
+      }
+    },
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser.git",
+      "state" : {
+        "revision" : "41982a3656a71c768319979febd796c6fd111d5c",
+        "version" : "1.5.0"
       }
     },
     {
@@ -34,6 +52,15 @@
       "state" : {
         "revision" : "a8421d68068d8f45fbceb418fbf22c5dad4afd33",
         "version" : "1.0.2"
+      }
+    },
+    {
+      "identity" : "swift-cmark",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-cmark.git",
+      "state" : {
+        "branch" : "gfm",
+        "revision" : "b022b08312decdc46585e0b3440d97f6f22ef703"
       }
     },
     {
@@ -88,6 +115,15 @@
       "state" : {
         "revision" : "d1e45f3e1eee2c9193f5369fa9d70a6ddad635e8",
         "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swift-markdown",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-markdown.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "90a8e2ec3d814093435b76c5e87917bd81785fd4"
       }
     },
     {

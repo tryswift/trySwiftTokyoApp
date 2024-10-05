@@ -7,4 +7,7 @@
    <FileRef
       location = "group:MyLibrary">
    </FileRef>
+   <FileRef
+      location = "group:Website">
+   </FileRef>
 </Workspace>
