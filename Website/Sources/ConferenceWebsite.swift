@@ -25,8 +25,12 @@ struct ConferenceWebsite {
     while let file = sponsorMediaEnumerator?.nextObject() as? URL {
       if file.pathExtension == "png" {
         let destURL = websiteAssetsDirectory.appendingPathComponent("images/from_app/\(file.lastPathComponent)")
-        try FileManager.default.copyItem(at: file, to: destURL)
-        print("Copied \(file.lastPathComponent) to \(destURL.path)")
+        do {
+          try FileManager.default.copyItem(at: file, to: destURL)
+          print("Copied \(file.lastPathComponent) to \(destURL.path)")
+        } catch {
+          // It may already be copied
+        }
       }
     }
   }
