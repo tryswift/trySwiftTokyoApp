@@ -1,15 +1,21 @@
 {
   "images" : [
     {
-      "filename" : "Duolingo_square-lockup_RGB.svg_1.pdf",
-      "idiom" : "universal"
+      "filename" : "additional_duolingo.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "preserves-vector-representation" : true
   }
 }

@@ -5,14 +5,20 @@ import PackageDescription
 
 let package = Package(
     name: "Website",
-    platforms: [.macOS(.v13)],
+    platforms: [.macOS(.v14)],
     dependencies: [
-        .package(url: "https://github.com/twostraws/Ignite", branch: "main")
+        .package(url: "https://github.com/twostraws/Ignite", branch: "main"),
+        .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.2.0"),
+        .package(path: "../MyLibrary")
     ],
     targets: [
         .executableTarget(
             name: "Website",
-            dependencies: ["Ignite"]
+            dependencies: [
+                "Ignite",
+                .product(name: "Dependencies", package: "swift-dependencies"),
+                .product(name: "DataClient", package: "MyLibrary"),
+            ]
         ),
     ]
 )
