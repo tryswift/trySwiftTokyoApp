@@ -16,21 +16,33 @@ struct ConferenceWebsite {
   }
 
   private static func copyAssets() throws {
+    let fileManager = FileManager.default
+
     let websiteDirectory = try URL.selectDirectories(from: #file).source
     let websiteAssetsDirectory = websiteDirectory.appending(path: "Assets")
     let iosAppDirectory = websiteDirectory.deletingLastPathComponent().appending(path: "MyLibrary")
 
     let sponsorMediaDirectory = iosAppDirectory.appending(path: "Sources/SponsorFeature/Media.xcassets")
-    let sponsorMediaEnumerator = FileManager.default.enumerator(at: sponsorMediaDirectory, includingPropertiesForKeys: nil)
+    let sponsorMediaEnumerator = fileManager.enumerator(at: sponsorMediaDirectory, includingPropertiesForKeys: nil)
     while let file = sponsorMediaEnumerator?.nextObject() as? URL {
       if file.pathExtension == "png" {
         let destURL = websiteAssetsDirectory.appendingPathComponent("images/from_app/\(file.lastPathComponent)")
-        do {
-          try FileManager.default.copyItem(at: file, to: destURL)
-          print("Copied \(file.lastPathComponent) to \(destURL.path)")
-        } catch {
-          // It may already be copied
+
+        let destinationDirectory = destURL.deletingLastPathComponent()
+        if !fileManager.fileExists(atPath: destinationDirectory.path) {
+          try fileManager.createDirectory(
+            at: destinationDirectory,
+            withIntermediateDirectories: true,
+            attributes: nil
+          )
         }
+
+        if fileManager.fileExists(atPath: destURL.path) {
+          try fileManager.removeItem(at: destURL)
+        }
+
+        try fileManager.copyItem(at: file, to: destURL)
+        print("Copied \(file.lastPathComponent) to \(destURL.path)")
       }
     }
   }
