@@ -52,6 +52,6 @@ struct ConferenceSite2025: Site {
   var name = "try! Swift Tokyo"
   var url = URL(string: "https://tryswift.jp")!
 
-  var homePage = Home()
+  var homePage = Home(language: .ja)
   var theme = MainTheme()
 }

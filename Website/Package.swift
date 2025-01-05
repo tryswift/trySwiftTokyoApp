@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "Website",
+    defaultLocalization: "en",
     platforms: [.macOS(.v14)],
     dependencies: [
         .package(url: "https://github.com/twostraws/Ignite", branch: "main"),
@@ -18,6 +19,9 @@ let package = Package(
                 "Ignite",
                 .product(name: "Dependencies", package: "swift-dependencies"),
                 .product(name: "DataClient", package: "MyLibrary"),
+            ],
+            resources: [
+                .process("Resources")
             ]
         ),
     ]

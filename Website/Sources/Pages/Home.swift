@@ -5,14 +5,13 @@ import Ignite
 import SharedModels
 
 struct Home: StaticPage {
+  let language: Language
   var title = "try! Swift Tokyo 2025"
 
   @Dependency(DataClient.self) var dataClient
 
   func body(context: PublishingContext) -> [BlockElement] {
-    NavigationBar(logo: "try! Swift Tokyo 2025") {
-
-    }
+    NavigationBar(logo: Text(String(forKey: "title", language: language)).font(.title1)) {}
 
     if let sponsors = try? dataClient.fetchSponsors() {
       for plan in Plan.allCases {
@@ -35,18 +34,6 @@ struct Home: StaticPage {
         Spacer(size: 160)
       }
     }
-
-    Text(title)
-      .font(.title1)
-    
-    Section {
-      Image("/images/riko_tokyo.svg", description: "Riko at Tokyo")
-        .resizable()
-        .frame(maxWidth: 250)
-        .padding()
-    }
-    .horizontalAlignment(.center)
-    .margin(.bottom, .extraLarge)
 
     Embed(title: "ticket", url: "https://lu.ma/embed/event/evt-iaERdyhafeQdV5f/simple")
       .aspectRatio(.r16x9)
