@@ -14,11 +14,11 @@ let package = Package(
       name: "GuidanceFeature",
       targets: ["GuidanceFeature"]),
     .library(
-        name: "DataClient",
-        targets: ["DataClient"]),
+      name: "DataClient",
+      targets: ["DataClient"]),
     .library(
-        name: "SharedModels",
-        targets: ["SharedModels"]
+      name: "SharedModels",
+      targets: ["SharedModels"]
     ),
   ],
   dependencies: [
