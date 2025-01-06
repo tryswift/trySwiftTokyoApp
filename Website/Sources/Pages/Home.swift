@@ -13,7 +13,7 @@ struct Home: StaticPage {
   func body(context: PublishingContext) -> [BlockElement] {
     NavigationBar(logo: Text(String(forKey: "title", language: language)).font(.title1)) {}
 
-    if let sponsors = try? dataClient.fetchSponsors() {
+    let sponsors = try! dataClient.fetchSponsors()
       for plan in Plan.allCases {
         Text(plan.rawValue.localizedCapitalized)
           .font(.title2)
@@ -33,7 +33,6 @@ struct Home: StaticPage {
 
         Spacer(size: 160)
       }
-    }
 
     Embed(title: "ticket", url: "https://lu.ma/embed/event/evt-iaERdyhafeQdV5f/simple")
       .aspectRatio(.r16x9)
