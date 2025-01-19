@@ -13,6 +13,28 @@ struct Home: StaticPage {
   func body(context: PublishingContext) -> [BlockElement] {
     NavigationBar(logo: Text(String(forKey: "title", language: language)).font(.title1)) {}
 
+    let day1 = try! dataClient.fetchDay1()
+    let day2 = try! dataClient.fetchDay2()
+    let speakers: [Speaker] = [day1, day2]
+      .flatMap(\.schedules)
+      .flatMap(\.sessions)
+      .compactMap(\.speakers)
+      .flatMap { $0 }
+    let uniqueSpeakers = Array(Dictionary(grouping: speakers, by: \.name).mapValues { $0.first! }.values)
+
+    Section {
+      for speaker in uniqueSpeakers {
+        Image(speaker.imageFilename, description: speaker.name)
+          .resizable()
+          .frame(width: 240, height: 240)
+          .cornerRadius(120)
+          .width(64)
+          .margin(.bottom, 16)
+      }
+    }
+    .columns(4)
+    .horizontalAlignment(.center)
+
     let sponsors = try! dataClient.fetchSponsors()
       for plan in Plan.allCases {
         Text(plan.rawValue.localizedCapitalized)
@@ -30,7 +52,7 @@ struct Home: StaticPage {
                     .resizable()
                     .frame(maxWidth: Int(plan.maxSize.width), maxHeight: Int(plan.maxSize.height))
                     .width(plan.padding)
-                    .padding(.bottom, 16)
+                    .margin(.bottom, 16)
                 }
                 if let target = sponsor.link?.absoluteString {
                   Link(image, target: target)
@@ -97,6 +119,12 @@ private extension Plan {
 }
 
 private extension Sponsor {
+  var imageFilename: String {
+    "/images/from_app/\(imageName).png"
+  }
+}
+
+private extension Speaker {
   var imageFilename: String {
     "/images/from_app/\(imageName).png"
   }
