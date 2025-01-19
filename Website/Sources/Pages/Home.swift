@@ -25,14 +25,19 @@ struct Home: StaticPage {
           Section {
             for sponsor in splittedSponsors {
               Group() {
-                Link(target: sponsor.link?.absoluteString ?? "") {
-                  Image("/images/from_app/\(sponsor.imageName).png", description: sponsor.name)
+                var image: InlineElement {
+                  Image(sponsor.imageFilename, description: sponsor.name)
                     .resizable()
                     .frame(maxWidth: Int(plan.maxSize.width), maxHeight: Int(plan.maxSize.height))
                     .width(plan.padding)
                     .padding(.bottom, 16)
                 }
-                .target(.newWindow)
+                if let target = sponsor.link?.absoluteString {
+                  Link(image, target: target)
+                    .target(.newWindow)
+                } else {
+                  image
+                }
               }
             }
           }
@@ -88,5 +93,11 @@ private extension Plan {
     case .individual:
       return .init(width: 100, height: 100)
     }
+  }
+}
+
+private extension Sponsor {
+  var imageFilename: String {
+    "/images/from_app/\(imageName).png"
   }
 }
