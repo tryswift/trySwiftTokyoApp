@@ -22,10 +22,16 @@ struct Home: StaticPage {
           .horizontalAlignment(.center)
         Section {
           for sponsor in sponsors.allPlans[plan]! {
-            Image("/images/from_app/\(sponsor.imageName).png", description: sponsor.name)
-              .resizable()
-              .frame(maxWidth: Int(plan.maxSize.width), maxHeight: Int(plan.maxSize.height))
-              .width(plan.padding)
+            Group() {
+              Link(target: sponsor.link?.absoluteString ?? "") {
+                Image("/images/from_app/\(sponsor.imageName).png", description: sponsor.name)
+                  .resizable()
+                  .frame(maxWidth: Int(plan.maxSize.width), maxHeight: Int(plan.maxSize.height))
+                  .width(plan.padding)
+                  .padding(.bottom, 16)
+              }
+              .target(.newWindow)
+            }
           }
         }
         .columns(plan.columnCount)
