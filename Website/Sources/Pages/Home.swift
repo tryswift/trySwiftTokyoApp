@@ -20,22 +20,25 @@ struct Home: StaticPage {
           .fontWeight(.bold)
           .padding()
           .horizontalAlignment(.center)
-        Section {
-          for sponsor in sponsors.allPlans[plan]! {
-            Group() {
-              Link(target: sponsor.link?.absoluteString ?? "") {
-                Image("/images/from_app/\(sponsor.imageName).png", description: sponsor.name)
-                  .resizable()
-                  .frame(maxWidth: Int(plan.maxSize.width), maxHeight: Int(plan.maxSize.height))
-                  .width(plan.padding)
-                  .padding(.bottom, 16)
+
+        for splittedSponsors in sponsors.allPlans[plan]!.splitBy(subSize: plan.columnCount) {
+          Section {
+            for sponsor in splittedSponsors {
+              Group() {
+                Link(target: sponsor.link?.absoluteString ?? "") {
+                  Image("/images/from_app/\(sponsor.imageName).png", description: sponsor.name)
+                    .resizable()
+                    .frame(maxWidth: Int(plan.maxSize.width), maxHeight: Int(plan.maxSize.height))
+                    .width(plan.padding)
+                    .padding(.bottom, 16)
+                }
+                .target(.newWindow)
               }
-              .target(.newWindow)
             }
           }
+          .columns(splittedSponsors.count)
+          .horizontalAlignment(.center)
         }
-        .columns(plan.columnCount)
-        .horizontalAlignment(.center)
 
         Spacer(size: 160)
       }
