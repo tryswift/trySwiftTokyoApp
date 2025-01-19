@@ -1,3 +1,4 @@
+import Cocoa
 import Foundation
 import Ignite
 
@@ -24,9 +25,13 @@ struct ConferenceWebsite {
 
     let sponsorMediaDirectory = iosAppDirectory.appending(path: "Sources/SponsorFeature/Media.xcassets")
     let sponsorMediaEnumerator = fileManager.enumerator(at: sponsorMediaDirectory, includingPropertiesForKeys: nil)
-    while let file = sponsorMediaEnumerator?.nextObject() as? URL {
-      if file.pathExtension == "png" {
-        let destURL = websiteAssetsDirectory.appendingPathComponent("images/from_app/\(file.lastPathComponent)")
+
+    let scheduleMediaDirectory = iosAppDirectory.appending(path: "Sources/ScheduleFeature/Media.xcassets")
+    let scheduleMediaEnumerator = fileManager.enumerator(at: scheduleMediaDirectory, includingPropertiesForKeys: nil)
+
+    try [sponsorMediaEnumerator, scheduleMediaEnumerator].forEach {
+      while let file = $0?.nextObject() as? URL {
+        let destURL = websiteAssetsDirectory.appendingPathComponent("images/from_app/\(file.deletingPathExtension().lastPathComponent).png")
 
         let destinationDirectory = destURL.deletingLastPathComponent()
         if !fileManager.fileExists(atPath: destinationDirectory.path) {
@@ -41,7 +46,15 @@ struct ConferenceWebsite {
           try fileManager.removeItem(at: destURL)
         }
 
-        try fileManager.copyItem(at: file, to: destURL)
+        if file.pathExtension == "png" {
+          try fileManager.copyItem(at: file, to: destURL)
+        } else if let image = NSImage(contentsOf: file) {
+          let pngData = NSBitmapImageRep(data: image.tiffRepresentation!)!
+            .representation(using: .png, properties: [:])!
+          try pngData.write(to: destURL)
+        } else {
+          continue
+        }
         print("Copied \(file.lastPathComponent) to \(destURL.path)")
       }
     }
