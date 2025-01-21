@@ -24,16 +24,31 @@ struct Home: StaticPage {
 
     Section {
       for speaker in uniqueSpeakers {
-        Image(speaker.imageFilename, description: speaker.name)
-          .resizable()
-          .frame(width: 240, height: 240)
-          .cornerRadius(120)
-          .width(64)
-          .margin(.bottom, 16)
+        Group() {
+          Button(
+            Image(speaker.imageFilename, description: speaker.name)
+              .resizable()
+              .frame(maxWidth: 240, maxHeight: 240)
+              .cornerRadius(120)
+              .width(64)
+              .margin(.bottom, 16)
+          ) {
+            ShowModal(id: speaker.name)
+          }
+        }
       }
     }
     .columns(4)
     .horizontalAlignment(.center)
+
+    Alert {
+      for speaker in speakers {
+        Modal(id: speaker.name) {
+          speaker.bio ?? ""
+        }
+        .size(.large)
+      }
+    }
 
     let sponsors = try! dataClient.fetchSponsors()
       for plan in Plan.allCases {
