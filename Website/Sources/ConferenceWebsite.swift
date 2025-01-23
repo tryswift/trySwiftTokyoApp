@@ -66,5 +66,6 @@ struct ConferenceSite2025: Site {
   var url = URL(string: "https://tryswift.jp")!
 
   var homePage = Home(language: .ja)
-  var theme = MainTheme()
+  var layout = MainLayout()
+  var darkTheme: (any Theme)? = nil
 }

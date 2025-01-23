@@ -4,13 +4,13 @@ import Foundation
 import Ignite
 import SharedModels
 
-struct Home: StaticPage {
+struct Home: StaticLayout {
   let language: Language
   var title = "try! Swift Tokyo 2025"
 
   @Dependency(DataClient.self) var dataClient
 
-  func body(context: PublishingContext) -> [BlockElement] {
+  var body: some HTML {
     NavigationBar(logo: Text(String(forKey: "title", language: language)).font(.title1)) {}
 
     let day1 = try! dataClient.fetchDay1()
@@ -20,29 +20,25 @@ struct Home: StaticPage {
       .flatMap(\.sessions)
       .compactMap(\.speakers)
       .flatMap { $0 }
-    let uniqueSpeakers = Array(Dictionary(grouping: speakers, by: \.name).mapValues { $0.first! }.values)
+      .filter { $0.bio != nil }
 
-    Section {
-      for speaker in uniqueSpeakers {
-        Group() {
-          Button(
-            Image(speaker.imageFilename, description: speaker.name)
-              .resizable()
-              .frame(maxWidth: 240, maxHeight: 240)
-              .cornerRadius(120)
-              .width(64)
-              .margin(.bottom, 16)
-          ) {
-            ShowModal(id: speaker.name)
-          }
+    // This is a workaround to center when the number of elements is less than `columns`
+    let splittedSpeakers = speakers.splitBy(subSize: 4)
+    ForEach(splittedSpeakers) { speakers in
+      Grid {
+        ForEach(speakers) { speaker in
+          SpeakerCell(speaker: speaker)
+            .margin(.bottom, 32)
+            .onClick {
+              ShowModal(id: speaker.name)
+            }
         }
       }
+      .columns(speakers.count)
     }
-    .columns(4)
-    .horizontalAlignment(.center)
 
     Alert {
-      for speaker in speakers {
+      speakers.map { speaker in
         Modal(id: speaker.name) {
           speaker.bio ?? ""
         }
@@ -51,42 +47,42 @@ struct Home: StaticPage {
     }
 
     let sponsors = try! dataClient.fetchSponsors()
-      for plan in Plan.allCases {
-        Text(plan.rawValue.localizedCapitalized)
-          .font(.title2)
-          .fontWeight(.bold)
-          .padding()
-          .horizontalAlignment(.center)
+    ForEach(Plan.allCases) { plan in
+      Text(plan.rawValue.localizedCapitalized)
+        .horizontalAlignment(.center)
+        .font(.title2)
+        .fontWeight(.bold)
+        .padding()
 
-        for splittedSponsors in sponsors.allPlans[plan]!.splitBy(subSize: plan.columnCount) {
-          Section {
-            for sponsor in splittedSponsors {
-              Group() {
-                var image: InlineElement {
-                  Image(sponsor.imageFilename, description: sponsor.name)
-                    .resizable()
-                    .frame(maxWidth: Int(plan.maxSize.width), maxHeight: Int(plan.maxSize.height))
-                    .width(plan.padding)
-                    .margin(.bottom, 16)
-                }
-                if let target = sponsor.link?.absoluteString {
-                  Link(image, target: target)
-                    .target(.newWindow)
-                } else {
-                  image
-                }
-              }
+      // This is a workaround to center when the number of elements is less than `columns`
+      let splittedSponsors = sponsors.allPlans[plan]!.splitBy(subSize: plan.columnCount)
+      ForEach(splittedSponsors) { sponsors in
+        Grid {
+          ForEach(sponsors) { sponsor in
+            var image: any InlineHTML {
+              Image(sponsor.imageFilename, description: sponsor.name)
+                .resizable()
+                .frame(maxWidth: Int(plan.maxSize.width), maxHeight: Int(plan.maxSize.height))
+                .margin(.bottom, 16)
+            }
+            if let target = sponsor.link?.absoluteString {
+              Link(image, target: target)
+                .target(.newWindow)
+            } else {
+              image
             }
           }
-          .columns(splittedSponsors.count)
-          .horizontalAlignment(.center)
         }
-
-        Spacer(size: 160)
+        .columns(sponsors.count)
+        .horizontalAlignment(.center)
+        .padding(.horizontal, plan.padding)
       }
 
+      Spacer(size: 160)
+    }
+
     Embed(title: "ticket", url: "https://lu.ma/embed/event/evt-iaERdyhafeQdV5f/simple")
-      .aspectRatio(.r16x9)
+      .aspectRatio(.square)
   }
 }
 
@@ -134,12 +130,6 @@ private extension Plan {
 }
 
 private extension Sponsor {
-  var imageFilename: String {
-    "/images/from_app/\(imageName).png"
-  }
-}
-
-private extension Speaker {
   var imageFilename: String {
     "/images/from_app/\(imageName).png"
   }
