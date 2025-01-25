@@ -32,9 +32,7 @@ struct Home: StaticLayout {
 
     Alert {
       speakers.map { speaker in
-        Modal(id: speaker.name) {
-          speaker.bio ?? ""
-        }.size(.large)
+        SpeakerModal(speaker: speaker)
       }
     }
 
