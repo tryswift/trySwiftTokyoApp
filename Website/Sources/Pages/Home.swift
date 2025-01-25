@@ -20,6 +20,7 @@ struct Home: StaticLayout {
   var body: some HTML {
     NavigationBar {
       Link(String(forKey: "speaker", language: language), target: "#speaker")
+      Link(String(forKey: "sponsor", language: language), target: "#sponsor")
     } logo: {
       LanguageSelector(currentLanguage: language)
     }
@@ -27,6 +28,8 @@ struct Home: StaticLayout {
     .navigationBarStyle(.dark)
     .background(.darkBlue.opacity(0.7))
     .position(.fixedTop)
+
+    SectionHeader(id: "speaker", title: String(forKey: "speaker", language: language))
 
     let day1 = try! dataClient.fetchDay1()
     let day2 = try! dataClient.fetchDay2()
@@ -50,6 +53,8 @@ struct Home: StaticLayout {
         SpeakerModal(speaker: speaker, language: language)
       }
     }
+
+    SectionHeader(id: "sponsor", title: String(forKey: "sponsor", language: language))
 
     let sponsors = try! dataClient.fetchSponsors()
     ForEach(Plan.allCases) { plan in
