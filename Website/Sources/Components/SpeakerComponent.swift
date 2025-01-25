@@ -1,7 +1,7 @@
 import Ignite
 import SharedModels
 
-struct SpeakerCell: HTML {
+struct SpeakerComponent: HTML {
   let speaker: Speaker
 
   var body: some HTML {

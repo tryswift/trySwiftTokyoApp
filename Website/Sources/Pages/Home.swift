@@ -22,27 +22,19 @@ struct Home: StaticLayout {
       .flatMap { $0 }
       .filter { $0.bio != nil }
 
-    // This is a workaround to center when the number of elements is less than `columns`
-    let splittedSpeakers = speakers.splitBy(subSize: 4)
-    ForEach(splittedSpeakers) { speakers in
-      Grid {
-        ForEach(speakers) { speaker in
-          SpeakerCell(speaker: speaker)
-            .margin(.bottom, 32)
-            .onClick {
-              ShowModal(id: speaker.name)
-            }
+    CenterAlignedGrid(speakers, columns: 4) { speaker in
+      SpeakerComponent(speaker: speaker)
+        .margin(.bottom, 32)
+        .onClick {
+          ShowModal(id: speaker.name)
         }
-      }
-      .columns(speakers.count)
     }
 
     Alert {
       speakers.map { speaker in
         Modal(id: speaker.name) {
           speaker.bio ?? ""
-        }
-        .size(.large)
+        }.size(.large)
       }
     }
 
@@ -54,28 +46,10 @@ struct Home: StaticLayout {
         .fontWeight(.bold)
         .padding()
 
-      // This is a workaround to center when the number of elements is less than `columns`
-      let splittedSponsors = sponsors.allPlans[plan]!.splitBy(subSize: plan.columnCount)
-      ForEach(splittedSponsors) { sponsors in
-        Grid {
-          ForEach(sponsors) { sponsor in
-            var image: any InlineHTML {
-              Image(sponsor.imageFilename, description: sponsor.name)
-                .resizable()
-                .frame(maxWidth: Int(plan.maxSize.width), maxHeight: Int(plan.maxSize.height))
-                .margin(.bottom, 16)
-            }
-            if let target = sponsor.link?.absoluteString {
-              Link(image, target: target)
-                .target(.newWindow)
-            } else {
-              image
-            }
-          }
+      CenterAlignedGrid(sponsors.allPlans[plan]!, columns: plan.columnCount) { sponsor in
+        Section {
+          SponsorComponent(sponsor: sponsor, size: plan.maxSize)
         }
-        .columns(sponsors.count)
-        .horizontalAlignment(.center)
-        .padding(.horizontal, plan.padding)
       }
 
       Spacer(size: 160)
@@ -100,19 +74,6 @@ private extension Plan {
     }
   }
 
-  var padding: Int {
-    switch self {
-    case .platinum:
-      return 90
-    case .gold:
-      return 88
-    case .silver:
-      return 72
-    case .bronze, .diversityAndInclusion, .community, .student, .individual:
-      return 64
-    }
-  }
-
   var maxSize: CGSize {
     switch self {
     case .platinum:
@@ -126,11 +87,5 @@ private extension Plan {
     case .individual:
       return .init(width: 100, height: 100)
     }
-  }
-}
-
-private extension Sponsor {
-  var imageFilename: String {
-    "/images/from_app/\(imageName).png"
   }
 }
