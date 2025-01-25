@@ -8,10 +8,25 @@ struct Home: StaticLayout {
   let language: Language
   var title = "try! Swift Tokyo 2025"
 
+  var path: String {
+    switch language {
+    case .ja: return "/"
+    case .en: return "/en"
+    }
+  }
+
   @Dependency(DataClient.self) var dataClient
 
   var body: some HTML {
-    NavigationBar(logo: Text(String(forKey: "title", language: language)).font(.title1)) {}
+    NavigationBar {
+      Link(String(forKey: "speaker", language: language), target: "#speaker")
+    } logo: {
+      LanguageSelector(currentLanguage: language)
+    }
+    .navigationItemAlignment(.trailing)
+    .navigationBarStyle(.dark)
+    .background(.darkBlue.opacity(0.7))
+    .position(.fixedTop)
 
     let day1 = try! dataClient.fetchDay1()
     let day2 = try! dataClient.fetchDay2()
@@ -32,7 +47,7 @@ struct Home: StaticLayout {
 
     Alert {
       speakers.map { speaker in
-        SpeakerModal(speaker: speaker)
+        SpeakerModal(speaker: speaker, language: language)
       }
     }
 

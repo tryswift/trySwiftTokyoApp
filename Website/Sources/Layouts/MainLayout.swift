@@ -15,6 +15,7 @@ struct MainLayout: Layout {
           IgniteFooter()
         }
       }
+      .padding(.vertical, 80)
       .class("container")
     }
   }

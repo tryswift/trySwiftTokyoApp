@@ -21,6 +21,7 @@ struct SpeakerComponent: HTML {
 
 struct SpeakerModal: HTML {
   let speaker: Speaker
+  let language: Language
   private let imageSize = 75
 
   var body: some HTML {
@@ -44,7 +45,7 @@ struct SpeakerModal: HTML {
         }.margin(.leading, imageSize + 20)
       }
       Grid {
-        Button("Close") {
+        Button(String(forKey: "close", language: language)) {
           DismissModal(id: speaker.name)
         }
         Text("try! Swift Tokyo 2025")

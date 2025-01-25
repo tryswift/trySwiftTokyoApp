@@ -68,4 +68,10 @@ struct ConferenceSite2025: Site {
   var homePage = Home(language: .ja)
   var layout = MainLayout()
   var darkTheme: (any Theme)? = nil
+
+  var staticLayouts: [any StaticLayout] {
+    for language in Language.allCases {
+      Home(language: language)
+    }
+  }
 }

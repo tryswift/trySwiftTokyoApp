@@ -1,6 +1,6 @@
 import Foundation
 
-enum Language: String {
+enum Language: String, CaseIterable {
   case ja
   case en
 }
