@@ -21,6 +21,7 @@ struct Home: StaticLayout {
     NavigationBar {
       Link(String(forKey: "about", language: language), target: "#about")
       Link(String(forKey: "outline", language: language), target: "#outline")
+      Link(String(forKey: "tickets", language: language), target: "#tickets")
       Link(String(forKey: "speaker", language: language), target: "#speaker")
       Link(String(forKey: "sponsor", language: language), target: "#sponsor")
     } logo: {
@@ -43,6 +44,9 @@ struct Home: StaticLayout {
 
     SectionHeader(id: "outline", title: String(forKey: "outline", language: language))
     OutlineComponent(language: language)
+
+    SectionHeader(id: "tickets", title: String(forKey: "tickets", language: language))
+    TicketsComponent(language: language)
 
     SectionHeader(id: "speaker", title: String(forKey: "speaker", language: language))
 
@@ -87,9 +91,6 @@ struct Home: StaticLayout {
 
       Spacer(size: 160)
     }
-
-    Embed(title: "ticket", url: "https://lu.ma/embed/event/evt-iaERdyhafeQdV5f/simple")
-      .aspectRatio(.square)
   }
 }
 

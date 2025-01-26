@@ -17,3 +17,7 @@
 "date_and_time_text" = "2025年4月9日（水） 〜 11（金）";
 "venue" = "場所";
 "venue_text" = "立川ステージガーデン<br>〒190-0014 東京都立川市緑町3-3 N1";
+"tickets" = "チケットの購入";
+"tickets_text" = "チケットは[Luma](https://lu.ma/z6j3c1bd)か下記から購入できます。<br>チケット購入前に、[よくある質問](https://tryswift.jp/faq)をお読みください。";
+"official_sns" = "最新情報はXでお知らせしています";
+"official_sns_button" = "公式Xはこちら";

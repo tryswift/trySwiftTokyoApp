@@ -17,3 +17,7 @@
 "date_and_time_text" = "Apr. 9th - 11th, 2025";
 "venue" = "Venue";
 "venue_text" = "TACHIKAWA STAGE GARDEN<br>N1, 3-3, Midori-cho, Tachikawa, Tokyo 190-0014";
+"tickets" = "Tickets";
+"tickets_text" = "You can get ticket from [Luma](https://lu.ma/z6j3c1bd) or get from below.<br>Before getting ticket please read [FAQ](https://tryswift.jp/faq_en).";
+"official_sns" = "The latest information is announced on X";
+"official_sns_button" = "Check updates on X";
