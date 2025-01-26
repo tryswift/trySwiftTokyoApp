@@ -20,6 +20,7 @@ struct Home: StaticLayout {
   var body: some HTML {
     NavigationBar {
       Link(String(forKey: "about", language: language), target: "#about")
+      Link(String(forKey: "outline", language: language), target: "#outline")
       Link(String(forKey: "speaker", language: language), target: "#speaker")
       Link(String(forKey: "sponsor", language: language), target: "#sponsor")
     } logo: {
@@ -34,11 +35,14 @@ struct Home: StaticLayout {
       .ignorePageGutters()
       .id("about")
 
-    Text(markdown: String(forKey: "about_text", language: language))
+    Text(String(forKey: "about_text", language: language))
       .horizontalAlignment(.center)
       .font(.lead)
       .margin(.top, .px(20))
       .margin(.horizontal, .px(50))
+
+    SectionHeader(id: "outline", title: String(forKey: "outline", language: language))
+    OutlineComponent(language: language)
 
     SectionHeader(id: "speaker", title: String(forKey: "speaker", language: language))
 
