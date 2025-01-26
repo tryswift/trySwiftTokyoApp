@@ -25,3 +25,12 @@ struct CenterAlignedGrid<Data: Sequence, Content: HTML>: HTML {
     self.content = content
   }
 }
+
+private extension Array {
+  func splitBy(subSize: Int) -> [[Element]] {
+    return stride(from: .zero, to: self.count, by: subSize).map { startIndex in
+      let endIndex = Swift.min(startIndex.advanced(by: subSize), self.count)
+      return Array(self[startIndex..<endIndex])
+    }
+  }
+}
