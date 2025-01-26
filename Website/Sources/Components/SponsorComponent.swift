@@ -8,7 +8,7 @@ struct SponsorComponent: HTML {
 
   var body: some HTML {
     var image: any InlineHTML {
-      Image(sponsor.imageFilename, description: sponsor.name)
+      Image(sponsor.imageFilename, description: sponsor.name ?? "sponsor logo")
         .resizable()
         .frame(maxWidth: Int(size.width), maxHeight: Int(size.height))
         .margin(.bottom, 16)

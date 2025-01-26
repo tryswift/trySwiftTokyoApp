@@ -8,7 +8,7 @@ struct AccessComponent: RootHTML {
     ZStack(alignment: .bottom) {
       Section {
         Spacer()
-        Image("/images/footer.png")
+        Image("/images/footer.png", description: "background image of footer")
           .resizable()
           .frame(width: .percent(100%))
       }
@@ -20,7 +20,7 @@ struct AccessComponent: RootHTML {
           .padding(.vertical, 80)
 
         Grid {
-          Image("/images/tachikawa_stage_garden.jpg")
+          Image("/images/tachikawa_stage_garden.jpg", description: "images of the venue")
             .resizable()
             .aspectRatio(3 / 2, contentMode: .fit)
             .margin(.bottom, 16)

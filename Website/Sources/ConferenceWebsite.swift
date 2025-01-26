@@ -55,7 +55,6 @@ struct ConferenceWebsite {
         } else {
           continue
         }
-        print("Copied \(file.lastPathComponent) to \(destURL.path)")
       }
     }
   }
