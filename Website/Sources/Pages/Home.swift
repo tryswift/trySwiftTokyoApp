@@ -25,7 +25,7 @@ struct Home: StaticLayout {
     } logo: {
       LanguageSelector(currentLanguage: language)
     }
-    .navigationItemAlignment(.trailing)
+    .navigationItemAlignment(.center)
     .navigationBarStyle(.dark)
     .background(.darkBlue.opacity(0.7))
     .position(.fixedTop)
