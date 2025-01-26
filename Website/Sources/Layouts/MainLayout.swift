@@ -9,13 +9,7 @@ struct MainLayout: Layout {
 
       HTMLBody {
         Section(page.body)
-
-        Section {
-          MainFooter()
-          IgniteFooter()
-        }
-      }
-      .class("container")
+      }.class("container")
     }
   }
 }

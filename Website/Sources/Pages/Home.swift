@@ -24,6 +24,7 @@ struct Home: StaticLayout {
       Link(String(forKey: "tickets", language: language), target: "#tickets")
       Link(String(forKey: "speaker", language: language), target: "#speaker")
       Link(String(forKey: "sponsor", language: language), target: "#sponsor")
+      Link(String(forKey: "access", language: language), target: "#access")
     } logo: {
       LanguageSelector(currentLanguage: language)
     }
@@ -87,10 +88,12 @@ struct Home: StaticLayout {
         Section {
           SponsorComponent(sponsor: sponsor, size: plan.maxSize)
         }
-      }
-
-      Spacer(size: 160)
+      }.margin(.bottom, 160)
     }
+
+    AccessComponent(language: language)
+      .ignorePageGutters()
+      .id("access")
   }
 }
 
