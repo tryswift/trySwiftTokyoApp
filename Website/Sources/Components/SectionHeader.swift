@@ -10,8 +10,11 @@ struct SectionHeader: HTML {
       Text(title)
         .horizontalAlignment(.center)
         .font(.title1)
+        .fontWeight(.bold)
+        .foregroundStyle(.bootstrapPurple)
     }
-    .padding(.vertical, 80)
+    .padding(.top, 80)
+    .padding(.bottom, 16)
     .id(id)
   }
 }

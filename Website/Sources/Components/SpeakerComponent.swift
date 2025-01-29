@@ -14,6 +14,7 @@ struct SpeakerComponent: HTML {
       Text(speaker.name)
         .font(.title6)
         .fontWeight(.bold)
+        .foregroundStyle(.orange)
     }
     .horizontalAlignment(.center)
   }
@@ -33,25 +34,36 @@ struct SpeakerModal: HTML {
           .cornerRadius(imageSize / 2)
         Section {
           Text(speaker.name)
-            .font(.title1)
+            .font(.title2)
+            .foregroundStyle(.bootstrapPurple)
           if let bio = speaker.bio {
             Text(bio)
               .font(.body)
+              .fontWeight(.regular)
+              .foregroundStyle(.dimGray)
           }
           if let link = speaker.links?.first {
             Link(link.name, target: link.url)
               .target(.newWindow)
+              .role(.secondary)
           }
         }.margin(.leading, imageSize + 20)
       }
+      .padding(.all, 16)
       Grid {
         Button(String(forKey: "close", language: language)) {
           DismissModal(id: speaker.name)
         }
+        .role(.light)
+        .foregroundStyle(.dimGray)
         Text("try! Swift Tokyo 2025")
           .horizontalAlignment(.trailing)
           .font(.body)
-      }.columns(2)
+          .fontWeight(.bold)
+          .foregroundStyle(.dimGray)
+      }
+      .columns(2)
+      .padding(.all, 16)
     }.size(.large)
   }
 }

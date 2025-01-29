@@ -28,6 +28,8 @@ struct HeaderComponent: RootHTML {
           }
           Text(String(forKey: "about", language: language))
             .font(.title1)
+            .fontWeight(.bold)
+            .foregroundStyle(.bootstrapPurple)
             .margin(.bottom, .px(20))
         }
         .horizontalAlignment(.center)

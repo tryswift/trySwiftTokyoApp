@@ -7,7 +7,7 @@ struct LanguageSelector: HTML, InlineHTML {
     Section {
       ForEach(Language.allCases) { language in
         Link(language.name, target: Home(language: language))
-          .role(currentLanguage == language ? .primary : .secondary)
+          .role(currentLanguage == language ? .light : .secondary)
           .fontWeight(currentLanguage == language ? .bold : .regular)
           .margin(.trailing, 16)
       }

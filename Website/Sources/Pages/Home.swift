@@ -18,13 +18,12 @@ struct Home: StaticLayout {
   @Dependency(DataClient.self) var dataClient
 
   var body: some HTML {
+    let links: [String] = ["about", "outline", "tickets", "speaker", "sponsor", "access"]
     NavigationBar {
-      Link(String(forKey: "about", language: language), target: "#about")
-      Link(String(forKey: "outline", language: language), target: "#outline")
-      Link(String(forKey: "tickets", language: language), target: "#tickets")
-      Link(String(forKey: "speaker", language: language), target: "#speaker")
-      Link(String(forKey: "sponsor", language: language), target: "#sponsor")
-      Link(String(forKey: "access", language: language), target: "#access")
+      for link in links {
+        Link(String(forKey: link, language: language), target: "#\(link)")
+          .role(.light)
+      }
     } logo: {
       LanguageSelector(currentLanguage: language)
     }
@@ -40,6 +39,7 @@ struct Home: StaticLayout {
     Text(String(forKey: "about_text", language: language))
       .horizontalAlignment(.center)
       .font(.lead)
+      .foregroundStyle(.dimGray)
       .margin(.top, .px(20))
       .margin(.horizontal, .px(50))
 
@@ -82,6 +82,7 @@ struct Home: StaticLayout {
         .horizontalAlignment(.center)
         .font(.title2)
         .fontWeight(.bold)
+        .foregroundStyle(.dimGray)
         .padding()
 
       CenterAlignedGrid(sponsors.allPlans[plan]!, columns: plan.columnCount) { sponsor in

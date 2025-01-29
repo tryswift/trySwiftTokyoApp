@@ -6,7 +6,8 @@ struct TicketsComponent: HTML {
   var body: some HTML {
     Section {
       Text(markdown: String(forKey: "tickets_text", language: language))
-        .font(.title3)
+        .font(.lead)
+        .foregroundStyle(.dimGray)
         .margin(.bottom, .px(20))
       Embed(
         title: String(forKey: "tickets", language: language),
@@ -16,14 +17,17 @@ struct TicketsComponent: HTML {
       .margin(.bottom, .px(120))
       Text(String(forKey: "official_sns", language: language))
         .font(.title3)
+        .foregroundStyle(.dimGray)
         .margin(.bottom, .px(16))
       Link(
         String(forKey: "official_sns_button", language: language),
         target: "https://x.com/tryswiftconf"
       )
       .linkStyle(.button)
-      .role(.info)
+      .role(.light)
       .font(.lead)
+      .fontWeight(.bold)
+      .foregroundStyle(.orange)
     }.horizontalAlignment(.center)
   }
 }

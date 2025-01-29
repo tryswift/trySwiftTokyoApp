@@ -6,8 +6,10 @@ struct MainFooter: RootHTML {
     Column {
       Text {
         Link("行動規範", target: URL(static: "https://tryswift.jp/code-of-conduct"))
+          .role(.light)
           .margin(.trailing, .small)
         Link("プライバシーポリシー", target: URL(static: "https://tryswift.jp/privacy-policy"))
+          .role(.light)
       }
       .horizontalAlignment(.center)
       .font(.body)

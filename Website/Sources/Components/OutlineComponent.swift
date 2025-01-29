@@ -10,14 +10,22 @@ struct OutlineComponent: HTML {
           String(forKey: "date_and_time", language: language)
         }
         .fontWeight(.bold)
-        String(forKey: "date_and_time_text", language: language)
+        .foregroundStyle(.dimGray)
+        Column {
+          String(forKey: "date_and_time_text", language: language)
+        }
+        .foregroundStyle(.dimGray)
       }
       Row {
         Column {
           String(forKey: "venue", language: language)
         }
         .fontWeight(.bold)
-        String(forKey: "venue_text", language: language)
+        .foregroundStyle(.dimGray)
+        Column {
+          String(forKey: "venue_text", language: language)
+        }
+        .foregroundStyle(.dimGray)
       }
     }
   }
