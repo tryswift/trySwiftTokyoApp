@@ -27,7 +27,7 @@ struct TicketsComponent: HTML {
       .role(.light)
       .font(.lead)
       .fontWeight(.bold)
-      .foregroundStyle(.orange)
+      .foregroundStyle(.orangeRed)
     }.horizontalAlignment(.center)
   }
 }

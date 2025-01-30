@@ -12,9 +12,15 @@ struct SpeakerComponent: HTML {
         .cornerRadius(115)
         .margin(.bottom, 16)
       Text(speaker.name)
-        .font(.title6)
-        .fontWeight(.bold)
-        .foregroundStyle(.orange)
+        .font(.title4)
+        .fontWeight(.medium)
+        .foregroundStyle(.orangeRed)
+      if let jobTitle = speaker.jobTitle {
+        Text(jobTitle)
+          .font(.body)
+          .fontWeight(.thin)
+          .foregroundStyle(.gray)
+      }
     }
     .horizontalAlignment(.center)
   }
@@ -36,16 +42,21 @@ struct SpeakerModal: HTML {
           Text(speaker.name)
             .font(.title2)
             .foregroundStyle(.bootstrapPurple)
-          if let bio = speaker.bio {
+          if let bio = speaker.getLocalizedBio(language: language) {
             Text(bio)
               .font(.body)
               .fontWeight(.regular)
               .foregroundStyle(.dimGray)
           }
-          if let link = speaker.links?.first {
-            Link(link.name, target: link.url)
-              .target(.newWindow)
-              .role(.secondary)
+          if let links = speaker.links {
+            Row {
+              ForEach(links) { link in
+                Link(link.name, target: link.url)
+                  .target(.newWindow)
+                  .role(.secondary)
+                  .margin(.trailing, 4)
+              }
+            }
           }
         }.margin(.leading, imageSize + 20)
       }
@@ -69,6 +80,13 @@ struct SpeakerModal: HTML {
 }
 
 private extension Speaker {
+  func getLocalizedBio(language: Language) -> String? {
+    switch language {
+    case .ja: japaneseBio
+    case .en: bio
+    }
+  }
+
   var imageFilename: String {
     "/images/from_app/\(imageName).png"
   }

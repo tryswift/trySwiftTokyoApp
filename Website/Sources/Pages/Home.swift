@@ -51,15 +51,7 @@ struct Home: StaticLayout {
 
     SectionHeader(id: "speaker", title: String(forKey: "speaker", language: language))
 
-    let day1 = try! dataClient.fetchDay1()
-    let day2 = try! dataClient.fetchDay2()
-    let speakers: [Speaker] = [day1, day2]
-      .flatMap(\.schedules)
-      .flatMap(\.sessions)
-      .compactMap(\.speakers)
-      .flatMap { $0 }
-      .filter { $0.bio != nil }
-
+    let speakers = try! dataClient.fetchSpeakers()
     CenterAlignedGrid(speakers, columns: 4) { speaker in
       SpeakerComponent(speaker: speaker)
         .margin(.bottom, 32)
