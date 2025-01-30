@@ -70,18 +70,21 @@ struct Home: StaticLayout {
 
     let sponsors = try! dataClient.fetchSponsors()
     ForEach(Plan.allCases) { plan in
-      Text(plan.rawValue.localizedCapitalized)
-        .horizontalAlignment(.center)
-        .font(.title2)
-        .fontWeight(.bold)
-        .foregroundStyle(.dimGray)
-        .padding()
+      // TODO: Remove `plan != .individual`
+      if let sponsors = sponsors.allPlans[plan], !sponsors.isEmpty, plan != .individual {
+        Text(plan.rawValue.localizedCapitalized.uppercased())
+          .horizontalAlignment(.center)
+          .font(.title2)
+          .fontWeight(.bold)
+          .foregroundStyle(plan.titleColor)
+          .padding()
 
-      CenterAlignedGrid(sponsors.allPlans[plan]!, columns: plan.columnCount) { sponsor in
-        Section {
-          SponsorComponent(sponsor: sponsor, size: plan.maxSize)
-        }
-      }.margin(.bottom, 160)
+        CenterAlignedGrid(sponsors, columns: plan.columnCount) { sponsor in
+          Section {
+            SponsorComponent(sponsor: sponsor, size: plan.maxSize, language: language)
+          }
+        }.margin(.bottom, 160)
+      }
     }
 
     AccessComponent(language: language)
@@ -116,6 +119,16 @@ private extension Plan {
       return .init(width: 130, height: 72)
     case .individual:
       return .init(width: 100, height: 100)
+    }
+  }
+
+  var titleColor: Color {
+    switch self {
+    case .platinum: .lightSlateGray
+    case .gold: .goldenrod
+    case .silver: .silver
+    case .bronze: .saddleBrown
+    case .diversityAndInclusion, .student, .community, .individual: .steelBlue
     }
   }
 }
