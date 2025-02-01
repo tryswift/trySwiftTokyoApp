@@ -7,7 +7,11 @@ struct MainNavigationBar: HTML {
   var body: some HTML {
     NavigationBar {
       for link in HomeSectionType.allCases.map(\.rawValue) {
-        Link(String(forKey: link, language: language), target: "/#\(link)")
+        let target: String = {
+          let homePath = Home.generatePath(language: language)
+          return path(language) == homePath ? "#\(link)" : "\(homePath)#\(link)"
+        }()
+        Link(String(forKey: link, language: language), target: target)
           .role(.light)
       }
       Link(String(forKey: "faq", language: language), target: FAQ(language: language))
