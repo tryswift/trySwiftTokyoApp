@@ -58,31 +58,8 @@ struct FAQ: StaticLayout {
           .foregroundStyle(.dimGray)
       }
     }
-
-    ZStack(alignment: .bottom) {
-      Section {
-        Spacer()
-        Image("/images/footer.png", description: "background image of footer")
-          .resizable()
-          .frame(width: .percent(100%))
-      }
-      Section {
-        MainFooter()
-          .foregroundStyle(.white)
-        IgniteFooter()
-          .foregroundStyle(.white)
-      }
-      .horizontalAlignment(.center)
+    MainFooterWithBackground()
       .margin(.top, 160)
-    }
-    .ignorePageGutters()
-    .margin(.top, 160)
-    .background(
-      Gradient(
-        colors: [.limeGreen, .skyBlue],
-        type: .linear(angle: 0)
-      )
-    )
   }
 
   private func generatePath(language: Language) -> String {
