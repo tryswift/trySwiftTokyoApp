@@ -1,12 +1,13 @@
 import Ignite
 
 struct LanguageSelector: HTML, InlineHTML {
+  let path: (Language) -> String
   let currentLanguage: Language
 
   var body: some HTML {
     Section {
       ForEach(Language.allCases) { language in
-        Link(language.name, target: Home(language: language))
+        Link(language.name, target: path(language))
           .role(currentLanguage == language ? .light : .secondary)
           .fontWeight(currentLanguage == language ? .bold : .regular)
           .margin(.trailing, 16)

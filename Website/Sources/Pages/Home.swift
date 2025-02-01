@@ -9,19 +9,23 @@ struct Home: StaticLayout {
   var title = "try! Swift Tokyo 2025"
 
   var path: String {
-    switch language {
-    case .ja: return "/"
-    case .en: return "/en"
-    }
+    generatePath(language: language)
   }
 
   @Dependency(DataClient.self) var dataClient
 
   var body: some HTML {
-    MainNavigationBar(language: language)
+    MainNavigationBar(path: generatePath(language:), language: language)
 
     ForEach(HomeSectionType.allCases) { sectionType in
       sectionType.generateContents(language: language, dataClient: dataClient)
+    }
+  }
+
+  private func generatePath(language: Language) -> String {
+    switch language {
+    case .ja: "/"
+    case .en: "/en"
     }
   }
 }

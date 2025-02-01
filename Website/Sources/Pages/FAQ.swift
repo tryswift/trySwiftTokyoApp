@@ -21,14 +21,11 @@ struct FAQ: StaticLayout {
   }
 
   var path: String {
-    switch language {
-    case .ja: return "/faq"
-    case .en: return "/faq_en"
-    }
+    generatePath(language: language)
   }
 
   var body: some HTML {
-    MainNavigationBar(language: language)
+    MainNavigationBar(path: generatePath(language:), language: language)
 
     Text(String(forKey: "faq", language: language))
       .horizontalAlignment(.center)
@@ -86,5 +83,12 @@ struct FAQ: StaticLayout {
         type: .linear(angle: 0)
       )
     )
+  }
+
+  private func generatePath(language: Language) -> String {
+    switch language {
+    case .ja: "/faq"
+    case .en: "/faq_en"
+    }
   }
 }

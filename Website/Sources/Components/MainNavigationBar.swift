@@ -1,6 +1,7 @@
 import Ignite
 
 struct MainNavigationBar: HTML {
+  let path: (Language) -> String
   let language: Language
 
   var body: some HTML {
@@ -12,7 +13,7 @@ struct MainNavigationBar: HTML {
       Link(String(forKey: "faq", language: language), target: FAQ(language: language))
         .role(.light)
     } logo: {
-      LanguageSelector(currentLanguage: language)
+      LanguageSelector(path: path, currentLanguage: language)
     }
     .navigationItemAlignment(.center)
     .navigationBarStyle(.dark)
