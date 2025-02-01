@@ -6,9 +6,11 @@ struct MainNavigationBar: HTML {
   var body: some HTML {
     NavigationBar {
       for link in SectionType.allCases.map(\.rawValue) {
-        Link(String(forKey: link, language: language), target: "#\(link)")
+        Link(String(forKey: link, language: language), target: "/#\(link)")
           .role(.light)
       }
+      Link(String(forKey: "faq", language: language), target: FAQ(language: language))
+        .role(.light)
     } logo: {
       LanguageSelector(currentLanguage: language)
     }

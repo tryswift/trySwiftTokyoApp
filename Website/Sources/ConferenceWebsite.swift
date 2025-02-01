@@ -71,6 +71,7 @@ struct ConferenceSite2025: Site {
   var staticLayouts: [any StaticLayout] {
     for language in Language.allCases {
       Home(language: language)
+      FAQ(language: language)
     }
   }
 }
