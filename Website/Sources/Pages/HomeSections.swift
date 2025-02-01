@@ -3,7 +3,7 @@ import Foundation
 import Ignite
 import SharedModels
 
-enum SectionType: String, CaseIterable {
+enum HomeSectionType: String, CaseIterable {
   case about
   case outline
   case tickets
@@ -12,7 +12,7 @@ enum SectionType: String, CaseIterable {
   case access
 }
 
-extension SectionType {
+extension HomeSectionType {
   @MainActor
   @HTMLBuilder
   func generateContents(language: Language, dataClient: DataClient) -> some HTML {

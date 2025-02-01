@@ -1,7 +1,7 @@
 import Ignite
 
 struct SectionHeader: HTML {
-  let type: SectionType
+  let type: HomeSectionType
   let language: Language
 
   var body: some HTML {

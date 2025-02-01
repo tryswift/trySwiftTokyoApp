@@ -20,7 +20,7 @@ struct Home: StaticLayout {
   var body: some HTML {
     MainNavigationBar(language: language)
 
-    ForEach(SectionType.allCases) { sectionType in
+    ForEach(HomeSectionType.allCases) { sectionType in
       sectionType.generateContents(language: language, dataClient: dataClient)
     }
   }

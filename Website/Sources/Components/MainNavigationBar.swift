@@ -5,7 +5,7 @@ struct MainNavigationBar: HTML {
 
   var body: some HTML {
     NavigationBar {
-      for link in SectionType.allCases.map(\.rawValue) {
+      for link in HomeSectionType.allCases.map(\.rawValue) {
         Link(String(forKey: link, language: language), target: "/#\(link)")
           .role(.light)
       }
