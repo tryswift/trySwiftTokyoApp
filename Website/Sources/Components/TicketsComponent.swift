@@ -23,6 +23,7 @@ struct TicketsComponent: HTML {
         String(forKey: "official_sns_button", language: language),
         target: "https://x.com/tryswiftconf"
       )
+      .target(.newWindow)
       .linkStyle(.button)
       .role(.light)
       .font(.lead)
