@@ -62,8 +62,7 @@ extension HomeSectionType {
 
       let sponsors = try! dataClient.fetchSponsors()
       ForEach(Plan.allCases) { plan in
-        // TODO: Remove `plan != .individual`
-        if let sponsors = sponsors.allPlans[plan], !sponsors.isEmpty, plan != .individual {
+        if let sponsors = sponsors.allPlans[plan], !sponsors.isEmpty {
           Text(plan.rawValue.localizedCapitalized.uppercased())
             .horizontalAlignment(.center)
             .font(.title1)
