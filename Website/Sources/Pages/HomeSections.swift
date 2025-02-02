@@ -46,6 +46,12 @@ extension HomeSectionType {
           }
       }
 
+      Text("And more...!")
+        .horizontalAlignment(.center)
+        .font(.title3)
+        .foregroundStyle(.dimGray)
+        .margin(.top, .px(32))
+
       Alert {
         speakers.map { speaker in
           SpeakerModal(speaker: speaker, language: language)
