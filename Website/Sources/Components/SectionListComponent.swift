@@ -1,3 +1,4 @@
+import Foundation
 import Ignite
 
 protocol StringEnum: RawRepresentable, CaseIterable where RawValue == String {}
@@ -26,10 +27,25 @@ struct SectionListComponent: HTML {
 
         let description = String(forKey: "\(sectionType.rawValue)_text", language: language)
         Text(markdown: description)
-          .horizontalAlignment(description.count > 100 ? .leading : .center)
+          .horizontalAlignment(description.displayedCharacterCount() > 100 ? .leading : .center)
           .font(.body)
           .foregroundStyle(.dimGray)
       }
     }
+  }
+}
+
+private extension String {
+  func displayedCharacterCount() -> Int {
+    guard let data = self.data(using: .utf8) else {
+      return .zero
+    }
+    let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
+      .documentType: NSAttributedString.DocumentType.html,
+      .characterEncoding: String.Encoding.utf8.rawValue
+    ]
+    let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil)
+
+    return attributedString?.string.count ?? .zero
   }
 }
