@@ -10,7 +10,7 @@ struct LanguageSelector: HTML, InlineHTML {
         Link(language.name, target: path(language))
           .role(currentLanguage == language ? .light : .secondary)
           .fontWeight(currentLanguage == language ? .bold : .regular)
-          .margin(.trailing, 16)
+          .margin(.trailing, .px(16))
       }
     }
   }

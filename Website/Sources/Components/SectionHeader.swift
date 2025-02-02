@@ -13,8 +13,8 @@ struct SectionHeader: HTML {
         .fontWeight(.bold)
         .foregroundStyle(.bootstrapPurple)
     }
-    .padding(.top, 80)
-    .padding(.bottom, 16)
+    .padding(.top, .px(80))
+    .padding(.bottom, .px(16))
     .id(type.rawValue)
   }
 }

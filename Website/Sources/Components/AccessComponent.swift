@@ -18,7 +18,7 @@ struct AccessComponent: RootHTML {
           .horizontalAlignment(.center)
           .font(.title1)
           .foregroundStyle(.white)
-          .padding(.top, 80)
+          .padding(.top, .px(80))
 
         Section {
           Text(String(forKey: "venue_name", language: language))
@@ -29,39 +29,39 @@ struct AccessComponent: RootHTML {
             .foregroundStyle(.white)
         }
         .horizontalAlignment(.leading)
-        .margin(.top, 32)
+        .margin(.top, .px(32))
 
         Grid {
           Image("/images/tachikawa_stage_garden.jpg", description: "images of the venue")
             .resizable()
             .aspectRatio(4 / 3, contentMode: .fit)
             .background(.white)
-            .margin(.bottom, 16)
+            .margin(.bottom, .px(16))
           Embed(title: "map", url: venueMapUrl)
             .aspectRatio(.r4x3)
-            .margin(.bottom, 16)
+            .margin(.bottom, .px(16))
         }
         .columns(2)
         .horizontalAlignment(.center)
         .frame(width: .percent(100%))
-        .margin(.vertical, 8)
+        .margin(.vertical, .px(8))
 
         Text(String(forKey: "suggested_nearby_accommodation", language: language))
           .horizontalAlignment(.center)
           .font(.title1)
           .foregroundStyle(.white)
-          .margin(.top, 80)
+          .margin(.top, .px(80))
 
         Embed(title: "Suggested Nearby Accommodation", url: accommodationMapUrl)
           .aspectRatio(.r21x9)
-          .margin(.top, 32)
+          .margin(.top, .px(32))
 
         Section {
           MainFooter(language: language)
             .foregroundStyle(.white)
           IgniteFooter()
             .foregroundStyle(.white)
-        }.margin(.top, 160)
+        }.margin(.top, .px(160))
       }
       .frame(width: .percent(100%))
       .ignorePageGutters(false)

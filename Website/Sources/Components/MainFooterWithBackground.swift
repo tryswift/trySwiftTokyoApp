@@ -18,7 +18,7 @@ struct MainFooterWithBackground: HTML {
           .foregroundStyle(.white)
       }
       .horizontalAlignment(.center)
-      .margin(.top, 160)
+      .margin(.top, .px(160))
     }
     .ignorePageGutters()
     .background(

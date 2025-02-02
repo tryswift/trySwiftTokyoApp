@@ -22,8 +22,8 @@ struct SectionListComponent: HTML {
           .font(.title2)
           .fontWeight(.bold)
           .foregroundStyle(.bootstrapPurple)
-          .padding(.top, 80)
-          .padding(.bottom, 16)
+          .margin(.top, .px(80))
+          .margin(.bottom, .px(16))
 
         let description = String(forKey: "\(sectionType.rawValue)_text", language: language)
         Text(markdown: description)

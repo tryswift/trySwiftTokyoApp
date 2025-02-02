@@ -27,10 +27,10 @@ struct CodeOfConduct: StaticLayout {
 
     let sectionTypes = CodeOfConductSectionType.allCases
     SectionListComponent(title: title, dataSource: sectionTypes, language: language)
-      .padding(.top, 140)
+      .margin(.top, .px(140))
 
     MainFooterWithBackground(language: language)
-      .margin(.top, 160)
+      .margin(.top, .px(160))
   }
 
   private func generatePath(language: Language) -> String {

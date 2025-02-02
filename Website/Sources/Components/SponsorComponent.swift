@@ -12,7 +12,7 @@ struct SponsorComponent: HTML {
       Image(sponsor.imageFilename, description: sponsor.name ?? "sponsor logo")
         .resizable()
         .frame(maxWidth: Int(size.width), maxHeight: Int(size.height))
-        .margin(.bottom, 16)
+        .margin(.bottom, .px(16))
     }
     if let target = sponsor.getLocalizedLink(language: language)?.absoluteString {
       Link(image, target: target)

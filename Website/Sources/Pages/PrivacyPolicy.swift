@@ -31,7 +31,7 @@ struct PrivacyPolicy: StaticLayout {
       .horizontalAlignment(.trailing)
       .font(.body)
       .foregroundStyle(.dimGray)
-      .padding(.top, 100)
+      .margin(.top, .px(100))
 
     let sectionTypes = PrivacyPolicySectionType.allCases.filter { section in
       switch language {
@@ -40,10 +40,10 @@ struct PrivacyPolicy: StaticLayout {
       }
     }
     SectionListComponent(title: title, dataSource: sectionTypes, language: language)
-      .padding(.top, 40)
+      .margin(.top, .px(40))
 
     MainFooterWithBackground(language: language)
-      .margin(.top, 160)
+      .margin(.top, .px(160))
   }
 
   private func generatePath(language: Language) -> String {

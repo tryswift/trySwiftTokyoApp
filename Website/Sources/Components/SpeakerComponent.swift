@@ -10,7 +10,7 @@ struct SpeakerComponent: HTML {
         .resizable()
         .frame(maxWidth: 230, maxHeight: 230)
         .cornerRadius(115)
-        .margin(.bottom, 16)
+        .margin(.bottom, .px(16))
       Text(speaker.name)
         .font(.title4)
         .fontWeight(.medium)
@@ -54,13 +54,14 @@ struct SpeakerModal: HTML {
                 Link(link.name, target: link.url)
                   .target(.newWindow)
                   .role(.secondary)
-                  .margin(.trailing, 4)
+                  .margin(.trailing, .px(4))
               }
             }
           }
-        }.margin(.leading, imageSize + 20)
+        }.margin(.leading, .px(imageSize + 20))
       }
-      .padding(.all, 16)
+      .padding(.all, .px(16))
+
       Grid {
         Button(String(forKey: "close", language: language)) {
           DismissModal(id: speaker.name)
@@ -74,7 +75,7 @@ struct SpeakerModal: HTML {
           .foregroundStyle(.dimGray)
       }
       .columns(2)
-      .padding(.all, 16)
+      .padding(.all, .px(16))
     }.size(.large)
   }
 }

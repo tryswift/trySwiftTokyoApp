@@ -40,7 +40,7 @@ extension HomeSectionType {
       let speakers = try! dataClient.fetchSpeakers()
       CenterAlignedGrid(speakers, columns: 4) { speaker in
         SpeakerComponent(speaker: speaker)
-          .margin(.bottom, 32)
+          .margin(.bottom, .px(32))
           .onClick {
             ShowModal(id: speaker.name)
           }
@@ -66,16 +66,16 @@ extension HomeSectionType {
         if let sponsors = sponsors.allPlans[plan], !sponsors.isEmpty, plan != .individual {
           Text(plan.rawValue.localizedCapitalized.uppercased())
             .horizontalAlignment(.center)
-            .font(.title2)
+            .font(.title1)
             .fontWeight(.bold)
             .foregroundStyle(plan.titleColor)
-            .padding()
+            .margin(.all, .px(32))
 
           CenterAlignedGrid(sponsors, columns: plan.columnCount) { sponsor in
             Section {
               SponsorComponent(sponsor: sponsor, size: plan.maxSize, language: language)
             }
-          }.margin(.bottom, 160)
+          }.margin(.bottom, .px(160))
         }
       }
     case .access:
