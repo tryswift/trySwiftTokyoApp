@@ -72,6 +72,7 @@ struct ConferenceSite2025: Site {
     for language in Language.allCases {
       Home(language: language)
       FAQ(language: language)
+      CodeOfConduct(language: language)
     }
   }
 }

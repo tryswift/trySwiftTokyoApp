@@ -45,7 +45,7 @@ struct AccessComponent: RootHTML {
         .horizontalAlignment(.leading)
 
         Section {
-          MainFooter()
+          MainFooter(language: language)
             .foregroundStyle(.white)
           IgniteFooter()
             .foregroundStyle(.white)

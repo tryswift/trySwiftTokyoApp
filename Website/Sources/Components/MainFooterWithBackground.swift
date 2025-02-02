@@ -1,6 +1,8 @@
 import Ignite
 
 struct MainFooterWithBackground: HTML {
+  let language: Language
+
   var body: some HTML {
     ZStack(alignment: .bottom) {
       Section {
@@ -10,7 +12,7 @@ struct MainFooterWithBackground: HTML {
           .frame(width: .percent(100%))
       }
       Section {
-        MainFooter()
+        MainFooter(language: language)
           .foregroundStyle(.white)
         IgniteFooter()
           .foregroundStyle(.white)

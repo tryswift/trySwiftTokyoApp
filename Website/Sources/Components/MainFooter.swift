@@ -2,10 +2,12 @@ import Foundation
 import Ignite
 
 struct MainFooter: RootHTML {
+  let language: Language
+
   var body: some HTML {
     Column {
       Text {
-        Link("行動規範", target: URL(static: "https://tryswift.jp/code-of-conduct"))
+        Link(String(forKey: "code_of_conduct", language: language), target: CodeOfConduct(language: language))
           .role(.light)
           .margin(.trailing, .small)
         Link("プライバシーポリシー", target: URL(static: "https://tryswift.jp/privacy-policy"))

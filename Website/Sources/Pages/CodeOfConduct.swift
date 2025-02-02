@@ -1,17 +1,15 @@
 import Ignite
 
-enum FAQSectionType: String, CaseIterable {
-  case aboutTrySwift = "about_try_swift"
-  case conferenceLanguages = "conference_languages"
-  case ticketCancellationPolicy = "ticket_cancellation_policy"
-  case ticketTransfer = "ticket_transfer"
-  case receiptAndInvoice = "receipt_and_invoice"
-  case visaSupport = "visa_support"
-  case beginnerParticipation = "beginner_participation"
-  case preparationBeforeEvent = "preparation_before_event"
+enum CodeOfConductSectionType: String, CaseIterable {
+  case communityParticipation = "community_participation"
+  case harassmentFree = "harassment_free"
+  case forSpeakers = "for_speakers"
+  case forAttendees = "for_attendees"
+  case reportingMisconduct = "reporting_misconduct"
+  case license = "license"
 }
 
-struct FAQ: StaticLayout {
+struct CodeOfConduct: StaticLayout {
   let language: Language
   let title: String
 
@@ -21,27 +19,20 @@ struct FAQ: StaticLayout {
 
   init(language: Language) {
     self.language = language
-    self.title = String(forKey: "faq", language: language)
+    self.title = String(forKey: "code_of_conduct", language: language)
   }
 
   var body: some HTML {
     MainNavigationBar(path: generatePath(language:), language: language)
 
-    Text(String(forKey: "faq", language: language))
+    Text(String(forKey: "code_of_conduct", language: language))
       .horizontalAlignment(.center)
       .font(.title1)
       .fontWeight(.bold)
       .foregroundStyle(.bootstrapPurple)
       .padding(.top, 140)
 
-    let sectionTypes = FAQSectionType.allCases.filter { section in
-      switch language {
-      case .ja: section != .visaSupport
-      case .en: true
-      }
-    }
-
-    ForEach(sectionTypes) { sectionType in
+    ForEach(CodeOfConductSectionType.allCases) { sectionType in
       Section {
         Text(String(forKey: sectionType.rawValue, language: language))
           .horizontalAlignment(.center)
@@ -65,8 +56,8 @@ struct FAQ: StaticLayout {
 
   private func generatePath(language: Language) -> String {
     switch language {
-    case .ja: "/faq"
-    case .en: "/faq_en"
+    case .ja: "/code-of-conduct"
+    case .en: "/code-of-conduct_en"
     }
   }
 }
