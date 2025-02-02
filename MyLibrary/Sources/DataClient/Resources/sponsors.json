@@ -66,6 +66,12 @@
       "imageName": "GOLD_DeNA",
       "link": "https://dena.com/intl/",
       "japanese_link": "https://dena.com/"
+    },
+    {
+      "id": 22,
+      "name": "Tramline",
+      "imageName": "GOLD_Tramline",
+      "link": "https://www.tramline.app/"
     }
   ],
   "silver": [
@@ -199,6 +205,12 @@
       "imageName": "BRONZE_zozo",
       "link": "https://corp.zozo.com/en/",
       "japanese_link": "https://corp.zozo.com/"
+    },
+    {
+      "id": 23,
+      "name": "岸川克己",
+      "imageName": "STUDENT_SCHOLARSHIP_kishikawakatsumi",
+      "link": "https://kishikawakatsumi.com/"
     }
   ],
   "community": [],
