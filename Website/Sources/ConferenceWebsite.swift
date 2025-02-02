@@ -63,6 +63,7 @@ struct ConferenceWebsite {
 struct ConferenceSite2025: Site {
   var name = "try! Swift Tokyo"
   var url = URL(string: "https://tryswift.jp")!
+  var favicon = URL(string: "/images/favicon.png")
 
   var homePage = Home(language: .ja)
   var layout = MainLayout()
