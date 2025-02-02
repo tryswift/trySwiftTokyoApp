@@ -12,14 +12,14 @@ enum PrivacyPolicySectionType: String, StringEnum {
 }
 
 struct PrivacyPolicy: StaticLayout {
-  let language: Language
+  let language: SupportedLanguage
   let title: String
 
   var path: String {
     generatePath(language: language)
   }
 
-  init(language: Language) {
+  init(language: SupportedLanguage) {
     self.language = language
     self.title = String(forKey: "privacy_policy", language: language)
   }
@@ -46,7 +46,7 @@ struct PrivacyPolicy: StaticLayout {
       .margin(.top, .px(160))
   }
 
-  private func generatePath(language: Language) -> String {
+  private func generatePath(language: SupportedLanguage) -> String {
     switch language {
     case .ja: "/privacy-policy"
     case .en: "/privacy-policy_en"

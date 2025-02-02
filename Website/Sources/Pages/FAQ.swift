@@ -12,14 +12,14 @@ enum FAQSectionType: String, StringEnum {
 }
 
 struct FAQ: StaticLayout {
-  let language: Language
+  let language: SupportedLanguage
   let title: String
 
   var path: String {
     generatePath(language: language)
   }
 
-  init(language: Language) {
+  init(language: SupportedLanguage) {
     self.language = language
     self.title = String(forKey: "faq", language: language)
   }
@@ -40,7 +40,7 @@ struct FAQ: StaticLayout {
       .margin(.top, .px(160))
   }
 
-  private func generatePath(language: Language) -> String {
+  private func generatePath(language: SupportedLanguage) -> String {
     switch language {
     case .ja: "/faq"
     case .en: "/faq_en"

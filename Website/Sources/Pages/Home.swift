@@ -5,11 +5,15 @@ import Ignite
 import SharedModels
 
 struct Home: StaticLayout {
-  let language: Language
-  var title = "try! Swift Tokyo 2025"
+  let language: SupportedLanguage
+  var title = ""
 
   var path: String {
     Home.generatePath(language: language)
+  }
+
+  var description: String {
+    String(forKey: "description", language: language)
   }
 
   @Dependency(DataClient.self) var dataClient
@@ -22,7 +26,7 @@ struct Home: StaticLayout {
     }
   }
 
-  static func generatePath(language: Language) -> String {
+  static func generatePath(language: SupportedLanguage) -> String {
     switch language {
     case .ja: "/"
     case .en: "/en"

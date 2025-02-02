@@ -1,8 +1,8 @@
 import Ignite
 
 struct MainNavigationBar: HTML {
-  let path: (Language) -> String
-  let language: Language
+  let path: (SupportedLanguage) -> String
+  let language: SupportedLanguage
 
   var body: some HTML {
     NavigationBar {

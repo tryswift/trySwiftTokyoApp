@@ -6,7 +6,7 @@ protocol StringEnum: RawRepresentable, CaseIterable where RawValue == String {}
 struct SectionListComponent: HTML {
   let title: String
   let dataSource: [any StringEnum]
-  let language: Language
+  let language: SupportedLanguage
 
   var body: some HTML {
     Text(title)

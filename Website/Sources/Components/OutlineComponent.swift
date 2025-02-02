@@ -1,7 +1,7 @@
 import Ignite
 
 struct OutlineComponent: HTML {
-  let language: Language
+  let language: SupportedLanguage
 
   var body: some HTML {
     Table {

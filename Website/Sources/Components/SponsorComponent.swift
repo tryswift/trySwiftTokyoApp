@@ -5,7 +5,7 @@ import SharedModels
 struct SponsorComponent: HTML {
   let sponsor: Sponsor
   let size: CGSize
-  let language: Language
+  let language: SupportedLanguage
 
   var body: some HTML {
     var image: any InlineHTML {
@@ -24,7 +24,7 @@ struct SponsorComponent: HTML {
 }
 
 private extension Sponsor {
-  func getLocalizedLink(language: Language) -> URL? {
+  func getLocalizedLink(language: SupportedLanguage) -> URL? {
     switch language {
     case .ja: japaneseLink ?? link
     case .en: link

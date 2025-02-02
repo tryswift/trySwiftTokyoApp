@@ -61,16 +61,18 @@ struct ConferenceWebsite {
 }
 
 struct ConferenceSite2025: Site {
+  var titleSuffix = " try! Swift Tokyo"
   var name = "try! Swift Tokyo"
+  var description: String? = String(forKey: "description", language: .ja)
+  var language: Language = .japanese
   var url = URL(string: "https://tryswift.jp")!
-  var favicon = URL(string: "/images/favicon.png")
-
   var homePage = Home(language: .ja)
   var layout = MainLayout()
   var darkTheme: (any Theme)? = nil
+  var favicon = URL(string: "/images/favicon.png")
 
   var staticLayouts: [any StaticLayout] {
-    for language in Language.allCases {
+    for language in SupportedLanguage.allCases {
       Home(language: language)
       FAQ(language: language)
       CodeOfConduct(language: language)

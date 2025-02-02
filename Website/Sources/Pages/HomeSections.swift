@@ -15,7 +15,7 @@ enum HomeSectionType: String, CaseIterable {
 extension HomeSectionType {
   @MainActor
   @HTMLBuilder
-  func generateContents(language: Language, dataClient: DataClient) -> some HTML {
+  func generateContents(language: SupportedLanguage, dataClient: DataClient) -> some HTML {
     switch self {
     case .about:
       HeaderComponent(language: language)

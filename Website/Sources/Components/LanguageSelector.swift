@@ -1,12 +1,12 @@
 import Ignite
 
 struct LanguageSelector: HTML, InlineHTML {
-  let path: (Language) -> String
-  let currentLanguage: Language
+  let path: (SupportedLanguage) -> String
+  let currentLanguage: SupportedLanguage
 
   var body: some HTML {
     Section {
-      ForEach(Language.allCases) { language in
+      ForEach(SupportedLanguage.allCases) { language in
         Link(language.name, target: path(language))
           .role(currentLanguage == language ? .light : .secondary)
           .fontWeight(currentLanguage == language ? .bold : .regular)
@@ -16,7 +16,7 @@ struct LanguageSelector: HTML, InlineHTML {
   }
 }
 
-private extension Language {
+private extension SupportedLanguage {
   var name: String {
     switch self {
     case .ja: return "日本語"

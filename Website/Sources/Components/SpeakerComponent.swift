@@ -28,7 +28,7 @@ struct SpeakerComponent: HTML {
 
 struct SpeakerModal: HTML {
   let speaker: Speaker
-  let language: Language
+  let language: SupportedLanguage
   private let imageSize = 75
 
   var body: some HTML {
@@ -81,7 +81,7 @@ struct SpeakerModal: HTML {
 }
 
 private extension Speaker {
-  func getLocalizedBio(language: Language) -> String? {
+  func getLocalizedBio(language: SupportedLanguage) -> String? {
     switch language {
     case .ja: japaneseBio
     case .en: bio

@@ -10,14 +10,14 @@ enum CodeOfConductSectionType: String, StringEnum {
 }
 
 struct CodeOfConduct: StaticLayout {
-  let language: Language
+  let language: SupportedLanguage
   let title: String
 
   var path: String {
     generatePath(language: language)
   }
 
-  init(language: Language) {
+  init(language: SupportedLanguage) {
     self.language = language
     self.title = String(forKey: "code_of_conduct", language: language)
   }
@@ -33,7 +33,7 @@ struct CodeOfConduct: StaticLayout {
       .margin(.top, .px(160))
   }
 
-  private func generatePath(language: Language) -> String {
+  private func generatePath(language: SupportedLanguage) -> String {
     switch language {
     case .ja: "/code-of-conduct"
     case .en: "/code-of-conduct_en"

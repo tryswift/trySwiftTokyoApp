@@ -2,7 +2,7 @@ import Foundation
 import Ignite
 
 struct MainFooter: RootHTML {
-  let language: Language
+  let language: SupportedLanguage
 
   var body: some HTML {
     Column {

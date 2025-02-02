@@ -2,7 +2,7 @@ import Ignite
 
 struct SectionHeader: HTML {
   let type: HomeSectionType
-  let language: Language
+  let language: SupportedLanguage
 
   var body: some HTML {
     ZStack(alignment: .center) {

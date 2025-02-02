@@ -1,7 +1,7 @@
 import Ignite
 
 struct TicketsComponent: HTML {
-  let language: Language
+  let language: SupportedLanguage
 
   var body: some HTML {
     Section {

@@ -1,7 +1,7 @@
 import Ignite
 
 struct MainFooterWithBackground: HTML {
-  let language: Language
+  let language: SupportedLanguage
 
   var body: some HTML {
     ZStack(alignment: .bottom) {
