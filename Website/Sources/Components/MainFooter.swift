@@ -10,7 +10,7 @@ struct MainFooter: RootHTML {
         Link(String(forKey: "code_of_conduct", language: language), target: CodeOfConduct(language: language))
           .role(.light)
           .margin(.trailing, .small)
-        Link("プライバシーポリシー", target: URL(static: "https://tryswift.jp/privacy-policy"))
+        Link(String(forKey: "privacy_policy", language: language), target: PrivacyPolicy(language: language))
           .role(.light)
       }
       .horizontalAlignment(.center)

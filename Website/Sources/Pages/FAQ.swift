@@ -34,6 +34,7 @@ struct FAQ: StaticLayout {
       }
     }
     SectionListComponent(title: title, dataSource: sectionTypes, language: language)
+      .padding(.top, 140)
 
     MainFooterWithBackground(language: language)
       .margin(.top, 160)

@@ -13,7 +13,6 @@ struct SectionListComponent: HTML {
       .font(.title1)
       .fontWeight(.bold)
       .foregroundStyle(.bootstrapPurple)
-      .padding(.top, 140)
 
     ForEach(dataSource) { sectionType in
       Section {

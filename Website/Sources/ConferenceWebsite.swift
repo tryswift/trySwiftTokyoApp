@@ -73,6 +73,7 @@ struct ConferenceSite2025: Site {
       Home(language: language)
       FAQ(language: language)
       CodeOfConduct(language: language)
+      PrivacyPolicy(language: language)
     }
   }
 }
