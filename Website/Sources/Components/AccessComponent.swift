@@ -53,7 +53,7 @@ struct AccessComponent: RootHTML {
           .margin(.top, .px(80))
 
         Embed(title: "Suggested Nearby Accommodation", url: accommodationMapUrl)
-          .aspectRatio(.r21x9)
+          .aspectRatio(.r16x9)
           .margin(.top, .px(32))
 
         Section {

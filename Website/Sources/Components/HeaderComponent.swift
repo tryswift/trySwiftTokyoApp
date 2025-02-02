@@ -30,7 +30,7 @@ struct HeaderComponent: RootHTML {
             .font(.title1)
             .fontWeight(.bold)
             .foregroundStyle(.bootstrapPurple)
-            .margin(.bottom, .px(20))
+            .margin(.bottom, .percent(2%))
         }
         .horizontalAlignment(.center)
         .ignorePageGutters(false)
