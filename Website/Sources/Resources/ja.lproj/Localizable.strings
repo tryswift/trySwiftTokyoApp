@@ -1,11 +1,3 @@
-/* 
-  Localizable.strings
-  Website
-
-  Created by AkkeyLab on 2025/01/06.
-  
-*/
-
 "description" = "Swiftを使った開発のコツや最新の事例を求めて 世界中から開発者が集います。 日頃のSwiftの知識やスキルを披露し、協力しあうことを目的に、 2025年4月9日 - 11日の３日間開催します！";
 "speaker" = "スピーカー";
 "sponsor" = "スポンサー";
