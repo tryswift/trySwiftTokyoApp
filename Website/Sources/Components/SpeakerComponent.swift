@@ -63,7 +63,7 @@ struct SpeakerModal: HTML {
       .padding(.all, .px(16))
 
       Grid {
-        Button(String(forKey: "close", language: language)) {
+        Button(String("Close", language: language)) {
           DismissModal(id: speaker.name)
         }
         .role(.light)

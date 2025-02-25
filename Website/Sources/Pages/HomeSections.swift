@@ -4,12 +4,18 @@ import Ignite
 import SharedModels
 
 enum HomeSectionType: String, CaseIterable {
-  case about
-  case outline
-  case tickets
-  case speaker
-  case sponsor
-  case access
+  case about = "About"
+  case outline = "Outline"
+  case tickets = "Tickets"
+  case speaker = "Speaker"
+  case sponsor = "Sponsor"
+  case access = "Access"
+}
+
+extension HomeSectionType {
+  var htmlId: String {
+    rawValue.lowercased()
+  }
 }
 
 extension HomeSectionType {
@@ -20,9 +26,13 @@ extension HomeSectionType {
     case .about:
       HeaderComponent(language: language)
         .ignorePageGutters()
-        .id(rawValue)
+        .id(htmlId)
 
-      Text(String(forKey: "about_text", language: language))
+      let text = String(
+        "Developers from all over the world gather<br>for tips and tricks and the latest case studies of development using Swift.<br>Developers from all over the world will gather here.<br>Swift and to showcase our Swift knowledge and skills, and to collaborate with each other,<br>The event will be held for three days from April 9 - 11, 2025!",
+        language: language
+      )
+      Text(text)
         .horizontalAlignment(.center)
         .font(.lead)
         .foregroundStyle(.dimGray)
@@ -80,7 +90,7 @@ extension HomeSectionType {
     case .access:
       AccessComponent(language: language)
         .ignorePageGutters()
-        .id(rawValue)
+        .id(htmlId)
     }
   }
 }

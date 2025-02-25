@@ -1,0 +1,1113 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "1. The \"Corporation\" means try Swift Tokyo Association.\n2. The term \"Personal information\" refers to information about living individuals (including name, address, phone number, etc.) and information that can identify specific individuals (including e-mail addresses and SNS accounts) as defined in Japan's \"Act on the Protection of Personal Information\" (Act No. 57 of 2003)." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. The \"Corporation\" means try Swift Tokyo Association.\n2. The term \"Personal information\" refers to information about living individuals (including name, address, phone number, etc.) and information that can identify specific individuals (including e-mail addresses and SNS accounts) as defined in Japan's \"Act on the Protection of Personal Information\" (Act No. 57 of 2003)."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. 「本法人」とは、一般社団法人try Swift Tokyoを指します。\n2. 「個人情報」とは、<a href=\"https://elaws.e-gov.go.jp/document?lawid=415AC0000000057\" target=\"_blank\">個人情報の保護に関する法律</a>（平成十五年法律第五十七号)に定める生存する個人に関する情報（氏名、住所、電話番号などを含む）ならびに特定の個人を識別することができるもの（メールアドレスやSNSのアカウントなどを含む）を指します。"
+          }
+        }
+      }
+    },
+    "About" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "イベントについて"
+          }
+        }
+      }
+    },
+    "Access" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Access"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "会場"
+          }
+        }
+      }
+    },
+    "Action" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Action"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "行動規範に違反する行動や言動をみかけたとき"
+          }
+        }
+      }
+    },
+    "Apr. 9th - 11th, 2025" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apr. 9th - 11th, 2025"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2025年4月9日（水） 〜 11（金）"
+          }
+        }
+      }
+    },
+    "Changes" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Changes"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プライバシーポリシーの変更について"
+          }
+        }
+      }
+    },
+    "Check updates on X" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check updates on X"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "公式Xはこちら"
+          }
+        }
+      }
+    },
+    "Close" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "閉じる"
+          }
+        }
+      }
+    },
+    "Code of Conduct" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Code of Conduct"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "行動規範"
+          }
+        }
+      }
+    },
+    "Contact us" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contact us"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "個人情報の取り扱いに関する問い合わせ先"
+          }
+        }
+      }
+    },
+    "Date and time" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date and time"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開催日時"
+          }
+        }
+      }
+    },
+    "Definintions" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Definintions"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "定義"
+          }
+        }
+      }
+    },
+    "Developers from all over the world gather<br>for tips and tricks and the latest case studies of development using Swift.<br>Developers from all over the world will gather here.<br>Swift and to showcase our Swift knowledge and skills, and to collaborate with each other,<br>The event will be held for three days from April 9 - 11, 2025!" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Developers from all over the world gather<br>for tips and tricks and the latest case studies of development using Swift.<br>Developers from all over the world will gather here.<br>Swift and to showcase our Swift knowledge and skills, and to collaborate with each other,<br>The event will be held for three days from April 9 - 11, 2025!"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swiftを使った開発のコツや最新の事例を求めて<br>世界中から開発者が集います。<br>日頃のSwiftの知識やスキルを披露し、協力しあうことを目的に、<br>2025年4月9日 - 11日の３日間開催します！"
+          }
+        }
+      }
+    },
+    "Developers from all over the world will gather for tips and tricks and the latest examples of development using Swift. The event will be held for three days from April 9 - 11, 2025, with the aim of sharing our Swift knowledge and skills and collaborating with each other!" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Developers from all over the world will gather for tips and tricks and the latest examples of development using Swift. The event will be held for three days from April 9 - 11, 2025, with the aim of sharing our Swift knowledge and skills and collaborating with each other!"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swiftを使った開発のコツや最新の事例を求めて 世界中から開発者が集います。 日頃のSwiftの知識やスキルを披露し、協力しあうことを目的に、 2025年4月9日 - 11日の３日間開催します！"
+          }
+        }
+      }
+    },
+    "Disclosure and correction of information" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disclosure and correction of information"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "個人情報の開示および訂正等"
+          }
+        }
+      }
+    },
+    "FAQ" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "FAQ"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "よくある質問"
+          }
+        }
+      }
+    },
+    "For Attendees" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For Attendees"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コミュニティ参加者のみなさまへ"
+          }
+        }
+      }
+    },
+    "For Harassment-free" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For Harassment-free"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ハラスメントについて"
+          }
+        }
+      }
+    },
+    "For Speakers" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For Speakers"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "イベントで登壇されるスピーカーのみなさまへ"
+          }
+        }
+      }
+    },
+    "Harassment includes offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.<br><br>However, taking pictures or recording a speaker's talk is allowed with permission from the presenter or organizer. Shooting includes screen captures." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Harassment includes offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.<br><br>However, taking pictures or recording a speaker's talk is allowed with permission from the presenter or organizer. Shooting includes screen captures."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ハラスメントには、性別、性的指向、身体障害、体の大きさ、人種、宗教、公共の場での性的画像、意図的な脅迫、ストーキング、撮影や録音の嫌がらせ 、トークの妨害、他のイベントに関する不快な口頭によるコメント、不適切な身体的接触、および望ましくない色気が含まれます。<br><br>ただしスピーカーのトークについては、発表者や運営の許可があれば撮影や録画を許容します。撮影には画面キャプチャも含まれます。"
+          }
+        }
+      }
+    },
+    "If you are being harassed, notice someone else that is being harassed, or have any other concerns, please contact a member of organizers or volunteers immediately." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you are being harassed, notice someone else that is being harassed, or have any other concerns, please contact a member of organizers or volunteers immediately."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "あなたがハラスメントを受けていたり、ハラスメントを受けている他の誰かに気付いたようなとき、また、その他の懸念が見つかった場合は、主催までご連絡ください。"
+          }
+        }
+      }
+    },
+    "If you have any questions about Privacy Policy, please contact us at <a href=\"mailto:tokyo@tryswift.jp\">tokyo@tryswift.jp</a>." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you have any questions about Privacy Policy, please contact us at <a href=\"mailto:tokyo@tryswift.jp\">tokyo@tryswift.jp</a>."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本法人における個人情報保護に関してご質問などがある場合は、<a href=\"mailto:tokyo@tryswift.jp\">tokyo@tryswift.jp</a> までご連絡下さい。"
+          }
+        }
+      }
+    },
+    "In order to provide a safe and secure event experience for everyone in the community and at community-sponsored events, all participants, regardless of their role as a speaker, participant, or staff member, are required to abide by the Code of Conduct as described herein. If you do not agree, you will not be allowed to participate in the event.<br><br>In addition, there is a purpose for holding the event. Please do not behave in a manner that is incompatible with the purpose of the event." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In order to provide a safe and secure event experience for everyone in the community and at community-sponsored events, all participants, regardless of their role as a speaker, participant, or staff member, are required to abide by the Code of Conduct as described herein. If you do not agree, you will not be allowed to participate in the event.<br><br>In addition, there is a purpose for holding the event. Please do not behave in a manner that is incompatible with the purpose of the event."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コミュニティおよびコミュニティが主催するイベントに参加するみなさんは、その場におけるすべての人へ安心・安全なイベント体験を提供することを目的に、登壇者、参加者、スタッフなどの役割によらず、ここに記載されている行動規範を遵守する必要があります。同意できない場合は、イベントへの参加をお断りしています。<br><br>また、イベントには開催の目的が存在します。目的にそぐわないような振る舞いは謹んでください。"
+          }
+        }
+      }
+    },
+    "Information You Provide to Us" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Information You Provide to Us"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "個人情報の取得"
+          }
+        }
+      }
+    },
+    "It is not appropriate to use images or text in presentations or slides that violate the above. In addition, sexist, racist, or other references to the above are not acceptable, even if the person is joking in talk.<br><br>If you have any questions during the preparation of your presentation, please let us know." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It is not appropriate to use images or text in presentations or slides that violate the above. In addition, sexist, racist, or other references to the above are not acceptable, even if the person is joking in talk.<br><br>If you have any questions during the preparation of your presentation, please let us know."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上記に違反する画像や文章を発表やスライドに利用することは適切ではありません。また、性差別や人種差別その他上記に該当するような言及は、本人が冗談で話をしたとしても認めていません。<br><br>発表準備中、何か不明点があれば、運営まで相談してください。"
+          }
+        }
+      }
+    },
+    "Last Update: Oct.10, 2023" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last Update: Oct.10, 2023"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最終更新日：2023年10月10日"
+          }
+        }
+      }
+    },
+    "License" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "License"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ライセンス"
+          }
+        }
+      }
+    },
+    "Manage of Information" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manage of Information"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "個人情報の管理"
+          }
+        }
+      }
+    },
+    "N1, 3-3, Midori-cho, Tachikawa, Tokyo<br>190-0014" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N1, 3-3, Midori-cho, Tachikawa, Tokyo<br>190-0014"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "〒190-0014<br>東京都立川市緑町3-3 N1"
+          }
+        }
+      }
+    },
+    "Outline" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Outline"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開催概要"
+          }
+        }
+      }
+    },
+    "Participation in the Community" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Participation in the Community"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コミュニティへの参加について"
+          }
+        }
+      }
+    },
+    "Privacy Policy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プライバシーポリシー"
+          }
+        }
+      }
+    },
+    "Q. Can beginners participate?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Q. Can beginners participate?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Q. 初心者でも参加できますか？"
+          }
+        }
+      }
+    },
+    "Q. Can tickets be transferred?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Q. Can tickets be transferred?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Q. チケットの譲渡はできますか？"
+          }
+        }
+      }
+    },
+    "Q. Can you issue a receipt and invoice?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Q. Can you issue a receipt and invoice?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Q. 領収書・請求書は発行できますか？"
+          }
+        }
+      }
+    },
+    "Q. Do you provide tourist visa support?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Q. Do you provide tourist visa support?"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "Q. In which languages will the conference be held?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Q. In which languages will the conference be held?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Q. カンファレンスはどの言語で開催されますか？"
+          }
+        }
+      }
+    },
+    "Q. Is there anything I need to do before the day of the event?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Q. Is there anything I need to do before the day of the event?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Q. 当日までにやることはありますか"
+          }
+        }
+      }
+    },
+    "Q. What is ticket cancellation policy?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Q. What is ticket cancellation policy?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Q. チケットのキャンセルポリシーについて教えてください。"
+          }
+        }
+      }
+    },
+    "Q. What's try! Swift?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Q. What's try! Swift?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Q. try! Swiftとはなんですか？"
+          }
+        }
+      }
+    },
+    "Some countries and regions require an application for a tourist VISA in order to enter Japan.<br>Depending on the country of residence you selected when you purchased your ticket, we will ask you if you need assistance with VISA application documents.<br>To find out if you reside in a country that requires a VISA, please visit the <a href=\"https://www.mofa.go.jp/j_info/visit/visa/index.html\" target=\"_blank\">Ministry of Foreign Affairs website</a>." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Some countries and regions require an application for a tourist VISA in order to enter Japan.<br>Depending on the country of residence you selected when you purchased your ticket, we will ask you if you need assistance with VISA application documents.<br>To find out if you reside in a country that requires a VISA, please visit the <a href=\"https://www.mofa.go.jp/j_info/visit/visa/index.html\" target=\"_blank\">Ministry of Foreign Affairs website</a>."
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "Speaker" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speaker"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スピーカー"
+          }
+        }
+      }
+    },
+    "Sponsor" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sponsor"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スポンサー"
+          }
+        }
+      }
+    },
+    "Suggested Nearby Accommodation" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suggested Nearby Accommodation"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "会場周辺の宿泊施設情報"
+          }
+        }
+      }
+    },
+    "TACHIKAWA STAGE GARDEN" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TACHIKAWA STAGE GARDEN"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "立川ステージガーデン"
+          }
+        }
+      }
+    },
+    "TACHIKAWA STAGE GARDEN<br>N1, 3-3, Midori-cho, Tachikawa, Tokyo 190-0014" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TACHIKAWA STAGE GARDEN<br>N1, 3-3, Midori-cho, Tachikawa, Tokyo 190-0014"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "立川ステージガーデン<br>〒190-0014 東京都立川市緑町3-3 N1"
+          }
+        }
+      }
+    },
+    "The Corporation may revise its privacy policy without prior notice. Any revision of the privacy policy will be posted on the website operated by the Corporation without delay." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Corporation may revise its privacy policy without prior notice. Any revision of the privacy policy will be posted on the website operated by the Corporation without delay."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本法人は、予告無くプライバシーポリシーを改定することがあります。プライバシーポリシーの改定があったときは、本法人が運営するウェブサイトに遅滞なく掲載いたします。"
+          }
+        }
+      }
+    },
+    "The Corporation will collect information registered when using the services provided by the Corporation, such as events sponsored by the Corporation, to the extent necessary. In principle, the collection of personal information shall be based on the provider's intention." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Corporation will collect information registered when using the services provided by the Corporation, such as events sponsored by the Corporation, to the extent necessary. In principle, the collection of personal information shall be based on the provider's intention."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本法人は、本法人の主催するイベント等、本法人が提供するサービスの利用時に登録いただいた情報を必要な範囲で収集します。個人情報の収集の際には、提供者の意思に基づくことを原則とします。"
+          }
+        }
+      }
+    },
+    "The Corporation will make every effort to properly manage the personal information it collects." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Corporation will make every effort to properly manage the personal information it collects."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本法人は、収集した個人情報を適切に管理するように努めます。"
+          }
+        }
+      }
+    },
+    "The Corporation will use the personal information provided by you within the scope of the following purposes.\n1. Identification, provision of services related to applications for use, billing of usage fees, and notification of changes, suspension, discontinuation, or cancellation of the terms and conditions of service provision.\n2. Providing necessary information related to event management, such as event announcements, distribution and use of official applications, etc.\n3. In addition to the above, to provide information on various services of the Corporation and to conduct surveys for service improvement\n\nIn addition, in any of the following cases, personal information may be used or disclosed and provided for purposes other than those described above.\n\n1. When required by law\n2. When there is the consent of the person providing the information.\n3. When all or part of the handling of personal information is outsourced to the extent necessary to achieve the business purpose (for example, when services such as delivery are outsourced)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Corporation will use the personal information provided by you within the scope of the following purposes.\n1. Identification, provision of services related to applications for use, billing of usage fees, and notification of changes, suspension, discontinuation, or cancellation of the terms and conditions of service provision.\n2. Providing necessary information related to event management, such as event announcements, distribution and use of official applications, etc.\n3. In addition to the above, to provide information on various services of the Corporation and to conduct surveys for service improvement\n\nIn addition, in any of the following cases, personal information may be used or disclosed and provided for purposes other than those described above.\n\n1. When required by law\n2. When there is the consent of the person providing the information.\n3. When all or part of the handling of personal information is outsourced to the extent necessary to achieve the business purpose (for example, when services such as delivery are outsourced)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本法人は、提供いただいた個人情報を、以下のような目的の範囲内で利用します。\n1. 本人確認、利用申込に関するサービスの提供、利用料金の請求、および利用サービス提供条件の変更・停止・中止・契約解除の通知\n2. イベントの開催案内、公式アプリの配布・利用などイベント運営に関わる必要な情報の提供\n3. 上記の他、本法人の各種サービスに関する情報提供やサービス向上のための調査\n\nまた次のいずれかの場合には上記の収集目的以外に個人情報を利用し、または開示提供することがあります。\n\n1. 法令の規定に基づくとき\n2. 提供者本人の同意があるとき\n3. 事業目的の達成のために必要な範囲内において個人情報の取扱いの全部又は一部を委託する場合（例えば、配送等のサービスを委託する場合など）"
+          }
+        }
+      }
+    },
+    "The latest information is announced on X" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The latest information is announced on X"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最新情報はXでお知らせしています"
+          }
+        }
+      }
+    },
+    "This Code of Conduct is released under a <a href=\"https://creativecommons.org/publicdomain/zero/1.0/deed.en\" target=\"_blank\">Creative Commons Zero license</a>." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This Code of Conduct is released under a <a href=\"https://creativecommons.org/publicdomain/zero/1.0/deed.en\" target=\"_blank\">Creative Commons Zero license</a>."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この行動規範は、<a href=\"https://creativecommons.org/publicdomain/zero/1.0/deed.ja\" target=\"_blank\">Creative Commons Zero license</a>で公開しています。"
+          }
+        }
+      }
+    },
+    "This community is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter and other online media. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organizers.<br><br>We don’t want anyone to be excluded due to age, gender, sexual orientation, mental or physical impairments, appearance or skin colour, national or religious background. We hope to see the same attitude with our attendees, and look forward to experiencing a non-violent and peaceful event with you." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This community is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter and other online media. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organizers.<br><br>We don’t want anyone to be excluded due to age, gender, sexual orientation, mental or physical impairments, appearance or skin colour, national or religious background. We hope to see the same attitude with our attendees, and look forward to experiencing a non-violent and peaceful event with you."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このコミュニティは、性別、性的指向、身体障害、体型、体格、人種、または宗教にかかわらず、すべての人にハラスメントのないコミュニティの提供を心がけています。<br><br>コミュニティ参加者へのハラスメントをいかなる形でも許容しません。<br><br>性的な表現や画像は、登壇内容、会場、ウェビナーのみならず、X（Twitter）および他のオンラインメディアを含む、あらゆる場所で許容しません。<br><br>これらの規則に違反した参加者は、主催の裁量で、会場から追放される可能性があります。 <br><br>年齢、性別、性的指向、精神的または身体障害、外観または肌の色、国籍、国際情勢および宗教的背景により、誰かが差別されることを望まないでください。<br><br>私達主催者は参加者と同じ態度で、非暴力的で平和なコミュニティを実現できることを楽しみにしています。"
+          }
+        }
+      }
+    },
+    "This translation is not an official one. Only the Japanese version is legally responsible. This English translation is intended to assist in understanding the [Japanese version of the Privacy Policy](/privacy-policy)." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This translation is not an official one. Only the Japanese version is legally responsible. This English translation is intended to assist in understanding the [Japanese version of the Privacy Policy](/privacy-policy)."
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "Ticket cancellations are accepted up until 30 days before the event, specifically by Tuesday, March 11 (JST).<br>After canceling via Luma, please contact the organizers. No cancellations will be accepted after this deadline. If you selected for advance delivery of swags, cancellation is not possible once the items have been shipped.<br><br>Regardless of ticket type, a 10% processing fee will be deducted from the refund amount. The refund processing time will depend on the payment service’s policies." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ticket cancellations are accepted up until 30 days before the event, specifically by Tuesday, March 11 (JST).<br>After canceling via Luma, please contact the organizers. No cancellations will be accepted after this deadline. If you selected for advance delivery of swags, cancellation is not possible once the items have been shipped.<br><br>Regardless of ticket type, a 10% processing fee will be deducted from the refund amount. The refund processing time will depend on the payment service’s policies."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チケットのキャンセルは、開催30日前の3/11 (火) まで受け付けます。Lumaでキャンセル後、運営に問い合わせを行ってください。期日以降、キャンセルは一切応じられません。ノベルティの事前配送を選択した場合、発送後のキャンセルはできません。<br><br>チケット種別によらず、金額の10%を手数料として差し引いて、返金します。返金されるまでの期間は、決済サービスの規定に準じます。"
+          }
+        }
+      }
+    },
+    "Tickets" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tickets"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チケットの購入"
+          }
+        }
+      }
+    },
+    "try! Swift is an international Swift conference that started in Tokyo in 2016. In addition to Tokyo, the conference has been held in New York, Bangalore, and San Jose, and in 2018, Apple's SwiftNIO team was the first in the world to present SwiftNIO, and in 2019, try! Swift was introduced to the Swift community at WWDC.<br><br>The conference will bring together selected experts from around the world to give 20-minute presentations on topics related to Swift. iOS, iPadOS, SwiftUI, and visionOS, as well as Apple Platform topics including Swift, Open-Source Swift, Swift on Server, and many other Swift topics.<br><br>In addition, try! Swift will have office hours where you can ask one-on-one questions to the speakers and ask any questions you may have had about the content of their talks." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "try! Swift is an international Swift conference that started in Tokyo in 2016. In addition to Tokyo, the conference has been held in New York, Bangalore, and San Jose, and in 2018, Apple's SwiftNIO team was the first in the world to present SwiftNIO, and in 2019, try! Swift was introduced to the Swift community at WWDC.<br><br>The conference will bring together selected experts from around the world to give 20-minute presentations on topics related to Swift. iOS, iPadOS, SwiftUI, and visionOS, as well as Apple Platform topics including Swift, Open-Source Swift, Swift on Server, and many other Swift topics.<br><br>In addition, try! Swift will have office hours where you can ask one-on-one questions to the speakers and ask any questions you may have had about the content of their talks."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "try! Swiftは2016年に東京で始まったSwiftの国際カンファレンスです。東京の他、ニューヨーク、ベンガルール、サンノゼでも開催実績があり、2018年にはAppleのSwiftNIOチームが世界に先駆けてSwiftNIOを発表したり、2019年にはWWDCでSwiftのコミュニティとして紹介されたことがあります。<br><br>カンファレンスでは、世界中から集まった選りすぐりのエキスパートが集まり、Swiftに関するトピックについて20分間のプレゼンテーションを行います。iOS、iPadOS、SwiftUI、visionOSをはじめとしたApple Platformのトピックはもちろん、Open-Source Swift、Swift on Serverなどの様々なSwiftに関するトピックについて発表を行います。<br><br>また、try! Swiftでは、登壇したスピーカーに１対１で質問できるオフィスアワーの時間を設けており、トークの内容で不明だった点を聞くことができます。"
+          }
+        }
+      }
+    },
+    "try! Swift Tokyo is available in both Japanese and English, and all talks are supported by simultaneous interpretation. During office hours, interpreters are also present, so you can ask questions in either English or Japanese as needed." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "try! Swift Tokyo is available in both Japanese and English, and all talks are supported by simultaneous interpretation. During office hours, interpreters are also present, so you can ask questions in either English or Japanese as needed."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "try! Swift Tokyo は日本語と英語に対応しており、すべてのトークで同時通訳がサポートされています。オフィスアワーでは、通訳者も同席するので、必要に応じて英語でも日本語でも質問することができます。"
+          }
+        }
+      }
+    },
+    "Unfortunately, ticket transfers are not permitted due to system limitations." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unfortunately, ticket transfers are not permitted due to system limitations."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仕組み上、チケットの譲渡は行えません。"
+          }
+        }
+      }
+    },
+    "Use of Information" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use of Information"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "個人情報の利用"
+          }
+        }
+      }
+    },
+    "Venue" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Venue"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "場所"
+          }
+        }
+      }
+    },
+    "When a provider of personal information requests disclosure of their own personal information, the Corporation will, in principle, disclose the information without delay. When a provider of personal information requests correction of their own personal information, the Corporation will, in principle, make such correction without delay." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "When a provider of personal information requests disclosure of their own personal information, the Corporation will, in principle, disclose the information without delay. When a provider of personal information requests correction of their own personal information, the Corporation will, in principle, make such correction without delay."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本法人は、個人情報の提供者から自己に関する個人情報の開示の請求があったときは、原則として遅滞なく開示します。また、自己に関する個人情報の訂正等の申し出があったときは、原則として遅滞なく訂正等を行います。"
+          }
+        }
+      }
+    },
+    "Yes, there is no limit to the level of participation. However, you may find the talks difficult.Most of the topics discussed at \"try! Swift\" are about cutting edge technology and techniques. You may not understand it on the spot, but we believe that being aware of what you don't understand, discussing it with others, and asking the speakers directly is an important value at the conference. Please come to the venue with an eagerness to learn and understand something new." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yes, there is no limit to the level of participation. However, you may find the talks difficult.Most of the topics discussed at \"try! Swift\" are about cutting edge technology and techniques. You may not understand it on the spot, but we believe that being aware of what you don't understand, discussing it with others, and asking the speakers directly is an important value at the conference. Please come to the venue with an eagerness to learn and understand something new."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "はい、参加するレベルに制限はありません。ただしトークの内容は難しく感じるかもしれません。try! Swiftで話されるトピックは最先端の技術やテクニックについてがほとんどです。その場では理解できないかもしれませんが、わからないことを自覚し、周りの人たちと相談したり、スピーカーに直接聞くことはカンファレンスにおける重要な価値であると考えています。新しいことを学びたい、理解したいという熱意を持って会場にお越しください。"
+          }
+        }
+      }
+    },
+    "Yes, you are welcome to join the Discord. Ticket purchasers will receive an invitation link to the Discord, where various topics related to Swift and development will be discussed, so please try to interact with each other before the event. You can get to know each other well before the event, and you may end up going out to dinner on the day of the event, or you may meet each other again after a long time at a conference outside of your country." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yes, you are welcome to join the Discord. Ticket purchasers will receive an invitation link to the Discord, where various topics related to Swift and development will be discussed, so please try to interact with each other before the event. You can get to know each other well before the event, and you may end up going out to dinner on the day of the event, or you may meet each other again after a long time at a conference outside of your country."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チケット購入者には、try! Swift TokyoのDiscordへの招待リンクが送られます。Swiftや開発に関する様々なトピックを用意しているので、ぜひ開催前から交流してみてください。事前の交流がきっかけで当日仲が深まってご飯に行くことになったり、海外のカンファレンスで久々に再会するようなこともあります。"
+          }
+        }
+      }
+    },
+    "You can create a receipt by opening the <a href=\"https://lu.ma/settings/payment\" target=\"_blank\">Luma payment history page</a> and selecting the menu icon (three dots) displayed on the right side of the payment history. If you want to customize the name on the receipt, you can temporarily change your account name in the <a href=\"https://lu.ma/settings\" target=\"_blank\">Luma settings</a>." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can create a receipt by opening the <a href=\"https://lu.ma/settings/payment\" target=\"_blank\">Luma payment history page</a> and selecting the menu icon (three dots) displayed on the right side of the payment history. If you want to customize the name on the receipt, you can temporarily change your account name in the <a href=\"https://lu.ma/settings\" target=\"_blank\">Luma settings</a>."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "<a href=\"https://lu.ma/settings/payment\" target=\"_blank\">Lumaの決済履歴画面</a>を開き、決済履歴の右側に表示される3点リーダから領収書を作成することができます。領収書の宛名をカスタマイズしたい場合は、<a href=\"https://lu.ma/settings\" target=\"_blank\">Lumaの設定</a>からアカウント名を一時的に変更することで対応可能です。"
+          }
+        }
+      }
+    },
+    "You can get ticket from <a href=\"https://lu.ma/z6j3c1bd\" target=\"_blank\">Luma</a> or get from below.<br>Before getting ticket please read [FAQ](/faq_en)." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can get ticket from <a href=\"https://lu.ma/z6j3c1bd\" target=\"_blank\">Luma</a> or get from below.<br>Before getting ticket please read [FAQ](/faq_en)."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チケットは<a href=\"https://lu.ma/z6j3c1bd\" target=\"_blank\">Luma</a>か下記から購入できます。<br>チケット購入前に、[よくある質問](/faq)をお読みください。"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

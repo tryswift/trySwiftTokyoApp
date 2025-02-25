@@ -14,17 +14,17 @@ struct AccessComponent: RootHTML {
           .frame(width: .percent(100%))
       }
       VStack {
-        Text(String(forKey: "access", language: language))
+        Text(String("Access", language: language))
           .horizontalAlignment(.center)
           .font(.title1)
           .foregroundStyle(.white)
           .padding(.top, .px(80))
 
         Section {
-          Text(String(forKey: "venue_name", language: language))
+          Text(String("TACHIKAWA STAGE GARDEN", language: language))
             .font(.title3)
             .foregroundStyle(.white)
-          Text(String(forKey: "venue_address", language: language))
+          Text(String("N1, 3-3, Midori-cho, Tachikawa, Tokyo<br>190-0014", language: language))
             .font(.lead)
             .foregroundStyle(.white)
         }
@@ -46,7 +46,7 @@ struct AccessComponent: RootHTML {
         .frame(width: .percent(100%))
         .margin(.vertical, .px(8))
 
-        Text(String(forKey: "suggested_nearby_accommodation", language: language))
+        Text(String("Suggested Nearby Accommodation", language: language))
           .horizontalAlignment(.center)
           .font(.title1)
           .foregroundStyle(.white)

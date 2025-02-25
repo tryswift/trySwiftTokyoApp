@@ -7,7 +7,7 @@ struct SectionHeader: HTML {
   var body: some HTML {
     ZStack(alignment: .center) {
       Text(markdown: "\n---")
-      Text(String(forKey: type.rawValue, language: language))
+      Text(String(type.rawValue, language: language))
         .horizontalAlignment(.center)
         .font(.title1)
         .fontWeight(.bold)
@@ -15,6 +15,6 @@ struct SectionHeader: HTML {
     }
     .padding(.top, .px(80))
     .padding(.bottom, .px(16))
-    .id(type.rawValue)
+    .id(type.htmlId)
   }
 }

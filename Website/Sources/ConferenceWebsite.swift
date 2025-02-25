@@ -63,7 +63,10 @@ struct ConferenceWebsite {
 struct ConferenceSite2025: Site {
   var titleSuffix = " try! Swift Tokyo"
   var name = "try! Swift Tokyo"
-  var description: String? = String(forKey: "description", language: .ja)
+  var description: String? = String(
+    "Developers from all over the world will gather for tips and tricks and the latest examples of development using Swift. The event will be held for three days from April 9 - 11, 2025, with the aim of sharing our Swift knowledge and skills and collaborating with each other!",
+    language: .ja
+  )
   var language: Language = .japanese
   var url = URL(string: "https://tryswift.jp")!
   var homePage = Home(language: .ja)

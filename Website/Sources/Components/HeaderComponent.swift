@@ -26,7 +26,7 @@ struct HeaderComponent: RootHTML {
             Image("/images/intersect.svg", description: "decoration image of header")
               .resizable()
           }
-          Text(String(forKey: "about", language: language))
+          Text(String("About", language: language))
             .font(.title1)
             .fontWeight(.bold)
             .foregroundStyle(.bootstrapPurple)

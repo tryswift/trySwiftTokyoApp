@@ -7,10 +7,10 @@ struct MainFooter: RootHTML {
   var body: some HTML {
     Column {
       Text {
-        Link(String(forKey: "code_of_conduct", language: language), target: CodeOfConduct(language: language))
+        Link(String("Code of Conduct", language: language), target: CodeOfConduct(language: language))
           .role(.light)
           .margin(.trailing, .small)
-        Link(String(forKey: "privacy_policy", language: language), target: PrivacyPolicy(language: language))
+        Link(String("Privacy Policy", language: language), target: PrivacyPolicy(language: language))
           .role(.light)
       }
       .horizontalAlignment(.center)

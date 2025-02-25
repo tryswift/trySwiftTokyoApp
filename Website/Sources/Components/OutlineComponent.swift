@@ -7,23 +7,23 @@ struct OutlineComponent: HTML {
     Table {
       Row {
         Column {
-          String(forKey: "date_and_time", language: language)
+          String("Date and time", language: language)
         }
         .fontWeight(.bold)
         .foregroundStyle(.dimGray)
         Column {
-          String(forKey: "date_and_time_text", language: language)
+          String("Apr. 9th - 11th, 2025", language: language)
         }
         .foregroundStyle(.dimGray)
       }
       Row {
         Column {
-          String(forKey: "venue", language: language)
+          String("Venue", language: language)
         }
         .fontWeight(.bold)
         .foregroundStyle(.dimGray)
         Column {
-          String(forKey: "venue_text", language: language)
+          String("TACHIKAWA STAGE GARDEN<br>N1, 3-3, Midori-cho, Tachikawa, Tokyo 190-0014", language: language)
         }
         .foregroundStyle(.dimGray)
       }

@@ -13,7 +13,10 @@ struct Home: StaticLayout {
   }
 
   var description: String {
-    String(forKey: "description", language: language)
+    String(
+        "Developers from all over the world will gather for tips and tricks and the latest examples of development using Swift. The event will be held for three days from April 9 - 11, 2025, with the aim of sharing our Swift knowledge and skills and collaborating with each other!",
+        language: language
+    )
   }
 
   @Dependency(DataClient.self) var dataClient

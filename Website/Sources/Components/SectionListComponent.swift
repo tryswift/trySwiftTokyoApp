@@ -1,11 +1,20 @@
 import Foundation
 import Ignite
 
-protocol StringEnum: RawRepresentable, CaseIterable where RawValue == String {}
+protocol SectionDefinition: RawRepresentable, CaseIterable where RawValue == String {
+  var title: String { get }
+  var description: String { get }
+}
+
+extension SectionDefinition {
+  var title: String {
+    rawValue
+  }
+}
 
 struct SectionListComponent: HTML {
   let title: String
-  let dataSource: [any StringEnum]
+  let dataSource: [any SectionDefinition]
   let language: SupportedLanguage
 
   var body: some HTML {
@@ -17,7 +26,7 @@ struct SectionListComponent: HTML {
 
     ForEach(dataSource) { sectionType in
       Section {
-        Text(String(forKey: sectionType.rawValue, language: language))
+        Text(String(sectionType.title, language: language))
           .horizontalAlignment(.center)
           .font(.title2)
           .fontWeight(.bold)
@@ -25,7 +34,7 @@ struct SectionListComponent: HTML {
           .margin(.top, .px(80))
           .margin(.bottom, .px(16))
 
-        let description = String(forKey: "\(sectionType.rawValue)_text", language: language)
+        let description = String(sectionType.description, language: language)
         Text(markdown: description)
           .horizontalAlignment(description.displayedCharacterCount() > 100 ? .leading : .center)
           .font(.body)
