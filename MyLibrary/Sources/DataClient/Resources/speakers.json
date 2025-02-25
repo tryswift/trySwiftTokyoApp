@@ -21,6 +21,32 @@
     ]
   },
   {
+    "name": "Sebastiaan de With",
+    "image_name": "sebastiaan_de_with",
+    "bio": "Sebastiaan is an ex-Apple designer now making camera apps like Halide, Kino and Spectre at Lux",
+    "japanese_bio": "Sebastiaanは元Appleのデザイナーで、現在はLuxでHalide、Kino、Spectreといったカメラアプリを開発しています。",
+    "job_title": "Co-founder / designer at Lux Optics",
+    "links": [
+      {
+        "url": "https://x.com/sdw",
+        "name": "@sdw"
+      }
+    ]
+  },
+  {
+    "name": "Benjamin Sandofsky",
+    "image_name": "benjamin_sandofsky",
+    "bio": "Escaped big-tech to build photography and video apps. Credits: Halide, Kino and Spectre.",
+    "japanese_bio": "大手テック企業を離れ、写真や動画アプリの開発に専念。代表作：Halide、Kino、Spectre。",
+    "job_title": "Co-founder / engineer at Lux Optics",
+    "links": [
+      {
+        "url": "https://sandofsky.com",
+        "name": "sandofsky.com"
+      }
+    ]
+  },
+  {
     "name": "Shai Mishali",
     "image_name": "shai_mishali",
     "bio": "Shai is a Senior iOS Tech Lead for monday.com, as well as an international speaker, and a highly active open-source contributor and maintainer on several high-profile projects - namely, the RxSwift Community and RxSwift projects, but also releases many open-source endeavours around Combine such as CombineCocoa, RxCombine and more.<br>He's a published author, having worked on over 6 different books on various topics related to the Swift eco-system, on topics such as Combine, RxSwift, async/await, and other Advanced Swift topics.<br>As an avid enthusiast of hackathons, Shai took 1st place at BattleHack Tel-Aviv 2014, BattleHack World Finals San Jose 2014, and Ford's Developer Challenge Tel-Aviv 2015. You can find him on GitHub and Twitter @freak4pc.",
@@ -34,19 +60,6 @@
       {
         "url": "https://github.com/freak4pc",
         "name": "@freak4pc"
-      }
-    ]
-  },
-  {
-    "name": "Sebastiaan de With",
-    "image_name": "sebastiaan_de_with",
-    "bio": "Sebastiaan is an ex-Apple designer now making camera apps like Halide, Kino and Spectre at Lux",
-    "japanese_bio": "Sebastiaanは元Appleのデザイナーで、現在はLuxでHalide、Kino、Spectreといったカメラアプリを開発しています。",
-    "job_title": "Co-founder / designer at Lux Optics",
-    "links": [
-      {
-        "url": "https://x.com/sdw",
-        "name": "@sdw"
       }
     ]
   },

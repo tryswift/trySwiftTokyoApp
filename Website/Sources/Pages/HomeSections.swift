@@ -52,7 +52,7 @@ extension HomeSectionType {
         SpeakerComponent(speaker: speaker)
           .margin(.bottom, .px(32))
           .onClick {
-            ShowModal(id: speaker.name)
+            ShowModal(id: speaker.modalId)
           }
       }
 

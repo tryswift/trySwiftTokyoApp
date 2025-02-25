@@ -32,7 +32,7 @@ struct SpeakerModal: HTML {
   private let imageSize = 75
 
   var body: some HTML {
-    Modal(id: speaker.name) {
+    Modal(id: speaker.modalId) {
       ZStack(alignment: .topLeading) {
         Image(speaker.imageFilename, description: speaker.name)
           .resizable()
@@ -64,7 +64,7 @@ struct SpeakerModal: HTML {
 
       Grid {
         Button(String("Close", language: language)) {
-          DismissModal(id: speaker.name)
+          DismissModal(id: speaker.modalId)
         }
         .role(.light)
         .foregroundStyle(.dimGray)
@@ -80,7 +80,7 @@ struct SpeakerModal: HTML {
   }
 }
 
-private extension Speaker {
+extension Speaker {
   func getLocalizedBio(language: SupportedLanguage) -> String? {
     switch language {
     case .ja: japaneseBio
@@ -90,5 +90,9 @@ private extension Speaker {
 
   var imageFilename: String {
     "/images/from_app/\(imageName).png"
+  }
+
+  var modalId: String {
+    name.replacingOccurrences(of: "'", with: "")
   }
 }
