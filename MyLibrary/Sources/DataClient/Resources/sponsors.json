@@ -214,5 +214,86 @@
     }
   ],
   "community": [],
-  "individual": []
+  "individual": [
+    {
+      "id": 1,
+      "imageName": "Individual_ooba",
+      "link": "https://x.com/ooba"
+    },
+    {
+      "id": 2,
+      "imageName": "individual_kishikawa_katsumi",
+      "link": "https://github.com/kishikawakatsumi"
+    },
+    {
+      "id": 4,
+      "imageName": "Individual_shiz",
+      "link": "https://x.com/stzn3"
+    },
+    {
+      "id": 5,
+      "imageName": "Individual_noppe",
+      "link": "https://github.com/noppefoxwolf"
+    },
+    {
+      "id": 6,
+      "imageName": "Individual_arasan01",
+      "link": "https://x.com/arasan01_me"
+    },
+    {
+      "id": 7,
+      "imageName": "Individual_banjun",
+      "link": "https://github.com/banjun"
+    },
+    {
+      "id": 9,
+      "imageName": "Individual_hcrane",
+      "link": "https://x.com/hcrane14"
+    },
+    {
+      "id": 11,
+      "imageName": "Individual_yuji_fujisaka",
+      "link": "https://github.com/yujif"
+    },
+    {
+      "id": 16,
+      "imageName": "Individual_tamadeveloper",
+      "link": "https://x.com/tamadeveloper/"
+    },
+    {
+      "id": 17,
+      "imageName": "Individual_econa77",
+      "link": "https://github.com/Econa77"
+    },
+    {
+      "id": 19,
+      "imageName": "Individual_scenee",
+      "link": "https://scenee.com/"
+    },
+    {
+      "id": 20,
+      "imageName": "Individual_aaron",
+      "link": "https://github.com/apparition47"
+    },
+    {
+      "id": 21,
+      "imageName": "Individual_sean_labastille",
+      "link": "https://mastodon.online/@flufff42"
+    },
+    {
+      "id": 22,
+      "imageName": "Individual_nao",
+      "link": "https://www.naoenomoto.com/"
+    },
+    {
+      "id": 23,
+      "imageName": "Individual_shogo4405",
+      "link": "https://github.com/shogo4405"
+    },
+    {
+      "id": 25,
+      "imageName": "Individual_justin",
+      "link": "https://littlebobert.github.io/"
+    }
+  ]
 }
