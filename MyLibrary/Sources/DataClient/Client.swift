@@ -10,6 +10,7 @@ public struct DataClient {
   public var fetchWorkshop: @Sendable () throws -> Conference
   public var fetchSponsors: @Sendable () throws -> Sponsors
   public var fetchOrganizers: @Sendable () throws -> [Organizer]
+  public var fetchSpeakers: @Sendable () throws -> [Speaker]
 }
 
 extension DataClient: DependencyKey {
@@ -38,6 +39,11 @@ extension DataClient: DependencyKey {
     fetchOrganizers: {
       let data = loadDataFromBundle(fileName: "organizers")
       let response = try jsonDecoder.decode([Organizer].self, from: data)
+      return response
+    },
+    fetchSpeakers: {
+      let data = loadDataFromBundle(fileName: "speakers")
+      let response = try jsonDecoder.decode([Speaker].self, from: data)
       return response
     }
   )

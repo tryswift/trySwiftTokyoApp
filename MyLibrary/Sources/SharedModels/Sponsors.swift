@@ -54,6 +54,7 @@ public struct Sponsor: Codable, Equatable, Hashable, Identifiable, Sendable {
   public var name: String?
   public var imageName: String
   public var link: URL?
+  public var japaneseLink: URL?
 
   public init(id: Int, name: String, imageName: String, link: URL? = nil) {
     self.id = id

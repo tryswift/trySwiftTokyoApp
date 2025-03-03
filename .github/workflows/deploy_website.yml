@@ -1,0 +1,64 @@
+name: Deploy website to GitHub Pages
+
+on:
+  push:
+    branches:
+      - "main"
+    paths:
+      - "Website/Sources/**"
+      - "Website/Assets/**"
+      - "trySwiftTokyo.xcworkspace/xcshareddata/swiftpm/Package.resolved"
+      - ".github/workflows/deploy_website.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: macos-latest
+    env:
+      DEVELOPER_DIR: /Applications/Xcode.app
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache SwiftPM dependencies
+        uses: actions/cache@v4
+        with:
+          key: xcode-${{ runner.os }}-${{ hashFiles('Package.resolved') }}
+          restore-keys: xcode-${{ runner.os }}-
+          path: ~/DerivedData/SourcePackages
+
+      - name: Build Website scheme
+        # https://forums.swift.org/t/xcode-and-swift-package-manager/44704/7
+        run: |
+          xcodebuild -scheme Website \
+            -configuration Release \
+            -sdk macosx \
+            -destination 'platform=macOS' \
+            -derivedDataPath ~/DerivedData
+
+      - name: Run Website App
+        run: ~/DerivedData/Build/Products/Release/Website
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './Build'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

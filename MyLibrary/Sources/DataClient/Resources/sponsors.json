@@ -4,344 +4,296 @@
       "id": 1,
       "name": "RevenueCat",
       "imageName": "PLATINUM_RevenueCat",
-      "link": "https://www.revenuecat.com/"
-    },
-    {
-      "id": 2,
-      "name": "株式会社MIXI",
-      "imageName": "PLATINUM_mixi",
-      "link": "https://mixi.co.jp/"
-    },
-    {
-      "id": 3,
-      "name": "株式会社メルカリ",
-      "imageName": "PLATINUM_mercari",
-      "link": "https://about.mercari.com/"
-    },
-    {
-      "id": 4,
-      "name": "RIZAPグループ株式会社",
-      "imageName": "PLATINUM_RIZAP",
-      "link": "https://www.rizapgroup.com/"
+      "link": "http://rev.cat/"
     }
   ],
   "gold": [
     {
-      "id": 5,
-      "name": "株式会社ディー・エヌ・エー",
-      "imageName": "GOLD_DeNA",
-      "link": "https://dena.com"
+      "id": 2,
+      "name": "株式会社U-NEXT",
+      "imageName": "GOLD_u-next",
+      "link": "https://www.unext.co.jp/en",
+      "japanese_link": "https://www.unext.co.jp/"
     },
     {
-      "id": 6,
-      "name": "株式会社MagicPod",
-      "imageName": "GOLD_MagicPod",
-      "link": "https://magicpod.com/"
+      "id": 3,
+      "name": "KINTOテクノロジーズ株式会社",
+      "imageName": "GOLD_kinto-technologies",
+      "link": "https://www.kinto-technologies.com/"
     },
     {
-      "id": 7,
-      "name": "サイボウズ株式会社",
-      "imageName": "GOLD_cybozu",
-      "link": "https://tech.cybozu.io/"
-    },
-    {
-      "id": 8,
-      "name": "LINEヤフー株式会社",
-      "imageName": "GOLD_LINEヤフー",
-      "link": "https://engineering.linecorp.com/ja"
-    },
-    {
-      "id": 9,
-      "name": "ピクシブ株式会社",
-      "imageName": "GOLD_pixiv",
-      "link": "https://www.pixiv.co.jp"
-    },
-    {
-      "id": 10,
-      "name": "株式会社サイバーエージェント",
-      "imageName": "GOLD_CyberAgent",
-      "link": "https://www.cyberagent.co.jp/"
-    },
-    {
-      "id": 11,
+      "id": 4,
       "name": "合同会社DMM.com",
       "imageName": "GOLD_DMM",
       "link": "https://dmm-corp.com/"
     },
     {
-      "id": 12,
-      "name": "株式会社タイミー",
-      "imageName": "GOLD_Timee",
-      "link": "https://timee.notion.site/timee/Timee-Product-Org-Entrance-Book-b7380eb4f6954e29b2664fe6f5e775f9"
+      "id": 5,
+      "name": "株式会社サイバーエージェント",
+      "imageName": "GOLD_CyberAgent",
+      "link": "https://www.cyberagent.co.jp/en/",
+      "japanese_link": "https://www.cyberagent.co.jp/"
     },
     {
-      "id": 13,
-      "name": "株式会社U-NEXT",
-      "imageName": "GOLD_u-next",
-      "link": "https://www.unext.co.jp/"
+      "id": 6,
+      "name": "LINEヤフー株式会社",
+      "imageName": "GOLD_LINEヤフー",
+      "link": "https://www.lycorp.co.jp/en/",
+      "japanese_link": "https://www.lycorp.co.jp/ja/"
     },
     {
-      "id": 14,
-      "name": "ROLLCAKE Inc.",
-      "imageName": "GOLD_Roolcake",
-      "link": "https://rollcake.co/"
+      "id": 7,
+      "name": "株式会社TVer",
+      "imageName": "GOLD_TVer",
+      "link": "https://recruit.tver.co.jp/"
     },
     {
-      "id": 15,
-      "name": "株式会社スタメン",
-      "imageName": "GOLD_stmn",
-      "link": "https://stmn.co.jp/"
+      "id": 8,
+      "name": "株式会社MagicPod",
+      "imageName": "GOLD_MagicPod",
+      "link": "https://magicpod.com/en/",
+      "japanese_link": "https://magicpod.com/"
     },
     {
-      "id": 16,
-      "name": "株式会社ZOZO",
-      "imageName": "GOLD_zozo",
-      "link": "https://corp.zozo.com/"
+      "id": 9,
+      "name": "オイシックス・ラ・大地株式会社",
+      "imageName": "GOLD_ORD",
+      "link": "https://recruit.oisixradaichi.co.jp/"
     },
     {
-      "id": 17,
-      "name": "Codemagic",
-      "imageName": "GOLD_codemagic",
-      "link": "https://codemagic.io/start/"
+      "id": 10,
+      "name": "株式会社ディー・エヌ・エー",
+      "imageName": "GOLD_DeNA",
+      "link": "https://dena.com/intl/",
+      "japanese_link": "https://dena.com/"
+    },
+    {
+      "id": 22,
+      "name": "Tramline",
+      "imageName": "GOLD_Tramline",
+      "link": "https://www.tramline.app/"
     }
   ],
   "silver": [
     {
-      "id": 18,
+      "id": 11,
       "name": "株式会社はてな",
       "imageName": "SILVER_hatena",
       "link": "https://hatena.co.jp"
     },
     {
-      "id": 19,
-      "name": "株式会社アンドパッド",
-      "imageName": "SILVER_andpad",
-      "link": "https://engineer.andpad.co.jp/"
+      "id": 12,
+      "name": "株式会社メドレー",
+      "imageName": "SILVER_medley",
+      "link": "https://www.medley.jp/en/",
+      "japanese_link": "https://www.medley.jp/"
     },
     {
-      "id": 20,
+      "id": 13,
+      "name": "newmo株式会社",
+      "imageName": "SILVER_newmo",
+      "link": "https://newmo.me/"
+    },
+    {
+      "id": 14,
+      "name": "野村ホールディングス株式会社",
+      "imageName": "SILVER_nomura",
+      "link": "https://www.nomuraholdings.com/top.html",
+      "japanese_link": "https://www.nomuraholdings.com/jp/top.html"
+    },
+    {
+      "id": 15,
+      "name": "株式会社メルカリ",
+      "imageName": "SILVER_mercari",
+      "link": "https://about.mercari.com/en/",
+      "japanese_link": "https://about.mercari.com/"
+    },
+    {
+      "id": 16,
       "name": "株式会社マネーフォワード",
-      "imageName": "SILVER_moneyforward",
-      "link": "https://corp.moneyforward.com/"
-    },
-    {
-      "id": 21,
-      "name": "株式会社ビットキー",
-      "imageName": "SILVER_bitkey",
-      "link": "https://bitkey.co.jp/"
+      "imageName": "SILVER_ moneyforward",
+      "link": "https://corp.moneyforward.com/en/",
+      "japanese_link": "https://corp.moneyforward.com/"
     }
   ],
   "bronze": [
     {
-      "id": 22,
-      "name": "パイオニア株式会社",
-      "imageName": "BRONZE_pioneer",
-      "link": "https://jpn.pioneer/ja/"
+      "id": 17,
+      "name": "サイボウズ株式会社",
+      "imageName": "BRONZE_cybozu",
+      "link": "https://tech.cybozu.io/"
     },
     {
-      "id": 23,
-      "name": "AkkeyLab株式会社",
-      "imageName": "BRONZE_akkeyLab",
-      "link": "https://akkeylab.ltd"
+      "id": 18,
+      "name": "株式会社ミラティブ",
+      "imageName": "BRONZE_mirrativ",
+      "link": "https://www.mirrativ.co.jp/en",
+      "japanese_link": "https://www.mirrativ.co.jp/"
     },
     {
-      "id": 24,
-      "name": "Stores株式会社",
-      "imageName": "BRONZE_stores",
-      "link": "https://jobs.st.inc/engineer"
+      "id": 19,
+      "name": "ピクシブ株式会社",
+      "imageName": "BRONZE_pixiv",
+      "link": "https://www.pixiv.co.jp/"
     },
     {
-      "id": 25,
-      "name": "株式会社Luup",
-      "imageName": "BRONZE_Luup",
-      "link": "https://luup.sc/"
+      "id": 20,
+      "name": "ZOZO, Inc.",
+      "imageName": "BRONZE_zozo",
+      "link": "https://corp.zozo.com/en/",
+      "japanese_link": "https://corp.zozo.com/"
+    },
+    {
+      "id": 21,
+      "name": "株式会社スマートバンク",
+      "imageName": "BRONZE_smartbank",
+      "link": "https://smartbank.co.jp/"
     }
   ],
   "diversity": [
     {
-      "id": 9,
-      "name": "ピクシブ株式会社",
-      "imageName": "GOLD_pixiv",
-      "link": "https://www.pixiv.co.jp"
+      "id": 6,
+      "name": "LINEヤフー株式会社",
+      "imageName": "GOLD_LINEヤフー",
+      "link": "https://www.lycorp.co.jp/en/",
+      "japanese_link": "https://www.lycorp.co.jp/ja/"
     },
     {
-      "id": 24,
-      "name": "Stores株式会社",
-      "imageName": "BRONZE_stores",
-      "link": "https://jobs.st.inc/engineer"
+      "id": 15,
+      "name": "株式会社メルカリ",
+      "imageName": "SILVER_mercari",
+      "link": "https://about.mercari.com/en/",
+      "japanese_link": "https://about.mercari.com/"
     },
     {
-      "id": 16,
-      "name": "株式会社ZOZO",
-      "imageName": "GOLD_zozo",
-      "link": "https://corp.zozo.com/"
+      "id": 20,
+      "name": "ZOZO, Inc.",
+      "imageName": "BRONZE_zozo",
+      "link": "https://corp.zozo.com/en/",
+      "japanese_link": "https://corp.zozo.com/"
     }
   ],
   "student": [
     {
-      "id": 7,
+      "id": 1,
+      "name": "RevenueCat",
+      "imageName": "PLATINUM_RevenueCat",
+      "link": "http://rev.cat/"
+    },
+    {
+      "id": 15,
+      "name": "株式会社メルカリ",
+      "imageName": "SILVER_mercari",
+      "link": "https://about.mercari.com/en/",
+      "japanese_link": "https://about.mercari.com/"
+    },
+    {
+      "id": 17,
       "name": "サイボウズ株式会社",
-      "imageName": "GOLD_cybozu",
+      "imageName": "BRONZE_cybozu",
       "link": "https://tech.cybozu.io/"
     },
     {
-      "id": 9,
+      "id": 19,
       "name": "ピクシブ株式会社",
-      "imageName": "GOLD_pixiv",
-      "link": "https://www.pixiv.co.jp"
+      "imageName": "BRONZE_pixiv",
+      "link": "https://www.pixiv.co.jp/"
+    },
+    {
+      "id": 20,
+      "name": "ZOZO, Inc.",
+      "imageName": "BRONZE_zozo",
+      "link": "https://corp.zozo.com/en/",
+      "japanese_link": "https://corp.zozo.com/"
+    },
+    {
+      "id": 23,
+      "name": "岸川克己",
+      "imageName": "STUDENT_SCHOLARSHIP_kishikawakatsumi",
+      "link": "https://kishikawakatsumi.com/"
     }
   ],
-  "community": [
-    {
-      "id": 26,
-      "name": "Duolingo",
-      "imageName": "additional_duolingo",
-      "link": "https://www.duolingo.com/"
-    },
-    {
-      "id": 18,
-      "name": "株式会社はてな",
-      "imageName": "SILVER_hatena",
-      "link": "https://hatena.co.jp"
-    },
-    {
-      "id": 7,
-      "name": "サイボウズ株式会社",
-      "imageName": "GOLD_cybozu",
-      "link": "https://tech.cybozu.io/"
-    },
-    {
-      "id": 32,
-      "name": "株式会社ゆめみ",
-      "imageName": "additional_yumemi",
-      "link": "https://www.yumemi.co.jp/"
-    }
-  ],
+  "community": [],
   "individual": [
     {
       "id": 1,
-      "imageName": "Individual_yassu999",
-      "link": "https://x.com/yassu999"
-    },
-    {
-      "id": 2,
-      "imageName": "Individual_kishikawakatsumi",
-      "link": "https://github.com/kishikawakatsumi"
-    },
-    {
-      "id": 3,
       "imageName": "Individual_ooba",
       "link": "https://x.com/ooba"
     },
     {
+      "id": 2,
+      "imageName": "individual_kishikawa_katsumi",
+      "link": "https://github.com/kishikawakatsumi"
+    },
+    {
       "id": 4,
-      "imageName": "Individual_tamadeveloper",
-      "link": "https://x.com/tamadeveloper"
+      "imageName": "Individual_shiz",
+      "link": "https://x.com/stzn3"
     },
     {
       "id": 5,
+      "imageName": "Individual_noppe",
+      "link": "https://github.com/noppefoxwolf"
+    },
+    {
+      "id": 6,
+      "imageName": "Individual_arasan01",
+      "link": "https://x.com/arasan01_me"
+    },
+    {
+      "id": 7,
+      "imageName": "Individual_banjun",
+      "link": "https://github.com/banjun"
+    },
+    {
+      "id": 9,
+      "imageName": "Individual_hcrane",
+      "link": "https://x.com/hcrane14"
+    },
+    {
+      "id": 11,
+      "imageName": "Individual_yuji_fujisaka",
+      "link": "https://github.com/yujif"
+    },
+    {
+      "id": 16,
+      "imageName": "Individual_tamadeveloper",
+      "link": "https://x.com/tamadeveloper/"
+    },
+    {
+      "id": 17,
+      "imageName": "Individual_econa77",
+      "link": "https://github.com/Econa77"
+    },
+    {
+      "id": 19,
+      "imageName": "Individual_scenee",
+      "link": "https://scenee.com/"
+    },
+    {
+      "id": 20,
+      "imageName": "Individual_aaron",
+      "link": "https://github.com/apparition47"
+    },
+    {
+      "id": 21,
+      "imageName": "Individual_sean_labastille",
+      "link": "https://mastodon.online/@flufff42"
+    },
+    {
+      "id": 22,
+      "imageName": "Individual_nao",
+      "link": "https://www.naoenomoto.com/"
+    },
+    {
+      "id": 23,
       "imageName": "Individual_shogo4405",
       "link": "https://github.com/shogo4405"
     },
     {
-      "id": 6,
-      "imageName": "Individual_ta_ka_tsu",
-      "link": "https://x.com/ta_ka_tsu"
-    },
-    {
-      "id": 7,
-      "imageName": "Individual_Takahiro_1984",
-      "link": "https://x.com/Takahiro_1984"
-    },
-    {
-      "id": 8,
-      "imageName": "Individual_u5_03",
-      "link": "https://x.com/u5_03"
-    },
-    {
-      "id": 9,
-      "imageName": "Individual_vince78718",
-      "link": "https://x.com/vince78718"
-    },
-    {
-      "id": 10,
-      "imageName": "Individual_stzn3",
-      "link": "https://x.com/stzn3"
-    },
-    {
-      "id": 11,
-      "imageName": "Individual_freddi",
-      "link": "https://x.com/___freddi___"
-    },
-    {
-      "id": 12,
-      "imageName": "Individual_Kyomesuke",
-      "link": "https://x.com/Kyomesuke"
-    },
-    {
-      "id": 13,
-      "imageName": "Individual_hatakenokakashi",
-      "link": "https://x.com/hatakenokakashi"
-    },
-    {
-      "id": 14,
-      "imageName": "Individual_kndoshn",
-      "link": "https://x.com/kndoshn"
-    },
-    {
-      "id": 15,
-      "imageName": "Individual_econa77",
-      "link": "https://x.com/econa77"
-    },
-    {
-      "id": 16,
-      "imageName": "Individual_apparition47",
-      "link": "https://github.com/apparition47"
-    },
-    {
-      "id": 17,
-      "imageName": "Individual_chris",
-      "link": "https://nihongo-app.com/"
-    },
-    {
-      "id": 18,
-      "imageName": "Individual_giginet",
-      "link": "https://x.com/giginet"
-    },
-    {
-      "id": 20,
-      "imageName": "Individual_banjun",
-      "link": "http://github.com/banjun"
-    },
-    {
-      "id": 21,
-      "imageName": "Individual_FromAtom",
-      "link": "https://x.com/FromAtom"
-    },
-    {
-      "id": 22,
-      "imageName": "Individual_ikkou",
-      "link": "https://x.com/ikkou"
-    },
-    {
-      "id": 23,
-      "imageName": "Individual_Solti",
-      "link": "https://x.com/Solti"
-    },
-    {
-      "id": 24,
-      "imageName": "Individual_noppefoxwolf",
-      "link": "https://github.com/noppefoxwolf"
-    },
-    {
       "id": 25,
-      "imageName": "Individual_ress_UoA",
-      "link": "https://x.com/ress_UoA"
-    },
-    {
-      "id": 26,
-      "imageName": "Individual_1024jp",
-      "link": "https://github.com/1024jp"
+      "imageName": "Individual_justin",
+      "link": "https://littlebobert.github.io/"
     }
   ]
 }
