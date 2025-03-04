@@ -217,7 +217,7 @@
   "individual": [
     {
       "id": 1,
-      "imageName": "Individual_ooba",
+      "imageName": "individual_ooba",
       "link": "https://x.com/ooba"
     },
     {
@@ -227,72 +227,72 @@
     },
     {
       "id": 4,
-      "imageName": "Individual_shiz",
+      "imageName": "individual_shiz",
       "link": "https://x.com/stzn3"
     },
     {
       "id": 5,
-      "imageName": "Individual_noppe",
+      "imageName": "individual_noppe",
       "link": "https://github.com/noppefoxwolf"
     },
     {
       "id": 6,
-      "imageName": "Individual_arasan01",
+      "imageName": "individual_arasan01",
       "link": "https://x.com/arasan01_me"
     },
     {
       "id": 7,
-      "imageName": "Individual_banjun",
+      "imageName": "individual_banjun",
       "link": "https://github.com/banjun"
     },
     {
       "id": 9,
-      "imageName": "Individual_hcrane",
+      "imageName": "individual_hcrane",
       "link": "https://x.com/hcrane14"
     },
     {
       "id": 11,
-      "imageName": "Individual_yuji_fujisaka",
+      "imageName": "individual_yuji_fujisaka",
       "link": "https://github.com/yujif"
     },
     {
       "id": 16,
-      "imageName": "Individual_tamadeveloper",
+      "imageName": "individual_tamadeveloper",
       "link": "https://x.com/tamadeveloper/"
     },
     {
       "id": 17,
-      "imageName": "Individual_econa77",
+      "imageName": "individual_econa77",
       "link": "https://github.com/Econa77"
     },
     {
       "id": 19,
-      "imageName": "Individual_scenee",
+      "imageName": "individual_scenee",
       "link": "https://scenee.com/"
     },
     {
       "id": 20,
-      "imageName": "Individual_aaron",
+      "imageName": "individual_aaron",
       "link": "https://github.com/apparition47"
     },
     {
       "id": 21,
-      "imageName": "Individual_sean_labastille",
+      "imageName": "individual_sean_labastille",
       "link": "https://mastodon.online/@flufff42"
     },
     {
       "id": 22,
-      "imageName": "Individual_nao",
+      "imageName": "individual_nao",
       "link": "https://www.naoenomoto.com/"
     },
     {
       "id": 23,
-      "imageName": "Individual_shogo4405",
+      "imageName": "individual_shogo4405",
       "link": "https://github.com/shogo4405"
     },
     {
       "id": 25,
-      "imageName": "Individual_justin",
+      "imageName": "individual_justin",
       "link": "https://littlebobert.github.io/"
     }
   ]
