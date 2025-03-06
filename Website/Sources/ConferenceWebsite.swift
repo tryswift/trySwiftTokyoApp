@@ -81,5 +81,15 @@ struct ConferenceSite2025: Site {
       CodeOfConduct(language: language)
       PrivacyPolicy(language: language)
     }
+    LegacyHome()
+  }
+}
+
+private struct LegacyHome: StaticLayout {
+  let title = ""
+  var path = "/_en"
+
+  var body: some HTML {
+    Spacer()
   }
 }
