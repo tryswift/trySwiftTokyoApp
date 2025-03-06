@@ -8,9 +8,9 @@ struct MainLayout: Layout {
   var body: some HTML {
     HTMLDocument {
       HTMLHead(for: page, with: siteConfiguration) {
-        MetaTag(name: "og:image", content: ogpLink)
-        MetaTag(name: "twitter:title", content: title)
-        MetaTag(name: "twitter:image", content: ogpLink)
+        MetaTag(property: "og:image", content: ogpLink)
+        MetaTag(property: "twitter:title", content: title)
+        MetaTag(property: "twitter:image", content: ogpLink)
       }
 
       HTMLBody {
