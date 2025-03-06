@@ -13,7 +13,7 @@ struct MainLayout: Layout {
         MetaTag(property: "twitter:image", content: ogpLink)
 
         if page.url.pathComponents.last == "_en" {
-          RedirectMetaTag()
+          RedirectMetaTag(to: URL(string: page.url.absoluteString.replacingOccurrences(of: "_", with: ""))!)
         }
       }
 
@@ -21,15 +21,5 @@ struct MainLayout: Layout {
         Section(page.body)
       }.class("container")
     }
-  }
-}
-
-private struct RedirectMetaTag: HeadElement, Sendable {
-  var body: some HTML { self }
-
-  func render(context: PublishingContext) -> String {
-    """
-    <meta http-equiv="refresh" content="0;url=https://tryswift.jp/en/">
-    """
   }
 }
