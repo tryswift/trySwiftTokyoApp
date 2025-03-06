@@ -70,7 +70,7 @@ struct ConferenceSite2025: Site {
   var language: Language = .japanese
   var url = URL(string: "https://tryswift.jp")!
   var homePage = Home(language: .ja)
-  var layout = MainLayout()
+  var layout = MainLayout(title: "try! Swift Tokyo", ogpLink: "https://tryswift.jp/images/ogp.jpg")
   var darkTheme: (any Theme)? = nil
   var favicon = URL(string: "/images/favicon.png")
 
@@ -81,5 +81,15 @@ struct ConferenceSite2025: Site {
       CodeOfConduct(language: language)
       PrivacyPolicy(language: language)
     }
+    LegacyHome()
+  }
+}
+
+private struct LegacyHome: StaticLayout {
+  let title = ""
+  var path = "/_en"
+
+  var body: some HTML {
+    Spacer()
   }
 }
