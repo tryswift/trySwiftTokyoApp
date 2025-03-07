@@ -213,7 +213,14 @@
       "link": "https://kishikawakatsumi.com/"
     }
   ],
-  "community": [],
+  "community": [
+      {
+        "id": 1,
+        "name": "サイフォン合同会社",
+        "imageName": "COMMUNITY_Scivone",
+        "link": "https://www.scivone.com"
+      }
+  ],
   "individual": [
     {
       "id": 1,
