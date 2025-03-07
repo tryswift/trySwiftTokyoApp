@@ -43,7 +43,7 @@ struct SpeakerModal: HTML {
             .font(.title2)
             .foregroundStyle(.bootstrapPurple)
           if let bio = speaker.getLocalizedBio(language: language) {
-            Text(bio)
+            Text(markdown:bio)
               .font(.body)
               .fontWeight(.regular)
               .foregroundStyle(.dimGray)
