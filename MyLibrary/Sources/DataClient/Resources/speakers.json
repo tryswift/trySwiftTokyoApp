@@ -262,8 +262,8 @@
   {
     "name": "Ryo Yamashita",
     "image_name": "ryo_yamashita",
-    "bio": "I’m an Individual developer.<br><br>I’ve released a variety of apps for Apple platforms.<ul><li>iOS & iPadOS: 7 apps</li><li>visionOS: 5 apps</li><li>watchOS: 5 apps</li><li>tvOS: 1 app</li><li>macOS: 3 apps</li></ul><br>Portfolio link<br>[flipbyblink.github.io/Portfolio](https://flipbyblink.github.io/Portfolio/)",
-    "japanese_bio": "個人開発者として、Appleプラットフォーム向けにさまざまなアプリをリリースしています。<ul><li>iOS & iPadOS アプリ：7</li><li>visionOS アプリ：5</li><li>watchOS アプリ：5</li><li>tvOS アプリ：1</li><li>macOS アプリ：3</li></ul><br>ポートフォリオ：<br>[flipbyblink.github.io/Portfolio](https://flipbyblink.github.io/Portfolio/)",
+    "bio": "I’m an Individual developer.<br><br>I’ve released a variety of apps for Apple platforms.\n- iOS & iPadOS: 7 apps\n- visionOS: 5 apps\n- watchOS: 5 apps\n- tvOS: 1 app\n- macOS: 3 apps\n\nPortfolio link <br>[flipbyblink.github.io/Portfolio](https://flipbyblink.github.io/Portfolio/)",
+    "japanese_bio": "個人開発者として、Appleプラットフォーム向けにさまざまなアプリをリリースしています。\n- iOS & iPadOS アプリ：7\n- visionOS アプリ：5\n- watchOS アプリ：5\n- tvOS アプリ：1\n- macOS アプリ：3\n\nポートフォリオ：<br>[flipbyblink.github.io/Portfolio](https://flipbyblink.github.io/Portfolio/)",
     "job_title": "Solo Developer for iOS, watchOS, macOS, and visionOS",
     "links": [
       {
@@ -312,11 +312,11 @@
     ]
   },
   {
-    "name": "はろだいん",
+    "name": "Halordain",
     "image_name": "halordain",
     "bio": "I’m Chris, also known as Halordain! I grew up in Dallas, Texas, and attended college at Stanford. I majored in electrical engineering with a specialization in image processing. I started studying Japanese to scout my opponents from Japan at the Pokémon World Championships, where my quarterfinals and semifinals opponents hailed from Yokosuka and Fujisawa, respectively.<br><br>My journey led me to Doshisha University to master Japanese under the Critical Language Scholarship. I abandoned my PhD at MIT CSAIL to pursue software development in Japan. Originally hired at Creatures Japan to process images for Pokémon cards, I ended up learning Objective-C to develop my first iPad app, [Pokédex for iOS (Creatures, 2012)](https://www.pokemon.co.jp/ex/pokedex/ja/).<br><br>After Creatures, I contracted with Bandai-Namco Studios to build the graphics engine behind [Super Smash Bros. for 3DS](https://www.smashbros.com/wiiu-3ds/us/3ds/). I parlayed my rendering knowledge in computer graphics, my image processing background, and my interest in iOS development into developing iOS Photoshop for Adobe, and eventually joined Apple to document their new graphics technologies such as Metal, ARKit, CreateML, and RealityKit.<br><br>I returned to Japan to help spearhead Nintendo of Japan’s smartphone game design, starting with Fire Emblem Heroes and [Pikmin Bloom](https://pikminbloom.com/ja/). These development experiences led me to craft my own path creating educational apps and experiences for teaching Japanese kids about AI and Swift.",
-    "japanese_bio": "こんにちは！Chris（Halordain）です！<br>テキサス州ダラスで育ち、スタンフォード大学で電気工学（画像処理専攻）を学びました。ポケモン世界大会で日本の対戦相手をリサーチするために日本語の勉強を始め、準々決勝・準決勝では横須賀と藤沢出身のプレイヤーと対戦しました。<br><br>その後、Critical Language Scholarshipを活用し、日本語を習得するために同志社大学へ留学。MIT CSAILの博士課程を辞め、日本でソフトウェア開発の道を選びました。<br>最初の仕事はクリーチャーズでポケモンカードの画像処理を担当することでした。そこでは、Objective-Cを学び、初のiPadアプリ [Pokédex for iOS（2012）](https://www.pokemon.co.jp/ex/pokedex/ja/) を開発しました。<br><br>その後、バンダイナムコスタジオで [大乱闘スマッシュブラザーズ for 3DS](https://www.smashbros.com/wiiu-3ds/us/3ds/) のグラフィックスエンジンの開発に携わり、コンピュータグラフィックスと画像処理の知識を活かしてAdobeでiOS向けPhotoshopの開発を担当しました。さらに、AppleではMetal・ARKit・CreateML・RealityKitなどの新しいグラフィック技術のドキュメント作成を担当しました。<br><br>日本に戻った後は任天堂のスマートフォンゲーム開発に携わり、「ファイアーエムブレム ヒーローズ」や [Pikmin Bloom](https://pikminbloom.com/ja/) の開発を支援。現在は、AIやSwiftを子どもたちに教える教育アプリを開発しています。",
-    "job_title": "",
+    "japanese_bio": "こんにちは！Chris（Halordain）です！<br>テキサス州ダラスで育ち、スタンフォード大学で電気工学（画像処理専攻）を学びました。ポケモン世界大会で日本の対戦相手をリサーチするために日本語の勉強を始め、準々決勝・準決勝では横須賀と藤沢出身のプレイヤーと対戦しました。<br><br>その後、Critical Language Scholarshipを活用し、日本語を習得するために同志社大学へ留学。MIT CSAILの博士課程を辞め、日本でソフトウェア開発の道を選びました。<br>最初の仕事はクリーチャーズでポケモンカードの画像処理を担当することでした。そこでは、Objective-Cを学び、初のiPadアプリ [ポケモン図鑑 for iOS (クリーチャーズ, 2012)](https://www.pokemon.co.jp/ex/pokedex/ja/) を開発しました。<br><br>その後、バンダイナムコスタジオで [大乱闘スマッシュブラザーズ for 3DS](https://www.smashbros.com/wiiu-3ds/us/3ds/) のグラフィックスエンジンの開発に携わり、コンピュータグラフィックスと画像処理の知識を活かしてAdobeでiOS向けPhotoshopの開発を担当しました。さらに、AppleではMetal・ARKit・CreateML・RealityKitなどの新しいグラフィック技術のドキュメント作成を担当しました。<br><br>日本に戻った後は任天堂のスマートフォンゲーム開発に携わり、「ファイアーエムブレム ヒーローズ」や [ピクミン ブルーム](https://pikminbloom.com/ja/) の開発を支援。現在は、AIやSwiftを子どもたちに教える教育アプリを開発しています。",
+    "job_title": "CEO @ Honmon",
     "links": [
       {
         "url": "https://www.halordain.com",
@@ -385,10 +385,10 @@
     ]
   },
   {
-    "name": "yugo.sugiyma / Sugiy",
+    "name": "Yugo Sugiyama",
     "image_name": "sugiy",
-    "bio": "- iOS and Flutter engineer in Japan<br>- Working in DeNA Co., Ltd.<br>- Often participate in [Japan-\\(region).swift](https://japan-region-swift.github.io/Japan-region-swift/) events in Japan.<br>- Spoke at conferences in Japan such as [iOSDC](https://iosdc.jp/2024/) from 2022 to 2024 and [FlutterKaigi2024](https://youtu.be/UwDqyVawLtA?si=E0kN98o9CdM_p8e6).<br>- I like cooking, fish, Japanese food, and pineapples.",
-    "japanese_bio": "日本でiOSとFlutterのエンジニアとして活動しています。<br>現在、株式会社ディー・エヌ・エーに所属しています。<br><br>イベント活動：<br>- [Japan-\\(region).swift](https://japan-region-swift.github.io/Japan-region-swift/) に頻繁に参加<br>- [iOSDC](https://iosdc.jp/2024/)（2022〜2024年）や [FlutterKaigi2024](https://youtu.be/UwDqyVawLtA?si=E0kN98o9CdM_p8e6) で登壇<br><br>料理をすることが好きで、魚や和食、パイナップルが好きです！",
+    "bio": "- iOS and Flutter engineer in Japan\n- Working in DeNA Co., Ltd.\n- Often participate in [Japan-\\(region).swift](https://japan-region-swift.github.io/Japan-region-swift/) events in Japan.\n- Spoke at conferences in Japan such as [iOSDC](https://iosdc.jp/2024/) from 2022 to 2024 and [FlutterKaigi2024](https://youtu.be/UwDqyVawLtA?si=E0kN98o9CdM_p8e6).\n- I like cooking, fish, Japanese food, and pineapples.",
+    "japanese_bio": "- 日本でiOSとFlutterのエンジニアをしています。\n- 株式会社ディー・エヌ・エーに勤務。\n- 日本で開催される[Japan-\\(region).swift](https://japan-region-swift.github.io/Japan-region-swift/)のイベントに頻繁に参加。\n- 2022年から2024年にかけて[iOSDC](https://iosdc.jp/2024/)や[FlutterKaigi2024](https://youtu.be/UwDqyVawLtA?si=E0kN98o9CdM_p8e6)など、日本のカンファレンスで登壇。\n- 料理、魚、和食、パイナップルが好き。",
     "job_title": "iOS/Flutter Developer in DeNA Co., Ltd.",
     "links": [
       {
