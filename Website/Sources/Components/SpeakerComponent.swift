@@ -29,53 +29,12 @@ struct SpeakerComponent: HTML {
 struct SpeakerModal: HTML {
   let speaker: Speaker
   let language: SupportedLanguage
-  private let imageSize = 75
 
   var body: some HTML {
     Modal(id: speaker.modalId) {
-      ZStack(alignment: .topLeading) {
-        Image(speaker.imageFilename, description: speaker.name)
-          .resizable()
-          .frame(maxWidth: imageSize, maxHeight: imageSize)
-          .cornerRadius(imageSize / 2)
-        Section {
-          Text(speaker.name)
-            .font(.title2)
-            .foregroundStyle(.bootstrapPurple)
-          if let bio = speaker.getLocalizedBio(language: language) {
-            Text(markdown:bio)
-              .font(.body)
-              .fontWeight(.regular)
-              .foregroundStyle(.dimGray)
-          }
-          if let links = speaker.links {
-            Row {
-              ForEach(links) { link in
-                Link(link.name, target: link.url)
-                  .target(.newWindow)
-                  .role(.secondary)
-                  .margin(.trailing, .px(4))
-              }
-            }
-          }
-        }.margin(.leading, .px(imageSize + 20))
-      }
-      .padding(.all, .px(16))
-
-      Grid {
-        Button(String("Close", language: language)) {
-          DismissModal(id: speaker.modalId)
-        }
-        .role(.light)
-        .foregroundStyle(.dimGray)
-        Text("try! Swift Tokyo 2025")
-          .horizontalAlignment(.trailing)
-          .font(.body)
-          .fontWeight(.bold)
-          .foregroundStyle(.dimGray)
-      }
-      .columns(2)
-      .padding(.all, .px(16))
+      SpeakerDetailComponent(speaker: speaker, language: language)
+      ModalFooterComponent(modalId: speaker.modalId, language: language)
+        .padding(.all, .px(16))
     }.size(.large)
   }
 }
