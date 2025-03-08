@@ -411,7 +411,12 @@
     "bio": "Software Engineer at DeNA Inc., specializing in mobile development for live streaming applications. With extensive experience in iOS development since the Objective-C era, I am passionate about leveraging Swift’s evolution to create innovative and efficient applications.",
     "japanese_bio": "株式会社ディー・エヌ・エーのソフトウェアエンジニアとして、ライブストリーミングアプリのモバイル開発を担当しています。<br>Objective-Cの時代からiOS開発に長年携わり、Swiftの進化を活かして革新的で効率的なアプリ開発に情熱を注いでいます。",
     "job_title": "Software Engineer at DeNA Inc.",
-    "links": []
+    "links": [
+      {
+        "url": "https://x.com/akkiee76",
+        "name": "@akkiee76"
+      }
+    ]
   },
   {
     "name": "Kazuya Ueoka",
