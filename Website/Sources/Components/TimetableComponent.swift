@@ -85,7 +85,7 @@ struct SessionDetailModal: HTML {
               .margin(.bottom, .px(8))
           }
         }
-        ModalFooterComponent(modalId: session.title, language: language)
+        ModalFooterComponent(modalId: session.modalId, language: language)
           .padding(.all, .px(16))
       },
       header: {
