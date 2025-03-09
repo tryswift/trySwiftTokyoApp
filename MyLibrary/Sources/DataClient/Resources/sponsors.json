@@ -214,12 +214,18 @@
     }
   ],
   "community": [
-      {
-        "id": 1,
-        "name": "サイフォン合同会社",
-        "imageName": "COMMUNITY_Scivone",
-        "link": "https://www.scivone.com"
-      }
+    {
+      "id": 1,
+      "name": "サイフォン合同会社",
+      "imageName": "COMMUNITY_Scivone",
+      "link": "https://www.scivone.com"
+    },
+    {
+      "id": 2,
+      "name": "Emerge Tools",
+      "imageName": "COMMUNITY_Emerge-Tools",
+      "link": "https://www.emergetools.com/"
+    }
   ],
   "individual": [
     {
