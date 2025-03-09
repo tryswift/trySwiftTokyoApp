@@ -23,10 +23,14 @@ struct TimetableComponent: RootHTML {
                   .frame(maxWidth: imageSize, maxHeight: imageSize)
                   .cornerRadius(imageSize / 2)
               }
+            } else {
+              Image.defaultImage
+                .resizable()
+                .frame(maxWidth: imageSize, maxHeight: imageSize)
+                .cornerRadius(imageSize / 2)
             }
-            Text(session.title)
-              .font(.lead)
-              .fontWeight(.bold)
+
+            SessionTitleComponent(session: session)
               .foregroundStyle(.dimGray)
               .margin(.leading, .px(imageSize + 20))
               .margin(.vertical, .px(8))
@@ -40,6 +44,22 @@ struct TimetableComponent: RootHTML {
         schedule.time.formattedTimeString()
       }
     }.margin(.bottom, .px(8))
+  }
+}
+
+private struct SessionTitleComponent: HTML {
+  let session: Session
+
+  var body: some HTML {
+    let titleHTML = Text(session.title)
+      .font(.lead)
+      .fontWeight(.bold)
+
+    if session.hasDescription {
+      Underline(titleHTML)
+    } else {
+      titleHTML
+    }
   }
 }
 
@@ -81,6 +101,10 @@ struct SessionDetailModal: HTML {
 extension Session {
   var modalId: String {
     title.replacingOccurrences(of: "'", with: "")
+  }
+
+  var hasDescription: Bool {
+    !(description ?? "").isEmpty
   }
 }
 
