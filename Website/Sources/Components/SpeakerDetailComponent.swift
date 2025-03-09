@@ -12,10 +12,12 @@ struct SpeakerDetailComponent: HTML {
         .resizable()
         .frame(maxWidth: imageSize, maxHeight: imageSize)
         .cornerRadius(imageSize / 2)
+
       Section {
         Text(speaker.name)
           .font(.title2)
           .foregroundStyle(.bootstrapPurple)
+
         if let bio = speaker.getLocalizedBio(language: language) {
           Text(markdown:bio)
             .font(.body)

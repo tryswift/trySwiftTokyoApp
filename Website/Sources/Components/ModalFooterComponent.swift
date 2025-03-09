@@ -11,6 +11,7 @@ struct ModalFooterComponent: HTML {
       }
       .role(.light)
       .foregroundStyle(.dimGray)
+
       Text("try! Swift Tokyo 2025")
         .horizontalAlignment(.trailing)
         .font(.body)
