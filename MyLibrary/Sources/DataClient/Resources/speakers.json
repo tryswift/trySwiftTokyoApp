@@ -327,9 +327,9 @@
   {
     "name": "Jeffrey Bergier",
     "image_name": "jeffrey_bergier",
-    "bio": "Cocoa Developer and Teacher. Love technology and cars. Working in the automotive software industry. Living in Tokyo.<br>Company: Woven by Toyota - This talk is not affiliated with my employer in any way.<br>Github: github.com/jeffreybergier<br>Mastodon: @jeff@jeffburg.social",
-    "japanese_bio": "Cocoa Developer & Teacher として活動しています。<br>テクノロジーと車が大好きで、現在は自動車ソフトウェア業界で働いています（勤務地：東京）。<br><br>所属：Woven by Toyota（本講演は所属企業とは関係ありません）<br>GitHub：github.com/jeffreybergier<br>Mastodon：@jeff@jeffburg.social",
-    "job_title": "",
+    "bio": "Cocoa Developer and Teacher. Love technology and cars. Working in the automotive software industry. Living in Tokyo.<br>Company: Woven by Toyota - This talk is not affiliated with my employer in any way.<br>Github: [@jeffreybergier](https://github.com/jeffreybergier)<br>Mastodon: [@jeff](https://jeffburg.social/@jeff)",
+    "japanese_bio": "Cocoa Developer & Teacher として活動しています。<br>テクノロジーと車が大好きで、現在は自動車ソフトウェア業界で働いています（勤務地：東京）。<br><br>所属：Woven by Toyota（本講演は所属企業とは関係ありません）<br>GitHub：[@jeffreybergier](https://github.com/jeffreybergier)<br>Mastodon：[@jeff](https://jeffburg.social/@jeff)",
+    "job_title": "Quality Assurance Engineer",
     "links": [
       {
         "url": "https://www.jeffburg.com",
