@@ -938,6 +938,23 @@
         }
       }
     },
+    "Timetable" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timetable"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タイムテーブル"
+          }
+        }
+      }
+    },
     "try! Swift is an international Swift conference that started in Tokyo in 2016. In addition to Tokyo, the conference has been held in New York, Bangalore, and San Jose, and in 2018, Apple's SwiftNIO team was the first in the world to present SwiftNIO, and in 2019, try! Swift was introduced to the Swift community at WWDC.<br><br>The conference will bring together selected experts from around the world to give 20-minute presentations on topics related to Swift. iOS, iPadOS, SwiftUI, and visionOS, as well as Apple Platform topics including Swift, Open-Source Swift, Swift on Server, and many other Swift topics.<br><br>In addition, try! Swift will have office hours where you can ask one-on-one questions to the speakers and ask any questions you may have had about the content of their talks." : {
       "extractionState" : "manual",
       "localizations" : {

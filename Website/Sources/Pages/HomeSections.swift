@@ -8,6 +8,7 @@ enum HomeSectionType: String, CaseIterable {
   case outline = "Outline"
   case tickets = "Tickets"
   case speaker = "Speaker"
+  case timetable = "Timetable"
   case sponsor = "Sponsor"
   case access = "Access"
 }
@@ -67,6 +68,14 @@ extension HomeSectionType {
           SpeakerModal(speaker: speaker, language: language)
         }
       }
+    case .timetable:
+      SectionHeader(type: self, language: language)
+
+      Text("Coming soon...!")
+        .horizontalAlignment(.center)
+        .font(.title3)
+        .foregroundStyle(.dimGray)
+        .margin(.top, .px(32))
     case .sponsor:
       SectionHeader(type: .sponsor, language: language)
 

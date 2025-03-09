@@ -327,9 +327,9 @@
   {
     "name": "Jeffrey Bergier",
     "image_name": "jeffrey_bergier",
-    "bio": "Cocoa Developer and Teacher. Love technology and cars. Working in the automotive software industry. Living in Tokyo.<br>Company: Woven by Toyota - This talk is not affiliated with my employer in any way.<br>Github: github.com/jeffreybergier<br>Mastodon: @jeff@jeffburg.social",
-    "japanese_bio": "Cocoa Developer & Teacher として活動しています。<br>テクノロジーと車が大好きで、現在は自動車ソフトウェア業界で働いています（勤務地：東京）。<br><br>所属：Woven by Toyota（本講演は所属企業とは関係ありません）<br>GitHub：github.com/jeffreybergier<br>Mastodon：@jeff@jeffburg.social",
-    "job_title": "",
+    "bio": "Cocoa Developer and Teacher. Love technology and cars. Working in the automotive software industry. Living in Tokyo.<br>Company: Woven by Toyota - This talk is not affiliated with my employer in any way.<br>Github: [@jeffreybergier](https://github.com/jeffreybergier)<br>Mastodon: [@jeff](https://jeffburg.social/@jeff)",
+    "japanese_bio": "Cocoa Developer & Teacher として活動しています。<br>テクノロジーと車が大好きで、現在は自動車ソフトウェア業界で働いています（勤務地：東京）。<br><br>所属：Woven by Toyota（本講演は所属企業とは関係ありません）<br>GitHub：[@jeffreybergier](https://github.com/jeffreybergier)<br>Mastodon：[@jeff](https://jeffburg.social/@jeff)",
+    "job_title": "Quality Assurance Engineer",
     "links": [
       {
         "url": "https://www.jeffburg.com",
@@ -376,7 +376,7 @@
     "image_name": "noppe",
     "bio": "iOS & visionOS app developer in Japan. Crafting 𝙫𝙚𝙖𝙧 and DAWN for mastodon. Loving #foxes.<br><br>[vear - Anime Avatar Camera](https://apps.apple.com/jp/app/vear-anime-avatar-camera/id1490697369?l=en-US)<br>[DAWN for Mastodon](https://apps.apple.com/jp/app/dawn-for-mastodon/id1668645019?l=en-US)",
     "japanese_bio": "日本でiOSとvisionOSのアプリを開発しています。<br>Mastodon向けの𝙫𝙚𝙖𝙧やDAWNなどのアプリ開発を手がけています。<br>#foxes（キツネ）が大好きです。<br><br>[vear - Anime Avatar Camera](https://apps.apple.com/jp/app/vear-anime-avatar-camera/id1490697369?l=en-US)<br>[DAWN - Mastodon クライアント](https://apps.apple.com/jp/app/dawn-for-mastodon/id1668645019?l=en-US)",
-    "job_title": "",
+    "job_title": "iOS Engineer at DeNA Co., Ltd.",
     "links": [
       {
         "url": "https://github.com/noppefoxwolf",
@@ -411,7 +411,12 @@
     "bio": "Software Engineer at DeNA Inc., specializing in mobile development for live streaming applications. With extensive experience in iOS development since the Objective-C era, I am passionate about leveraging Swift’s evolution to create innovative and efficient applications.",
     "japanese_bio": "株式会社ディー・エヌ・エーのソフトウェアエンジニアとして、ライブストリーミングアプリのモバイル開発を担当しています。<br>Objective-Cの時代からiOS開発に長年携わり、Swiftの進化を活かして革新的で効率的なアプリ開発に情熱を注いでいます。",
     "job_title": "Software Engineer at DeNA Inc.",
-    "links": []
+    "links": [
+      {
+        "url": "https://x.com/akkiee76",
+        "name": "@akkiee76"
+      }
+    ]
   },
   {
     "name": "Kazuya Ueoka",
