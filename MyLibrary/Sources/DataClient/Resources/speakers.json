@@ -385,11 +385,11 @@
     ]
   },
   {
-    "name": "Yugo Sugiyama",
+    "name": "Sugiy",
     "image_name": "sugiy",
     "bio": "- iOS and Flutter engineer in Japan\n- Working in DeNA Co., Ltd.\n- Often participate in [Japan-\\(region).swift](https://japan-region-swift.github.io/Japan-region-swift/) events in Japan.\n- Spoke at conferences in Japan such as [iOSDC](https://iosdc.jp/2024/) from 2022 to 2024 and [FlutterKaigi2024](https://youtu.be/UwDqyVawLtA?si=E0kN98o9CdM_p8e6).\n- I like cooking, fish, Japanese food, and pineapples.",
     "japanese_bio": "- 日本でiOSとFlutterのエンジニアをしています。\n- 株式会社ディー・エヌ・エーに勤務。\n- 日本で開催される[Japan-\\(region).swift](https://japan-region-swift.github.io/Japan-region-swift/)のイベントに頻繁に参加。\n- 2022年から2024年にかけて[iOSDC](https://iosdc.jp/2024/)や[FlutterKaigi2024](https://youtu.be/UwDqyVawLtA?si=E0kN98o9CdM_p8e6)など、日本のカンファレンスで登壇。\n- 料理、魚、和食、パイナップルが好き。",
-    "job_title": "iOS/Flutter Developer in DeNA Co., Ltd.",
+    "job_title": "iOS/Flutter Developer at DeNA Co., Ltd.",
     "links": [
       {
         "url": "https://ulog.sugiy.com/en/",

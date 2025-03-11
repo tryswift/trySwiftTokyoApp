@@ -72,6 +72,13 @@
       "name": "Tramline",
       "imageName": "GOLD_Tramline",
       "link": "https://www.tramline.app/"
+    },
+    {
+      "id": 24,
+      "name": "株式会社MIXI",
+      "imageName": "GOLD_MIXI",
+      "link": "https://mixi.co.jp/en/",
+      "japanese_link": "https://mixi.co.jp"
     }
   ],
   "silver": [
@@ -148,6 +155,13 @@
       "name": "株式会社スマートバンク",
       "imageName": "BRONZE_smartbank",
       "link": "https://smartbank.co.jp/"
+    },
+    {
+      "id": 25,
+      "name": "株式会社Luup",
+      "imageName": "BRONZE_Luup",
+      "link": "https://luup.sc/en/",
+      "japanese_link": "https://luup.sc/"
     }
   ],
   "diversity": [
@@ -216,15 +230,27 @@
   "community": [
     {
       "id": 1,
+      "name": "DroidKaigi Association",
+      "imageName": "COMMUNITY_DroidKaigi",
+      "link": "https://droidkaigi.jp/"
+    },
+    {
+      "id": 2,
       "name": "サイフォン合同会社",
       "imageName": "COMMUNITY_Scivone",
       "link": "https://www.scivone.com"
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "Emerge Tools",
       "imageName": "COMMUNITY_Emerge-Tools",
       "link": "https://www.emergetools.com/"
+    },
+    {
+      "id": 4,
+      "name": "Flitto",
+      "imageName": "COMMUNITY_Flitto",
+      "link": "https://flitto.com/"
     }
   ],
   "individual": [
