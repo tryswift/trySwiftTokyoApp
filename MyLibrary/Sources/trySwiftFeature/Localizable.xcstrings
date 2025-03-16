@@ -140,6 +140,28 @@
         }
       }
     },
+    "Maru / Marina Arai" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maru / 新井 茉里奈"
+          }
+        }
+      }
+    },
+    "Maru is about to enter her fourth year as an iOS Developer. Lately, she’s been diving into testing, and in her free time, she enjoys knitting and coffee." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS Developerとして働き始めて４年目になろうとしています。最近はテストについて勉強していて、趣味は編み物やコーヒーです。"
+          }
+        }
+      }
+    },
     "Meet Organizers" : {
       "localizations" : {
         "ja" : {
