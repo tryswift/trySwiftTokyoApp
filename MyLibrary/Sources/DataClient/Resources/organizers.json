@@ -250,5 +250,21 @@
         "url": "https://github.com/kazu-42"
       }
     ]
+  },
+  {
+    "id": 17,
+    "name": "Maru / Marina Arai",
+    "image_name": "Maru",
+    "bio": "Maru is about to enter her fourth year as an iOS Developer. Lately, she’s been diving into testing, and in her free time, she enjoys knitting and coffee.",
+    "links": [
+      {
+        "name": "@marunomi_",
+        "url": "https://x.com/marunomi_"
+      },
+      {
+        "name": "@marunomi",
+        "url": "https://github.com/marunomi"
+      }
+    ]
   }
 ]
