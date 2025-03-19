@@ -68,23 +68,6 @@
     ]
   },
   {
-    "name": "Shai Mishali",
-    "image_name": "shai_mishali",
-    "bio": "Shai is a Senior iOS Tech Lead for monday.com, as well as an international speaker, and a highly active open-source contributor and maintainer on several high-profile projects - namely, the RxSwift Community and RxSwift projects, but also releases many open-source endeavours around Combine such as CombineCocoa, RxCombine and more.<br>He's a published author, having worked on over 6 different books on various topics related to the Swift eco-system, on topics such as Combine, RxSwift, async/await, and other Advanced Swift topics.<br>As an avid enthusiast of hackathons, Shai took 1st place at BattleHack Tel-Aviv 2014, BattleHack World Finals San Jose 2014, and Ford's Developer Challenge Tel-Aviv 2015. You can find him on GitHub and Twitter @freak4pc.",
-    "japanese_bio": "Shaiはmonday.comのシニアiOSテックリードであり、国際的な講演者、そしてオープンソースコミュニティに積極的に貢献している開発者です。特にRxSwiftコミュニティやRxSwiftプロジェクトに注力しているほか、CombineCocoaやRxCombineといったCombine関連のオープンソースプロジェクトも多数手がけています。<br>また、Swiftエコシステムに関する6冊以上の著書があり、Combine、RxSwift、async/await、その他の高度なSwiftトピックを取り上げています。<br>ハッカソンの熱狂的なファンでもあり、BattleHack Tel-Aviv 2014、BattleHack World Finals San Jose 2014、Ford’s Developer Challenge Tel-Aviv 2015で1位を獲得しています。GitHubやTwitterでは@freak4pcとして活動しています。",
-    "job_title": "Staff iOS Engineer @ monday.com",
-    "links": [
-      {
-        "url": "https://x.com/freak4pc",
-        "name": "@freak4pc"
-      },
-      {
-        "url": "https://github.com/freak4pc",
-        "name": "@freak4pc"
-      }
-    ]
-  },
-  {
     "name": "Paul Hudson",
     "image_name": "paul_hudson",
     "bio": "Paul is the author of Hacking with Swift, Pro Swift, Swift Design Patterns, Testing Swift, Swift Interview Challenges, and more. Suffice it to say, he quite likes Swift. And coffee. (But mostly Swift.) (And coffee.)",
@@ -273,11 +256,11 @@
     ]
   },
   {
-    "name": "Michael Petrie",
+    "name": "Mike 'Kapsy' Petrie",
     "image_name": "michael_petrie",
     "bio": "I'm a New Zealander who has been living in Japan for the past 10 years. I primarily work with low level, real time graphics and audio. This year, I founded a company called kapsy.io, and am currently working on a real time generative music sequencer with the code named _Variations_.",
     "japanese_bio": "ニュージーランド出身で、日本に住んで10年になります。主に低レベルなリアルタイムのグラフィックスやオーディオを扱っています。<br>今年、新しくkapsy.ioという会社を設立し、現在はリアルタイムで生成される音楽シーケンサーVariations（コードネーム）の開発を進めています。",
-    "job_title": "",
+    "job_title": "Programmer at ZOZO, Inc",
     "links": [
       {
         "url": "https://github.com/Kapsy",

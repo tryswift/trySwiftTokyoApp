@@ -48,7 +48,7 @@ extension HomeSectionType {
     case .speaker:
       SectionHeader(type: .speaker, language: language)
 
-      let speakers = try! dataClient.fetchSpeakers().filter { !($0.jobTitle ?? "").isEmpty }
+      let speakers = try! dataClient.fetchSpeakers()
       CenterAlignedGrid(speakers, columns: 4) { speaker in
         SpeakerComponent(speaker: speaker)
           .margin(.bottom, .px(32))
@@ -56,12 +56,6 @@ extension HomeSectionType {
             ShowModal(id: speaker.modalId)
           }
       }
-
-      Text("And more...!")
-        .horizontalAlignment(.center)
-        .font(.title3)
-        .foregroundStyle(.dimGray)
-        .margin(.top, .px(32))
 
       Alert {
         speakers.map { speaker in
