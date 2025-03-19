@@ -187,14 +187,14 @@ public struct ScheduleView: View {
                   .padding()
               }
               .background(
-                Color(uiColor: .secondarySystemBackground)
+                secondarySystemBackgroundColor
                   .clipShape(RoundedRectangle(cornerRadius: 8))
               )
             } else {
               listRow(session: session)
                 .padding()
                 .background(
-                  Color(uiColor: .secondarySystemBackground)
+                  secondarySystemBackgroundColor
                     .clipShape(RoundedRectangle(cornerRadius: 8))
                 )
             }
@@ -216,7 +216,7 @@ public struct ScheduleView: View {
               .aspectRatio(contentMode: .fit)
               .clipShape(Circle())
               .background(
-                Color(uiColor: .systemBackground)
+                systemBackgroundColor
                   .clipShape(Circle())
               )
               .frame(width: 60)
@@ -242,17 +242,17 @@ public struct ScheduleView: View {
         }
         if let speakers = session.speakers {
           Text(ListFormatter.localizedString(byJoining: speakers.map(\.name)))
-            .foregroundStyle(Color.init(uiColor: .label))
+            .foregroundStyle(labelColor)
             .multilineTextAlignment(.leading)
         }
         if let summary = session.summary {
           if session.title == "Office hour", let speakers = session.speakers {
             let description = officeHourDescription(speakers: speakers)
             Text(description)
-              .foregroundStyle(Color(uiColor: .secondaryLabel))
+              .foregroundStyle(secondaryLabelColor)
           } else {
             Text(LocalizedStringKey(summary), bundle: .module)
-              .foregroundStyle(Color(uiColor: .secondaryLabel))
+              .foregroundStyle(secondaryLabelColor)
           }
         }
       }
@@ -278,6 +278,38 @@ public struct ScheduleView: View {
     }
     let formatter = ListFormatter()
     return formatter.string(from: givenNames)!
+  }
+
+  private var systemBackgroundColor: Color {
+    #if os(macOS)
+      Color(nsColor: .windowBackgroundColor)
+    #else
+      Color(uiColor: .systemBackground)
+    #endif
+  }
+
+  private var secondarySystemBackgroundColor: Color {
+    #if os(macOS)
+      Color(nsColor: .underPageBackgroundColor)
+    #else
+      Color(uiColor: .secondarySystemBackground)
+    #endif
+  }
+
+  private var labelColor: Color {
+    #if os(macOS)
+      Color(nsColor: .labelColor)
+    #else
+      Color(uiColor: .label)
+    #endif
+  }
+
+  private var secondaryLabelColor: Color {
+    #if os(macOS)
+      Color(nsColor: .secondaryLabelColor)
+    #else
+      Color(uiColor: .secondaryLabel)
+    #endif
   }
 }
 

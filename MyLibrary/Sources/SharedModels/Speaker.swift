@@ -4,7 +4,6 @@ public struct Speaker: Codable, Equatable, Hashable, Sendable {
   public var name: String
   public var imageName: String
   public var bio: String?
-  public var japaneseBio: String?
   public var links: [Link]?
   public var jobTitle: String?
 

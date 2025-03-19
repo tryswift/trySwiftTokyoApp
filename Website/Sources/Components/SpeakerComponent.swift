@@ -40,13 +40,6 @@ struct SpeakerModal: HTML {
 }
 
 extension Speaker {
-  func getLocalizedBio(language: SupportedLanguage) -> String? {
-    switch language {
-    case .ja: japaneseBio
-    case .en: bio
-    }
-  }
-
   var imageFilename: String {
     "/images/from_app/\(imageName).png"
   }

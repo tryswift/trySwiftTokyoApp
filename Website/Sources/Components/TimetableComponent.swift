@@ -4,6 +4,7 @@ import SharedModels
 
 struct TimetableComponent: RootHTML {
   let conference: Conference
+  let language: SupportedLanguage
   private let imageSize = 50
 
   var body: some HTML {
@@ -30,7 +31,7 @@ struct TimetableComponent: RootHTML {
                 .cornerRadius(imageSize / 2)
             }
 
-            SessionTitleComponent(session: session)
+            SessionTitleComponent(session: session, language: language)
               .foregroundStyle(.dimGray)
               .margin(.leading, .px(imageSize + 20))
               .margin(.vertical, .px(8))
@@ -49,9 +50,10 @@ struct TimetableComponent: RootHTML {
 
 private struct SessionTitleComponent: HTML {
   let session: Session
+  let language: SupportedLanguage
 
   var body: some HTML {
-    let titleHTML = Text(session.title)
+    let titleHTML = Text(String(session.title, bundle: .scheduleFeature, language: language))
       .font(.lead)
       .fontWeight(.bold)
 
@@ -72,7 +74,7 @@ struct SessionDetailModal: HTML {
       id: session.modalId,
       body: {
         if let description = session.description, !description.isEmpty {
-          Text(description)
+          Text(String(description, bundle: .scheduleFeature, language: language))
             .font(.lead)
             .foregroundStyle(.dimGray)
             .margin(.horizontal, .px(16))
@@ -89,7 +91,7 @@ struct SessionDetailModal: HTML {
           .padding(.all, .px(16))
       },
       header: {
-        Text(session.title)
+        Text(String(session.title, bundle: .scheduleFeature, language: language))
           .font(.title2)
           .fontWeight(.bold)
           .foregroundStyle(.bootstrapPurple)

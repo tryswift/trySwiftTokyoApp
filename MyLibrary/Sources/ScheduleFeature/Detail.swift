@@ -126,11 +126,19 @@ public struct ScheduleDetailView: View {
     }
     .padding()
     .background(
-      Color(uiColor: .secondarySystemBackground)
+      secondarySystemBackgroundColor
         .clipShape(RoundedRectangle(cornerRadius: 8))
     )
     .padding()
 
+  }
+
+  private var secondarySystemBackgroundColor: Color {
+    #if os(macOS)
+      Color(nsColor: .underPageBackgroundColor)
+    #else
+      Color(uiColor: .secondarySystemBackground)
+    #endif
   }
 }
 

@@ -16,3 +16,10 @@ extension String {
     self.init(NSLocalizedString(key, bundle: localizedBundle, comment: ""))
   }
 }
+
+extension Bundle {
+  static var scheduleFeature: Bundle {
+    let bundlePath = Bundle.main.resourceURL!.appendingPathComponent("MyLibrary_ScheduleFeature.bundle")
+    return .init(url: bundlePath)!
+  }
+}

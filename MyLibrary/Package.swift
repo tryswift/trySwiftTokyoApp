@@ -18,8 +18,11 @@ let package = Package(
       targets: ["DataClient"]),
     .library(
       name: "SharedModels",
-      targets: ["SharedModels"]
-    ),
+      targets: ["SharedModels"]),
+    .library(
+      name: "ScheduleFeature",
+      targets: ["ScheduleFeature"]
+    )
   ],
   dependencies: [
     .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.9.1"),

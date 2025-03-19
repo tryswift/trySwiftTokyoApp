@@ -19,6 +19,7 @@ let package = Package(
         "Ignite",
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "DataClient", package: "MyLibrary"),
+        .product(name: "ScheduleFeature", package: "MyLibrary"),
       ],
       resources: [
         .process("Resources")
