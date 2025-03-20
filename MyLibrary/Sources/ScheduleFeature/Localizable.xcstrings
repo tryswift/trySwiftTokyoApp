@@ -121,6 +121,17 @@
         }
       }
     },
+    "Belongs to Cyber AI Productions. XR Expert at Cyber Agent.<br>Responsible for system development related to XR and studio shooting.<br>Purchased Apple Vision Pro locally on its U.S. release day. Actively engaged in development and research, including the visionOS 30 Days project.<br>Organizer of the visionOS Engineer Meetup. Published a book on visionOS app development.<br>Has spoken at iOSDC for nine consecutive years, as well as at try! Swift Tokyo, XR Kaigi, Let’s visionOS, AWE USA, and more.<br>Mainly shares updates on X, so please follow!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cyber AI Productions所属。XR Expert at Cyber Agent。<br>XR関連とスタジオ撮影関連のシステム開発を担当。<br>Apple Vision Proを米国発売日に現地購入。visionOS 30 Days開発など精力的に実装と調査をしています。<br>visionOS Engineer Meetup主催。visionOSアプリ開発の書籍出版。<br>iOSDC9年連続登壇の他、try! Swift Tokyo、XR Kaigi、Let's visionOS、AWE USAなど登壇あり。<br>Xを中心に発信しているのでフォローしてください。"
+          }
+        }
+      }
+    },
     "Big Little Wins for You or Your App" : {
       "extractionState" : "manual",
       "localizations" : {

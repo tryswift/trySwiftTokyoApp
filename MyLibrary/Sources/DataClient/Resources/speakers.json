@@ -382,5 +382,29 @@
         "name": "fromkk.me"
       }
     ]
+  },
+  {
+    "name": "Satoshi Hattori",
+    "image_name": "satoshi_hattori",
+    "bio": "Belongs to Cyber AI Productions. XR Expert at Cyber Agent.<br>Responsible for system development related to XR and studio shooting.<br>Purchased Apple Vision Pro locally on its U.S. release day. Actively engaged in development and research, including the visionOS 30 Days project.<br>Organizer of the visionOS Engineer Meetup. Published a book on visionOS app development.<br>Has spoken at iOSDC for nine consecutive years, as well as at try! Swift Tokyo, XR Kaigi, Let’s visionOS, AWE USA, and more.<br>Mainly shares updates on X, so please follow!",
+    "job_title": "XR Engineer at Cyber AI Productions",
+    "links": [
+      {
+        "url": "https://x.com/shmdevelop",
+        "name": "@shmdevelop"
+      },
+      {
+        "url": "https://github.com/satoshi0212",
+        "name": "@satoshi0212"
+      },
+      {
+        "url": "https://www.linkedin.com/in/satoshi-hattori/",
+        "name": "linkedin.com/in/satoshi-hattori"
+      },
+      {
+        "url": "https://www.amazon.co.jp/dp/4297143119/",
+        "name": "amazon.co.jp/dp/4297143119"
+      }
+    ]
   }
 ]
