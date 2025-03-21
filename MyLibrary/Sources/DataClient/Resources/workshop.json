@@ -51,7 +51,7 @@
             {
               "id": 6,
               "name": "Paul Hudson",
-              "image_name": "Paul Hudson",
+              "image_name": "paul_hudson",
               "bio": "Paul is the author of Hacking with Swift, Pro Swift, Swift Design Patterns, Testing Swift, Swift Coding Challenges, and more. Suffice it to say, he quite likes Swift. And coffee. (But mostly Swift.) (And coffee.)",
               "links": [
                 {

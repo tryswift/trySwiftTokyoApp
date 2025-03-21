@@ -227,7 +227,7 @@
             {
               "id": 5,
               "name": "Satoshi Hattori",
-              "image_name": "Satoshi Hattori",
+              "image_name": "satoshi_hattori",
               "bio": "Satoshi is a software engineer living in Tokyo, Japan.\nHe works for CyberAgent in a photography studio that enables virtual production.\nHe is also working on \"the visionOS 30 Days Development Challenge\" and a virtual camera implementation, and uploading the results to GitHub.\nHe loves ARKit and has recently pursued visionOS development and looks forward to a society where Vision Pro is widely used.",
               "links": [
                 {
@@ -263,7 +263,7 @@
             {
               "id": 6,
               "name": "Paul Hudson",
-              "image_name": "Paul Hudson",
+              "image_name": "paul_hudson",
               "bio": "Paul is the author of Hacking with Swift, Pro Swift, Swift Design Patterns, Testing Swift, Swift Coding Challenges, and more. Suffice it to say, he quite likes Swift. And coffee. (But mostly Swift.) (And coffee.)",
               "links": [
                 {
@@ -282,7 +282,7 @@
             {
               "id": 5,
               "name": "Satoshi Hattori",
-              "image_name": "Satoshi Hattori"
+              "image_name": "satoshi_hattori"
             }
           ],
           "place": "Ask the Speaker",
@@ -320,7 +320,7 @@
             {
               "id": 6,
               "name": "Paul Hudson",
-              "image_name": "Paul Hudson"
+              "image_name": "paul_hudson"
             }
           ],
           "place": "Ask the Speaker",
