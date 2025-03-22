@@ -20,6 +20,18 @@
     ]
   },
   {
+    "name": "Si Beaumont",
+    "image_name": "si_beaumont",
+    "bio": "Si works at Apple, where he helps maintain a number of open-source Swift libraries to support server-side use cases. Before that, he’s worked in a wide range of areas including virtulalization, cloud technologies, privacy-preserving machine learning, and developer tools. <br><br>Si is based in Cambridge, UK, but loves to travel and see new places. He’s hugely passionate about coffee and enjoys playing bass guitar.",
+    "job_title": "Software Engineer @ Apple",
+    "links": [
+      {
+        "url": "https://github.com/simonjbeaumont",
+        "name": "@simonjbeaumont"
+      }
+    ]
+  },
+  {
     "name": "Krzysztof Zablocki",
     "image_name": "krzysztof_zablocki",
     "bio": "Krzysztof is shaping the future of Apple platforms with tools adopted by 80K+ teams, from Apple to Disney. 🏆 2x Engineering Emmy winner, co-founder of Pixle, and creator of Foldify & Sourcery for Xcode.",

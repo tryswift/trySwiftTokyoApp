@@ -1227,6 +1227,17 @@
         }
       }
     },
+    "Si works at Apple, where he helps maintain a number of open-source Swift libraries to support server-side use cases. Before that, he’s worked in a wide range of areas including virtulalization, cloud technologies, privacy-preserving machine learning, and developer tools. <br><br>Si is based in Cambridge, UK, but loves to travel and see new places. He’s hugely passionate about coffee and enjoys playing bass guitar." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SiはAppleで働いており、サーバーサイドでの利用を支援するために、複数のオープンソースのSwiftライブラリの維持に携わっています。以前は、仮想化、クラウド技術、プライバシー保護機械学習、開発者向けツールなど、幅広い分野での経験を積んできました。<br><br>現在はイギリスのケンブリッジを拠点に活動していますが、旅行をして新しい場所を訪れるのが大好きです。コーヒーには強い情熱を持っており、ベースギターを弾くのも楽しんでいます。"
+          }
+        }
+      }
+    },
     "Sign in with Luma and show QR code of your ticket at the reception." : {
       "extractionState" : "manual",
       "localizations" : {
