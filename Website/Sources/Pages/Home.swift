@@ -22,7 +22,11 @@ struct Home: StaticLayout {
   @Dependency(DataClient.self) var dataClient
 
   var body: some HTML {
-    MainNavigationBar(path: Home.generatePath(language:), language: language)
+    MainNavigationBar(
+      path: Home.generatePath(language:),
+      sections: HomeSectionType.navigationItems,
+      language: language
+    )
 
     ForEach(HomeSectionType.allCases) { sectionType in
       sectionType.generateContents(language: language, dataClient: dataClient)

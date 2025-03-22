@@ -40,7 +40,11 @@ struct PrivacyPolicy: StaticLayout {
   }
 
   var body: some HTML {
-    MainNavigationBar(path: generatePath(language:), language: language)
+    MainNavigationBar(
+      path: generatePath(language:),
+      sections: HomeSectionType.navigationItems,
+      language: language
+    )
 
     Text(String("Last Update: Oct.10, 2023", language: language))
       .horizontalAlignment(.trailing)

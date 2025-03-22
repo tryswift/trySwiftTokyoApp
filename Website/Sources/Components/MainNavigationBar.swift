@@ -2,11 +2,12 @@ import Ignite
 
 struct MainNavigationBar: HTML {
   let path: (SupportedLanguage) -> String
+  let sections: [HomeSectionType]
   let language: SupportedLanguage
 
   var body: some HTML {
     NavigationBar {
-      for section in HomeSectionType.allCases {
+      for section in sections {
         let target: String = {
           let homePath = Home.generatePath(language: language)
           return path(language) == homePath ? "#\(section.htmlId)" : "\(homePath)#\(section.htmlId)"

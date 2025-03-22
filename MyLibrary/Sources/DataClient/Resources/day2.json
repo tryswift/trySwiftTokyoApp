@@ -111,7 +111,7 @@
           "speakers": [
             {
               "name": "Kishikawa katsumi",
-              "image_name": "kishikawa katsumi",
+              "image_name": "kishikawa_katsumi",
               "bio": "Katsumi has been developing software for the Apple platform for over 10 years and currently works for a company that develops low-code platforms. He works on automating all kinds of tasks. In his spare time, he builds and maintains various open source projects that improve developer productivity.",
               "links": [
                 {
@@ -166,7 +166,7 @@
           "speakers": [
             {
               "name": "Kishikawa Katsumi",
-              "image_name": "kishikawa katsumi"
+              "image_name": "kishikawa_katsumi"
             }
           ],
           "place": "Ask the Speaker",

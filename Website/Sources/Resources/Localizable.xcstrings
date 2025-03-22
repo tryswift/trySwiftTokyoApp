@@ -477,6 +477,40 @@
         }
       }
     },
+    "Meet the Hosts" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meet the Hosts"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "司会者"
+          }
+        }
+      }
+    },
+    "Meet the Organizers" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meet the Organizers"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主催者"
+          }
+        }
+      }
+    },
     "N1, 3-3, Midori-cho, Tachikawa, Tokyo<br>190-0014" : {
       "extractionState" : "manual",
       "localizations" : {
