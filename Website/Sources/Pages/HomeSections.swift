@@ -21,6 +21,10 @@ extension HomeSectionType {
       .lowercased()
       .replacingOccurrences(of: " ", with: "-")
   }
+
+  static var navigationItems: [Self] {
+    Self.allCases.filter { ![.meetTheHosts, .meetTheOrganizers].contains($0) }
+  }
 }
 
 extension HomeSectionType {

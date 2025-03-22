@@ -22,11 +22,9 @@ struct Home: StaticLayout {
   @Dependency(DataClient.self) var dataClient
 
   var body: some HTML {
-    let navSections = HomeSectionType.allCases
-      .filter { ![.meetTheHosts, .meetTheOrganizers].contains($0) }
     MainNavigationBar(
       path: Home.generatePath(language:),
-      sections: navSections,
+      sections: HomeSectionType.navigationItems,
       language: language
     )
 

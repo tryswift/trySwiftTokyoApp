@@ -42,7 +42,7 @@ struct PrivacyPolicy: StaticLayout {
   var body: some HTML {
     MainNavigationBar(
       path: generatePath(language:),
-      sections: HomeSectionType.allCases,
+      sections: HomeSectionType.navigationItems,
       language: language
     )
 
