@@ -78,12 +78,6 @@ extension HomeSectionType {
             ShowModal(id: organizer.modalId)
           }
       }
-
-      Alert {
-        hosts.map { host in
-          OrganizerModel(organizer: host, language: language)
-        }
-      }
     case .timetable:
       SectionHeader(type: self, language: language)
 
