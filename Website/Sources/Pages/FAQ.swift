@@ -40,7 +40,11 @@ struct FAQ: StaticLayout {
   }
 
   var body: some HTML {
-    MainNavigationBar(path: generatePath(language:), language: language)
+    MainNavigationBar(
+      path: generatePath(language:),
+      sections: HomeSectionType.allCases,
+      language: language
+    )
 
     let sectionTypes = FAQSectionType.allCases.filter { section in
       switch language {

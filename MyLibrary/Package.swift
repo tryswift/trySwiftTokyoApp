@@ -21,8 +21,10 @@ let package = Package(
       targets: ["SharedModels"]),
     .library(
       name: "ScheduleFeature",
-      targets: ["ScheduleFeature"]
-    )
+      targets: ["ScheduleFeature"]),
+    .library(
+      name: "trySwiftFeature",
+      targets: ["trySwiftFeature"]),
   ],
   dependencies: [
     .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.9.1"),

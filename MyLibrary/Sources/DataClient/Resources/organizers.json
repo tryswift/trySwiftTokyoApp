@@ -44,22 +44,6 @@
     ]
   },
   {
-    "id": 4,
-    "name": "Miharu Naruse",
-    "image_name": "miharun",
-    "bio": "Miharu is an iOS Developer. After graduating from the faculty of agriculture at university, she somehow started developing iOS apps.\nHer hobby is watching old movies. This year, she wants to learn English and go on a trip abroad!",
-    "links": [
-      {
-        "name": "@miharun_dev",
-        "url": "https://twitter.com/miharun_dev"
-      },
-      {
-        "name": "@mnaruse",
-        "url": "https://github.com/mnaruse"
-      }
-    ]
-  },
-  {
     "id": 5,
     "name": "Naoki Muramoto",
     "image_name": "Naoki",
@@ -88,22 +72,6 @@
       {
         "name": "@saku",
         "url": "https://github.com/saku"
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "name": "Takuya Tominaga",
-    "image_name": "TakuyaTominaga",
-    "bio": "Takuya has been an iOS developer for three years, after working in sales and testing. Now, I'm working on developing iOS apps with SwiftUI and GraphQL for my job. I love how iOS development is always changing. This is my first time at try! Swift Tokyo, and surprisingly, I'm part of the team too! What's more, try! Swift Tokyo happens to be on the same day my second child is expected, which has me really excited! Outside of work, my partner and I are big into Pokémon cards and hope to meet new friends this way. I can't wait to meet people from all over through Swift and have some great times together!",
-    "links": [
-      {
-        "name": "@tominagaaaaa",
-        "url": "https://x.com/tominagaaaaa"
-      },
-      {
-        "name": "@takuyaaaaaaahaaaaaa",
-        "url": "https://github.com/takuyaaaaaaahaaaaaa"
       }
     ]
   },
@@ -200,22 +168,6 @@
       {
         "name": "@TimOliver",
         "url": "https://github.com/TimOliver"
-      }
-    ]
-  },
-  {
-    "id": 14,
-    "name": "Hideyuki Nanashima",
-    "image_name": "jollyjoester",
-    "bio": "Hideyuki is a Swift lover and focusing to enjoy learning and playing with Swift more. He organizes Swift Fun Club which is the group where Swift lovers gather in Japan. He is also the most famous Kanpai-er(person who make a toast). He is expanding the circle of Swift lovers with Kanpai🍻",
-    "links": [
-      {
-        "name": "@jollyjoester",
-        "url": "https://x.com/jollyjoester"
-      },
-      {
-        "name": "@jollyjoester",
-        "url": "https://github.com/jollyjoester"
       }
     ]
   },

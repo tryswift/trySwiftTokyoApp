@@ -8,14 +8,18 @@ enum HomeSectionType: String, CaseIterable {
   case outline = "Outline"
   case tickets = "Tickets"
   case speaker = "Speaker"
+  case meetTheHosts = "Meet the Hosts"
   case timetable = "Timetable"
   case sponsor = "Sponsor"
+  case meetTheOrganizers = "Meet the Organizers"
   case access = "Access"
 }
 
 extension HomeSectionType {
   var htmlId: String {
-    rawValue.lowercased()
+    rawValue
+      .lowercased()
+      .replacingOccurrences(of: " ", with: "-")
   }
 }
 
@@ -46,7 +50,7 @@ extension HomeSectionType {
       SectionHeader(type: self, language: language)
       TicketsComponent(language: language)
     case .speaker:
-      SectionHeader(type: .speaker, language: language)
+      SectionHeader(type: self, language: language)
 
       let speakers = try! dataClient.fetchSpeakers()
       CenterAlignedGrid(speakers, columns: 4) { speaker in
@@ -62,6 +66,24 @@ extension HomeSectionType {
           SpeakerModal(speaker: speaker, language: language)
         }
       }
+    case .meetTheHosts:
+      SectionHeader(type: self, language: language)
+
+      let hosts = try! dataClient.fetchOrganizers()
+        .filter { [8, 13].contains($0.id) }
+      CenterAlignedGrid(hosts, columns: hosts.count) { organizer in
+        OrganizerComponent(organizer: organizer)
+          .margin(.bottom, .px(32))
+          .onClick {
+            ShowModal(id: organizer.modalId)
+          }
+      }
+
+      Alert {
+        hosts.map { host in
+          OrganizerModel(organizer: host, language: language)
+        }
+      }
     case .timetable:
       SectionHeader(type: self, language: language)
 
@@ -71,7 +93,7 @@ extension HomeSectionType {
         .foregroundStyle(.dimGray)
         .margin(.top, .px(32))
     case .sponsor:
-      SectionHeader(type: .sponsor, language: language)
+      SectionHeader(type: self, language: language)
 
       let sponsors = try! dataClient.fetchSponsors()
       ForEach(Plan.allCases) { plan in
@@ -88,6 +110,23 @@ extension HomeSectionType {
               SponsorComponent(sponsor: sponsor, size: plan.maxSize, language: language)
             }
           }.margin(.bottom, .px(160))
+        }
+      }
+    case .meetTheOrganizers:
+      SectionHeader(type: self, language: language)
+
+      let organizers = try! dataClient.fetchOrganizers()
+      CenterAlignedGrid(organizers, columns: 4) { organizer in
+        OrganizerComponent(organizer: organizer)
+          .margin(.bottom, .px(32))
+          .onClick {
+            ShowModal(id: organizer.modalId)
+          }
+      }
+
+      Alert {
+        organizers.map { organizer in
+          OrganizerModel(organizer: organizer, language: language)
         }
       }
     case .access:

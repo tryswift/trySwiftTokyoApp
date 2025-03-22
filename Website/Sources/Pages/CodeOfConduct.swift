@@ -36,7 +36,11 @@ struct CodeOfConduct: StaticLayout {
   }
 
   var body: some HTML {
-    MainNavigationBar(path: generatePath(language:), language: language)
+    MainNavigationBar(
+      path: generatePath(language:),
+      sections: HomeSectionType.allCases,
+      language: language
+    )
 
     let sectionTypes = CodeOfConductSectionType.allCases
     SectionListComponent(title: title, dataSource: sectionTypes, language: language)

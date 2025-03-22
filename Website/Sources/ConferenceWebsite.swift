@@ -29,7 +29,10 @@ struct ConferenceWebsite {
     let scheduleMediaDirectory = iosAppDirectory.appending(path: "Sources/ScheduleFeature/Media.xcassets")
     let scheduleMediaEnumerator = fileManager.enumerator(at: scheduleMediaDirectory, includingPropertiesForKeys: nil)
 
-    try [sponsorMediaEnumerator, scheduleMediaEnumerator].forEach {
+    let trySwiftMediaDirectory = iosAppDirectory.appending(path: "Sources/trySwiftFeature/Media.xcassets")
+    let trySwiftMediaEnumerator = fileManager.enumerator(at: trySwiftMediaDirectory, includingPropertiesForKeys: nil)
+
+    try [sponsorMediaEnumerator, scheduleMediaEnumerator, trySwiftMediaEnumerator].forEach {
       while let file = $0?.nextObject() as? URL {
         let destURL = websiteAssetsDirectory.appendingPathComponent("images/from_app/\(file.deletingPathExtension().lastPathComponent).png")
 

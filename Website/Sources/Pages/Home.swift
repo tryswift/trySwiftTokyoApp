@@ -22,7 +22,13 @@ struct Home: StaticLayout {
   @Dependency(DataClient.self) var dataClient
 
   var body: some HTML {
-    MainNavigationBar(path: Home.generatePath(language:), language: language)
+    let navSections = HomeSectionType.allCases
+      .filter { ![.meetTheHosts, .meetTheOrganizers].contains($0) }
+    MainNavigationBar(
+      path: Home.generatePath(language:),
+      sections: navSections,
+      language: language
+    )
 
     ForEach(HomeSectionType.allCases) { sectionType in
       sectionType.generateContents(language: language, dataClient: dataClient)
